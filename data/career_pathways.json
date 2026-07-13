@@ -1,0 +1,177 @@
+[
+  {
+    "name": "Full Stack Developer",
+    "description": "Build end-to-end web applications spanning responsive frontends, scalable backends, databases, and deployment pipelines. Work with modern JavaScript frameworks and server-side technologies.",
+    "required_skills": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Node.js or Python",
+      "SQL",
+      "Git",
+      "REST APIs",
+      "Docker"
+    ],
+    "recommended_courses": [
+      "course-002",
+      "course-003",
+      "course-001",
+      "course-013",
+      "course-016",
+      "course-010"
+    ],
+    "recommended_projects": [
+      "project-001",
+      "project-002",
+      "project-003"
+    ],
+    "certifications": [
+      "cert-001",
+      "cert-002"
+    ],
+    "prerequisites": [
+      "Basic computer literacy",
+      "Willingness to learn multiple technologies"
+    ]
+  },
+  {
+    "name": "Data Scientist",
+    "description": "Extract insights from complex datasets using statistics, programming, and machine learning. Perform data cleaning, exploratory analysis, model building, and communicate findings to stakeholders.",
+    "required_skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Statistics",
+      "SQL",
+      "Data visualization",
+      "Machine learning",
+      "Jupyter notebooks",
+      "Communication"
+    ],
+    "recommended_courses": [
+      "course-001",
+      "course-004",
+      "course-005",
+      "course-006",
+      "course-013"
+    ],
+    "recommended_projects": [
+      "project-004",
+      "project-005",
+      "project-006"
+    ],
+    "certifications": [
+      "cert-003",
+      "cert-004"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge",
+      "High school mathematics"
+    ]
+  },
+  {
+    "name": "AI Engineer",
+    "description": "Design and deploy AI-powered applications using deep learning, NLP, and large language models. Build intelligent systems that understand language, vision, and decision-making.",
+    "required_skills": [
+      "Python",
+      "Machine learning",
+      "Deep learning",
+      "TensorFlow or PyTorch",
+      "NLP",
+      "Transformers",
+      "Data preprocessing",
+      "Model deployment",
+      "Cloud platforms"
+    ],
+    "recommended_courses": [
+      "course-001",
+      "course-006",
+      "course-007",
+      "course-008",
+      "course-017",
+      "course-009"
+    ],
+    "recommended_projects": [
+      "project-006",
+      "project-007",
+      "project-008"
+    ],
+    "certifications": [
+      "cert-003",
+      "cert-005"
+    ],
+    "prerequisites": [
+      "Strong Python skills",
+      "Linear algebra basics",
+      "Machine learning fundamentals"
+    ]
+  },
+  {
+    "name": "Cloud Engineer",
+    "description": "Design, deploy, and manage cloud infrastructure on AWS, Azure, or GCP. Automate infrastructure, implement security best practices, and ensure high availability.",
+    "required_skills": [
+      "Linux",
+      "Networking",
+      "AWS or Azure",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Monitoring",
+      "Security"
+    ],
+    "recommended_courses": [
+      "course-009",
+      "course-011",
+      "course-010"
+    ],
+    "recommended_projects": [
+      "project-009",
+      "project-010",
+      "project-003"
+    ],
+    "certifications": [
+      "cert-001",
+      "cert-006"
+    ],
+    "prerequisites": [
+      "Basic Linux knowledge",
+      "Understanding of networking concepts"
+    ]
+  },
+  {
+    "name": "Cybersecurity Analyst",
+    "description": "Protect organizations from cyber threats by monitoring networks, investigating incidents, performing vulnerability assessments, and implementing security controls.",
+    "required_skills": [
+      "Networking",
+      "Linux",
+      "Security tools",
+      "Penetration testing",
+      "SIEM",
+      "Cryptography",
+      "Incident response",
+      "Compliance",
+      "Scripting"
+    ],
+    "recommended_courses": [
+      "course-012",
+      "course-011",
+      "course-001"
+    ],
+    "recommended_projects": [
+      "project-010",
+      "project-011",
+      "project-012"
+    ],
+    "certifications": [
+      "cert-007",
+      "cert-008"
+    ],
+    "prerequisites": [
+      "Networking fundamentals",
+      "Linux basics",
+      "Interest in information security"
+    ]
+  }
+]

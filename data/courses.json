@@ -1,0 +1,189 @@
+[
+  {
+    "id": "course-001",
+    "title": "Python Fundamentals",
+    "domain": "Web Development",
+    "description": "Master Python basics including variables, control flow, functions, and file handling. Build a solid foundation for backend development and data science.",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["Python syntax", "Data types", "Control flow", "Functions", "File I/O"],
+    "tags": ["python", "programming", "fundamentals", "backend"]
+  },
+  {
+    "id": "course-002",
+    "title": "HTML, CSS & JavaScript Bootcamp",
+    "domain": "Web Development",
+    "description": "Learn to build responsive web pages from scratch using modern HTML5, CSS3, and vanilla JavaScript with DOM manipulation.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["HTML5", "CSS3", "JavaScript", "Responsive design", "DOM manipulation"],
+    "tags": ["html", "css", "javascript", "frontend", "web"]
+  },
+  {
+    "id": "course-003",
+    "title": "React.js Frontend Development",
+    "domain": "Web Development",
+    "description": "Build modern single-page applications with React. Covers components, hooks, state management, routing, and API integration.",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["HTML5", "CSS3", "JavaScript"],
+    "skills_gained": ["React", "JSX", "Hooks", "State management", "React Router"],
+    "tags": ["react", "frontend", "javascript", "spa", "web"]
+  },
+  {
+    "id": "course-004",
+    "title": "Data Analysis with Python",
+    "domain": "Data Science",
+    "description": "Perform exploratory data analysis, data cleaning, and visualization using Pandas, NumPy, and Matplotlib on real-world datasets.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "prerequisites": ["Python syntax"],
+    "skills_gained": ["Pandas", "NumPy", "Matplotlib", "Data cleaning", "EDA"],
+    "tags": ["data science", "python", "pandas", "visualization", "analysis"]
+  },
+  {
+    "id": "course-005",
+    "title": "Statistics for Data Science",
+    "domain": "Data Science",
+    "description": "Core statistical concepts including probability, distributions, hypothesis testing, and regression analysis for data-driven decision making.",
+    "duration": "5 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["Python syntax", "Basic mathematics"],
+    "skills_gained": ["Probability", "Hypothesis testing", "Regression", "Statistical inference"],
+    "tags": ["statistics", "data science", "probability", "math"]
+  },
+  {
+    "id": "course-006",
+    "title": "Machine Learning with Scikit-Learn",
+    "domain": "Machine Learning",
+    "description": "Implement supervised and unsupervised ML algorithms including linear regression, decision trees, random forests, and k-means clustering.",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["Python syntax", "Statistics basics", "Pandas"],
+    "skills_gained": ["Scikit-learn", "Classification", "Regression", "Clustering", "Model evaluation"],
+    "tags": ["machine learning", "scikit-learn", "ai", "algorithms"]
+  },
+  {
+    "id": "course-007",
+    "title": "Deep Learning & Neural Networks",
+    "domain": "Artificial Intelligence",
+    "description": "Build neural networks from scratch and with TensorFlow/Keras. Cover CNNs, RNNs, transfer learning, and model optimization.",
+    "duration": "10 weeks",
+    "level": "Advanced",
+    "prerequisites": ["Machine learning basics", "Linear algebra", "Python"],
+    "skills_gained": ["TensorFlow", "Keras", "CNN", "RNN", "Transfer learning"],
+    "tags": ["deep learning", "neural networks", "tensorflow", "ai"]
+  },
+  {
+    "id": "course-008",
+    "title": "Natural Language Processing",
+    "domain": "Artificial Intelligence",
+    "description": "Process and analyze text data with NLP techniques including tokenization, sentiment analysis, named entity recognition, and transformer models.",
+    "duration": "8 weeks",
+    "level": "Advanced",
+    "prerequisites": ["Machine learning basics", "Python"],
+    "skills_gained": ["NLP", "Tokenization", "Transformers", "BERT", "Text classification"],
+    "tags": ["nlp", "ai", "text processing", "transformers", "bert"]
+  },
+  {
+    "id": "course-009",
+    "title": "AWS Cloud Practitioner Essentials",
+    "domain": "Cloud Computing",
+    "description": "Understand AWS cloud services, pricing models, security fundamentals, and architecture best practices for the cloud practitioner certification.",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["AWS core services", "Cloud architecture", "IAM", "S3", "EC2"],
+    "tags": ["aws", "cloud", "certification", "infrastructure"]
+  },
+  {
+    "id": "course-010",
+    "title": "Docker & Kubernetes Mastery",
+    "domain": "DevOps",
+    "description": "Containerize applications with Docker and orchestrate deployments with Kubernetes. Covers images, pods, services, and Helm charts.",
+    "duration": "7 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["Linux basics", "Command line"],
+    "skills_gained": ["Docker", "Kubernetes", "Containers", "Helm", "CI/CD basics"],
+    "tags": ["docker", "kubernetes", "devops", "containers", "orchestration"]
+  },
+  {
+    "id": "course-011",
+    "title": "Linux System Administration",
+    "domain": "DevOps",
+    "description": "Master Linux command line, file systems, process management, networking, shell scripting, and system security fundamentals.",
+    "duration": "5 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["Linux CLI", "Shell scripting", "File systems", "Process management", "Networking"],
+    "tags": ["linux", "devops", "system admin", "shell", "bash"]
+  },
+  {
+    "id": "course-012",
+    "title": "Network Security & Ethical Hacking",
+    "domain": "Cybersecurity",
+    "description": "Learn network security principles, vulnerability assessment, penetration testing, and ethical hacking methodologies using industry tools.",
+    "duration": "8 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["Networking basics", "Linux fundamentals"],
+    "skills_gained": ["Penetration testing", "Nmap", "Wireshark", "Vulnerability assessment", "OWASP"],
+    "tags": ["cybersecurity", "ethical hacking", "network security", "penetration testing"]
+  },
+  {
+    "id": "course-013",
+    "title": "SQL & Database Design",
+    "domain": "Databases",
+    "description": "Design relational databases, write complex SQL queries, normalize data, and work with PostgreSQL and MySQL in production environments.",
+    "duration": "5 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["SQL", "Database design", "PostgreSQL", "Normalization", "Joins"],
+    "tags": ["sql", "database", "postgresql", "mysql", "backend"]
+  },
+  {
+    "id": "course-014",
+    "title": "NoSQL with MongoDB & Redis",
+    "domain": "Databases",
+    "description": "Explore document-based and key-value databases. Build applications with MongoDB for flexible schemas and Redis for caching and real-time data.",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["SQL basics", "JavaScript basics"],
+    "skills_gained": ["MongoDB", "Redis", "Document databases", "Caching", "Aggregation pipeline"],
+    "tags": ["nosql", "mongodb", "redis", "database", "caching"]
+  },
+  {
+    "id": "course-015",
+    "title": "UI/UX Design Principles",
+    "domain": "UI/UX",
+    "description": "Learn user-centered design, wireframing, prototyping with Figma, accessibility standards, and design system creation.",
+    "duration": "6 weeks",
+    "level": "Beginner",
+    "prerequisites": [],
+    "skills_gained": ["Figma", "Wireframing", "Prototyping", "User research", "Accessibility"],
+    "tags": ["ui", "ux", "design", "figma", "prototyping"]
+  },
+  {
+    "id": "course-016",
+    "title": "FastAPI Backend Development",
+    "domain": "Web Development",
+    "description": "Build high-performance REST APIs with FastAPI. Covers Pydantic validation, async endpoints, middleware, authentication, and OpenAPI docs.",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "prerequisites": ["Python syntax", "HTTP basics"],
+    "skills_gained": ["FastAPI", "Pydantic", "REST APIs", "Async programming", "OpenAPI"],
+    "tags": ["fastapi", "python", "backend", "api", "rest"]
+  },
+  {
+    "id": "course-017",
+    "title": "MLOps & Model Deployment",
+    "domain": "Machine Learning",
+    "description": "Deploy ML models to production with MLOps best practices. Covers model serving, monitoring, CI/CD for ML, and cloud deployment strategies.",
+    "duration": "6 weeks",
+    "level": "Advanced",
+    "prerequisites": ["Machine learning basics", "Docker", "Python"],
+    "skills_gained": ["MLflow", "Model serving", "MLOps", "Model monitoring", "CI/CD"],
+    "tags": ["mlops", "deployment", "machine learning", "devops", "production"]
+  }
+]

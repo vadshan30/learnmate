@@ -1,0 +1,41 @@
+# ============================================
+# LearnMate AI – Backend Dependencies
+# Windows-compatible (prebuilt wheels, no compilation)
+# Requires: Python 3.11.x on Windows
+# ============================================
+
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Data validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Environment management
+python-dotenv==1.0.1
+
+# Vector databases
+# chromadb 0.5.23: last stable 0.5.x release, confirmed working on Windows
+# chroma-hnswlib 0.7.6: prebuilt wheel available for cp311-win_amd64
+chromadb==0.5.23
+chroma-hnswlib==0.7.6
+faiss-cpu==1.9.0.post1
+
+# Embeddings
+sentence-transformers==3.3.1
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+
+# HTTP client
+httpx==0.28.1
+
+# IBM Watsonx AI
+ibm-watsonx-ai==1.3.1
+
+# Data processing
+pandas==2.2.3
+numpy==2.2.1
+
+# Utilities
+python-multipart==0.0.20

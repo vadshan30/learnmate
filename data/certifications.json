@@ -1,0 +1,92 @@
+[
+  {
+    "id": "cert-001",
+    "name": "AWS Certified Cloud Practitioner",
+    "provider": "Amazon Web Services",
+    "level": "Beginner",
+    "description": "Validate foundational knowledge of AWS Cloud services, security, pricing, and architecture. Ideal for individuals starting their cloud journey.",
+    "prerequisites": ["Basic IT knowledge", "6 months of industry experience recommended"],
+    "exam_link": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "skills_covered": ["AWS core services", "Cloud security", "AWS pricing", "Cloud architecture", "Support basics"]
+  },
+  {
+    "id": "cert-002",
+    "name": "Meta Front-End Developer Professional Certificate",
+    "provider": "Meta",
+    "level": "Beginner",
+    "description": "Learn to build modern web interfaces with React, version control with Git, and testing best practices. Designed by Meta engineers.",
+    "prerequisites": ["Basic HTML and CSS knowledge"],
+    "exam_link": "https://www.coursera.org/professional-certificates/meta-frontend-developer",
+    "skills_covered": ["React", "JavaScript", "HTML5", "CSS3", "Version control", "Testing"]
+  },
+  {
+    "id": "cert-003",
+    "name": "IBM Data Science Professional Certificate",
+    "provider": "IBM",
+    "level": "Beginner",
+    "description": "Comprehensive data science program covering Python, SQL, data visualization, machine learning, and capstone project using real-world data.",
+    "prerequisites": ["Basic math", "No prior coding experience required"],
+    "exam_link": "https://www.coursera.org/professional-certificates/ibm-data-science",
+    "skills_covered": ["Python", "SQL", "Pandas", "Matplotlib", "Machine learning", "Jupyter notebooks"]
+  },
+  {
+    "id": "cert-004",
+    "name": "Google Data Analytics Professional Certificate",
+    "provider": "Google",
+    "level": "Beginner",
+    "description": "Learn the tools and techniques used by entry-level data analysts. Covers spreadsheets, SQL, R programming, Tableau, and data-driven decision making.",
+    "prerequisites": ["No prior experience required"],
+    "exam_link": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "skills_covered": ["SQL", "R programming", "Tableau", "Spreadsheets", "Data visualization", "Data cleaning"]
+  },
+  {
+    "id": "cert-005",
+    "name": "TensorFlow Developer Certificate",
+    "provider": "Google",
+    "level": "Intermediate",
+    "description": "Demonstrate proficiency in building and training neural networks using TensorFlow. Covers CNNs, RNNs, NLP, and time series forecasting.",
+    "prerequisites": ["Python proficiency", "Machine learning basics", "Linear algebra"],
+    "exam_link": "https://www.tensorflow.org/certificate",
+    "skills_covered": ["TensorFlow", "Neural networks", "CNN", "RNN", "NLP", "Time series"]
+  },
+  {
+    "id": "cert-006",
+    "name": "Microsoft Certified: Azure Fundamentals",
+    "provider": "Microsoft",
+    "level": "Beginner",
+    "description": "Validate foundational knowledge of Azure cloud services, core solutions, management tools, governance, privacy, and compliance.",
+    "prerequisites": ["Familiarity with IT concepts"],
+    "exam_link": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
+    "skills_covered": ["Azure services", "Cloud concepts", "Azure pricing", "Governance", "Security"]
+  },
+  {
+    "id": "cert-007",
+    "name": "CompTIA Security+",
+    "provider": "CompTIA",
+    "level": "Intermediate",
+    "description": "Globally recognized certification covering core cybersecurity skills including threat detection, risk management, cryptography, and incident response.",
+    "prerequisites": ["Network+ or equivalent knowledge", "2 years of IT experience recommended"],
+    "exam_link": "https://www.comptia.org/certifications/security",
+    "skills_covered": ["Threat detection", "Risk management", "Cryptography", "Identity management", "Incident response"]
+  },
+  {
+    "id": "cert-008",
+    "name": "Cisco Certified Network Associate (CCNA)",
+    "provider": "Cisco",
+    "level": "Intermediate",
+    "description": "Validate your ability to install, configure, and troubleshoot networks. Covers network fundamentals, IP services, security fundamentals, and automation.",
+    "prerequisites": ["Basic computer literacy", "Understanding of networking concepts"],
+    "exam_link": "https://www.cisco.com/c/en/us/training-events/training-certifications/ccna.html",
+    "skills_covered": ["Network fundamentals", "IP connectivity", "Security fundamentals", "Automation", "Troubleshooting"]
+  },
+  {
+    "id": "cert-009",
+    "name": "HashiCorp Certified: Terraform Associate",
+    "provider": "HashiCorp",
+    "level": "Intermediate",
+    "description": "Demonstrate skills in infrastructure as code using Terraform. Covers configuration syntax, state management, modules, and cloud provider integration.",
+    "prerequisites": ["Cloud platform experience", "Command line familiarity"],
+    "exam_link": "https://www.hashicorp.com/certification/terraform-associate",
+    "skills_covered": ["Terraform", "Infrastructure as code", "State management", "Cloud provisioning", "Modules"]
+  }
+]

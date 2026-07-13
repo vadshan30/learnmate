@@ -1,0 +1,182 @@
+[
+  {
+    "id": "project-001",
+    "title": "Personal Portfolio Website",
+    "description": "Design and build a responsive personal portfolio website showcasing your projects, skills, and resume. Deploy it using a static hosting service.",
+    "difficulty": "Beginner",
+    "estimated_time": "2 weeks",
+    "skills_required": ["HTML5", "CSS3", "JavaScript", "Responsive design"],
+    "technologies": ["HTML", "CSS", "JavaScript", "Git", "GitHub Pages"],
+    "learning_outcomes": [
+      "Build semantic HTML structures",
+      "Apply responsive CSS layouts with Flexbox and Grid",
+      "Implement interactive features with vanilla JavaScript",
+      "Deploy a static site to a hosting platform"
+    ]
+  },
+  {
+    "id": "project-002",
+    "title": "Task Manager REST API",
+    "description": "Create a RESTful API for a task management application with CRUD operations, user authentication, and input validation using FastAPI.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "skills_required": ["Python", "FastAPI", "Pydantic", "SQL", "REST API design"],
+    "technologies": ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Pydantic"],
+    "learning_outcomes": [
+      "Design RESTful API endpoints",
+      "Implement data validation with Pydantic",
+      "Connect to a relational database",
+      "Write API documentation with OpenAPI"
+    ]
+  },
+  {
+    "id": "project-003",
+    "title": "Dockerized Microservices Application",
+    "description": "Decompose a monolithic application into microservices, containerize each with Docker, and orchestrate them using Docker Compose with shared networking.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "skills_required": ["Docker", "Docker Compose", "REST APIs", "Networking", "Linux"],
+    "technologies": ["Docker", "Docker Compose", "Python", "FastAPI", "Nginx"],
+    "learning_outcomes": [
+      "Write Dockerfiles for multiple services",
+      "Configure inter-service networking",
+      "Manage multi-container deployments",
+      "Implement reverse proxy with Nginx"
+    ]
+  },
+  {
+    "id": "project-004",
+    "title": "Exploratory Data Analysis Dashboard",
+    "description": "Perform end-to-end EDA on a real-world dataset and build an interactive dashboard to visualize trends, distributions, and correlations.",
+    "difficulty": "Beginner",
+    "estimated_time": "2 weeks",
+    "skills_required": ["Python", "Pandas", "Matplotlib", "Data cleaning", "Visualization"],
+    "technologies": ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "learning_outcomes": [
+      "Clean and preprocess messy datasets",
+      "Create meaningful statistical visualizations",
+      "Communicate insights through dashboards",
+      "Apply exploratory data analysis techniques"
+    ]
+  },
+  {
+    "id": "project-005",
+    "title": "Stock Price Prediction Model",
+    "description": "Build a machine learning model to predict stock price movements using historical data. Compare multiple algorithms and evaluate performance metrics.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "skills_required": ["Python", "Scikit-learn", "Pandas", "Time series basics", "Data visualization"],
+    "technologies": ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+    "learning_outcomes": [
+      "Fetch and process financial time series data",
+      "Engineer features for prediction models",
+      "Train and compare multiple ML algorithms",
+      "Evaluate models using RMSE, MAE, and R-squared"
+    ]
+  },
+  {
+    "id": "project-006",
+    "title": "Sentiment Analysis Pipeline",
+    "description": "Develop an NLP pipeline that classifies product reviews as positive, negative, or neutral using pre-trained transformer models and custom training.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "skills_required": ["Python", "NLP basics", "Transformers", "Text preprocessing", "Machine learning"],
+    "technologies": ["Python", "Hugging Face Transformers", "NLTK", "Pandas", "FastAPI"],
+    "learning_outcomes": [
+      "Preprocess and tokenize text data",
+      "Fine-tune pre-trained language models",
+      "Build an end-to-end NLP classification pipeline",
+      "Deploy a model as a REST API"
+    ]
+  },
+  {
+    "id": "project-007",
+    "title": "Image Classification with CNNs",
+    "description": "Train a convolutional neural network to classify images across multiple categories. Implement data augmentation, transfer learning, and model evaluation.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "skills_required": ["Python", "TensorFlow", "Deep learning", "Computer vision basics"],
+    "technologies": ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
+    "learning_outcomes": [
+      "Build and train CNN architectures from scratch",
+      "Apply data augmentation techniques",
+      "Implement transfer learning with pre-trained models",
+      "Analyze model performance with confusion matrices"
+    ]
+  },
+  {
+    "id": "project-008",
+    "title": "RAG-Powered Study Assistant",
+    "description": "Build a retrieval-augmented generation chatbot that answers study questions by retrieving relevant content from a vector database of course materials.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "skills_required": ["Python", "LangChain or LlamaIndex", "Vector databases", "Embeddings", "LLM APIs"],
+    "technologies": ["Python", "ChromaDB", "Sentence Transformers", "FastAPI", "React"],
+    "learning_outcomes": [
+      "Chunk and embed document collections",
+      "Build a semantic search retrieval pipeline",
+      "Integrate LLMs with retrieved context",
+      "Deploy a full-stack AI application"
+    ]
+  },
+  {
+    "id": "project-009",
+    "title": "Serverless URL Shortener",
+    "description": "Deploy a serverless URL shortener on AWS Lambda with API Gateway, DynamoDB for storage, and CloudFront for caching and global delivery.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "skills_required": ["AWS Lambda", "API Gateway", "DynamoDB", "Python", "Serverless concepts"],
+    "technologies": ["AWS Lambda", "DynamoDB", "API Gateway", "Python", "Terraform"],
+    "learning_outcomes": [
+      "Design serverless architectures",
+      "Implement Lambda functions with Python",
+      "Configure API Gateway routing",
+      "Manage infrastructure with Terraform"
+    ]
+  },
+  {
+    "id": "project-010",
+    "title": "Kubernetes CI/CD Pipeline",
+    "description": "Set up a complete CI/CD pipeline that builds, tests, and deploys a containerized application to a Kubernetes cluster with automated rollbacks.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "skills_required": ["Docker", "Kubernetes", "CI/CD", "Linux", "Git"],
+    "technologies": ["Docker", "Kubernetes", "GitHub Actions", "Helm", "Nginx"],
+    "learning_outcomes": [
+      "Create CI/CD pipeline configurations",
+      "Deploy applications to Kubernetes clusters",
+      "Implement Helm charts for templated deployments",
+      "Configure automated health checks and rollbacks"
+    ]
+  },
+  {
+    "id": "project-011",
+    "title": "Network Traffic Analyzer",
+    "description": "Build a tool that captures and analyzes network traffic packets, detects anomalies, and generates security reports for potential threats.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "skills_required": ["Python", "Networking basics", "Packet analysis", "Data visualization"],
+    "technologies": ["Python", "Scapy", "Wireshark", "Pandas", "Matplotlib"],
+    "learning_outcomes": [
+      "Capture and parse network packets",
+      "Identify common network attack patterns",
+      "Visualize network traffic patterns",
+      "Generate automated security reports"
+    ]
+  },
+  {
+    "id": "project-012",
+    "title": "Vulnerability Scanner Dashboard",
+    "description": "Develop a web-based dashboard that aggregates vulnerability scan results, prioritizes risks, and tracks remediation progress across infrastructure.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "skills_required": ["Python", "Web development", "Security scanning tools", "SQL", "Data visualization"],
+    "technologies": ["FastAPI", "React", "PostgreSQL", "Nmap", "Chart.js"],
+    "learning_outcomes": [
+      "Integrate security scanning tools into a web app",
+      "Prioritize vulnerabilities by severity",
+      "Build real-time security dashboards",
+      "Track and manage remediation workflows"
+    ]
+  }
+]
