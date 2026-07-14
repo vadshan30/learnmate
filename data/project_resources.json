@@ -1,0 +1,2844 @@
+{
+  "project-001": {
+    "title": "Personal Portfolio Website",
+    "documentation": [
+      {
+        "name": "MDN HTML Guide",
+        "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML"
+      },
+      {
+        "name": "CSS Tricks Complete Guide",
+        "url": "https://css-tricks.com/guides/"
+      },
+      {
+        "name": "JavaScript.info",
+        "url": "https://javascript.info/"
+      },
+      {
+        "name": "GitHub Pages Docs",
+        "url": "https://docs.github.com/en/pages"
+      }
+    ],
+    "datasets": [],
+    "api_references": [],
+    "starter_templates": [
+      {
+        "name": "HTML5 Boilerplate",
+        "url": "https://html5boilerplate.com/"
+      }
+    ],
+    "best_practices": [
+      "Use semantic HTML elements (header, nav, main, section, footer)",
+      "Ensure responsive design with CSS Grid or Flexbox",
+      "Optimize images with WebP format and lazy loading",
+      "Add meta tags for SEO and social sharing",
+      "Test across multiple browsers and screen sizes"
+    ]
+  },
+  "project-002": {
+    "title": "Task Manager REST API",
+    "documentation": [
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Pydantic v2 Guide",
+        "url": "https://docs.pydantic.dev/latest/"
+      },
+      {
+        "name": "SQLAlchemy ORM Docs",
+        "url": "https://docs.sqlalchemy.org/"
+      },
+      {
+        "name": "REST API Design Best Practices",
+        "url": "https://restfulapi.net/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "HTTP Methods Reference",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+      },
+      {
+        "name": "HTTP Status Codes",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "FastAPI Project Template",
+        "url": "https://fastapi.tiangolo.com/tutorial/bigger-applications/"
+      }
+    ],
+    "best_practices": [
+      "Use proper HTTP status codes (201 Created, 404 Not Found, etc.)",
+      "Implement pagination for list endpoints",
+      "Add request validation with Pydantic models",
+      "Write unit tests for all endpoints",
+      "Document your API with OpenAPI/Swagger"
+    ]
+  },
+  "project-003": {
+    "title": "Dockerized Microservices Application",
+    "documentation": [
+      {
+        "name": "Docker Documentation",
+        "url": "https://docs.docker.com/"
+      },
+      {
+        "name": "Docker Compose Guide",
+        "url": "https://docs.docker.com/compose/"
+      },
+      {
+        "name": "Kubernetes Basics",
+        "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/"
+      },
+      {
+        "name": "Microservices Patterns",
+        "url": "https://microservices.io/patterns/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Docker Engine API",
+        "url": "https://docs.docker.com/engine/api/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Docker Compose Template",
+        "url": "https://docs.docker.com/compose/getting-started/"
+      }
+    ],
+    "best_practices": [
+      "Use multi-stage builds to minimize image size",
+      "Run containers as non-root users",
+      "Use .dockerignore to exclude unnecessary files",
+      "Implement health checks for each service",
+      "Use Docker networks for service communication"
+    ]
+  },
+  "project-004": {
+    "title": "Exploratory Data Analysis Dashboard",
+    "documentation": [
+      {
+        "name": "Pandas Documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "name": "Matplotlib Tutorial",
+        "url": "https://matplotlib.org/stable/tutorials/"
+      },
+      {
+        "name": "Seaborn Tutorial",
+        "url": "https://seaborn.pydata.org/tutorial.html"
+      },
+      {
+        "name": "Plotly Dashboard Guide",
+        "url": "https://plotly.com/python/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Kaggle Datasets",
+        "url": "https://www.kaggle.com/datasets"
+      },
+      {
+        "name": "UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/ml/index.php"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Pandas API Reference",
+        "url": "https://pandas.pydata.org/docs/reference/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Jupyter Notebook Setup",
+        "url": "https://jupyter.org/install"
+      }
+    ],
+    "best_practices": [
+      "Start with data shape, types, and missing values",
+      "Use histograms and box plots for distribution analysis",
+      "Create correlation matrices for feature relationships",
+      "Document findings in markdown cells",
+      "Export cleaned datasets for downstream use"
+    ]
+  },
+  "project-005": {
+    "title": "Stock Price Prediction Model",
+    "documentation": [
+      {
+        "name": "Scikit-learn Documentation",
+        "url": "https://scikit-learn.org/stable/"
+      },
+      {
+        "name": "TensorFlow Guide",
+        "url": "https://www.tensorflow.org/guide"
+      },
+      {
+        "name": "Pandas DataReader",
+        "url": "https://pandas.pydata.org/docs/remote_data.html"
+      },
+      {
+        "name": "yfinance Documentation",
+        "url": "https://pypi.org/project/yfinance/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Yahoo Finance (via yfinance)",
+        "url": "https://pypi.org/project/yfinance/"
+      },
+      {
+        "name": "Kaggle Stock Data",
+        "url": "https://www.kaggle.com/datasets?search=stock+prices"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "yfinance API",
+        "url": "https://pypi.org/project/yfinance/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Split data chronologically (train on past, test on future)",
+      "Use technical indicators as features (MA, RSI, MACD)",
+      "Evaluate with MAE, RMSE, and MAPE metrics",
+      "Visualize predictions vs actual prices",
+      "Include risk disclaimers in any financial model"
+    ]
+  },
+  "project-006": {
+    "title": "Sentiment Analysis Pipeline",
+    "documentation": [
+      {
+        "name": "Hugging Face Transformers",
+        "url": "https://huggingface.co/docs/transformers/"
+      },
+      {
+        "name": "NLTK Documentation",
+        "url": "https://www.nltk.org/"
+      },
+      {
+        "name": "spaCy User Guide",
+        "url": "https://spacy.io/usage"
+      },
+      {
+        "name": "Scikit-learn Text Features",
+        "url": "https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "IMDB Reviews Dataset",
+        "url": "https://ai.stanford.edu/~amaas/data/sentiment/"
+      },
+      {
+        "name": "Twitter Sentiment140",
+        "url": "https://www.kaggle.com/datasets/kazanova/sentiment140"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Hugging Face Sentiment Models",
+        "url": "https://huggingface.co/models?pipeline_tag=text-classification&sort=downloads"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Preprocess text: lowercase, remove URLs, handle emojis",
+      "Compare traditional (TF-IDF + SVM) vs transformer approaches",
+      "Use stratified train/test splits for balanced evaluation",
+      "Report precision, recall, and F1-score per class",
+      "Visualize confusion matrix and word clouds"
+    ]
+  },
+  "project-007": {
+    "title": "Image Classification with CNNs",
+    "documentation": [
+      {
+        "name": "TensorFlow Keras CNN Guide",
+        "url": "https://www.tensorflow.org/tutorials/images/cnn"
+      },
+      {
+        "name": "PyTorch Vision Tutorial",
+        "url": "https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html"
+      },
+      {
+        "name": "CS231n CNN Notes",
+        "url": "https://cs231n.github.io/convolutional-networks/"
+      },
+      {
+        "name": "Data Augmentation Guide",
+        "url": "https://www.tensorflow.org/tutorials/images/data_augmentation"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "CIFAR-10 Dataset",
+        "url": "https://www.cs.toronto.edu/~kriz/cifar.html"
+      },
+      {
+        "name": "MNIST Handwritten Digits",
+        "url": "https://www.kaggle.com/datasets/avnishnish/mnist-original"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Keras Layers API",
+        "url": "https://keras.io/api/layers/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Start with a simple architecture, add complexity gradually",
+      "Use data augmentation to prevent overfitting",
+      "Monitor training/validation loss curves",
+      "Use learning rate scheduling",
+      "Visualize filters and activation maps for interpretability"
+    ]
+  },
+  "project-008": {
+    "title": "RAG-Powered Study Assistant",
+    "documentation": [
+      {
+        "name": "LangChain Documentation",
+        "url": "https://python.langchain.com/docs/"
+      },
+      {
+        "name": "ChromaDB Getting Started",
+        "url": "https://docs.trychroma.com/docs/overview/getting-started"
+      },
+      {
+        "name": "Sentence Transformers",
+        "url": "https://www.sbert.net/"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "LangChain Documentation (as knowledge base)",
+        "url": "https://python.langchain.com/docs/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "ChromaDB Python Client",
+        "url": "https://docs.trychroma.com/docs/overview/introduction"
+      },
+      {
+        "name": "OpenAI Embeddings API",
+        "url": "https://platform.openai.com/docs/guides/embeddings"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "RAG Template",
+        "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/"
+      }
+    ],
+    "best_practices": [
+      "Chunk documents strategically (500-1000 tokens with overlap)",
+      "Use appropriate embedding models for your domain",
+      "Implement hybrid search (semantic + keyword)",
+      "Evaluate retrieval quality with precision@k and recall@k",
+      "Add citation tracking for generated answers"
+    ]
+  },
+  "project-009": {
+    "title": "Serverless URL Shortener",
+    "documentation": [
+      {
+        "name": "AWS Lambda Developer Guide",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+      },
+      {
+        "name": "API Gateway Documentation",
+        "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/"
+      },
+      {
+        "name": "DynamoDB Developer Guide",
+        "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/"
+      },
+      {
+        "name": "Serverless Framework Docs",
+        "url": "https://www.serverless.com/framework/docs/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "AWS SDK for Python (boto3)",
+        "url": "https://boto3.amazonaws.com/v1/documentation/api/latest/index.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Serverless Framework Template",
+        "url": "https://www.serverless.com/framework/docs/providers/aws/examples/"
+      }
+    ],
+    "best_practices": [
+      "Use environment variables for configuration",
+      "Implement proper error handling and logging",
+      "Add rate limiting to prevent abuse",
+      "Monitor with AWS CloudWatch",
+      "Use DynamoDB for low-latency key-value lookups"
+    ]
+  },
+  "project-010": {
+    "title": "Kubernetes CI/CD Pipeline",
+    "documentation": [
+      {
+        "name": "Kubernetes Documentation",
+        "url": "https://kubernetes.io/docs/"
+      },
+      {
+        "name": "GitHub Actions Guide",
+        "url": "https://docs.github.com/en/actions"
+      },
+      {
+        "name": "Helm Charts Guide",
+        "url": "https://helm.sh/docs/"
+      },
+      {
+        "name": "ArgoCD Documentation",
+        "url": "https://argo-cd.readthedocs.io/en/stable/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Kubernetes API Reference",
+        "url": "https://kubernetes.io/docs/reference/kubernetes-api/"
+      },
+      {
+        "name": "GitHub Actions API",
+        "url": "https://docs.github.com/en/rest/actions"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "GitHub Actions Starter Workflows",
+        "url": "https://github.com/actions/starter-workflows"
+      }
+    ],
+    "best_practices": [
+      "Use namespaces for environment isolation",
+      "Implement proper RBAC policies",
+      "Use secrets management for sensitive data",
+      "Set up proper health checks (liveness, readiness)",
+      "Implement rollback strategies"
+    ]
+  },
+  "project-011": {
+    "title": "Network Traffic Analyzer",
+    "documentation": [
+      {
+        "name": "Wireshark User Guide",
+        "url": "https://www.wireshark.org/docs/"
+      },
+      {
+        "name": "Scapy Documentation",
+        "url>": "https://scapy.readthedocs.io/"
+      },
+      {
+        "name": "NetworkX Documentation",
+        "url": "https://networkx.org/documentation/stable/"
+      },
+      {
+        "name": "Pandas for Network Analysis",
+        "url": "https://pandas.pydata.org/docs/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "CICIDS 2017 Dataset",
+        "url": "https://www.unb.ca/cic/datasets/ids-2017.html"
+      },
+      {
+        "name": "Kaggle Network Traffic",
+        "url": "https://www.kaggle.com/datasets?search=network+traffic"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Scapy Packet Manipulation",
+        "url": "https://scapy.readthedocs.io/en/latest/usage.html"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use packet capture filters to reduce noise",
+      "Implement protocol parsing hierarchically",
+      "Store processed data in structured formats (Parquet/CSV)",
+      "Create time-series visualizations for traffic patterns",
+      "Anonymize sensitive data in captures before sharing"
+    ]
+  },
+  "project-012": {
+    "title": "Vulnerability Scanner Dashboard",
+    "documentation": [
+      {
+        "name": "OWASP Testing Guide",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/"
+      },
+      {
+        "name": "Nmap Documentation",
+        "url": "https://nmap.org/book/"
+      },
+      {
+        "name": "Flask/Dash for Dashboards",
+        "url": "https://dash.plotly.com/"
+      },
+      {
+        "name": "CVE Database",
+        "url": "https://cve.mitre.org/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "NVD (National Vulnerability Database)",
+        "url": "https://nvd.nist.gov/"
+      },
+      {
+        "name": "Exploit-DB",
+        "url": "https://www.exploit-db.com/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "NVD API",
+        "url": "https://nvd.nist.gov/developers/vulnerabilities"
+      },
+      {
+        "name": "Nmap Scripting Engine",
+        "url": "https://nmap.org/book/nse.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Dash Bootstrap Template",
+        "url": "https://dash-bootstrap-components.opensource.faculty.ai/"
+      }
+    ],
+    "best_practices": [
+      "Only scan systems you have permission to test",
+      "Implement proper authentication for the dashboard",
+      "Use CVE scoring (CVSS) for prioritization",
+      "Generate automated reports in PDF/HTML format",
+      "Schedule regular scans and track remediation progress"
+    ]
+  },
+  "project-013": {
+    "title": "Real-time Chat Application",
+    "documentation": [
+      {
+        "name": "Socket.io Documentation",
+        "url": "https://socket.io/docs/v4/"
+      },
+      {
+        "name": "React Hooks Guide",
+        "url": "https://react.dev/learn/hooks-overview"
+      },
+      {
+        "name": "MongoDB Node.js Driver",
+        "url": "https://www.mongodb.com/docs/drivers/node-current/"
+      },
+      {
+        "name": "Express.js Guide",
+        "url": "https://expressjs.com/en/guide/routing.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Socket.io API",
+        "url": "https://socket.io/docs/v4/client-api/"
+      },
+      {
+        "name": "MongoDB CRUD Operations",
+        "url": "https://www.mongodb.com/docs/manual/crud/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "MERN Stack Template",
+        "url": "https://github.com/bradtraversy/mern-jwt-auth"
+      }
+    ],
+    "best_practices": [
+      "Use rooms for group chat isolation",
+      "Implement message queuing for offline users",
+      "Sanitize all user inputs to prevent XSS",
+      "Use JWT with short expiry for WebSocket auth",
+      "Implement message pagination for chat history"
+    ]
+  },
+  "project-014": {
+    "title": "Cloud Cost Optimization Tool",
+    "documentation": [
+      {
+        "name": "AWS Boto3 Documentation",
+        "url": "https://boto3.amazonaws.com/v1/documentation/api/latest/index.html"
+      },
+      {
+        "name": "AWS Cost Explorer API",
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/"
+      },
+      {
+        "name": "Terraform AWS Provider",
+        "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs"
+      },
+      {
+        "name": "AWS Budgets Guide",
+        "url": "https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Boto3 Cost Explorer",
+        "url": "https://boto3.amazonaws.com/v1/documentation/api/latest/reference/aws.ce.html"
+      },
+      {
+        "name": "AWS Cost Management API",
+        "url": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Terraform AWS Module",
+        "url": "https://registry.terraform.io/modules/terraform-aws-modules/"
+      }
+    ],
+    "best_practices": [
+      "Cache API responses to reduce costs",
+      "Use IAM roles with least privilege",
+      "Implement cost anomaly detection",
+      "Schedule regular cost reports",
+      "Tag all resources for cost allocation"
+    ]
+  },
+  "project-015": {
+    "title": "E-commerce Recommendation Engine",
+    "documentation": [
+      {
+        "name": "Surprise Library Documentation",
+        "url": "http://surpriselib.com/"
+      },
+      {
+        "name": "Scikit-learn Recommendation Guide",
+        "url": "https://scikit-learn.org/stable/modules/multiclass.html"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Recommendation Systems Guide",
+        "url": "https://surprise.readthedocs.io/en/stable/getting_started.html"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Amazon Product Reviews",
+        "url": "https://www.kaggle.com/datasets/bittlingmayer/amazonreviews"
+      },
+      {
+        "name": "MovieLens Dataset",
+        "url": "https://grouplens.org/datasets/movielens/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Surprise API Reference",
+        "url": "https://surprise.readthedocs.io/en/stable/FAQ.html"
+      },
+      {
+        "name": "FastAPI Response Models",
+        "url": "https://fastapi.tiangolo.com/tutorial/response-model/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Split data chronologically for temporal validation",
+      "Handle cold start problem for new users/items",
+      "Use hybrid approaches for better coverage",
+      "Implement A/B testing for recommendation quality",
+      "Monitor for popularity bias in recommendations"
+    ]
+  },
+  "project-016": {
+    "title": "Blockchain-based Voting System",
+    "documentation": [
+      {
+        "name": "Solidity Documentation",
+        "url": "https://docs.soliditylang.org/"
+      },
+      {
+        "name": "Truffle Suite Guide",
+        "url": "https://trufflesuite.com/docs/"
+      },
+      {
+        "name": "Web3.js Documentation",
+        "url": "https://web3js.readthedocs.io/en/v4.0.1/"
+      },
+      {
+        "name": "Ethereum Developer Resources",
+        "url": "https://ethereum.org/en/developers/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Solidity Smart Contracts",
+        "url": "https://docs.soliditylang.org/en/latest/"
+      },
+      {
+        "name": "Ganache CLI",
+        "url": "https://github.com/trufflesuite/ganache"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Truffle Box",
+        "url": "https://trufflesuite.com/boxes/"
+      }
+    ],
+    "best_practices": [
+      "Audit smart contracts before deployment",
+      "Use events for on-chain logging",
+      "Implement voter eligibility verification",
+      "Test thoroughly on Ganache before testnet",
+      "Use OpenZeppelin for standard patterns"
+    ]
+  },
+  "project-017": {
+    "title": "AI-Powered Code Review Assistant",
+    "documentation": [
+      {
+        "name": "IBM Granite Documentation",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "CodeQL Documentation",
+        "url": "https://codeql.github.com/docs/"
+      },
+      {
+        "name": "GitPython Documentation",
+        "url": "https://gitpython.readthedocs.io/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "IBM Granite API",
+        "url": "https://github.com/IBM Granite"
+      },
+      {
+        "name": "CodeQL CLI",
+        "url": "https://codeql.github.com/docs/codeql-cli-reference/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Implement rate limiting for LLM calls",
+      "Cache frequent code analysis results",
+      "Use AST parsing for accurate code understanding",
+      "Implement severity levels for findings",
+      "Log all review actions for audit trail"
+    ]
+  },
+  "project-018": {
+    "title": "IoT Smart Home Dashboard",
+    "documentation": [
+      {
+        "name": "MQTT Protocol Documentation",
+        "url": "https://mqtt.org/documentation/"
+      },
+      {
+        "name": "ESP8266 Arduino Guide",
+        "url": "https://arduino-esp8266.readthedocs.io/"
+      },
+      {
+        "name": "Grafana Tutorials",
+        "url": "https://grafana.com/tutorials/"
+      },
+      {
+        "name": "React Dashboard Guide",
+        "url": "https://react.dev/learn"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Paho MQTT Python",
+        "url": "https://eclipse.dev/paho/files/paho.mqtt.python/html/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "MQTT Broker Docker",
+        "url": "https://hub.docker.com/_/eclipse-mosquitto"
+      }
+    ],
+    "best_practices": [
+      "Use QoS levels appropriately for different message types",
+      "Implement TLS for MQTT communication",
+      "Use device IDs and topics for message isolation",
+      "Implement heartbeat for device health monitoring",
+      "Use message retained flags for last known state"
+    ]
+  },
+  "project-019": {
+    "title": "Automated Resume Parser",
+    "documentation": [
+      {
+        "name": "PyPDF2 Documentation",
+        "url": "https://pypdf2.readthedocs.io/"
+      },
+      {
+        "name": "Spacy NLP Tutorial",
+        "url": "https://spacy.io/usage"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "NLTK Documentation",
+        "url": "https://www.nltk.org/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Resume Dataset",
+        "url": "https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Spacy Entity Recognition",
+        "url": "https://spacy.io/usage/linguistic-features#named-entities"
+      },
+      {
+        "name": "FastAPI File Upload",
+        "url": "https://fastapi.tiangolo.com/tutorial/request-files/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use regex patterns for email and phone extraction",
+      "Train custom NER models for domain-specific entities",
+      "Handle multi-column resume layouts",
+      "Implement confidence scores for extracted fields",
+      "Support multiple PDF encodings"
+    ]
+  },
+  "project-020": {
+    "title": "Containerized CI/CD Pipeline",
+    "documentation": [
+      {
+        "name": "Jenkins Documentation",
+        "url": "https://www.jenkins.io/doc/"
+      },
+      {
+        "name": "Kubernetes Tutorials",
+        "url": "https://kubernetes.io/docs/tutorials/"
+      },
+      {
+        "name": "Docker Best Practices",
+        "url": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/"
+      },
+      {
+        "name": "Helm Charts Guide",
+        "url": "https://helm.sh/docs/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Jenkins Pipeline Syntax",
+        "url": "https://www.jenkins.io/doc/book/pipeline/syntax/"
+      },
+      {
+        "name": "Kubernetes API",
+        "url": "https://kubernetes.io/docs/reference/kubernetes-api/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Jenkins Pipeline Templates",
+        "url": "https://github.com/jenkinsci/pipeline-examples"
+      }
+    ],
+    "best_practices": [
+      "Use multi-stage Docker builds for smaller images",
+      "Implement proper secret management",
+      "Use namespace isolation for environments",
+      "Implement automated rollback on failure",
+      "Use Helm values files for environment config"
+    ]
+  },
+  "project-021": {
+    "title": "Real-time Sports Analytics Dashboard",
+    "documentation": [
+      {
+        "name": "Plotly Dash Documentation",
+        "url": "https://dash.plotly.com/"
+      },
+      {
+        "name": "Apache Kafka Tutorial",
+        "url": "https://kafka.apache.org/documentation/#gettingStarted"
+      },
+      {
+        "name": "Redis Streams Guide",
+        "url": "https://redis.io/docs/data-types/streams/"
+      },
+      {
+        "name": "Data Visualization Best Practices",
+        "url": "https://www.tableau.com/blog/examining-data-viz-rules"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Sports API Data",
+        "url": "https://www.thesportsdocs.com/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Confluent Kafka Python",
+        "url": "https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/"
+      },
+      {
+        "name": "Dash Callbacks",
+        "url": "https://dash.plotly.com/basic-callbacks"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Dash Bootstrap Template",
+        "url": "https://dash-bootstrap-components.opensource.faculty.ai/"
+      }
+    ],
+    "best_practices": [
+      "Use Kafka consumer groups for parallel processing",
+      "Implement data windowing for real-time aggregations",
+      "Use Redis for caching frequent queries",
+      "Optimize Dash callback chains for performance",
+      "Handle late-arriving data gracefully"
+    ]
+  },
+  "project-022": {
+    "title": "Content Management System (CMS)",
+    "documentation": [
+      {
+        "name": "Django Documentation",
+        "url": "https://docs.djangoproject.com/"
+      },
+      {
+        "name": "Django REST Framework",
+        "url": "https://www.django-rest-framework.org/"
+      },
+      {
+        "name": "PostgreSQL Guide",
+        "url": "https://www.postgresql.org/docs/"
+      },
+      {
+        "name": "Redis Django Cache",
+        "url": "https://docs.djangoproject.com/en/4.2/topics/cache/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Django REST Framework Serializers",
+        "url": "https://www.django-rest-framework.org/api-guide/serializers/"
+      },
+      {
+        "name": "Celery Documentation",
+        "url": "https://docs.celeryq.dev/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Django DRF Template",
+        "url": "https://github.com/encode/django-rest-framework/tree/master"
+      }
+    ],
+    "best_practices": [
+      "Use Django permissions for role-based access",
+      "Implement content versioning with reversion",
+      "Use Celery for async tasks like image processing",
+      "Implement Redis caching for frequently accessed content",
+      "Use Django signals for audit logging"
+    ]
+  },
+  "project-023": {
+    "title": "Cryptocurrency Trading Bot",
+    "documentation": [
+      {
+        "name": "CCXT Documentation",
+        "url": "https://github.com/ccxt/ccxt#readme"
+      },
+      {
+        "name": "TA-Lib Python Guide",
+        "url": "https://ta-lib.github.io/ta-lib-python/"
+      },
+      {
+        "name": "Pandas for Finance",
+        "url": "https://pandas.pydata.org/docs/user_guide/cookbook.html"
+      },
+      {
+        "name": "Trading Strategy Guide",
+        "url": "https://www.investopedia.com/articles/active-trading/101014/basics-algorithmic-trading-concepts-and-examples.asp"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Binance Historical Data",
+        "url": "https://www.binance.com/en/finance"
+      },
+      {
+        "name": "Yahoo Finance (via yfinance)",
+        "url": "https://pypi.org/project/yfinance/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "CCXT Exchange List",
+        "url": "https://github.com/ccxt/ccxt#supported-cryptocurrency-exchange-markets"
+      },
+      {
+        "name": "TA-Lib Functions",
+        "url": "https://ta-lib.github.io/ta-lib-python/func_groups/momentum_indicators.html"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Always use paper trading mode first",
+      "Implement stop-loss and take-profit orders",
+      "Log all trades for analysis",
+      "Use exponential backoff for API retries",
+      "Implement position sizing based on risk tolerance"
+    ]
+  },
+  "project-024": {
+    "title": "Healthcare Telemedicine Platform",
+    "documentation": [
+      {
+        "name": "WebRTC Documentation",
+        "url": "https://webrtc.org/"
+      },
+      {
+        "name": "SimpleWebRTC Guide",
+        "url": "https://simplewebrtc.com/"
+      },
+      {
+        "name": "HIPAA Compliance Guide",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html"
+      },
+      {
+        "name": "MongoDB Data Modeling",
+        "url": "https://www.mongodb.com/docs/manual/core/data-model-design/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "WebRTC API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
+      },
+      {
+        "name": "Socket.io Rooms",
+        "url": "https://socket.io/docs/v4/rooms/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Encrypt all patient data at rest and in transit",
+      "Implement audit logging for HIPAA compliance",
+      "Use TURN servers for reliable WebRTC connections",
+      "Implement session recording consent flows",
+      "Use short-lived tokens for authentication"
+    ]
+  },
+  "project-025": {
+    "title": "GraphQL API Gateway",
+    "documentation": [
+      {
+        "name": "Apollo Server Docs",
+        "url": "https://www.apollographql.com/docs/apollo-server/"
+      },
+      {
+        "name": "GraphQL Specification",
+        "url": "https://spec.graphql.org/"
+      },
+      {
+        "name": "Apollo Federation",
+        "url": "https://www.apollographql.com/docs/federation/"
+      },
+      {
+        "name": "DataLoader Documentation",
+        "url": "https://github.com/graphql/dataloader"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Apollo Server API",
+        "url": "https://www.apollographql.com/docs/apollo-server/api/apollo-server/"
+      },
+      {
+        "name": "GraphQL SDL Reference",
+        "url": "https://spec.graphql.org/June2018/#sec-Field-Definitions"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Apollo Server Starter",
+        "url": "https://www.apollographql.com/docs/starter/getting-started/"
+      }
+    ],
+    "best_practices": [
+      "Use DataLoader to solve N+1 query problems",
+      "Implement query complexity analysis",
+      "Use persisted queries for production",
+      "Implement proper error handling in resolvers",
+      "Use schema-first design approach"
+    ]
+  },
+  "project-026": {
+    "title": "Movie Recommendation System",
+    "documentation": [
+      {
+        "name": "Surprise Library Documentation",
+        "url": "http://surpriselib.com/"
+      },
+      {
+        "name": "Flask Documentation",
+        "url": "https://flask.palletsprojects.com/"
+      },
+      {
+        "name": "MovieLens Dataset",
+        "url": "https://grouplens.org/datasets/movielens/"
+      },
+      {
+        "name": "Recommendation Systems Guide",
+        "url": "https://surprise.readthedocs.io/en/stable/getting_started.html"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "MovieLens 100K",
+        "url": "https://grouplens.org/datasets/movielens/100k/"
+      },
+      {
+        "name": "MovieLens 25M",
+        "url": "https://grouplens.org/datasets/movielens/25m/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Surprise Algorithm Classes",
+        "url": "https://surprise.readthedocs.io/en/stable/algorithms.html"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use cross-validation for model evaluation",
+      "Handle implicit vs explicit feedback",
+      "Implement similarity metrics (cosine, Pearson)",
+      "Use SVD for matrix factorization",
+      "Provide explanation for recommendations"
+    ]
+  },
+  "project-027": {
+    "title": "Serverless Image Processing Pipeline",
+    "documentation": [
+      {
+        "name": "AWS Lambda Developer Guide",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+      },
+      {
+        "name": "Pillow Documentation",
+        "url": "https://pillow.readthedocs.io/"
+      },
+      {
+        "name": "S3 Event Notifications",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html"
+      },
+      {
+        "name": "CloudFront Developer Guide",
+        "url": "https://docs.aws.amazon.com/cloudfront/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Boto3 S3 API",
+        "url": "https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html"
+      },
+      {
+        "name": "Pillow ImageOps",
+        "url": "https://pillow.readthedocs.io/en/stable/reference/ImageOps.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "AWS Lambda Python Template",
+        "url": "https://github.com/awslabs/aws-sam-cli/tree/master/templates"
+      }
+    ],
+    "best_practices": [
+      "Use Lambda layers for shared dependencies",
+      "Implement dead-letter queues for failed processing",
+      "Optimize memory allocation for Lambda",
+      "Use S3 lifecycle policies for cost management",
+      "Implement image format detection before processing"
+    ]
+  },
+  "project-028": {
+    "title": "Social Media Sentiment Analysis",
+    "documentation": [
+      {
+        "name": "Tweepy Documentation",
+        "url": "https://docs.tweepy.dev/"
+      },
+      {
+        "name": "NLTK Documentation",
+        "url": "https://www.nltk.org/"
+      },
+      {
+        "name": "TextBlob Guide",
+        "url": "https://textblob.readthedocs.io/"
+      },
+      {
+        "name": "Plotly Express",
+        "url": "https://plotly.com/python/plotly-express/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Twitter Sentiment140",
+        "url": "https://www.kaggle.com/datasets/kazanova/sentiment140"
+      },
+      {
+        "name": "SemEval Datasets",
+        "url": "https://alt.qcri.org/semeval2017/task4/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Tweepy API Reference",
+        "url": "https://docs.tweepy.dev/en/latest/api.html"
+      },
+      {
+        "name": "TextBlob Sentiment",
+        "url": "https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Handle rate limiting from Twitter API",
+      "Preprocess text: remove URLs, mentions, hashtags",
+      "Use lexicon-based and ML approaches together",
+      "Account for sarcasm and negation in sentiment",
+      "Store raw and processed data separately"
+    ]
+  },
+  "project-029": {
+    "title": "Kubernetes Cluster Setup",
+    "documentation": [
+      {
+        "name": "Kubernetes Documentation",
+        "url": "https://kubernetes.io/docs/"
+      },
+      {
+        "name": "Prometheus Getting Started",
+        "url": "https://prometheus.io/docs/prometheus/latest/getting_started/"
+      },
+      {
+        "name": "Grafana Tutorials",
+        "url": "https://grafana.com/tutorials/"
+      },
+      {
+        "name": "Istio Documentation",
+        "url": "https://istio.io/latest/docs/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Kubernetes API Reference",
+        "url": "https://kubernetes.io/docs/reference/kubernetes-api/"
+      },
+      {
+        "name": "PromQL Reference",
+        "url": "https://prometheus.io/docs/prometheus/latest/querying/basics/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Kubernetes Helm Charts",
+        "url": "https://artifacthub.io/"
+      }
+    ],
+    "best_practices": [
+      "Use namespaces for environment separation",
+      "Implement resource quotas and limits",
+      "Use network policies for security",
+      "Enable RBAC for access control",
+      "Use Helm for reproducible deployments"
+    ]
+  },
+  "project-030": {
+    "title": "Serverless E-commerce Backend",
+    "documentation": [
+      {
+        "name": "AWS Lambda Developer Guide",
+        "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+      },
+      {
+        "name": "Stripe API Documentation",
+        "url": "https://stripe.com/docs/api"
+      },
+      {
+        "name": "AWS Cognito Developer Guide",
+        "url": "https://docs.aws.amazon.com/cognito/"
+      },
+      {
+        "name": "DynamoDB Developer Guide",
+        "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Stripe Checkout Sessions",
+        "url": "https://stripe.com/docs/payments/checkout"
+      },
+      {
+        "name": "DynamoDB Query API",
+        "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Query.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "AWS SAM Template",
+        "url": "https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template-basics.html"
+      }
+    ],
+    "best_practices": [
+      "Use DynamoDB single-table design for e-commerce",
+      "Implement idempotency for payment processing",
+      "Use Cognito for user management",
+      "Implement optimistic concurrency for inventory",
+      "Use Step Functions for order processing workflows"
+    ]
+  },
+  "project-031": {
+    "title": "Neural Style Transfer App",
+    "documentation": [
+      {
+        "name": "TensorFlow Tutorials",
+        "url": "https://www.tensorflow.org/tutorials"
+      },
+      {
+        "name": "Neural Style Transfer Paper",
+        "url": "https://arxiv.org/abs/1508.06576"
+      },
+      {
+        "name": "OpenCV Python Tutorials",
+        "url": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html"
+      },
+      {
+        "name": "Flask Documentation",
+        "url": "https://flask.palletsprojects.com/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "WikiArt Dataset",
+        "url": "https://www.kaggle.com/c/painter-by-numbers"
+      },
+      {
+        "name": "COCO Dataset",
+        "url": "https://cocodataset.org/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "TensorFlow Hub Models",
+        "url": "https://tfhub.dev/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use pre-trained VGG19 for feature extraction",
+      "Implement content and style loss separately",
+      "Use Adam optimizer with appropriate learning rate",
+      "Implement real-time preview with lower resolution",
+      "Cache style models for repeated use"
+    ]
+  },
+  "project-032": {
+    "title": "Log Analysis & Anomaly Detection",
+    "documentation": [
+      {
+        "name": "Scikit-learn Anomaly Detection",
+        "url": "https://scikit-learn.org/stable/modules/outlier_detection.html"
+      },
+      {
+        "name": "Elasticsearch Log Analysis",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+      },
+      {
+        "name": "Pandas Documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "name": "Kibana Tutorial",
+        "url": "https://www.elastic.co/guide/en/kibana/current/getting-started.html"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Log Hub Dataset",
+        "url": "https://github.com/logpai/LogHub"
+      },
+      {
+        "name": "BGL Dataset",
+        "url": "https://www.usenix.org/publications/proceedings?page=0"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Scikit-learn IsolationForest",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Parse log templates before anomaly detection",
+      "Use Isolation Forest for unsupervised anomaly detection",
+      "Implement sliding window for temporal patterns",
+      "Use TF-IDF for log vectorization",
+      "Set appropriate contamination parameter"
+    ]
+  },
+  "project-033": {
+    "title": "Ansible Automation Playbooks",
+    "documentation": [
+      {
+        "name": "Ansible Documentation",
+        "url": "https://docs.ansible.com/ansible/latest/index.html"
+      },
+      {
+        "name": "Ansible Galaxy",
+        "url": "https://galaxy.ansible.com/"
+      },
+      {
+        "name": "AWX Documentation",
+        "url": "https://docs.ansible.com/awx/latest/"
+      },
+      {
+        "name": "Playbook Best Practices",
+        "url": "https://docs.ansible.com/ansible/latest/tips_tricks/ansible_tips_tricks.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Ansible Module Index",
+        "url": "https://docs.ansible.com/ansible/latest/collections/index.html"
+      },
+      {
+        "name": "Ansible Vault",
+        "url": "https://docs.ansible.com/ansible/latest/vault_guide/index.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Ansible Galaxy Roles",
+        "url": "https://galaxy.ansible.com/roles"
+      }
+    ],
+    "best_practices": [
+      "Use Ansible Vault for secrets management",
+      "Write idempotent playbooks",
+      "Use roles for reusable components",
+      "Implement dry-run mode (--check) for validation",
+      "Use inventory groups for environment separation"
+    ]
+  },
+  "project-034": {
+    "title": "Healthcare Data Analytics Pipeline",
+    "documentation": [
+      {
+        "name": "Apache Airflow Documentation",
+        "url": "https://airflow.apache.org/docs/"
+      },
+      {
+        "name": "dbt Documentation",
+        "url": "https://docs.getdbt.com/"
+      },
+      {
+        "name": "HIPAA Compliance Checklist",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html"
+      },
+      {
+        "name": "FHIR Standard",
+        "url": "https://www.hl7.org/fhir/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "MIMIC-III Dataset",
+        "url": "https://physionet.org/content/mimiciii/1.4/"
+      },
+      {
+        "name": "Synthea Synthetic Data",
+        "url": "https://synthea.mitre.org/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Airflow DAG API",
+        "url": "https://airflow.apache.org/docs/apache-airflow/stable/concepts/dags.html"
+      },
+      {
+        "name": "dbt Core API",
+        "url": "https://docs.getdbt.com/reference/dbt-projects/dbt-projects"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Airflow Docker Compose",
+        "url": "https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html"
+      }
+    ],
+    "best_practices": [
+      "Encrypt PHI data at rest and in transit",
+      "Implement data de-identification pipelines",
+      "Use Airflow connections for credential management",
+      "Implement data quality checks with dbt tests",
+      "Maintain audit trails for all data access"
+    ]
+  },
+  "project-035": {
+    "title": "Cross-platform Mobile App (Flutter)",
+    "documentation": [
+      {
+        "name": "Flutter Documentation",
+        "url": "https://docs.flutter.dev/"
+      },
+      {
+        "name": "Dart Language Guide",
+        "url": "https://dart.dev/guides"
+      },
+      {
+        "name": "Firebase for Flutter",
+        "url": "https://firebase.google.com/docs/flutter/setup"
+      },
+      {
+        "name": "Provider Package",
+        "url": "https://pub.dev/packages/provider"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Flutter Widget Catalog",
+        "url": "https://docs.flutter.dev/ui/widgets"
+      },
+      {
+        "name": "Firebase Flutter Plugins",
+        "url": "https://firebase.flutter.dev/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Flutter Starter Template",
+        "url": "https://github.com/nickvdyck/flutter-starter-template"
+      }
+    ],
+    "best_practices": [
+      "Use Provider for state management",
+      "Implement responsive layouts with LayoutBuilder",
+      "Use Flutter's built-in widgets for performance",
+      "Handle platform-specific code with if kIsWeb",
+      "Implement proper error handling with try-catch"
+    ]
+  },
+  "project-036": {
+    "title": "Elasticsearch Search Engine",
+    "documentation": [
+      {
+        "name": "Elasticsearch Documentation",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+      },
+      {
+        "name": "Kibana Guide",
+        "url": "https://www.elastic.co/guide/en/kibana/current/index.html"
+      },
+      {
+        "name": "Spring Data Elasticsearch",
+        "url": "https://spring.io/projects/spring-data-elasticsearch"
+      },
+      {
+        "name": "Search Best Practices",
+        "url": "https://www.elastic.co/blog/found/elasticsearch-from-the-upside-down"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Wikipedia Dataset",
+        "url": "https://www.elastic.co/guide/en/kibana/current/tutorial-load-dataset.html"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Elasticsearch Query DSL",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html"
+      },
+      {
+        "name": "Elasticsearch Analyzers",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Elastic Docker Compose",
+        "url": "https://github.com/elastic/elasticsearch/blob/main/docs/reference/setup/install/docker.asciidoc"
+      }
+    ],
+    "best_practices": [
+      "Design mapping before indexing data",
+      "Use appropriate analyzers for text fields",
+      "Implement scroll API for large result sets",
+      "Use index aliases for zero-downtime reindexing",
+      "Monitor cluster health and shard allocation"
+    ]
+  },
+  "project-037": {
+    "title": "Terraform Infrastructure Automation",
+    "documentation": [
+      {
+        "name": "Terraform Documentation",
+        "url": "https://developer.hashicorp.com/terraform/docs"
+      },
+      {
+        "name": "AWS Provider Guide",
+        "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs"
+      },
+      {
+        "name": "Terragrunt Documentation",
+        "url": "https://terragrunthtml.com/"
+      },
+      {
+        "name": "Terraform Best Practices",
+        "url": "https://www.terraform-best-practices.com/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Terraform CLI",
+        "url": "https://developer.hashicorp.com/terraform/cli"
+      },
+      {
+        "name": "Terraform Import",
+        "url": "https://developer.hashicorp.com/terraform/cli/import"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Terraform Module Registry",
+        "url": "https://registry.terraform.io/browse/modules"
+      }
+    ],
+    "best_practices": [
+      "Use remote state with locking",
+      "Implement workspaces for environment separation",
+      "Use modules for reusable infrastructure",
+      "Implement terraform plan before apply",
+      "Use sensitive variables for secrets"
+    ]
+  },
+  "project-038": {
+    "title": "Digital Media Asset Management",
+    "documentation": [
+      {
+        "name": "MongoDB GridFS Documentation",
+        "url": "https://www.mongodb.com/docs/manual/core/gridfs/"
+      },
+      {
+        "name": "Elasticsearch Documentation",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+      },
+      {
+        "name": "AWS S3 Developer Guide",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/"
+      },
+      {
+        "name": "React Documentation",
+        "url": "https://react.dev/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Multer (File Upload)",
+        "url": "https://github.com/expressjs/multer"
+      },
+      {
+        "name": "Sharp Image Processing",
+        "url": "https://sharp.pixelplumbing.com/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use chunked file uploads for large media",
+      "Generate thumbnails for fast previews",
+      "Implement MIME type validation",
+      "Use CDN for media delivery",
+      "Implement access control for shared assets"
+    ]
+  },
+  "project-039": {
+    "title": "ML Model Monitoring System",
+    "documentation": [
+      {
+        "name": "MLflow Documentation",
+        "url": "https://mlflow.org/docs/latest/index.html"
+      },
+      {
+        "name": "Evidently AI Documentation",
+        "url": "https://docs.evidentlyai.com/"
+      },
+      {
+        "name": "Prometheus Documentation",
+        "url": "https://prometheus.io/docs/"
+      },
+      {
+        "name": "Grafana Tutorials",
+        "url": "https://grafana.com/tutorials/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "MLflow Tracking API",
+        "url": "https://mlflow.org/docs/latest/tracking.html"
+      },
+      {
+        "name": "Evidently Reports",
+        "url": "https://docs.evidentlyai.com/docs/library/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "MLflow Docker Setup",
+        "url": "https://github.com/mlflow/mlflow/tree/master/examples/docker"
+      }
+    ],
+    "best_practices": [
+      "Log all experiments with MLflow",
+      "Implement data drift detection with Evidently",
+      "Use Prometheus metrics for model performance",
+      "Set up alerts for performance degradation",
+      "Maintain model registry for versioning"
+    ]
+  },
+  "project-040": {
+    "title": "Dynamic Pricing Engine",
+    "documentation": [
+      {
+        "name": "Scikit-learn Documentation",
+        "url": "https://scikit-learn.org/stable/"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Pandas Documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "name": "Pricing Strategy Guide",
+        "url": "https://www.priceintelligently.com/blog/price-optimization"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "E-commerce Dataset",
+        "url": "https://www.kaggle.com/datasets/carrie1/ecommerce-data"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Scikit-learn Regression",
+        "url": "https://scikit-learn.org/stable/supervised_learning.html#supervised-learning"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use time series features for demand prediction",
+      "Implement price elasticity analysis",
+      "Use A/B testing for price optimization",
+      "Monitor revenue impact of price changes",
+      "Implement guardrails for extreme price changes"
+    ]
+  },
+  "project-041": {
+    "title": "Progressive Web App (PWA)",
+    "documentation": [
+      {
+        "name": "PWA Documentation",
+        "url": "https://web.dev/articles/what-are-pwas"
+      },
+      {
+        "name": "Service Worker API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"
+      },
+      {
+        "name": "Workbox Documentation",
+        "url": "https://developer.chrome.com/docs/workbox/"
+      },
+      {
+        "name": "Web App Manifest",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Manifest"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Cache API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Cache"
+      },
+      {
+        "name": "Push API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Push_API"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Workbox Webpack Plugin",
+        "url": "https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin/"
+      }
+    ],
+    "best_practices": [
+      "Implement proper service worker lifecycle",
+      "Use Workbox for caching strategies",
+      "Implement offline-first design pattern",
+      "Use Lighthouse for PWA auditing",
+      "Implement background sync for form submissions"
+    ]
+  },
+  "project-042": {
+    "title": "Data Lineage & Governance",
+    "documentation": [
+      {
+        "name": "Apache Atlas Documentation",
+        "url": "https://atlas.apache.org/latest/"
+      },
+      {
+        "name": "OpenMetadata Documentation",
+        "url": "https://docs.open-metadata.org/"
+      },
+      {
+        "name": "DataHub Documentation",
+        "url": "https://datahubproject.io/docs/"
+      },
+      {
+        "name": "Data Governance Framework",
+        "url": "https://www.dataversity.net/what-is-data-governance/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Apache Atlas API",
+        "url": "https://atlas.apache.org/api/v2/index.html"
+      },
+      {
+        "name": "OpenMetadata REST API",
+        "url": "https://docs.open-metadata.org/developers/rest-apis"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "OpenMetadata Docker",
+        "url": "https://docs.open-metadata.org/latest/deployment/docker"
+      }
+    ],
+    "best_practices": [
+      "Implement metadata collection at ingestion",
+      "Use automated classification for PII data",
+      "Maintain data catalog with ownership info",
+      "Implement data quality SLAs",
+      "Track data freshness and update frequency"
+    ]
+  },
+  "project-043": {
+    "title": "Biometric Authentication System",
+    "documentation": [
+      {
+        "name": "OpenCV Documentation",
+        "url": "https://docs.opencv.org/"
+      },
+      {
+        "name": "Dlib Documentation",
+        "url": "http://dlib.net/"
+      },
+      {
+        "name": "PyTorch Tutorials",
+        "url": "https://pytorch.org/tutorials/"
+      },
+      {
+        "name": "Face Recognition Papers",
+        "url": "https://arxiv.org/abs/1503.03832"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "LFW Dataset",
+        "url": "http://vis-www.cs.umass.edu/lfw/"
+      },
+      {
+        "name": "CelebA Dataset",
+        "url": "https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "OpenCV Face Detection",
+        "url": "https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html"
+      },
+      {
+        "name": "face_recognition Library",
+        "url": "https://github.com/ageitgey/face_recognition"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Implement liveness detection to prevent spoofing",
+      "Use face encoding for comparison",
+      "Implement confidence thresholds",
+      "Handle multiple face detection",
+      "Encrypt stored face encodings"
+    ]
+  },
+  "project-044": {
+    "title": "Distributed Task Queue System",
+    "documentation": [
+      {
+        "name": "Celery Documentation",
+        "url": "https://docs.celeryq.dev/"
+      },
+      {
+        "name": "RabbitMQ Tutorial",
+        "url": "https://www.rabbitmq.com/tutorials.html"
+      },
+      {
+        "name": "Flower Monitoring",
+        "url": "https://flower.readthedocs.io/"
+      },
+      {
+        "name": "Redis Queue (RQ)",
+        "url": "https://python-rq.org/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Celery Task API",
+        "url": "https://docs.celeryq.dev/en/stable/userguide/tasks.html"
+      },
+      {
+        "name": "Celery Canvas",
+        "url": "https://docs.celeryq.dev/en/stable/userguide/canvas.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Celery Docker Compose",
+        "url": "https://github.com/mattkohl/celery-docker"
+      }
+    ],
+    "best_practices": [
+      "Use task routing for workload distribution",
+      "Implement retry with exponential backoff",
+      "Set appropriate task time limits",
+      "Use result backends for task status",
+      "Implement rate limiting for API-dependent tasks"
+    ]
+  },
+  "project-045": {
+    "title": "NoSQL Database Migration Tool",
+    "documentation": [
+      {
+        "name": "MongoDB Documentation",
+        "url": "https://www.mongodb.com/docs/"
+      },
+      {
+        "name": "Cassandra Documentation",
+        "url": "https://cassandra.apache.org/doc/latest/"
+      },
+      {
+        "name": "Apache Kafka Documentation",
+        "url": "https://kafka.apache.org/documentation/"
+      },
+      {
+        "name": "Pymongo Documentation",
+        "url": "https://pymongo.readthedocs.io/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Pymongo CRUD",
+        "url": "https://pymongo.readthedocs.io/en/stable/tutorial/crud.html"
+      },
+      {
+        "name": "Cassandra Python Driver",
+        "url": "https://docs.datastax.com/en/developer/python-driver/latest/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use bulk operations for large migrations",
+      "Implement data validation during migration",
+      "Use checksums for data integrity verification",
+      "Implement incremental migration for large datasets",
+      "Maintain migration logs for rollback"
+    ]
+  },
+  "project-046": {
+    "title": "Web Scraping & Monitoring System",
+    "documentation": [
+      {
+        "name": "Scrapy Documentation",
+        "url": "https://docs.scrapy.org/"
+      },
+      {
+        "name": "Selenium Python Docs",
+        "url": "https://www.selenium.dev/documentation/webdriver/"
+      },
+      {
+        "name": "BeautifulSoup Documentation",
+        "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Scrapy Selectors",
+        "url": "https://docs.scrapy.org/en/latest/topics/selectors.html"
+      },
+      {
+        "name": "Selenium WebDriver API",
+        "url": "https://www.selenium.dev/documentation/webdriver/elements/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Scrapy Project Template",
+        "url": "https://docs.scrapy.org/en/latest/intro/tutorial.html"
+      }
+    ],
+    "best_practices": [
+      "Respect robots.txt and rate limits",
+      "Implement proxy rotation for large-scale scraping",
+      "Use Scrapy middleware for user-agent rotation",
+      "Implement change detection with content hashing",
+      "Use headless browser for JavaScript-rendered pages"
+    ]
+  },
+  "project-047": {
+    "title": "Micro-frontend Architecture",
+    "documentation": [
+      {
+        "name": "Webpack 5 Module Federation",
+        "url": "https://webpack.js.org/concepts/module-federation/"
+      },
+      {
+        "name": "Single-SPA Documentation",
+        "url": "https://single-spa.js.org/"
+      },
+      {
+        "name": "React Documentation",
+        "url": "https://react.dev/"
+      },
+      {
+        "name": "Micro-frontend Patterns",
+        "url": "https://micro-frontends.org/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Module Federation Plugin",
+        "url": "https://webpack.js.org/plugins/module-federation-plugin/"
+      },
+      {
+        "name": "single-spa API",
+        "url": "https://single-spa.js.org/docs/api/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Module Federation Examples",
+        "url": "https://github.com/module-federation/module-federation-examples"
+      }
+    ],
+    "best_practices": [
+      "Use shared dependencies to reduce bundle size",
+      "Implement proper error boundaries per micro-frontend",
+      "Use shared state libraries for cross-app communication",
+      "Implement independent deployment pipelines",
+      "Use type definitions for shared contracts"
+    ]
+  },
+  "project-048": {
+    "title": "Log Management System (ELK Stack)",
+    "documentation": [
+      {
+        "name": "Elasticsearch Documentation",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+      },
+      {
+        "name": "Logstash Documentation",
+        "url": "https://www.elastic.co/guide/en/logstash/current/index.html"
+      },
+      {
+        "name": "Kibana Guide",
+        "url": "https://www.elastic.co/guide/en/kibana/current/index.html"
+      },
+      {
+        "name": "Filebeat Reference",
+        "url": "https://www.elastic.co/guide/en/beats/filebeat/current/index.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Logstash Input Plugins",
+        "url": "https://www.elastic.co/guide/en/logstash/current/input-plugins.html"
+      },
+      {
+        "name": "Kibana Dashboard API",
+        "url": "https://www.elastic.co/guide/en/kibana/current/dashboard-api.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "ELK Docker Compose",
+        "url": "https://github.com/elastic/elasticsearch/tree/main/docs/reference/setup/install/docker"
+      }
+    ],
+    "best_practices": [
+      "Use index templates for log mapping",
+      "Implement ILM policies for log retention",
+      "Use Filebeat for lightweight log shipping",
+      "Implement field normalization in Logstash",
+      "Use Kibana alerting for error detection"
+    ]
+  },
+  "project-049": {
+    "title": "AI-powered Resume Builder",
+    "documentation": [
+      {
+        "name": "IBM Granite Documentation",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "React PDF Library",
+        "url": "https://react-pdf.org/"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "NLTK Documentation",
+        "url": "https://www.nltk.org/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "IBM Granite API",
+        "url": "https://github.com/IBM Granite"
+      },
+      {
+        "name": "React PDF Components",
+        "url": "https://react-pdf.org/components"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use structured prompts for content generation",
+      "Implement ATS-friendly formatting",
+      "Use keyword extraction for job matching",
+      "Implement content scoring algorithms",
+      "Support multiple resume templates"
+    ]
+  },
+  "project-050": {
+    "title": "Infrastructure Cost Calculator",
+    "documentation": [
+      {
+        "name": "AWS Pricing API",
+        "url": "https://docs.aws.amazon.com/awsaccountbilling/latest/offeredServices/pricing-calculator.html"
+      },
+      {
+        "name": "Azure Pricing API",
+        "url": "https://azure.microsoft.com/en-us/pricing/"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Cost Optimization Guide",
+        "url": "https://aws.amazon.com/aws-cost-management/aws-cost-optimization/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "AWS Pricing API",
+        "url": "https://docs.aws.amazon.com/awsaccountbilling/latest/offeredServices/pricing-calculator.html"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Cache pricing API responses",
+      "Implement cost estimation formulas",
+      "Use instance families for comparison",
+      "Include data transfer costs",
+      "Implement savings recommendations"
+    ]
+  },
+  "project-051": {
+    "title": "Real-time Collaboration Platform",
+    "documentation": [
+      {
+        "name": "Socket.io Documentation",
+        "url": "https://socket.io/docs/v4/"
+      },
+      {
+        "name": "Yjs CRDT Documentation",
+        "url": "https://docs.yjs.dev/"
+      },
+      {
+        "name": "React Documentation",
+        "url": "https://react.dev/"
+      },
+      {
+        "name": "Conflict Resolution Patterns",
+        "url": "https://martinfowler.com/articles/enterprise-application-patterns.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Socket.io Rooms",
+        "url": "https://socket.io/docs/v4/rooms/"
+      },
+      {
+        "name": "Yjs WebSocket Provider",
+        "url": "https://docs.yjs.dev/ecosystem/connection-provider-y-websocket"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Yjs + Tiptap Editor",
+        "url": "https://github.com/ueberdosis/tiptap"
+      }
+    ],
+    "best_practices": [
+      "Use CRDTs for conflict-free collaboration",
+      "Implement presence indicators for active users",
+      "Use operation batching for performance",
+      "Implement offline support with sync",
+      "Use version history for undo/redo"
+    ]
+  },
+  "project-052": {
+    "title": "Data Quality Framework",
+    "documentation": [
+      {
+        "name": "Great Expectations Documentation",
+        "url": "https://docs.greatexpectations.io/"
+      },
+      {
+        "name": "Pandas Documentation",
+        "url": "https://pandas.pydata.org/docs/"
+      },
+      {
+        "name": "Apache Airflow",
+        "url": "https://airflow.apache.org/docs/"
+      },
+      {
+        "name": "Data Quality Best Practices",
+        "url": "https://www.greatexpectations.io/blog/data-quality-best-practices"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Great Expectations API",
+        "url": "https://docs.greatexpectations.io/docs/reference/api/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Great Expectations Quickstart",
+        "url": "https://docs.greatexpectations.io/docs/guides/setup/installation/index"
+      }
+    ],
+    "best_practices": [
+      "Define expectations collaboratively with stakeholders",
+      "Implement automated quality checks in pipelines",
+      "Use profiling to discover data patterns",
+      "Implement alerting for quality violations",
+      "Maintain quality metrics over time"
+    ]
+  },
+  "project-053": {
+    "title": "AI Chatbot for Customer Support",
+    "documentation": [
+      {
+        "name": "IBM Granite Documentation",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Socket.io Documentation",
+        "url": "https://socket.io/docs/v4/"
+      },
+      {
+        "name": "Conversational AI Guide",
+        "url": "https://www.intercom.com/conversational-ai"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Customer Support Dataset",
+        "url": "https://www.kaggle.com/datasets/thedevastator/customer-support-issues"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "IBM Granite API",
+        "url": "https://github.com/IBM Granite"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Implement conversation context management",
+      "Use intent classification for routing",
+      "Implement fallback to human agents",
+      "Log conversations for model improvement",
+      "Use sentiment analysis for escalation"
+    ]
+  },
+  "project-054": {
+    "title": "Custom Chatbot with RAG",
+    "documentation": [
+      {
+        "name": "LangChain Documentation",
+        "url": "https://python.langchain.com/docs/"
+      },
+      {
+        "name": "ChromaDB Documentation",
+        "url": "https://docs.trychroma.com/"
+      },
+      {
+        "name": "IBM Granite Guide",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "RAG Architecture Guide",
+        "url": "https://research.ibm.com/blog/retrieval-augmented-generation"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Custom Document Collection",
+        "url": ""
+      }
+    ],
+    "api_references": [
+      {
+        "name": "LangChain Retriever",
+        "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/"
+      },
+      {
+        "name": "ChromaDB Python Client",
+        "url": "https://docs.trychroma.com/docs/overview/introduction"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "LangChain RAG Template",
+        "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/"
+      }
+    ],
+    "best_practices": [
+      "Chunk documents with overlap for context",
+      "Use hybrid search (semantic + keyword)",
+      "Implement source citation tracking",
+      "Evaluate retrieval quality with metrics",
+      "Use reranking for improved relevance"
+    ]
+  },
+  "project-055": {
+    "title": "Event-Driven Microservices",
+    "documentation": [
+      {
+        "name": "Apache Kafka Documentation",
+        "url": "https://kafka.apache.org/documentation/"
+      },
+      {
+        "name": "Microservices Patterns",
+        "url": "https://microservices.io/patterns/"
+      },
+      {
+        "name": "Spring Boot Guide",
+        "url": "https://spring.io/guides"
+      },
+      {
+        "name": "Saga Pattern",
+        "url": "https://microservices.io/patterns/data/saga.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Kafka Producer API",
+        "url": "https://kafka.apache.org/34/javadoc/index.html?org/apache/kafka/clients/producer/KafkaProducer.html"
+      },
+      {
+        "name": "Kafka Consumer API",
+        "url": "https://kafka.apache.org/34/javadoc/index.html?org/apache/kafka/clients/consumer/KafkaConsumer.html"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Kafka Docker Compose",
+        "url": "https://github.com/confluentinc/cp-docker-images"
+      }
+    ],
+    "best_practices": [
+      "Implement event sourcing for auditability",
+      "Use saga pattern for distributed transactions",
+      "Implement idempotent consumers",
+      "Use schema registry for event validation",
+      "Implement dead letter queues for failed events"
+    ]
+  },
+  "project-056": {
+    "title": "Real-time Fraud Detection",
+    "documentation": [
+      {
+        "name": "Apache Flink Documentation",
+        "url": "https://flink.apache.org/docs/"
+      },
+      {
+        "name": "Scikit-learn Anomaly Detection",
+        "url": "https://scikit-learn.org/stable/modules/outlier_detection.html"
+      },
+      {
+        "name": "XGBoost Documentation",
+        "url": "https://xgboost.readthedocs.io/"
+      },
+      {
+        "name": "Elasticsearch Documentation",
+        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Credit Card Fraud Dataset",
+        "url": "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Flink Table API",
+        "url": "https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/dev/python/table_api/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Handle class imbalance with SMOTE or undersampling",
+      "Use streaming for real-time detection",
+      "Implement feature engineering pipelines",
+      "Use ensemble methods for better accuracy",
+      "Implement alert suppression for alert fatigue"
+    ]
+  },
+  "project-057": {
+    "title": "RAG-based Document Q&A System",
+    "documentation": [
+      {
+        "name": "LangChain Documentation",
+        "url": "https://python.langchain.com/docs/"
+      },
+      {
+        "name": "ChromaDB Documentation",
+        "url": "https://docs.trychroma.com/"
+      },
+      {
+        "name": "IBM Granite Guide",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "Document Loaders Guide",
+        "url": "https://python.langchain.com/docs/modules/data_connection/document_loaders/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "Custom Document Collection",
+        "url": ""
+      }
+    ],
+    "api_references": [
+      {
+        "name": "LangChain Document Loaders",
+        "url": "https://python.langchain.com/docs/modules/data_connection/document_loaders/"
+      },
+      {
+        "name": "ChromaDB Collection API",
+        "url": "https://docs.trychroma.com/docs/overview/usage-guide"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "LangChain RAG Template",
+        "url": "https://python.langchain.com/docs/modules/data_connection/retrievers/"
+      }
+    ],
+    "best_practices": [
+      "Use recursive text splitting for chunking",
+      "Implement metadata filtering for precision",
+      "Use hybrid search for better recall",
+      "Implement answer quality scoring",
+      "Support multiple document formats"
+    ]
+  },
+  "project-058": {
+    "title": "URL Shortener with Analytics",
+    "documentation": [
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "Redis Python Client",
+        "url": "https://redis-py.readthedocs.io/"
+      },
+      {
+        "name": "Chart.js Documentation",
+        "url": "https://www.chartjs.org/docs/"
+      },
+      {
+        "name": "SQLAlchemy ORM",
+        "url": "https://docs.sqlalchemy.org/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "FastAPI Query Parameters",
+        "url": "https://fastapi.tiangolo.com/tutorial/query-params/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use Redis for high-speed URL lookups",
+      "Implement click tracking asynchronously",
+      "Use Base62 encoding for short URLs",
+      "Implement rate limiting per IP",
+      "Use database indexing for analytics queries"
+    ]
+  },
+  "project-059": {
+    "title": "AI Image Generator Studio",
+    "documentation": [
+      {
+        "name": "Stable Diffusion Documentation",
+        "url": "https://huggingface.co/docs/diffusers/"
+      },
+      {
+        "name": "Hugging Face Diffusers",
+        "url": "https://huggingface.co/docs/diffusers/index"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "React Documentation",
+        "url": "https://react.dev/"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "LAION-5B Dataset",
+        "url": "https://laion.ai/blog/laion-5b/"
+      }
+    ],
+    "api_references": [
+      {
+        "name": "Diffusers Pipeline API",
+        "url": "https://huggingface.co/docs/diffusers/main/en/api/pipelines/stable_diffusion"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use mixed precision for faster generation",
+      "Implement negative prompts for quality control",
+      "Use guidance scale for prompt adherence",
+      "Implement image-to-image for editing",
+      "Use scheduler comparison for quality vs speed"
+    ]
+  },
+  "project-060": {
+    "title": "Password Manager Application",
+    "documentation": [
+      {
+        "name": "Cryptography (Python)",
+        "url": "https://cryptography.io/en/latest/"
+      },
+      {
+        "name": "Web Crypto API",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API"
+      },
+      {
+        "name": "React Documentation",
+        "url": "https://react.dev/"
+      },
+      {
+        "name": "Browser Extension Guide",
+        "url": "https://developer.chrome.com/docs/extensions/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Fernet Encryption",
+        "url": "https://cryptography.io/en/latest/fernet/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Chrome Extension Starter",
+        "url": "https://github.com/GoogleChrome/chrome-extensions-samples"
+      }
+    ],
+    "best_practices": [
+      "Never store master password",
+      "Use PBKDF2 for key derivation",
+      "Implement zero-knowledge architecture",
+      "Use secure random for password generation",
+      "Implement auto-lock after inactivity"
+    ]
+  },
+  "project-061": {
+    "title": "Multi-tenant SaaS Platform",
+    "documentation": [
+      {
+        "name": "Django Documentation",
+        "url": "https://docs.djangoproject.com/"
+      },
+      {
+        "name": "Stripe Subscriptions",
+        "url": "https://stripe.com/docs/billing/subscriptions"
+      },
+      {
+        "name": "Django Multi-tenancy",
+        "url": "https://www.django-rest-framework.org/"
+      },
+      {
+        "name": "PostgreSQL Row Level Security",
+        "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Stripe Customer Portal",
+        "url": "https://stripe.com/docs/customer-management/portal"
+      },
+      {
+        "name": "Django Tenant Schemas",
+        "url": "https://django-tenants.readthedocs.io/"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "Django SAAS Template",
+        "url": "https://github.com/nickvdyck/django-saas-starter"
+      }
+    ],
+    "best_practices": [
+      "Use schema-based or row-based multi-tenancy",
+      "Implement tenant isolation at database level",
+      "Use tenant context middleware",
+      "Implement usage metering per tenant",
+      "Use background tasks for tenant provisioning"
+    ]
+  },
+  "project-062": {
+    "title": "Video Streaming Platform",
+    "documentation": [
+      {
+        "name": "FFmpeg Documentation",
+        "url": "https://ffmpeg.org/documentation.html"
+      },
+      {
+        "name": "AWS S3 Developer Guide",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/"
+      },
+      {
+        "name": "HLS Streaming Guide",
+        "url": "https://developer.apple.com/documentation/http-live-streaming"
+      },
+      {
+        "name": "React Player",
+        "url": "https://www.npmjs.com/package/react-player"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "FFmpeg Python",
+        "url": "https://github.com/kkroening/ffmpeg-python"
+      },
+      {
+        "name": "AWS CloudFront",
+        "url": "https://docs.aws.amazon.com/cloudfront/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use chunked uploads for large files",
+      "Implement transcoding queue for processing",
+      "Use adaptive bitrate for different connections",
+      "Generate multiple quality variants",
+      "Implement DRM for content protection"
+    ]
+  },
+  "project-063": {
+    "title": "Distributed Cache System",
+    "documentation": [
+      {
+        "name": "Redis Documentation",
+        "url": "https://redis.io/docs/"
+      },
+      {
+        "name": "Consistent Hashing Paper",
+        "url": "https://www.cs.cornell.edu/home/kporter/tr98.pdf"
+      },
+      {
+        "name": "gRPC Python",
+        "url": "https://grpc.io/docs/languages/python/"
+      },
+      {
+        "name": "Prometheus Documentation",
+        "url": "https://prometheus.io/docs/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "Redis Commands",
+        "url": "https://redis.io/docs/commands/"
+      }
+    ],
+    "starter_templates": [],
+    "best_practices": [
+      "Use consistent hashing for key distribution",
+      "Implement gossip protocol for cluster membership",
+      "Use WAL for data persistence",
+      "Implement read repair for consistency",
+      "Monitor cache hit rate and eviction stats"
+    ]
+  },
+  "project-064": {
+    "title": "AI Code Completion IDE Plugin",
+    "documentation": [
+      {
+        "name": "VS Code Extension API",
+        "url": "https://code.visualstudio.com/api"
+      },
+      {
+        "name": "IBM Granite Documentation",
+        "url": "https://github.com/IBM/granite-code-models"
+      },
+      {
+        "name": "FastAPI Documentation",
+        "url": "https://fastapi.tiangolo.com/"
+      },
+      {
+        "name": "TypeScript Documentation",
+        "url": "https://www.typescriptlang.org/docs/"
+      }
+    ],
+    "datasets": [],
+    "api_references": [
+      {
+        "name": "VS Code Completion API",
+        "url": "https://code.visualstudio.com/api/extension-guides/suggest-api"
+      },
+      {
+        "name": "IBM Granite API",
+        "url": "https://github.com/IBM/granite"
+      }
+    ],
+    "starter_templates": [
+      {
+        "name": "VS Code Extension Starter",
+        "url": "https://github.com/microsoft/vscode-extension-samples"
+      }
+    ],
+    "best_practices": [
+      "Cache completions for repeated contexts",
+      "Implement debounce for completion requests",
+      "Use streaming for real-time suggestions",
+      "Implement language-specific tokenization",
+      "Use context window optimization"
+    ]
+  }
+}

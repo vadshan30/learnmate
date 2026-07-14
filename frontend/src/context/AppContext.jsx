@@ -7,6 +7,7 @@ const AppContext = createContext(null)
 export function AppProvider({ children }) {
   const [student, setStudent] = useState(null)
   const [roadmap, setRoadmap] = useState(null)
+  const [progress, setProgress] = useState(null)
   const [chatMessages, setChatMessages] = useState([])
   const [courses, setCourses] = useState([])
   const [projects, setProjects] = useState([])
@@ -50,6 +51,7 @@ export function AppProvider({ children }) {
     await wrap('delete', () => api.deleteStudent(student.student_id))
     setStudent(null)
     setRoadmap(null)
+    setProgress(null)
     setChatMessages([])
     localStorage.removeItem('learnmate_student_id')
     toast.success('Profile deleted')
@@ -65,6 +67,16 @@ export function AppProvider({ children }) {
     }
   }, [student, wrap])
 
+  const fetchProgress = useCallback(async () => {
+    if (!student?.student_id) return
+    try {
+      const r = await api.getProgress(student.student_id)
+      setProgress(r.data?.data || null)
+    } catch {
+      setProgress(null)
+    }
+  }, [student])
+
   const buildRoadmap = useCallback(async (opts = {}) => {
     if (!student?.student_id) { toast.error('Create a profile first'); return }
     const r = await wrap('roadmap', () =>
@@ -72,8 +84,29 @@ export function AppProvider({ children }) {
     )
     setRoadmap(r.data?.roadmap || r.data)
     toast.success('Roadmap generated!')
+    // Refresh progress after generating
+    setTimeout(() => fetchProgress(), 500)
     return r.data
-  }, [student, wrap])
+  }, [student, wrap, fetchProgress])
+
+  const completeTopic = useCallback(async (topicName, completed = true) => {
+    if (!student?.student_id) { toast.error('Create a profile first'); return }
+    try {
+      const r = await api.completeTopic({
+        student_id: student.student_id,
+        topic_name: topicName,
+        completed,
+      })
+      setProgress(r.data?.data || null)
+      // Also refresh the roadmap to get updated week statuses
+      await fetchRoadmap()
+      return r.data
+    } catch (e) {
+      const msg = e?.response?.data?.message || e?.message || 'Failed to update topic'
+      toast.error(msg)
+      throw e
+    }
+  }, [student, fetchRoadmap])
 
   const sendMessage = useCallback(async (message) => {
     if (!student?.student_id) { toast.error('Create a profile first'); return }
@@ -108,6 +141,7 @@ export function AppProvider({ children }) {
   const value = {
     student, setStudent, saveStudent, removeStudent,
     roadmap, setRoadmap, fetchRoadmap, buildRoadmap,
+    progress, fetchProgress, completeTopic,
     chatMessages, setChatMessages, sendMessage, clearMessages,
     courses, projects, certifications, fetchCatalog,
     health, loading,

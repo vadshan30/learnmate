@@ -90,7 +90,10 @@ export default function Settings() {
             <div className="flex justify-between">
               <span className="text-gray-500">RAG Service</span>
               <span className={health?.rag_available ? 'text-green-600' : 'text-yellow-600'}>
-                {health?.rag_available ? 'Available' : 'Unavailable'}
+                {health?.services?.rag === 'healthy' ? 'Healthy' :
+                 health?.services?.rag === 'empty' ? 'Empty (no data)' :
+                 health?.services?.rag === 'error' ? 'Error' :
+                 health?.rag_available ? 'Available' : 'Unavailable'}
               </span>
             </div>
             <div className="flex justify-between">

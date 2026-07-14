@@ -101,7 +101,7 @@ class RoadmapGenerator:
 
         return roadmap
 
-    async def update_roadmap(
+    def update_roadmap(
         self,
         roadmap: Dict[str, Any],
         completed_topics: List[str],
@@ -126,31 +126,65 @@ class RoadmapGenerator:
             len(completed_topics),
         )
 
-        completed_lower = {t.lower().strip() for t in completed_topics}
+        # Merge with existing completed topics
+        existing_completed = set(roadmap.get("completed_topics", []))
+        new_completed = {t.lower().strip() for t in completed_topics}
+        all_completed = existing_completed | new_completed
 
         # Mark completed weeks and calculate progress
         completed_weeks = self._mark_completed_weeks(
-            roadmap, completed_lower
+            roadmap, all_completed
         )
 
         # Calculate new progress
         total_weeks = max(len(roadmap.get("weeks", [])), 1)
+        total_topics = roadmap.get("total_topics", 0)
+        completed_topics_count = len(all_completed)
         percentage = (
-            (completed_weeks / total_weeks * 100.0)
-            if total_weeks > 0
+            (completed_topics_count / total_topics * 100.0)
+            if total_topics > 0
             else 0.0
         )
+
+        # Build week progress breakdown
+        week_progress = self._build_week_progress(roadmap, all_completed)
+
+        # Determine completion status
+        if percentage >= 100:
+            completion_status = "completed"
+        elif percentage > 0:
+            completion_status = "in_progress"
+        else:
+            completion_status = "not_started"
+
+        # Current week: first non-completed week
+        current_week = total_weeks
+        for w in roadmap.get("weeks", []):
+            if w.get("completion_status") != "completed":
+                current_week = w.get("week_number", 1)
+                break
 
         roadmap["progress"] = {
             "completed_weeks": completed_weeks,
             "total_weeks": total_weeks,
             "percentage": round(percentage, 1),
-            "current_week": min(completed_weeks + 1, total_weeks),
+            "current_week": current_week,
+            "total_topics": total_topics,
+            "completed_topics_count": completed_topics_count,
+            "week_progress": week_progress,
+            "completion_status": completion_status,
         }
+
+        roadmap["completed_topics"] = list(all_completed)
 
         # Refresh recommendations
         roadmap["recommendations"] = self._generate_recommendations(
-            roadmap, completed_lower, percentage
+            roadmap, all_completed, percentage
+        )
+
+        # Deduplicate certifications
+        roadmap["certifications"] = self.deduplicate_certifications(
+            roadmap.get("certifications", [])
         )
 
         # Calculate remaining study hours
@@ -161,13 +195,220 @@ class RoadmapGenerator:
         )
 
         logger.info(
-            "Roadmap updated: %d/%d weeks completed (%.1f%%)",
-            completed_weeks,
-            total_weeks,
+            "Roadmap updated: %d/%d topics completed (%.1f%%)",
+            completed_topics_count,
+            total_topics,
             percentage,
         )
 
         return roadmap
+
+    # ------------------------------------------------------------------
+    # Progress calculation helpers
+    # ------------------------------------------------------------------
+
+    def calculate_progress(
+        self, roadmap: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Calculate the current progress of a roadmap.
+
+        Args:
+            roadmap: The roadmap dictionary.
+
+        Returns:
+            A progress dictionary with all progress metrics.
+        """
+        completed_topics = set(roadmap.get("completed_topics", []))
+        weeks = roadmap.get("weeks", [])
+        total_topics = roadmap.get("total_topics", 0)
+        total_weeks = max(len(weeks), 1)
+
+        completed_weeks = 0
+        week_progress = []
+
+        for week in weeks:
+            week_num = week.get("week_number", 1)
+            topics = week.get("topics", [])
+            total_w = len(topics)
+            completed_w = sum(
+                1 for t in topics
+                if t.lower().strip() in completed_topics
+            )
+            pct = (completed_w / total_w * 100.0) if total_w > 0 else 0.0
+
+            if total_w > 0 and completed_w == total_w:
+                status = "completed"
+                completed_weeks += 1
+            elif completed_w > 0:
+                status = "in_progress"
+            else:
+                status = "pending"
+
+            week_progress.append({
+                "week_number": week_num,
+                "completed": status == "completed",
+                "total_topics": total_w,
+                "completed_topics_count": completed_w,
+                "percentage": round(pct, 1),
+                "status": status,
+            })
+
+        completed_count = len(completed_topics)
+        percentage = (
+            (completed_count / total_topics * 100.0)
+            if total_topics > 0
+            else 0.0
+        )
+
+        if percentage >= 100:
+            completion_status = "completed"
+        elif percentage > 0:
+            completion_status = "in_progress"
+        else:
+            completion_status = "not_started"
+
+        current_week = len(weeks)
+        for wp in week_progress:
+            if wp["status"] != "completed":
+                current_week = wp["week_number"]
+                break
+
+        return {
+            "overall_progress": round(percentage, 1),
+            "completed_topics": completed_count,
+            "total_topics": total_topics,
+            "completed_weeks": completed_weeks,
+            "total_weeks": total_weeks,
+            "current_week": current_week,
+            "week_progress": week_progress,
+            "completion_status": completion_status,
+        }
+
+    def update_topic_completion(
+        self,
+        roadmap: Dict[str, Any],
+        topic_name: str,
+        completed: bool = True,
+    ) -> Dict[str, Any]:
+        """Mark a single topic as completed or uncompleted.
+
+        Args:
+            roadmap: The roadmap dictionary to update.
+            topic_name: The topic name to toggle.
+            completed: Whether to mark as completed.
+
+        Returns:
+            Updated roadmap dictionary.
+        """
+        completed_topics = set(roadmap.get("completed_topics", []))
+        topic_lower = topic_name.lower().strip()
+
+        if completed:
+            completed_topics.add(topic_lower)
+        else:
+            completed_topics.discard(topic_lower)
+
+        roadmap["completed_topics"] = list(completed_topics)
+        return self.update_roadmap(roadmap, list(completed_topics))
+
+    def deduplicate_certifications(
+        self, certifications: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
+        """Remove duplicate certifications by unique ID or name.
+
+        Args:
+            certifications: List of certification dicts.
+
+        Returns:
+            Deduplicated list of certification dicts.
+        """
+        seen_ids: set = set()
+        seen_names: set = set()
+        unique: List[Dict[str, Any]] = []
+
+        for cert in certifications:
+            cert_id = cert.get("id", "")
+            cert_name = (cert.get("name", "") or "").lower().strip()
+
+            if cert_id and cert_id in seen_ids:
+                continue
+            if cert_name and cert_name in seen_names:
+                continue
+
+            if cert_id:
+                seen_ids.add(cert_id)
+            if cert_name:
+                seen_names.add(cert_name)
+            unique.append(cert)
+
+        if len(unique) < len(certifications):
+            logger.info(
+                "[RAG] Deduplicated certifications: %d -> %d",
+                len(certifications),
+                len(unique),
+            )
+
+        return unique
+
+    def refresh_recommendations(
+        self,
+        roadmap: Dict[str, Any],
+        completed_topics: Optional[List[str]] = None,
+    ) -> List[str]:
+        """Refresh recommendations based on current progress.
+
+        Args:
+            roadmap: The roadmap dictionary.
+            completed_topics: Optional override list. If not provided,
+                              uses roadmap's completed_topics.
+
+        Returns:
+            Updated list of recommendation strings.
+        """
+        if completed_topics is None:
+            completed_topics = roadmap.get("completed_topics", [])
+        completed_lower = {t.lower().strip() for t in completed_topics}
+        percentage = roadmap.get("progress", {}).get("percentage", 0.0)
+        return self._generate_recommendations(
+            roadmap, completed_lower, percentage
+        )
+
+    def _build_week_progress(
+        self,
+        roadmap: Dict[str, Any],
+        completed_lower: set[str],
+    ) -> List[Dict[str, Any]]:
+        """Build per-week progress breakdown.
+
+        Args:
+            roadmap: The roadmap dictionary.
+            completed_lower: Set of normalised completed topic names.
+
+        Returns:
+            List of week progress dicts.
+        """
+        week_progress = []
+        for week in roadmap.get("weeks", []):
+            week_num = week.get("week_number", 1)
+            topics = week.get("topics", [])
+            total_w = len(topics)
+            completed_w = sum(
+                1 for t in topics
+                if t.lower().strip() in completed_lower
+            )
+            pct = (completed_w / total_w * 100.0) if total_w > 0 else 0.0
+
+            status = week.get("completion_status", "pending")
+            week_progress.append({
+                "week_number": week_num,
+                "completed": status == "completed",
+                "total_topics": total_w,
+                "completed_topics_count": completed_w,
+                "percentage": round(pct, 1),
+                "status": status,
+            })
+
+        return week_progress
 
     # ------------------------------------------------------------------
     # RAG resource retrieval
@@ -634,9 +875,9 @@ class RoadmapGenerator:
                 next_week_num, skill_analysis
             ))
 
-        # Parse certifications
-        certifications = self._parse_certifications(
-            resources, skill_analysis, profile
+        # Parse certifications (deduplicated)
+        certifications = self.deduplicate_certifications(
+            self._parse_certifications(resources, skill_analysis, profile)
         )
 
         # Build final project (capstone)
@@ -646,6 +887,10 @@ class RoadmapGenerator:
 
         # Build initial recommendations
         recommendations = self._build_initial_recommendations(skill_analysis)
+
+        # Calculate initial progress
+        total_topics = sum(len(w.get("topics", [])) for w in weeks)
+        total_hours = sum(w.get("estimated_hours", 10.0) for w in weeks)
 
         return {
             "roadmap_id": roadmap_id,
@@ -657,10 +902,17 @@ class RoadmapGenerator:
             "final_project": final_project,
             "progress": {
                 "completed_weeks": 0,
-                "total_weeks": 10,
+                "total_weeks": len(weeks),
                 "percentage": 0.0,
                 "current_week": 1,
+                "total_topics": total_topics,
+                "completed_topics_count": 0,
+                "week_progress": [],
+                "completion_status": "not_started",
             },
+            "completed_topics": [],
+            "total_topics": total_topics,
+            "total_hours": total_hours,
             "skill_analysis": {
                 "coverage_percentage": skill_analysis.coverage_percentage,
                 "missing_skills": skill_analysis.missing_skills,
@@ -961,19 +1213,20 @@ class RoadmapGenerator:
             week_items.discard("")
 
             if not week_items:
-                # No items to check - mark as completed if week number
-                # is within the completed range
                 continue
 
             overlap = week_items & completed_lower
 
             if week_items and week_items <= completed_lower:
                 week["completion_status"] = "completed"
+                week["completed"] = True
                 completed_weeks += 1
             elif overlap:
                 week["completion_status"] = "in_progress"
+                week["completed"] = False
             else:
                 week["completion_status"] = "pending"
+                week["completed"] = False
 
         return completed_weeks
 
@@ -1075,7 +1328,7 @@ async def generate_roadmap(profile: StudentProfile) -> Dict[str, Any]:
     return await generator.generate_roadmap(profile)
 
 
-async def update_roadmap(
+def update_roadmap(
     roadmap: Dict[str, Any],
     completed_topics: List[str],
 ) -> Dict[str, Any]:
@@ -1092,7 +1345,7 @@ async def update_roadmap(
         Updated roadmap dictionary.
     """
     generator = RoadmapGenerator()
-    return await generator.update_roadmap(roadmap, completed_topics)
+    return generator.update_roadmap(roadmap, completed_topics)
 
 
 # ---------------------------------------------------------------------------

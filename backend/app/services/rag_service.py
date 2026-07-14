@@ -2,7 +2,7 @@
 
 Manages the Retrieval-Augmented Generation pipeline using ChromaDB
 for vector storage and SentenceTransformer embeddings for semantic
-search over courses, projects, and certifications.
+search over courses, projects, certifications, and career pathways.
 
 On startup the service ingests all learning resources from the JSON
 datasets into a ChromaDB collection so they can be retrieved by
@@ -16,13 +16,14 @@ installed the module-level ``rag_service`` singleton will be
 
 from __future__ import annotations
 
-import json
+import hashlib
 import logging
 import os
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("learnmate.rag")
 
 # ---------------------------------------------------------------------------
 # Optional dependency detection
@@ -38,7 +39,7 @@ except ImportError:
     ChromaSettings = None  # type: ignore[assignment,misc]
     _CHROMADB_AVAILABLE = False
     logger.warning(
-        "chromadb is not installed – RAG features are disabled. "
+        "[RAG] chromadb is not installed – RAG features are disabled. "
         "Install it with: pip install chromadb"
     )
 
@@ -51,7 +52,7 @@ except ImportError:
     _SENTENCE_TRANSFORMERS_AVAILABLE = False
     if _CHROMADB_AVAILABLE:
         logger.warning(
-            "sentence-transformers is not installed – RAG features are disabled. "
+            "[RAG] sentence-transformers is not installed – RAG features are disabled. "
             "Install it with: pip install sentence-transformers"
         )
 
@@ -62,14 +63,22 @@ RAG_AVAILABLE: bool = _CHROMADB_AVAILABLE and _SENTENCE_TRANSFORMERS_AVAILABLE
 # ---------------------------------------------------------------------------
 
 CHROMA_DB_PATH: str = os.getenv("CHROMA_DB_PATH", "./data/chroma_db")
-EMBEDDING_MODEL_NAME: str = os.getenv(
-    "EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2"
-)
+EMBEDDING_MODEL_NAME: str = os.getenv("EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2")
 COLLECTION_NAME: str = "learning_resources"
 
-# Resolve the backend data directory relative to this file's location
+# Resolve paths relative to this file for reliable dataset loading
 _BACKEND_ROOT: Path = Path(__file__).resolve().parent.parent.parent.parent
 _DATA_DIR: Path = _BACKEND_ROOT / "data"
+
+
+# ---------------------------------------------------------------------------
+# Deterministic ID helper
+# ---------------------------------------------------------------------------
+
+def _make_deterministic_id(resource_type: str, resource_id: str) -> str:
+    """Create a deterministic, collision-free document ID."""
+    raw = f"{resource_type}:{resource_id}"
+    return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
 # ---------------------------------------------------------------------------
@@ -91,9 +100,16 @@ class RAGService:
                 "Install chromadb and sentence-transformers."
             )
 
+        # Ensure the ChromaDB directory exists
+        chroma_path = Path(CHROMA_DB_PATH)
+        chroma_path.mkdir(parents=True, exist_ok=True)
+        logger.info("[RAG] ChromaDB path: %s", chroma_path.resolve())
+
         self._embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
+        logger.info("[RAG] Embedding model loaded: %s", EMBEDDING_MODEL_NAME)
+
         self._chroma_client: chromadb.ClientAPI = chromadb.PersistentClient(
-            path=CHROMA_DB_PATH,
+            path=str(chroma_path),
             settings=ChromaSettings(anonymized_telemetry=False),
         )
         self._collection = self._chroma_client.get_or_create_collection(
@@ -101,6 +117,8 @@ class RAGService:
             metadata={"hnsw:space": "cosine"},
         )
         self._initialised: bool = False
+        self._last_loaded: Optional[str] = None
+        self._doc_counts: Dict[str, int] = {}
 
     # ------------------------------------------------------------------
     # Initialisation
@@ -111,31 +129,81 @@ class RAGService:
         if self._initialised:
             return
 
-        if self._collection.count() > 0:
+        existing_count = self._collection.count()
+        if existing_count > 0:
             logger.info(
-                "Collection '%s' already has %d documents – skipping load",
+                "[RAG] Collection '%s' already has %d documents – skipping load",
                 COLLECTION_NAME,
-                self._collection.count(),
+                existing_count,
             )
             self._initialised = True
+            self._last_loaded = datetime.now(timezone.utc).isoformat()
             return
 
-        loaded = 0
-        loaded += self._load_courses()
-        loaded += self._load_projects()
-        loaded += self._load_certifications()
+        await self.reload_all()
 
+    async def reload_all(self) -> Dict[str, int]:
+        """Reload all datasets from JSON files into ChromaDB.
+
+        Returns:
+            Dict with counts per resource type and total.
+        """
+        logger.info("[RAG] Loading datasets...")
+
+        from app.utils.data_loader import (
+            load_courses,
+            load_certifications,
+            load_career_pathways,
+            load_projects,
+        )
+
+        courses = load_courses()
+        projects = load_projects()
+        certifications = load_certifications()
+        career_pathways = load_career_pathways()
+
+        logger.info("[RAG] Loaded %d Courses", len(courses))
+        logger.info("[RAG] Loaded %d Projects", len(projects))
+        logger.info("[RAG] Loaded %d Certifications", len(certifications))
+        logger.info("[RAG] Loaded %d Career Pathways", len(career_pathways))
+
+        logger.info("[RAG] Creating embeddings...")
+        counts = {
+            "courses": self._add_documents_batch(courses, "course"),
+            "projects": self._add_documents_batch(projects, "project"),
+            "certifications": self._add_documents_batch(certifications, "certification"),
+            "career_pathways": self._add_documents_batch(career_pathways, "career_pathway"),
+        }
+        total = sum(counts.values())
+        counts["total"] = total
+
+        self._doc_counts = counts
+        self._last_loaded = datetime.now(timezone.utc).isoformat()
         self._initialised = True
-        logger.info("RAG service initialised – %d resources indexed", loaded)
+
+        logger.info("[RAG] Indexed %d Documents", total)
+        logger.info("[RAG] RAG Ready")
+
+        return counts
 
     def _load_json(self, filename: str) -> List[Dict[str, Any]]:
         """Load and return a JSON file from the data directory."""
         path = _DATA_DIR / filename
         if not path.exists():
-            logger.warning("Dataset file not found: %s", path)
+            logger.error("[RAG ERROR] File not found: %s", path)
             return []
-        with open(path, "r", encoding="utf-8") as fh:
-            return json.load(fh)
+        try:
+            import json
+
+            with open(path, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+            if not isinstance(data, list):
+                logger.error("[RAG ERROR] Expected array in %s, got %s", path, type(data).__name__)
+                return []
+            return data
+        except Exception as exc:
+            logger.error("[RAG ERROR] Failed to load %s: %s", path, exc)
+            return []
 
     def _build_document(self, item: Dict[str, Any], resource_type: str) -> str:
         """Build a searchable text document from a resource dict.
@@ -145,34 +213,58 @@ class RAGService:
         """
         parts = [f"Type: {resource_type}"]
 
-        if "title" in item:
-            parts.append(f"Title: {item['title']}")
-        if "name" in item:
-            parts.append(f"Name: {item['name']}")
-        if "domain" in item:
-            parts.append(f"Domain: {item['domain']}")
-        if "description" in item:
-            parts.append(f"Description: {item['description']}")
-        if "level" in item:
-            parts.append(f"Level: {item['level']}")
-        if "skills_gained" in item:
-            parts.append(f"Skills gained: {', '.join(item['skills_gained'])}")
-        if "skills_covered" in item:
-            parts.append(f"Skills covered: {', '.join(item['skills_covered'])}")
-        if "tags" in item:
-            parts.append(f"Tags: {', '.join(item['tags'])}")
-        if "technologies" in item:
-            parts.append(f"Technologies: {', '.join(item['technologies'])}")
-        if "provider" in item:
-            parts.append(f"Provider: {item['provider']}")
-        if "difficulty" in item:
-            parts.append(f"Difficulty: {item['difficulty']}")
-        if "learning_outcomes" in item:
-            parts.append(
-                f"Learning outcomes: {', '.join(item['learning_outcomes'])}"
-            )
+        for field, label in [
+            ("title", "Title"),
+            ("name", "Name"),
+            ("domain", "Domain"),
+            ("description", "Description"),
+            ("level", "Level"),
+            ("difficulty", "Difficulty"),
+            ("provider", "Provider"),
+            ("duration", "Duration"),
+        ]:
+            if field in item and item[field]:
+                parts.append(f"{label}: {item[field]}")
+
+        for field, label in [
+            ("skills_gained", "Skills gained"),
+            ("skills_covered", "Skills covered"),
+            ("required_skills", "Required skills"),
+            ("tags", "Tags"),
+            ("technologies", "Technologies"),
+            ("learning_outcomes", "Learning outcomes"),
+        ]:
+            if field in item and item[field]:
+                if isinstance(item[field], list):
+                    parts.append(f"{label}: {', '.join(str(s) for s in item[field])}")
+                else:
+                    parts.append(f"{label}: {item[field]}")
 
         return " | ".join(parts)
+
+    def _build_metadata(self, item: Dict[str, Any], resource_type: str) -> Dict[str, str]:
+        """Build rich metadata for a resource for filtering."""
+        meta: Dict[str, str] = {"resource_type": resource_type}
+
+        for field in ["domain", "provider", "category"]:
+            if field in item and item[field]:
+                meta[field] = str(item[field])
+
+        level = item.get("level") or item.get("difficulty") or ""
+        if isinstance(level, dict):
+            level = level.get("value", "")
+        if level:
+            meta["level"] = str(level)
+
+        skills = item.get("skills_gained") or item.get("skills_covered") or item.get("required_skills") or []
+        if isinstance(skills, list) and skills:
+            meta["skills"] = ", ".join(str(s) for s in skills)
+
+        tags = item.get("tags") or []
+        if isinstance(tags, list) and tags:
+            meta["tags"] = ", ".join(str(t) for t in tags)
+
+        return meta
 
     def _add_documents_batch(
         self,
@@ -192,49 +284,39 @@ class RAGService:
         metadatas: List[Dict[str, str]] = []
 
         for item in items:
-            doc_id = item.get("id") or item.get("name", "")
-            if not doc_id:
+            raw_id = item.get("id") or item.get("name", "")
+            if not raw_id:
                 continue
-            doc_id = f"{resource_type}:{doc_id}"
+            doc_id = _make_deterministic_id(resource_type, raw_id)
 
             document = self._build_document(item, resource_type)
+            metadata = self._build_metadata(item, resource_type)
+
             ids.append(doc_id)
             documents.append(document)
-            metadatas.append({"resource_type": resource_type})
+            metadatas.append(metadata)
 
         if not ids:
             return 0
 
-        embeddings = self._embedding_model.encode(documents).tolist()
+        try:
+            embeddings = self._embedding_model.encode(documents, show_progress_bar=False).tolist()
+        except Exception as exc:
+            logger.error("[RAG ERROR] Embedding failed for %s: %s", resource_type, exc)
+            return 0
 
-        self._collection.upsert(
-            ids=ids,
-            documents=documents,
-            embeddings=embeddings,
-            metadatas=metadatas,
-        )
+        try:
+            self._collection.upsert(
+                ids=ids,
+                documents=documents,
+                embeddings=embeddings,
+                metadatas=metadatas,
+            )
+        except Exception as exc:
+            logger.error("[RAG ERROR] ChromaDB upsert failed for %s: %s", resource_type, exc)
+            return 0
+
         return len(ids)
-
-    def _load_courses(self) -> int:
-        """Load courses from courses.json into ChromaDB."""
-        items = self._load_json("courses.json")
-        count = self._add_documents_batch(items, "course")
-        logger.info("Loaded %d courses into ChromaDB", count)
-        return count
-
-    def _load_projects(self) -> int:
-        """Load projects from projects.json into ChromaDB."""
-        items = self._load_json("projects.json")
-        count = self._add_documents_batch(items, "project")
-        logger.info("Loaded %d projects into ChromaDB", count)
-        return count
-
-    def _load_certifications(self) -> int:
-        """Load certifications from certifications.json into ChromaDB."""
-        items = self._load_json("certifications.json")
-        count = self._add_documents_batch(items, "certification")
-        logger.info("Loaded %d certifications into ChromaDB", count)
-        return count
 
     # ------------------------------------------------------------------
     # Public query methods
@@ -257,32 +339,91 @@ class RAGService:
         distances = results.get("distances", [[]])[0]
 
         for i in range(min(n, len(ids))):
-            formatted.append({
+            entry: Dict[str, Any] = {
                 "id": ids[i],
                 "document": documents[i] if i < len(documents) else "",
                 "metadata": metadatas[i] if i < len(metadatas) else {},
-                "score": round(1.0 - distances[i], 4)
-                if i < len(distances)
-                else 0.0,
-            })
+            }
+            if i < len(distances):
+                # Cosine distance: 0 = identical, 2 = opposite
+                # Convert to similarity score: 1 = identical, 0 = opposite
+                entry["score"] = round(max(0.0, 1.0 - distances[i]), 4)
+            else:
+                entry["score"] = 0.0
+            formatted.append(entry)
         return formatted
 
     async def search_courses(
         self,
         query: str,
         n: int = 5,
+        resource_type: Optional[str] = None,
+        level: Optional[str] = None,
+        max_retries: int = 3,
     ) -> List[Dict[str, Any]]:
-        """Search for courses matching a natural-language query."""
-        if not query.strip():
+        """Search for resources matching a natural-language query.
+
+        Includes automatic retry logic for transient failures.
+
+        Args:
+            query: Natural-language search query.
+            n: Maximum number of results.
+            resource_type: Optional filter by resource type (course, project, certification, career_pathway).
+            level: Optional filter by difficulty level (Beginner, Intermediate, Advanced).
+            max_retries: Number of retry attempts on failure.
+        """
+        if not query or not query.strip():
             return []
 
         query_embedding = self._encode_query(query)
-        results = self._collection.query(
-            query_embeddings=[query_embedding],
-            n_results=n,
-            include=["documents", "metadatas", "distances"],
-        )
-        return self._format_results(results, n)
+
+        where_filter: Optional[Dict[str, Any]] = None
+        conditions: List[Dict[str, Any]] = []
+
+        if resource_type:
+            conditions.append({"resource_type": resource_type})
+        if level:
+            conditions.append({"level": level})
+
+        if len(conditions) == 1:
+            where_filter = conditions[0]
+        elif len(conditions) > 1:
+            where_filter = {"$and": conditions}
+
+        last_error: Optional[Exception] = None
+        for attempt in range(max_retries):
+            try:
+                # Validate collection before querying
+                doc_count = self._collection.count()
+                if doc_count == 0:
+                    logger.warning("[RAG] Collection is empty – search will return no results")
+                    return []
+
+                query_kwargs: Dict[str, Any] = {
+                    "query_embeddings": [query_embedding],
+                    "n_results": min(n, max(1, doc_count)),
+                    "include": ["documents", "metadatas", "distances"],
+                }
+                if where_filter:
+                    query_kwargs["where"] = where_filter
+
+                results = self._collection.query(**query_kwargs)
+                return self._format_results(results, n)
+
+            except Exception as exc:
+                last_error = exc
+                logger.warning(
+                    "[RAG] Search attempt %d/%d failed: %s",
+                    attempt + 1,
+                    max_retries,
+                    exc,
+                )
+                if attempt < max_retries - 1:
+                    import asyncio
+                    await asyncio.sleep(0.5 * (attempt + 1))
+
+        logger.error("[RAG ERROR] Search query failed after %d retries: %s", max_retries, last_error)
+        return []
 
     async def search_by_skills(
         self,
@@ -302,31 +443,52 @@ class RAGService:
         resource_type: str = "course",
     ) -> bool:
         """Add a new learning resource to the vector database."""
-        doc_id = resource.get("id") or resource.get("name", "")
-        if not doc_id:
-            logger.warning("Cannot add resource without an id or name")
+        raw_id = resource.get("id") or resource.get("name", "")
+        if not raw_id:
+            logger.warning("[RAG] Cannot add resource without an id or name")
             return False
 
-        doc_id = f"{resource_type}:{doc_id}"
+        doc_id = _make_deterministic_id(resource_type, raw_id)
         document = self._build_document(resource, resource_type)
+        metadata = self._build_metadata(resource, resource_type)
         embedding = self._encode_query(document)
 
-        self._collection.upsert(
-            ids=[doc_id],
-            documents=[document],
-            embeddings=[embedding],
-            metadatas=[{"resource_type": resource_type}],
-        )
-        logger.info("Added resource '%s' to ChromaDB", doc_id)
+        try:
+            self._collection.upsert(
+                ids=[doc_id],
+                documents=[document],
+                embeddings=[embedding],
+                metadatas=[metadata],
+            )
+        except Exception as exc:
+            logger.error("[RAG ERROR] Failed to add resource '%s': %s", doc_id, exc)
+            return False
+
+        logger.info("[RAG] Added resource '%s' to ChromaDB", doc_id)
         return True
 
     async def get_collection_stats(self) -> Dict[str, Any]:
         """Return statistics about the ChromaDB collection."""
+        count = 0
+        try:
+            count = self._collection.count()
+        except Exception:
+            pass
+
+        is_healthy = RAG_AVAILABLE and count > 0
+
         return {
+            "available": RAG_AVAILABLE,
+            "status": "healthy" if is_healthy else ("degraded" if RAG_AVAILABLE else "unavailable"),
+            "documents": count,
             "collection": COLLECTION_NAME,
-            "total_documents": self._collection.count(),
+            "total_documents": count,
             "embedding_model": EMBEDDING_MODEL_NAME,
-            "chroma_db_path": CHROMA_DB_PATH,
+            "database": "Persistent",
+            "chroma_db_path": str(Path(CHROMA_DB_PATH).resolve()),
+            "last_loaded": self._last_loaded,
+            "document_counts": self._doc_counts,
+            "synchronized": self._initialised,
         }
 
 
@@ -339,6 +501,7 @@ rag_service: Optional[RAGService] = None
 if RAG_AVAILABLE:
     try:
         rag_service = RAGService()
+        logger.info("[RAG] RAG service instance created")
     except Exception as exc:
-        logger.error("Failed to initialise RAG service: %s", exc)
+        logger.error("[RAG ERROR] Failed to create RAG service: %s", exc)
         rag_service = None

@@ -53,6 +53,13 @@ export const getRoadmap = (id) => api.get(`/api/roadmap/${id}`)
 export const updateRoadmap = (id, data) => api.put(`/api/roadmap/${id}`, data)
 export const deleteRoadmap = (id) => api.delete(`/api/roadmap/${id}`)
 
+/* ── Progress ────────────────────────────────────────────── */
+export const getProgress = (studentId) => api.get(`/api/roadmap/progress/${studentId}`)
+export const updateProgress = (studentId, data) => api.put(`/api/roadmap/progress/${studentId}`, data)
+export const completeTopic = (data) => api.post('/api/roadmap/topic/complete', data)
+export const getWeeklyProgress = (studentId) => api.get(`/api/roadmap/progress/${studentId}/weekly`)
+export const getSkillProgress = (studentId) => api.get(`/api/roadmap/progress/${studentId}/skills`)
+
 /* ── Chat ────────────────────────────────────────────────── */
 export const sendChat = (data) => api.post('/api/chat', data)
 export const clearChat = (id) => api.delete(`/api/chat/${id}`)
@@ -61,6 +68,23 @@ export const clearChat = (id) => api.delete(`/api/chat/${id}`)
 export const getCourses = () => api.get('/api/courses')
 export const getProjects = () => api.get('/api/projects')
 export const getCertifications = () => api.get('/api/certifications')
+
+/* ── Resources (new) ─────────────────────────────────────── */
+export const getResourceCourses = (params) => api.get('/api/resources/courses', { params })
+export const getResourceCourse = (id) => api.get(`/api/resources/courses/${id}`)
+export const getResourceProjects = (params) => api.get('/api/resources/projects', { params })
+export const getResourceCertifications = (params) => api.get('/api/resources/certifications', { params })
+export const searchAllResources = (params) => api.get('/api/resources/search', { params })
+export const syncResources = () => api.post('/api/resources/sync')
+export const getCareerPathways = () => api.get('/api/resources/pathways')
+
+/* ── Projects (detail) ───────────────────────────────────── */
+export const getProjectDetails = (id) => api.get(`/api/projects/${id}`)
+export const getProjectResources = (id) => api.get(`/api/projects/${id}/resources`)
+export const getRecommendedCourses = (id, params) => api.get(`/api/projects/${id}/recommended-courses`, { params })
+export const saveProject = (id, studentId) => api.post(`/api/projects/${id}/save`, null, { params: { student_id: studentId } })
+export const completeProject = (id, studentId) => api.post(`/api/projects/${id}/complete`, null, { params: { student_id: studentId } })
+export const getProjectStats = (studentId) => api.get(`/api/projects/stats/${studentId}`)
 
 /* ── Search ──────────────────────────────────────────────── */
 export const searchResources = (params) => api.get('/api/search', { params })

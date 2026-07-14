@@ -5,9 +5,18 @@
     "provider": "Amazon Web Services",
     "level": "Beginner",
     "description": "Validate foundational knowledge of AWS Cloud services, security, pricing, and architecture. Ideal for individuals starting their cloud journey.",
-    "prerequisites": ["Basic IT knowledge", "6 months of industry experience recommended"],
+    "prerequisites": [
+      "Basic IT knowledge",
+      "6 months of industry experience recommended"
+    ],
     "exam_link": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-    "skills_covered": ["AWS core services", "Cloud security", "AWS pricing", "Cloud architecture", "Support basics"]
+    "skills_covered": [
+      "AWS core services",
+      "Cloud security",
+      "AWS pricing",
+      "Cloud architecture",
+      "Support basics"
+    ]
   },
   {
     "id": "cert-002",
@@ -15,9 +24,18 @@
     "provider": "Meta",
     "level": "Beginner",
     "description": "Learn to build modern web interfaces with React, version control with Git, and testing best practices. Designed by Meta engineers.",
-    "prerequisites": ["Basic HTML and CSS knowledge"],
+    "prerequisites": [
+      "Basic HTML and CSS knowledge"
+    ],
     "exam_link": "https://www.coursera.org/professional-certificates/meta-frontend-developer",
-    "skills_covered": ["React", "JavaScript", "HTML5", "CSS3", "Version control", "Testing"]
+    "skills_covered": [
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Version control",
+      "Testing"
+    ]
   },
   {
     "id": "cert-003",
@@ -25,9 +43,19 @@
     "provider": "IBM",
     "level": "Beginner",
     "description": "Comprehensive data science program covering Python, SQL, data visualization, machine learning, and capstone project using real-world data.",
-    "prerequisites": ["Basic math", "No prior coding experience required"],
+    "prerequisites": [
+      "Basic math",
+      "No prior coding experience required"
+    ],
     "exam_link": "https://www.coursera.org/professional-certificates/ibm-data-science",
-    "skills_covered": ["Python", "SQL", "Pandas", "Matplotlib", "Machine learning", "Jupyter notebooks"]
+    "skills_covered": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "Matplotlib",
+      "Machine learning",
+      "Jupyter notebooks"
+    ]
   },
   {
     "id": "cert-004",
@@ -35,9 +63,18 @@
     "provider": "Google",
     "level": "Beginner",
     "description": "Learn the tools and techniques used by entry-level data analysts. Covers spreadsheets, SQL, R programming, Tableau, and data-driven decision making.",
-    "prerequisites": ["No prior experience required"],
+    "prerequisites": [
+      "No prior experience required"
+    ],
     "exam_link": "https://www.coursera.org/professional-certificates/google-data-analytics",
-    "skills_covered": ["SQL", "R programming", "Tableau", "Spreadsheets", "Data visualization", "Data cleaning"]
+    "skills_covered": [
+      "SQL",
+      "R programming",
+      "Tableau",
+      "Spreadsheets",
+      "Data visualization",
+      "Data cleaning"
+    ]
   },
   {
     "id": "cert-005",
@@ -45,9 +82,20 @@
     "provider": "Google",
     "level": "Intermediate",
     "description": "Demonstrate proficiency in building and training neural networks using TensorFlow. Covers CNNs, RNNs, NLP, and time series forecasting.",
-    "prerequisites": ["Python proficiency", "Machine learning basics", "Linear algebra"],
+    "prerequisites": [
+      "Python proficiency",
+      "Machine learning basics",
+      "Linear algebra"
+    ],
     "exam_link": "https://www.tensorflow.org/certificate",
-    "skills_covered": ["TensorFlow", "Neural networks", "CNN", "RNN", "NLP", "Time series"]
+    "skills_covered": [
+      "TensorFlow",
+      "Neural networks",
+      "CNN",
+      "RNN",
+      "NLP",
+      "Time series"
+    ]
   },
   {
     "id": "cert-006",
@@ -55,9 +103,17 @@
     "provider": "Microsoft",
     "level": "Beginner",
     "description": "Validate foundational knowledge of Azure cloud services, core solutions, management tools, governance, privacy, and compliance.",
-    "prerequisites": ["Familiarity with IT concepts"],
+    "prerequisites": [
+      "Familiarity with IT concepts"
+    ],
     "exam_link": "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
-    "skills_covered": ["Azure services", "Cloud concepts", "Azure pricing", "Governance", "Security"]
+    "skills_covered": [
+      "Azure services",
+      "Cloud concepts",
+      "Azure pricing",
+      "Governance",
+      "Security"
+    ]
   },
   {
     "id": "cert-007",
@@ -65,9 +121,18 @@
     "provider": "CompTIA",
     "level": "Intermediate",
     "description": "Globally recognized certification covering core cybersecurity skills including threat detection, risk management, cryptography, and incident response.",
-    "prerequisites": ["Network+ or equivalent knowledge", "2 years of IT experience recommended"],
+    "prerequisites": [
+      "Network+ or equivalent knowledge",
+      "2 years of IT experience recommended"
+    ],
     "exam_link": "https://www.comptia.org/certifications/security",
-    "skills_covered": ["Threat detection", "Risk management", "Cryptography", "Identity management", "Incident response"]
+    "skills_covered": [
+      "Threat detection",
+      "Risk management",
+      "Cryptography",
+      "Identity management",
+      "Incident response"
+    ]
   },
   {
     "id": "cert-008",
@@ -75,9 +140,18 @@
     "provider": "Cisco",
     "level": "Intermediate",
     "description": "Validate your ability to install, configure, and troubleshoot networks. Covers network fundamentals, IP services, security fundamentals, and automation.",
-    "prerequisites": ["Basic computer literacy", "Understanding of networking concepts"],
+    "prerequisites": [
+      "Basic computer literacy",
+      "Understanding of networking concepts"
+    ],
     "exam_link": "https://www.cisco.com/c/en/us/training-events/training-certifications/ccna.html",
-    "skills_covered": ["Network fundamentals", "IP connectivity", "Security fundamentals", "Automation", "Troubleshooting"]
+    "skills_covered": [
+      "Network fundamentals",
+      "IP connectivity",
+      "Security fundamentals",
+      "Automation",
+      "Troubleshooting"
+    ]
   },
   {
     "id": "cert-009",
@@ -85,8 +159,2159 @@
     "provider": "HashiCorp",
     "level": "Intermediate",
     "description": "Demonstrate skills in infrastructure as code using Terraform. Covers configuration syntax, state management, modules, and cloud provider integration.",
-    "prerequisites": ["Cloud platform experience", "Command line familiarity"],
+    "prerequisites": [
+      "Cloud platform experience",
+      "Command line familiarity"
+    ],
     "exam_link": "https://www.hashicorp.com/certification/terraform-associate",
-    "skills_covered": ["Terraform", "Infrastructure as code", "State management", "Cloud provisioning", "Modules"]
+    "skills_covered": [
+      "Terraform",
+      "Infrastructure as code",
+      "State management",
+      "Cloud provisioning",
+      "Modules"
+    ]
+  },
+  {
+    "id": "cert-010",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "10 hours",
+    "exam_fee": "Free",
+    "validity": "No expiration",
+    "description": "Learn the basics of AI, how to use AI tools effectively, and how to apply AI in the workplace. This course covers prompt engineering, AI ethics, and responsible AI practices for everyday professionals.",
+    "prerequisites": [
+      "No prior AI or programming experience required"
+    ],
+    "learning_outcomes": [
+      "Understand core AI concepts and terminology",
+      "Write effective prompts for AI tools",
+      "Evaluate AI outputs for accuracy and bias",
+      "Apply AI responsibly in professional settings"
+    ],
+    "official_badge": "Google AI Essentials Badge",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "Business Analyst",
+      "Project Manager",
+      "Marketing Specialist",
+      "HR Professional"
+    ],
+    "name": "Google AI Essentials",
+    "exam_link": "https://grow.google/ai",
+    "skills_covered": [
+      "AI fundamentals",
+      "Prompt engineering",
+      "AI ethics",
+      "Responsible AI use",
+      "AI tools"
+    ]
+  },
+  {
+    "id": "cert-011",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Cybersecurity",
+    "duration": "6 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Develop job-ready skills for an entry-level cybersecurity role. Learn to identify common cyber threats, protect organizations from attacks, and respond to security incidents using industry-standard tools.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "learning_outcomes": [
+      "Identify and respond to common cybersecurity threats",
+      "Configure and monitor security systems using SIEM tools",
+      "Write SQL queries for data analysis in security contexts",
+      "Automate security tasks with Python",
+      "Manage identities and access controls"
+    ],
+    "official_badge": "Google Cybersecurity Professional Certificate",
+    "recommended_courses": [
+      "course-018"
+    ],
+    "career_roles": [
+      "Security Analyst",
+      "Security Operations Center Analyst",
+      "Cybersecurity Analyst",
+      "Information Security Analyst"
+    ],
+    "name": "Google Cybersecurity Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    "skills_covered": [
+      "Security operations",
+      "Network security",
+      "Linux",
+      "SQL",
+      "Python",
+      "SIEM tools",
+      "Incident detection"
+    ]
+  },
+  {
+    "id": "cert-012",
+    "provider": "Google",
+    "level": "Intermediate",
+    "category": "Data Analytics",
+    "duration": "6 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Build advanced data skills for a career in data analytics or data science. Covers statistics, regression analysis, machine learning with scikit-learn, and data visualization with Tableau.",
+    "prerequisites": [
+      "Completion of Google Data Analytics Certificate or equivalent experience",
+      "Basic understanding of spreadsheets and SQL"
+    ],
+    "learning_outcomes": [
+      "Apply statistical methods to analyze complex datasets",
+      "Build and evaluate regression and classification models",
+      "Use Python and R for advanced data analysis",
+      "Create compelling data visualizations with Tableau",
+      "Communicate data-driven insights to stakeholders"
+    ],
+    "official_badge": "Google Advanced Data Analytics Badge",
+    "recommended_courses": [
+      "course-004",
+      "course-009"
+    ],
+    "career_roles": [
+      "Data Analyst",
+      "Senior Data Analyst",
+      "Business Intelligence Analyst",
+      "Analytics Engineer"
+    ],
+    "name": "Google Advanced Data Analytics Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-advanced-data-analytics",
+    "skills_covered": [
+      "Python",
+      "R programming",
+      "Statistical analysis",
+      "Machine learning",
+      "Tableau",
+      "Regression",
+      "Logistic regression"
+    ]
+  },
+  {
+    "id": "cert-013",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "duration": "3 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn the skills needed to begin a career in business intelligence and data analytics. Create data visualizations, build dashboards, and use data to drive business decisions.",
+    "prerequisites": [
+      "Basic data literacy",
+      "Familiarity with spreadsheets"
+    ],
+    "learning_outcomes": [
+      "Design and create interactive Tableau dashboards",
+      "Write complex SQL queries for reporting",
+      "Model data for business intelligence",
+      "Present data insights to non-technical stakeholders"
+    ],
+    "official_badge": "Google Business Intelligence Badge",
+    "recommended_courses": [
+      "course-004",
+      "course-009"
+    ],
+    "career_roles": [
+      "Business Intelligence Analyst",
+      "Data Analyst",
+      "Reporting Analyst",
+      "BI Developer"
+    ],
+    "name": "Google Business Intelligence Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-business-intelligence",
+    "skills_covered": [
+      "Tableau",
+      "SQL",
+      "Data modeling",
+      "Dashboard creation",
+      "Business intelligence",
+      "Data-driven decisions"
+    ]
+  },
+  {
+    "id": "cert-014",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Project Management",
+    "duration": "6 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Gain the job-ready skills needed to manage projects effectively. Learn Agile methodologies, create project plans, manage budgets, and lead cross-functional teams.",
+    "prerequisites": [
+      "No prior project management experience required"
+    ],
+    "learning_outcomes": [
+      "Apply Agile and Scrum methodologies to manage projects",
+      "Create comprehensive project plans and timelines",
+      "Manage project budgets and resources",
+      "Facilitate effective stakeholder communication",
+      "Use project management tools like Asana"
+    ],
+    "official_badge": "Google Project Management Badge",
+    "recommended_courses": [
+      "course-047"
+    ],
+    "career_roles": [
+      "Project Manager",
+      "Scrum Master",
+      "Program Manager",
+      "Project Coordinator"
+    ],
+    "name": "Google Project Management Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-project-management",
+    "skills_covered": [
+      "Agile project management",
+      "Scrum methodology",
+      "Risk management",
+      "Stakeholder management",
+      "Budget management",
+      "Project planning"
+    ]
+  },
+  {
+    "id": "cert-015",
+    "provider": "IBM",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "4 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn AI fundamentals and practical implementation. Build AI-powered applications using Python, machine learning, deep learning, and modern LLM APIs.",
+    "prerequisites": [
+      "Basic programming knowledge helpful but not required"
+    ],
+    "learning_outcomes": [
+      "Build ML models using scikit-learn and Keras",
+      "Implement computer vision with OpenCV",
+      "Create NLP applications using Transformers",
+      "Develop AI applications with LLM APIs",
+      "Deploy AI models using IBM Cloud"
+    ],
+    "official_badge": "IBM AI Developer Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-025"
+    ],
+    "career_roles": [
+      "AI Developer",
+      "Machine Learning Engineer",
+      "Data Scientist",
+      "AI Application Developer"
+    ],
+    "name": "IBM AI Developer Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/ibm-ai-developer",
+    "skills_covered": [
+      "Python",
+      "Machine learning",
+      "Deep learning",
+      "NLP",
+      "Computer vision",
+      "LLMs",
+      "OpenCV",
+      "Keras"
+    ]
+  },
+  {
+    "id": "cert-016",
+    "provider": "IBM",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "duration": "4 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Develop skills in Python, SQL, and IBM Cognos Analytics to analyze data and create compelling dashboards. Learn the full data analytics lifecycle from data collection to insight communication.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "learning_outcomes": [
+      "Use Python libraries (Pandas, NumPy) for data wrangling",
+      "Write SQL queries to extract and analyze data",
+      "Create interactive dashboards with IBM Cognos",
+      "Perform exploratory data analysis",
+      "Present actionable insights from data"
+    ],
+    "official_badge": "IBM Data Analyst Certificate",
+    "recommended_courses": [
+      "course-004",
+      "course-009"
+    ],
+    "career_roles": [
+      "Data Analyst",
+      "Business Analyst",
+      "Operations Analyst",
+      "Junior Data Scientist"
+    ],
+    "name": "IBM Data Analyst Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/ibm-data-analyst",
+    "skills_covered": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "IBM Cognos",
+      "Data wrangling",
+      "Data visualization"
+    ]
+  },
+  {
+    "id": "cert-017",
+    "provider": "IBM",
+    "level": "Intermediate",
+    "category": "DevOps",
+    "duration": "4 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Master DevOps practices and software engineering principles. Learn containerization, CI/CD pipelines, cloud deployment, and microservices architecture using real-world tools.",
+    "prerequisites": [
+      "Basic programming experience",
+      "Familiarity with Git"
+    ],
+    "learning_outcomes": [
+      "Build and deploy containerized applications with Docker and Kubernetes",
+      "Implement CI/CD pipelines using GitHub Actions",
+      "Design microservices architectures",
+      "Practice test-driven development",
+      "Deploy applications to cloud platforms"
+    ],
+    "official_badge": "IBM DevOps Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "DevOps Engineer",
+      "Site Reliability Engineer",
+      "Cloud Engineer",
+      "Software Developer"
+    ],
+    "name": "IBM DevOps and Software Engineering Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/devops-and-software-engineering",
+    "skills_covered": [
+      "DevOps",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "Microservices",
+      "Cloud deployment",
+      "Agile",
+      "TDD"
+    ]
+  },
+  {
+    "id": "cert-018",
+    "provider": "IBM",
+    "level": "Intermediate",
+    "category": "Cybersecurity",
+    "duration": "4 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn the skills to become a cybersecurity analyst. Covers network security, incident response, penetration testing fundamentals, and security information and event management (SIEM).",
+    "prerequisites": [
+      "Basic IT knowledge",
+      "Some networking experience helpful"
+    ],
+    "learning_outcomes": [
+      "Detect and respond to cybersecurity incidents",
+      "Use SIEM tools for security monitoring",
+      "Conduct vulnerability assessments",
+      "Apply cryptographic techniques for data protection",
+      "Implement network security best practices"
+    ],
+    "official_badge": "IBM Cybersecurity Analyst Certificate",
+    "recommended_courses": [
+      "course-018"
+    ],
+    "career_roles": [
+      "Cybersecurity Analyst",
+      "Security Engineer",
+      "Incident Responder",
+      "Threat Analyst"
+    ],
+    "name": "IBM Cybersecurity Analyst Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst",
+    "skills_covered": [
+      "Network security",
+      "Incident response",
+      "Penetration testing",
+      "SIEM",
+      "Cryptography",
+      "Threat intelligence",
+      "Vulnerability management"
+    ]
+  },
+  {
+    "id": "cert-019",
+    "provider": "Microsoft",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (20-30 hours recommended)",
+    "exam_fee": "$99 USD",
+    "validity": "Does not expire",
+    "description": "Demonstrate foundational knowledge of AI concepts and related Microsoft Azure services. Covers computer vision, NLP, conversational AI, and responsible AI principles.",
+    "prerequisites": [
+      "Familiarity with computers and using the internet"
+    ],
+    "learning_outcomes": [
+      "Describe AI workloads and considerations on Azure",
+      "Use Azure Computer Vision services",
+      "Implement NLP solutions with Azure Cognitive Services",
+      "Build conversational AI solutions",
+      "Understand responsible AI principles"
+    ],
+    "official_badge": "Microsoft Certified: Azure AI Fundamentals",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "AI Engineer",
+      "Data Scientist",
+      "Cloud Architect",
+      "Solution Architect"
+    ],
+    "name": "Microsoft Azure AI Fundamentals (AI-900)",
+    "exam_link": "https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/",
+    "skills_covered": [
+      "Azure AI services",
+      "Computer vision",
+      "NLP",
+      "Conversational AI",
+      "Document intelligence",
+      "Responsible AI"
+    ]
+  },
+  {
+    "id": "cert-020",
+    "provider": "Microsoft",
+    "level": "Beginner",
+    "category": "Data Science",
+    "duration": "Self-paced (20-30 hours recommended)",
+    "exam_fee": "$99 USD",
+    "validity": "Does not expire",
+    "description": "Validate foundational knowledge of core data concepts and how they are implemented using Microsoft Azure data services. Covers relational, non-relational, analytics, and data warehousing.",
+    "prerequisites": [
+      "Familiarity with basic data concepts"
+    ],
+    "learning_outcomes": [
+      "Describe core data concepts in cloud environments",
+      "Work with relational data on Azure",
+      "Use Azure Cosmos DB for non-relational data",
+      "Understand analytics workloads on Azure",
+      "Describe data warehousing concepts"
+    ],
+    "official_badge": "Microsoft Certified: Azure Data Fundamentals",
+    "recommended_courses": [
+      "course-004",
+      "course-009"
+    ],
+    "career_roles": [
+      "Data Analyst",
+      "Data Engineer",
+      "Database Administrator",
+      "Cloud Data Specialist"
+    ],
+    "name": "Microsoft Azure Data Fundamentals (DP-900)",
+    "exam_link": "https://learn.microsoft.com/credentials/certifications/azure-data-fundamentals/",
+    "skills_covered": [
+      "Azure data services",
+      "Core data concepts",
+      "Relational data",
+      "Non-relational data",
+      "Data warehousing",
+      "Data lakes"
+    ]
+  },
+  {
+    "id": "cert-021",
+    "provider": "Microsoft",
+    "level": "Intermediate",
+    "category": "Data Analytics",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$165 USD",
+    "validity": "Does not expire",
+    "description": "Demonstrate essential knowledge and skills to prepare, model, visualize, and analyze data using Microsoft Power BI. Covers DAX formulas, Power Query transformations, and advanced data modeling.",
+    "prerequisites": [
+      "Experience with data analysis using Power BI",
+      "Basic understanding of data modeling concepts"
+    ],
+    "learning_outcomes": [
+      "Prepare and transform data using Power Query",
+      "Create sophisticated data models with DAX",
+      "Design interactive Power BI reports and dashboards",
+      "Implement row-level security",
+      "Deploy and maintain assets in Power BI Service"
+    ],
+    "official_badge": "Microsoft Certified: Power BI Data Analyst Associate",
+    "recommended_courses": [
+      "course-009",
+      "course-028"
+    ],
+    "career_roles": [
+      "Data Analyst",
+      "BI Analyst",
+      "Business Intelligence Developer",
+      "Reporting Analyst"
+    ],
+    "name": "Power BI Data Analyst Associate (PL-300)",
+    "exam_link": "https://learn.microsoft.com/credentials/certifications/power-bi-data-analyst-associate/",
+    "skills_covered": [
+      "Power BI",
+      "DAX",
+      "Data modeling",
+      "Power Query",
+      "Data visualization",
+      "Row-level security",
+      "Data analysis"
+    ]
+  },
+  {
+    "id": "cert-022",
+    "provider": "Microsoft",
+    "level": "Beginner",
+    "category": "Cybersecurity",
+    "duration": "Self-paced (15-25 hours recommended)",
+    "exam_fee": "$99 USD",
+    "validity": "Does not expire",
+    "description": "Demonstrate foundational knowledge of security, compliance, and identity concepts across cloud-based and related Microsoft services. Covers Azure security tools, compliance solutions, and identity management.",
+    "prerequisites": [
+      "Familiarity with IT concepts and cloud computing basics"
+    ],
+    "learning_outcomes": [
+      "Describe security, compliance, and identity concepts",
+      "Explain Microsoft security solutions",
+      "Describe Microsoft compliance solutions",
+      "Understand Azure Active Directory and conditional access",
+      "Implement zero trust model principles"
+    ],
+    "official_badge": "Microsoft Certified: SC-900",
+    "recommended_courses": [
+      "course-018"
+    ],
+    "career_roles": [
+      "Security Analyst",
+      "Compliance Analyst",
+      "IT Security Administrator",
+      "Identity Administrator"
+    ],
+    "name": "Microsoft Security, Compliance & Identity Fundamentals (SC-900)",
+    "exam_link": "https://learn.microsoft.com/credentials/certifications/security-compliance-and-identity-fundamentals/",
+    "skills_covered": [
+      "Microsoft Security",
+      "Compliance",
+      "Identity management",
+      "Azure security",
+      "Conditional access",
+      "Zero Trust"
+    ]
+  },
+  {
+    "id": "cert-023",
+    "provider": "Amazon Web Services",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (20-40 hours recommended)",
+    "exam_fee": "$100 USD",
+    "validity": "3 years",
+    "description": "Validate foundational knowledge of AWS Cloud services, security, pricing, and architecture. Ideal for individuals starting their cloud journey or working in non-technical cloud roles.",
+    "prerequisites": [
+      "Basic IT knowledge",
+      "6 months of industry experience recommended"
+    ],
+    "learning_outcomes": [
+      "Explain the AWS shared responsibility model",
+      "Identify AWS core services and their use cases",
+      "Understand AWS security best practices",
+      "Describe AWS pricing models and billing",
+      "Navigate the AWS Well-Architected Framework"
+    ],
+    "official_badge": "AWS Certified Cloud Practitioner",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Cloud Practitioner",
+      "Cloud Sales Associate",
+      "Technical Program Manager",
+      "IT Support Specialist"
+    ],
+    "name": "AWS Cloud Practitioner",
+    "exam_link": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "skills_covered": [
+      "AWS cloud concepts",
+      "AWS core services",
+      "Cloud security",
+      "AWS pricing",
+      "Cloud architecture",
+      "Support basics"
+    ]
+  },
+  {
+    "id": "cert-024",
+    "provider": "Amazon Web Services",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (20-30 hours recommended)",
+    "exam_fee": "$100 USD",
+    "validity": "3 years",
+    "description": "Validate foundational knowledge of AI and ML concepts, AWS AI services, and how to use them to build intelligent solutions. Covers generative AI, ML lifecycle, and responsible AI practices.",
+    "prerequisites": [
+      "Basic understanding of AI/ML concepts",
+      "Some cloud computing experience helpful"
+    ],
+    "learning_outcomes": [
+      "Describe AI and ML concepts and use cases on AWS",
+      "Use Amazon Bedrock for generative AI",
+      "Understand the ML lifecycle and SageMaker",
+      "Apply responsible AI principles",
+      "Identify appropriate AWS AI services for different scenarios"
+    ],
+    "official_badge": "AWS Certified AI Practitioner",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-025"
+    ],
+    "career_roles": [
+      "AI/ML Engineer",
+      "Cloud Architect",
+      "Data Scientist",
+      "Solution Architect"
+    ],
+    "name": "AWS AI Practitioner",
+    "exam_link": "https://aws.amazon.com/certification/",
+    "skills_covered": [
+      "AI/ML fundamentals",
+      "AWS AI services",
+      "Amazon Bedrock",
+      "SageMaker",
+      "Generative AI",
+      "Responsible AI"
+    ]
+  },
+  {
+    "id": "cert-025",
+    "provider": "Amazon Web Services",
+    "level": "Intermediate",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (80-120 hours recommended)",
+    "exam_fee": "$150 USD",
+    "validity": "3 years",
+    "description": "Validate technical expertise in designing and deploying scalable, highly available, and fault-tolerant systems on AWS. Covers VPC design, compute services, storage solutions, and cost optimization.",
+    "prerequisites": [
+      "At least 1 year of hands-on experience with AWS",
+      "Familiarity with AWS services and cloud architecture"
+    ],
+    "learning_outcomes": [
+      "Design resilient and high-performing architectures",
+      "Implement cost-optimized solutions",
+      "Migrate complex applications to AWS",
+      "Apply security best practices across AWS services",
+      "Design serverless and event-driven architectures"
+    ],
+    "official_badge": "AWS Certified Solutions Architect Associate",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Solutions Architect",
+      "Cloud Architect",
+      "DevOps Engineer",
+      "Cloud Consultant"
+    ],
+    "name": "AWS Solutions Architect Associate",
+    "exam_link": "https://aws.amazon.com/certification/",
+    "skills_covered": [
+      "AWS architecture",
+      "Compute",
+      "Networking",
+      "Storage",
+      "Security",
+      "Cost optimization",
+      "Disaster recovery",
+      "Well-Architected Framework"
+    ]
+  },
+  {
+    "id": "cert-026",
+    "provider": "Amazon Web Services",
+    "level": "Intermediate",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (80-120 hours recommended)",
+    "exam_fee": "$150 USD",
+    "validity": "3 years",
+    "description": "Validate technical expertise in developing, deploying, and debugging cloud-based applications on AWS. Covers serverless architecture, APIs, CI/CD pipelines, and AWS SDKs.",
+    "prerequisites": [
+      "At least 1 year of hands-on development experience with AWS",
+      "Proficiency in at least one programming language"
+    ],
+    "learning_outcomes": [
+      "Design and implement serverless applications using Lambda",
+      "Build and deploy APIs with API Gateway",
+      "Use DynamoDB for NoSQL data storage",
+      "Implement CI/CD pipelines with AWS services",
+      "Write and deploy cloud-native applications using CloudFormation"
+    ],
+    "official_badge": "AWS Certified Developer Associate",
+    "recommended_courses": [
+      "course-010",
+      "course-014",
+      "course-001"
+    ],
+    "career_roles": [
+      "Cloud Developer",
+      "Backend Developer",
+      "DevOps Engineer",
+      "Serverless Developer"
+    ],
+    "name": "AWS Developer Associate",
+    "exam_link": "https://aws.amazon.com/certification/",
+    "skills_covered": [
+      "AWS SDK",
+      "Serverless",
+      "Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "CI/CD on AWS",
+      "Containerization",
+      "CloudFormation"
+    ]
+  },
+  {
+    "id": "cert-027",
+    "provider": "Meta",
+    "level": "Beginner",
+    "category": "Backend Development",
+    "duration": "7 months (6 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn to build server-side web applications with Python and Django. Covers API development, database management, testing, and deployment using industry-standard tools.",
+    "prerequisites": [
+      "Basic knowledge of HTML and CSS",
+      "Some programming experience helpful"
+    ],
+    "learning_outcomes": [
+      "Build RESTful APIs using Django",
+      "Design and manage MySQL databases",
+      "Implement authentication and authorization",
+      "Write unit tests for backend applications",
+      "Deploy applications using Docker"
+    ],
+    "official_badge": "Meta Back-End Developer Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-010"
+    ],
+    "career_roles": [
+      "Backend Developer",
+      "Python Developer",
+      "API Developer",
+      "Full-Stack Developer"
+    ],
+    "name": "Meta Back-End Developer Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/meta-back-end-developer",
+    "skills_covered": [
+      "Python",
+      "Django",
+      "REST APIs",
+      "MySQL",
+      "Git",
+      "Unit testing",
+      "Docker",
+      "GraphQL"
+    ]
+  },
+  {
+    "id": "cert-028",
+    "provider": "Meta",
+    "level": "Beginner",
+    "category": "Mobile Development",
+    "duration": "7 months (6 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn to build Android apps from scratch using Kotlin and modern Android development tools. Covers UI design with Jetpack Compose, data persistence, and app publishing.",
+    "prerequisites": [
+      "No prior Android development experience required",
+      "Basic programming knowledge helpful"
+    ],
+    "learning_outcomes": [
+      "Build Android apps using Kotlin and Android Studio",
+      "Design responsive UIs with Jetpack Compose",
+      "Implement data persistence with Room database",
+      "Use MVVM architecture for app development",
+      "Publish apps to the Google Play Store"
+    ],
+    "official_badge": "Meta Android Developer Certificate",
+    "recommended_courses": [
+      "course-011"
+    ],
+    "career_roles": [
+      "Android Developer",
+      "Mobile App Developer",
+      "Junior Software Developer",
+      "React Native Developer"
+    ],
+    "name": "Meta Android Developer Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/meta-android-developer",
+    "skills_covered": [
+      "Kotlin",
+      "Android Studio",
+      "Jetpack Compose",
+      "Material Design",
+      "Room Database",
+      "Navigation",
+      "MVVM"
+    ]
+  },
+  {
+    "id": "cert-029",
+    "provider": "Meta",
+    "level": "Beginner",
+    "category": "Mobile Development",
+    "duration": "7 months (6 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn to build iOS applications using Swift and SwiftUI. Covers interface design, data persistence, networking, and publishing to the App Store.",
+    "prerequisites": [
+      "No prior iOS development experience required",
+      "Basic programming knowledge helpful"
+    ],
+    "learning_outcomes": [
+      "Build iOS apps using Swift and SwiftUI",
+      "Design user interfaces with SwiftUI views and layouts",
+      "Implement data persistence with Core Data",
+      "Consume REST APIs in iOS applications",
+      "Publish apps to the Apple App Store"
+    ],
+    "official_badge": "Meta iOS Developer Certificate",
+    "recommended_courses": [
+      "course-011"
+    ],
+    "career_roles": [
+      "iOS Developer",
+      "Mobile App Developer",
+      "Swift Developer",
+      "Software Developer"
+    ],
+    "name": "Meta iOS Developer Professional Certificate",
+    "exam_link": "https://www.coursera.org/professional-certificates/meta-ios-developer",
+    "skills_covered": [
+      "Swift",
+      "SwiftUI",
+      "UIKit",
+      "Core Data",
+      "REST APIs",
+      "ARKit",
+      "App Store publishing"
+    ]
+  },
+  {
+    "id": "cert-030",
+    "provider": "Oracle",
+    "level": "Beginner",
+    "category": "Java Development",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$245 USD",
+    "validity": "Does not expire",
+    "description": "Validate foundational Java programming knowledge. Covers Java syntax, object-oriented programming principles, core APIs, and basic application development.",
+    "prerequisites": [
+      "Basic computer literacy"
+    ],
+    "learning_outcomes": [
+      "Write Java programs using core language features",
+      "Apply object-oriented programming concepts",
+      "Use Java collections and exception handling",
+      "Work with file I/O operations",
+      "Understand the Java platform and runtime environment"
+    ],
+    "official_badge": "Oracle Java Foundations Certified",
+    "recommended_courses": [
+      "course-019"
+    ],
+    "career_roles": [
+      "Java Developer",
+      "Software Developer",
+      "Junior Programmer",
+      "Application Developer"
+    ],
+    "name": "Oracle Java Foundations",
+    "exam_link": "https://education.oracle.com/",
+    "skills_covered": [
+      "Java basics",
+      "OOP concepts",
+      "Java syntax",
+      "Control structures",
+      "Arrays",
+      "Exception handling",
+      "File I/O"
+    ]
+  },
+  {
+    "id": "cert-031",
+    "provider": "Oracle",
+    "level": "Intermediate",
+    "category": "Java Development",
+    "duration": "Self-paced (60-80 hours recommended)",
+    "exam_fee": "$245 USD",
+    "validity": "Does not expire",
+    "description": "Demonstrate advanced Java SE programming skills. Covers generics, collections framework, streams, concurrency, JVM internals, and Java module system.",
+    "prerequisites": [
+      "Oracle Java Foundations or equivalent knowledge",
+      "1-2 years of Java development experience"
+    ],
+    "learning_outcomes": [
+      "Apply advanced Java SE features including generics and lambdas",
+      "Use the Streams API for data processing",
+      "Implement concurrent and parallel applications",
+      "Understand JVM memory management and garbage collection",
+      "Design applications using Java modules"
+    ],
+    "official_badge": "Oracle Java SE Professional Certified",
+    "recommended_courses": [
+      "course-019"
+    ],
+    "career_roles": [
+      "Senior Java Developer",
+      "Backend Developer",
+      "Software Architect",
+      "Enterprise Developer"
+    ],
+    "name": "Oracle Java Professional",
+    "exam_link": "https://education.oracle.com/",
+    "skills_covered": [
+      "Advanced Java",
+      "Generics",
+      "Streams API",
+      "Concurrency",
+      "Design patterns",
+      "JVM internals",
+      "Modules",
+      "Security"
+    ]
+  },
+  {
+    "id": "cert-032",
+    "provider": "Oracle",
+    "level": "Beginner",
+    "category": "Backend Development",
+    "duration": "Self-paced (30-40 hours recommended)",
+    "exam_fee": "$245 USD",
+    "validity": "Does not expire",
+    "description": "Validate foundational knowledge of Oracle Database concepts, SQL, and database administration. Covers relational database design, SQL queries, and basic PL/SQL.",
+    "prerequisites": [
+      "Basic computer literacy"
+    ],
+    "learning_outcomes": [
+      "Understand relational database concepts and design",
+      "Write SQL queries for data manipulation",
+      "Create and manage database objects",
+      "Use PL/SQL for basic programmatic access",
+      "Perform basic database administration tasks"
+    ],
+    "official_badge": "Oracle Database Foundations Certified",
+    "recommended_courses": [
+      "course-001",
+      "course-009"
+    ],
+    "career_roles": [
+      "Database Administrator",
+      "Data Analyst",
+      "Backend Developer",
+      "Database Developer"
+    ],
+    "name": "Oracle Database Foundations",
+    "exam_link": "https://education.oracle.com/",
+    "skills_covered": [
+      "SQL",
+      "Database concepts",
+      "Oracle Database",
+      "Data modeling",
+      "PL/SQL basics",
+      "Query optimization"
+    ]
+  },
+  {
+    "id": "cert-033",
+    "provider": "Cisco",
+    "level": "Intermediate",
+    "category": "Cybersecurity",
+    "duration": "Self-paced (100-120 hours recommended)",
+    "exam_fee": "$330 USD",
+    "validity": "3 years",
+    "description": "Prepare for a career in cybersecurity operations. Covers security monitoring, host and network intrusion analysis, security policies, and incident response procedures.",
+    "prerequisites": [
+      "Basic networking knowledge",
+      "CCNA-level understanding helpful"
+    ],
+    "learning_outcomes": [
+      "Apply security monitoring techniques",
+      "Perform host-based security analysis",
+      "Analyze network intrusions and attacks",
+      "Implement incident response procedures",
+      "Understand compliance frameworks and security policies"
+    ],
+    "official_badge": "Cisco Certified CyberOps Associate",
+    "recommended_courses": [
+      "course-018"
+    ],
+    "career_roles": [
+      "Security Operations Analyst",
+      "Cybersecurity Analyst",
+      "SOC Analyst",
+      "Incident Responder"
+    ],
+    "name": "Cisco CyberOps Associate",
+    "exam_link": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications.html",
+    "skills_covered": [
+      "Security monitoring",
+      "Host-based analysis",
+      "Network intrusion analysis",
+      "Security policies",
+      "Incident response",
+      "Cryptography"
+    ]
+  },
+  {
+    "id": "cert-034",
+    "provider": "Cisco",
+    "level": "Intermediate",
+    "category": "DevOps",
+    "duration": "Self-paced (100-120 hours recommended)",
+    "exam_fee": "$330 USD",
+    "validity": "3 years",
+    "description": "Validate skills in network automation, programmability, and DevOps for Cisco platforms. Covers Python, REST APIs, Git, Docker, and Ansible for infrastructure automation.",
+    "prerequisites": [
+      "Basic programming knowledge",
+      "Understanding of networking concepts"
+    ],
+    "learning_outcomes": [
+      "Write Python scripts for network automation",
+      "Use REST APIs to interact with Cisco platforms",
+      "Implement version control with Git",
+      "Containerize network applications with Docker",
+      "Automate network configuration with Ansible"
+    ],
+    "official_badge": "Cisco Certified DevNet Associate",
+    "recommended_courses": [
+      "course-001",
+      "course-010"
+    ],
+    "career_roles": [
+      "Network Automation Engineer",
+      "DevOps Engineer",
+      "Cloud Engineer",
+      "Network Developer"
+    ],
+    "name": "Cisco DevNet Associate",
+    "exam_link": "https://www.cisco.com/site/us/en/learn/training-certifications/certifications.html",
+    "skills_covered": [
+      "Network automation",
+      "Python",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "YAML",
+      "Ansible",
+      "Cisco platforms"
+    ]
+  },
+  {
+    "id": "cert-035",
+    "provider": "NVIDIA",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "Does not expire",
+    "description": "Master the concepts and practical implementation of generative AI. Covers large language models, transformer architecture, prompt engineering, retrieval-augmented generation, and deployment on NVIDIA platforms.",
+    "prerequisites": [
+      "Basic Python programming",
+      "Understanding of machine learning fundamentals"
+    ],
+    "learning_outcomes": [
+      "Understand transformer architecture and attention mechanisms",
+      "Build and deploy generative AI applications",
+      "Implement RAG systems for knowledge-grounded generation",
+      "Fine-tune LLMs for domain-specific tasks",
+      "Optimize AI inference using NVIDIA tools"
+    ],
+    "official_badge": "NVIDIA Generative AI Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-025"
+    ],
+    "career_roles": [
+      "AI Engineer",
+      "ML Engineer",
+      "GenAI Developer",
+      "AI Researcher"
+    ],
+    "name": "NVIDIA Generative AI Certification",
+    "exam_link": "https://developer.nvidia.com/training",
+    "skills_covered": [
+      "Generative AI",
+      "LLMs",
+      "Transformer architecture",
+      "Prompt engineering",
+      "Fine-tuning",
+      "RAG",
+      "AI deployment"
+    ]
+  },
+  {
+    "id": "cert-036",
+    "provider": "NVIDIA",
+    "level": "Intermediate",
+    "category": "Deep Learning",
+    "duration": "Self-paced (60-80 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "Does not expire",
+    "description": "Gain practical experience in deep learning using NVIDIA's GPU-accelerated tools. Covers neural network fundamentals, CNNs, RNNs, GANs, and model optimization with TensorRT.",
+    "prerequisites": [
+      "Python programming proficiency",
+      "Understanding of linear algebra and calculus basics"
+    ],
+    "learning_outcomes": [
+      "Build and train deep neural networks using PyTorch",
+      "Implement CNNs for image classification and detection",
+      "Build RNNs for sequence modeling",
+      "Train GANs for generative models",
+      "Optimize model inference using TensorRT"
+    ],
+    "official_badge": "NVIDIA Deep Learning Institute Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-026"
+    ],
+    "career_roles": [
+      "Deep Learning Engineer",
+      "Computer Vision Engineer",
+      "AI Researcher",
+      "ML Engineer"
+    ],
+    "name": "NVIDIA Deep Learning Institute Certificate",
+    "exam_link": "https://developer.nvidia.com/training",
+    "skills_covered": [
+      "Deep learning",
+      "Neural networks",
+      "CNNs",
+      "RNNs",
+      "GANs",
+      "Transfer learning",
+      "TensorRT",
+      "NVIDIA CUDA"
+    ]
+  },
+  {
+    "id": "cert-037",
+    "provider": "DeepLearning.AI",
+    "level": "Beginner",
+    "category": "Machine Learning",
+    "duration": "3 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn foundational machine learning algorithms and techniques. Covers supervised learning, unsupervised learning, recommender systems, and reinforcement learning with hands-on Python projects.",
+    "prerequisites": [
+      "Basic Python programming",
+      "High school math (algebra, basic calculus)"
+    ],
+    "learning_outcomes": [
+      "Implement linear and logistic regression from scratch",
+      "Build neural networks using NumPy and TensorFlow",
+      "Apply regularization to prevent overfitting",
+      "Build recommender systems",
+      "Implement reinforcement learning algorithms"
+    ],
+    "official_badge": "DeepLearning.AI Machine Learning Specialization Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-005"
+    ],
+    "career_roles": [
+      "Machine Learning Engineer",
+      "Data Scientist",
+      "AI Developer",
+      "Research Scientist"
+    ],
+    "name": "Machine Learning Specialization (DeepLearning.AI)",
+    "exam_link": "https://www.deeplearning.ai/courses/machine-learning-specialization/",
+    "skills_covered": [
+      "Supervised learning",
+      "Unsupervised learning",
+      "Recommender systems",
+      "Reinforcement learning",
+      "Neural networks",
+      "Decision trees",
+      "Anomaly detection"
+    ]
+  },
+  {
+    "id": "cert-038",
+    "provider": "DeepLearning.AI",
+    "level": "Intermediate",
+    "category": "Deep Learning",
+    "duration": "5 months (7 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Master deep learning techniques and their applications. Covers neural network optimization, CNNs for computer vision, sequence models for NLP, and practical methodology for building deep learning systems.",
+    "prerequisites": [
+      "Python programming",
+      "Basic machine learning concepts",
+      "Linear algebra basics"
+    ],
+    "learning_outcomes": [
+      "Build deep neural networks using TensorFlow",
+      "Apply batch normalization and dropout",
+      "Implement CNNs for image recognition",
+      "Build RNNs, LSTMs, and GRUs for sequence data",
+      "Design and implement transformer architectures"
+    ],
+    "official_badge": "DeepLearning.AI Deep Learning Specialization Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-026"
+    ],
+    "career_roles": [
+      "Deep Learning Engineer",
+      "Computer Vision Engineer",
+      "NLP Engineer",
+      "AI Research Scientist"
+    ],
+    "name": "Deep Learning Specialization (DeepLearning.AI)",
+    "exam_link": "https://www.deeplearning.ai/courses/deep-learning-specialization/",
+    "skills_covered": [
+      "Neural networks",
+      "CNNs",
+      "RNNs",
+      "LSTMs",
+      "Transformers",
+      "Optimization",
+      "Batch normalization",
+      "TensorFlow"
+    ]
+  },
+  {
+    "id": "cert-039",
+    "provider": "DeepLearning.AI",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "3 weeks (3 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Understand generative AI from a non-technical perspective. Learn what generative AI can and cannot do, how to use it effectively, and its impact on business and society.",
+    "prerequisites": [
+      "No prior technical experience required"
+    ],
+    "learning_outcomes": [
+      "Explain how generative AI works at a high level",
+      "Identify effective use cases for generative AI",
+      "Write effective prompts for AI tools",
+      "Understand the limitations and ethical considerations of AI",
+      "Develop an AI strategy for your organization"
+    ],
+    "official_badge": "DeepLearning.AI Generative AI for Everyone Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "Business Leader",
+      "Product Manager",
+      "Marketing Manager",
+      "Entrepreneur"
+    ],
+    "name": "Generative AI for Everyone (DeepLearning.AI)",
+    "exam_link": "https://www.deeplearning.ai/courses/generative-ai-for-everyone/",
+    "skills_covered": [
+      "Generative AI concepts",
+      "LLMs",
+      "Prompt engineering",
+      "AI applications",
+      "AI ethics",
+      "Business AI strategy"
+    ]
+  },
+  {
+    "id": "cert-040",
+    "provider": "DeepLearning.AI",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "4 weeks (4 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn Python programming basics with an AI-first approach. Covers data types, control flow, functions, and how to use Python to interact with AI models and APIs.",
+    "prerequisites": [
+      "No prior programming experience required"
+    ],
+    "learning_outcomes": [
+      "Write Python programs using variables, loops, and functions",
+      "Manipulate data using Python lists and dictionaries",
+      "Work with files and APIs in Python",
+      "Integrate LLM APIs into Python scripts",
+      "Automate repetitive tasks using Python"
+    ],
+    "official_badge": "DeepLearning.AI AI Python Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-005"
+    ],
+    "career_roles": [
+      "Junior Developer",
+      "Data Analyst",
+      "Automation Engineer",
+      "AI Enthusiast"
+    ],
+    "name": "AI Python for Beginners (DeepLearning.AI)",
+    "exam_link": "https://www.deeplearning.ai/",
+    "skills_covered": [
+      "Python basics",
+      "AI concepts",
+      "Data manipulation",
+      "APIs",
+      "Automation",
+      "LLM integration"
+    ]
+  },
+  {
+    "id": "cert-041",
+    "provider": "OpenAI",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (20-40 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "No expiration",
+    "description": "Learn to build applications powered by OpenAI's GPT models. Covers API integration, prompt engineering best practices, function calling, and building production-ready AI applications.",
+    "prerequisites": [
+      "Basic programming knowledge (Python recommended)",
+      "Understanding of HTTP APIs"
+    ],
+    "learning_outcomes": [
+      "Integrate OpenAI API into applications",
+      "Master advanced prompt engineering techniques",
+      "Implement function calling for structured outputs",
+      "Build production-ready AI applications",
+      "Understand fine-tuning and model capabilities"
+    ],
+    "official_badge": "OpenAI Academy Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "AI Developer",
+      "Full-Stack Developer",
+      "Product Engineer",
+      "AI Consultant"
+    ],
+    "name": "OpenAI Academy",
+    "exam_link": "https://academy.openai.com/",
+    "skills_covered": [
+      "GPT models",
+      "API integration",
+      "Prompt engineering",
+      "AI application development",
+      "Function calling",
+      "Fine-tuning basics"
+    ]
+  },
+  {
+    "id": "cert-042",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (15-30 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "No expiration",
+    "description": "Learn to build applications using Anthropic's Claude AI models. Covers Claude API integration, prompt engineering, AI safety principles, and responsible AI development practices.",
+    "prerequisites": [
+      "Basic programming knowledge",
+      "Familiarity with AI concepts"
+    ],
+    "learning_outcomes": [
+      "Integrate Claude API into web applications",
+      "Apply best practices for prompt engineering",
+      "Understand Constitutional AI principles",
+      "Build safe and reliable AI applications",
+      "Implement AI safety guardrails"
+    ],
+    "official_badge": "Anthropic Academy Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "AI Developer",
+      "AI Safety Researcher",
+      "ML Engineer",
+      "Product Engineer"
+    ],
+    "name": "Anthropic Academy",
+    "exam_link": "https://anthropic.skilljar.com/",
+    "skills_covered": [
+      "Claude API",
+      "Prompt engineering",
+      "AI safety",
+      "Constitutional AI",
+      "Responsible AI",
+      "Building with Claude"
+    ]
+  },
+  {
+    "id": "cert-043",
+    "provider": "Hugging Face",
+    "level": "Intermediate",
+    "category": "Natural Language Processing",
+    "duration": "Self-paced (60-80 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "No expiration",
+    "description": "Master NLP techniques using the Hugging Face ecosystem. Covers Transformers library, fine-tuning pre-trained models, text classification, NER, question answering, and model deployment.",
+    "prerequisites": [
+      "Python programming",
+      "Basic understanding of deep learning",
+      "Familiarity with PyTorch or TensorFlow"
+    ],
+    "learning_outcomes": [
+      "Use the Transformers library for NLP tasks",
+      "Fine-tune pre-trained models for custom tasks",
+      "Implement text classification and NER",
+      "Build question-answering systems",
+      "Deploy NLP models using Hugging Face Inference API"
+    ],
+    "official_badge": "Hugging Face NLP Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-026"
+    ],
+    "career_roles": [
+      "NLP Engineer",
+      "ML Engineer",
+      "Data Scientist",
+      "AI Developer"
+    ],
+    "name": "Hugging Face NLP Course",
+    "exam_link": "https://huggingface.co/learn",
+    "skills_covered": [
+      "Transformers",
+      "Hugging Face libraries",
+      "NLP",
+      "Text classification",
+      "Named entity recognition",
+      "Question answering",
+      "Fine-tuning"
+    ]
+  },
+  {
+    "id": "cert-044",
+    "provider": "Hugging Face",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "Free",
+    "validity": "No expiration",
+    "description": "Learn to build AI agents that can reason, plan, and use tools. Covers agent architectures, tool integration, multi-agent systems, and building autonomous AI workflows.",
+    "prerequisites": [
+      "Python programming",
+      "Familiarity with LLMs and Transformers",
+      "Understanding of API development"
+    ],
+    "learning_outcomes": [
+      "Design and implement AI agent architectures",
+      "Integrate external tools and APIs into agents",
+      "Build multi-agent systems",
+      "Implement reasoning and planning capabilities",
+      "Deploy autonomous AI workflows"
+    ],
+    "official_badge": "Hugging Face Agents Course Certificate",
+    "recommended_courses": [
+      "course-001",
+      "course-021",
+      "course-025"
+    ],
+    "career_roles": [
+      "AI Engineer",
+      "AI Agent Developer",
+      "ML Engineer",
+      "Research Engineer"
+    ],
+    "name": "Hugging Face Agents Course",
+    "exam_link": "https://huggingface.co/learn",
+    "skills_covered": [
+      "AI agents",
+      "Tool use",
+      "LLM orchestration",
+      "Agentic workflows",
+      "Multi-agent systems",
+      "Code generation",
+      "Reasoning"
+    ]
+  },
+  {
+    "id": "cert-045",
+    "provider": "Linux Foundation",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (30-40 hours recommended)",
+    "exam_fee": "$250 USD",
+    "validity": "3 years",
+    "description": "Validate foundational knowledge of Kubernetes and the cloud native ecosystem. Covers container orchestration, cloud native architecture, observability, and the cloud native landscape.",
+    "prerequisites": [
+      "Basic understanding of cloud computing",
+      "Familiarity with containers and Docker helpful"
+    ],
+    "learning_outcomes": [
+      "Understand cloud native architecture principles",
+      "Describe Kubernetes components and architecture",
+      "Deploy applications on Kubernetes clusters",
+      "Implement basic observability practices",
+      "Navigate the CNCF cloud native landscape"
+    ],
+    "official_badge": "Linux Foundation KCNA",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Cloud Engineer",
+      "DevOps Engineer",
+      "Platform Engineer",
+      "SRE"
+    ],
+    "name": "Kubernetes and Cloud Native Associate (KCNA)",
+    "exam_link": "https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/",
+    "skills_covered": [
+      "Kubernetes basics",
+      "Cloud native concepts",
+      "Container fundamentals",
+      "Microservices",
+      "Observability",
+      "Service mesh"
+    ]
+  },
+  {
+    "id": "cert-046",
+    "provider": "Linux Foundation",
+    "level": "Intermediate",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (60-80 hours recommended)",
+    "exam_fee": "$395 USD",
+    "validity": "3 years",
+    "description": "Validate skills in designing, building, configuring, and exposing cloud native applications on Kubernetes. Performance-based exam testing real-world skills in a live Kubernetes environment.",
+    "prerequisites": [
+      "Experience with Kubernetes",
+      "Strong Linux command-line skills",
+      "Familiarity with container runtimes"
+    ],
+    "learning_outcomes": [
+      "Design and deploy applications on Kubernetes",
+      "Configure multi-container pods",
+      "Implement storage and persistent volumes",
+      "Configure network policies and services",
+      "Troubleshoot and debug applications in Kubernetes"
+    ],
+    "official_badge": "Certified Kubernetes Application Developer",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Kubernetes Developer",
+      "Cloud Native Developer",
+      "Platform Engineer",
+      "DevOps Engineer"
+    ],
+    "name": "Certified Kubernetes Application Developer (CKAD)",
+    "exam_link": "https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/",
+    "skills_covered": [
+      "Kubernetes",
+      "Container orchestration",
+      "Pods",
+      "Deployments",
+      "Services",
+      "Networking",
+      "Storage",
+      "Security",
+      "Helm"
+    ]
+  },
+  {
+    "id": "cert-047",
+    "provider": "Linux Foundation",
+    "level": "Advanced",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (80-120 hours recommended)",
+    "exam_fee": "$395 USD",
+    "validity": "3 years",
+    "description": "Validate skills in Kubernetes cluster administration, including installation, configuration, networking, storage, troubleshooting, and security. Performance-based exam with live cluster tasks.",
+    "prerequisites": [
+      "CKAD or equivalent Kubernetes experience",
+      "Strong Linux administration skills",
+      "Networking fundamentals"
+    ],
+    "learning_outcomes": [
+      "Install and configure Kubernetes clusters",
+      "Manage cluster networking and service meshes",
+      "Implement storage solutions and persistent volumes",
+      "Apply security policies and RBAC",
+      "Troubleshoot cluster components and workloads"
+    ],
+    "official_badge": "Certified Kubernetes Administrator",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Kubernetes Administrator",
+      "Platform Engineer",
+      "SRE",
+      "Cloud Infrastructure Engineer"
+    ],
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "exam_link": "https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/",
+    "skills_covered": [
+      "Kubernetes administration",
+      "Cluster architecture",
+      "Networking",
+      "Storage",
+      "Security",
+      "Troubleshooting",
+      "Etcd",
+      "Backup"
+    ]
+  },
+  {
+    "id": "cert-048",
+    "provider": "Linux Foundation",
+    "level": "Intermediate",
+    "category": "DevOps",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$395 USD",
+    "validity": "3 years",
+    "description": "Validate essential Linux system administration skills. Covers essential commands, storage, networking, security, and troubleshooting in a performance-based exam.",
+    "prerequisites": [
+      "Basic Linux experience",
+      "Familiarity with command-line interface"
+    ],
+    "learning_outcomes": [
+      "Manage users, groups, and file permissions",
+      "Configure storage and file systems",
+      "Set up and troubleshoot networking",
+      "Implement security measures and firewall rules",
+      "Write shell scripts for automation"
+    ],
+    "official_badge": "Linux Foundation LFCS",
+    "recommended_courses": [
+      "course-010"
+    ],
+    "career_roles": [
+      "Linux Administrator",
+      "System Administrator",
+      "DevOps Engineer",
+      "Cloud Engineer"
+    ],
+    "name": "Linux Foundation Certified System Administrator (LFCS)",
+    "exam_link": "https://training.linuxfoundation.org/",
+    "skills_covered": [
+      "Linux administration",
+      "Shell scripting",
+      "File systems",
+      "Networking",
+      "User management",
+      "Security",
+      "Package management",
+      "Systemd"
+    ]
+  },
+  {
+    "id": "cert-049",
+    "provider": "Linux Foundation",
+    "level": "Beginner",
+    "category": "DevOps",
+    "duration": "Self-paced (20-30 hours recommended)",
+    "exam_fee": "$250 USD",
+    "validity": "3 years",
+    "description": "Validate foundational IT knowledge with a Linux focus. Covers Linux fundamentals, cloud computing, networking, security, and hardware concepts for those starting their IT career.",
+    "prerequisites": [
+      "Basic computer literacy",
+      "Interest in IT careers"
+    ],
+    "learning_outcomes": [
+      "Understand Linux operating system fundamentals",
+      "Describe cloud computing concepts and models",
+      "Explain networking fundamentals",
+      "Identify basic security principles",
+      "Understand hardware components and their functions"
+    ],
+    "official_badge": "Linux Foundation LFCA",
+    "recommended_courses": [
+      "course-010"
+    ],
+    "career_roles": [
+      "IT Support Specialist",
+      "Help Desk Technician",
+      "Junior System Administrator",
+      "IT Analyst"
+    ],
+    "name": "Linux Foundation Certified IT Associate (LFCA)",
+    "exam_link": "https://training.linuxfoundation.org/",
+    "skills_covered": [
+      "Linux basics",
+      "Cloud computing",
+      "Networking fundamentals",
+      "Security basics",
+      "Hardware",
+      "Operating systems",
+      "DevOps concepts"
+    ]
+  },
+  {
+    "id": "cert-050",
+    "provider": "Databricks",
+    "level": "Intermediate",
+    "category": "Data Science",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$200 USD",
+    "validity": "Does not expire",
+    "description": "Validate expertise in data engineering on the Databricks platform. Covers Apache Spark, Delta Lake, ETL pipeline development, and the lakehouse architecture pattern.",
+    "prerequisites": [
+      "Experience with SQL and Python",
+      "Basic understanding of data engineering concepts"
+    ],
+    "learning_outcomes": [
+      "Build ETL pipelines using Apache Spark and Delta Lake",
+      "Implement data lakehouse architecture patterns",
+      "Use PySpark for distributed data processing",
+      "Design and implement data models for analytics",
+      "Optimize Spark jobs for performance"
+    ],
+    "official_badge": "Databricks Certified Data Engineer Associate",
+    "recommended_courses": [
+      "course-009",
+      "course-001"
+    ],
+    "career_roles": [
+      "Data Engineer",
+      "Analytics Engineer",
+      "Big Data Engineer",
+      "Spark Developer"
+    ],
+    "name": "Databricks Data Engineer Associate",
+    "exam_link": "https://www.databricks.com/learn/certification",
+    "skills_covered": [
+      "Apache Spark",
+      "Delta Lake",
+      "ETL pipelines",
+      "Data modeling",
+      "PySpark",
+      "SQL",
+      "Data lakehouse architecture"
+    ]
+  },
+  {
+    "id": "cert-051",
+    "provider": "Databricks",
+    "level": "Intermediate",
+    "category": "Machine Learning",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$200 USD",
+    "validity": "Does not expire",
+    "description": "Validate machine learning skills on the Databricks platform. Covers MLflow, feature engineering, model training and deployment, and building end-to-end ML pipelines.",
+    "prerequisites": [
+      "Experience with Python and machine learning basics",
+      "Familiarity with ML frameworks like scikit-learn or PyTorch"
+    ],
+    "learning_outcomes": [
+      "Build ML pipelines using Databricks and MLflow",
+      "Perform feature engineering at scale",
+      "Train and evaluate ML models",
+      "Deploy models to production",
+      "Use Databricks AutoML for rapid prototyping"
+    ],
+    "official_badge": "Databricks Certified ML Associate",
+    "recommended_courses": [
+      "course-001",
+      "course-005",
+      "course-026"
+    ],
+    "career_roles": [
+      "ML Engineer",
+      "Data Scientist",
+      "ML Operations Engineer",
+      "AI Developer"
+    ],
+    "name": "Databricks Machine Learning Associate",
+    "exam_link": "https://www.databricks.com/learn/certification",
+    "skills_covered": [
+      "MLflow",
+      "Feature engineering",
+      "Model training",
+      "Model deployment",
+      "AutoML",
+      "ML pipelines",
+      "Databricks platform"
+    ]
+  },
+  {
+    "id": "cert-052",
+    "provider": "Snowflake",
+    "level": "Intermediate",
+    "category": "Data Science",
+    "duration": "Self-paced (40-60 hours recommended)",
+    "exam_fee": "$175 USD",
+    "validity": "2 years",
+    "description": "Validate core knowledge and skills with Snowflake's Data Cloud platform. Covers architecture, data loading, query performance, security, and data sharing capabilities.",
+    "prerequisites": [
+      "SQL proficiency",
+      "Basic data warehousing concepts",
+      "Cloud platform familiarity helpful"
+    ],
+    "learning_outcomes": [
+      "Navigate and manage the Snowflake platform",
+      "Load and transform data in Snowflake",
+      "Write optimized SQL queries",
+      "Implement data sharing and security",
+      "Configure virtual warehouses for performance"
+    ],
+    "official_badge": "Snowflake SnowPro Core Certified",
+    "recommended_courses": [
+      "course-009",
+      "course-004"
+    ],
+    "career_roles": [
+      "Data Engineer",
+      "Data Analyst",
+      "Database Administrator",
+      "Cloud Data Architect"
+    ],
+    "name": "SnowPro Core Certification",
+    "exam_link": "https://learn.snowflake.com/",
+    "skills_covered": [
+      "Snowflake",
+      "SQL",
+      "Data warehousing",
+      "Data sharing",
+      "Semi-structured data",
+      "Security",
+      "Performance optimization"
+    ]
+  },
+  {
+    "id": "cert-053",
+    "provider": "HashiCorp",
+    "level": "Intermediate",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (30-40 hours recommended)",
+    "exam_fee": "$230 USD (or free via training path)",
+    "validity": "2 years",
+    "description": "Demonstrate skills in infrastructure as code using Terraform. Covers HCL syntax, state management, modules, cloud provider integration, and Terraform Cloud workflows.",
+    "prerequisites": [
+      "Cloud platform experience",
+      "Command line familiarity",
+      "Basic understanding of infrastructure concepts"
+    ],
+    "learning_outcomes": [
+      "Write Terraform configurations using HCL",
+      "Manage infrastructure state effectively",
+      "Create reusable Terraform modules",
+      "Implement multi-cloud provisioning",
+      "Use Terraform Cloud for team collaboration"
+    ],
+    "official_badge": "HashiCorp Terraform Associate",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "DevOps Engineer",
+      "Cloud Engineer",
+      "Infrastructure Engineer",
+      "SRE"
+    ],
+    "name": "HashiCorp Certified: Terraform Associate (Updated)",
+    "exam_link": "https://developer.hashicorp.com/certifications",
+    "skills_covered": [
+      "Terraform",
+      "Infrastructure as code",
+      "HCL",
+      "State management",
+      "Modules",
+      "Workspaces",
+      "Cloud providers",
+      "Provisioners"
+    ]
+  },
+  {
+    "id": "cert-054",
+    "provider": "Salesforce",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "duration": "Self-paced (20-30 hours recommended)",
+    "exam_fee": "Free (via Trailhead)",
+    "validity": "Does not expire",
+    "description": "Learn to leverage AI capabilities within the Salesforce ecosystem. Covers Einstein AI, predictive and generative AI features, CRM automation, and responsible AI practices.",
+    "prerequisites": [
+      "Basic Salesforce familiarity",
+      "Understanding of CRM concepts"
+    ],
+    "learning_outcomes": [
+      "Understand Salesforce AI capabilities and use cases",
+      "Implement Einstein prediction and recommendation features",
+      "Use generative AI features in Salesforce",
+      "Apply ethical AI principles in CRM",
+      "Configure AI-powered automations"
+    ],
+    "official_badge": "Salesforce AI Associate",
+    "recommended_courses": [
+      "course-001",
+      "course-021"
+    ],
+    "career_roles": [
+      "Salesforce Administrator",
+      "CRM Specialist",
+      "Salesforce Developer",
+      "AI Solutions Consultant"
+    ],
+    "name": "Salesforce AI Associate",
+    "exam_link": "https://trailhead.salesforce.com/credentials",
+    "skills_covered": [
+      "Salesforce AI",
+      "Einstein",
+      "Predictive AI",
+      "Generative AI",
+      "CRM automation",
+      "Data privacy",
+      "Ethical AI"
+    ]
+  },
+  {
+    "id": "cert-055",
+    "provider": "Meta",
+    "level": "Beginner",
+    "category": "Frontend Development",
+    "duration": "7 months (6 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Build modern web interfaces with React. Covers HTML, CSS, JavaScript fundamentals, React components, hooks, state management, testing, and accessibility best practices.",
+    "prerequisites": [
+      "Basic HTML and CSS knowledge"
+    ],
+    "learning_outcomes": [
+      "Build responsive web interfaces using React",
+      "Implement state management with React hooks",
+      "Write unit and integration tests for web applications",
+      "Apply accessibility best practices",
+      "Use Git and GitHub for version control"
+    ],
+    "official_badge": "Meta Front-End Developer Certificate",
+    "recommended_courses": [
+      "course-003",
+      "course-006"
+    ],
+    "career_roles": [
+      "Front-End Developer",
+      "React Developer",
+      "UI Developer",
+      "Web Developer"
+    ],
+    "name": "Meta Front-End Developer Professional Certificate (Updated)",
+    "exam_link": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+    "skills_covered": [
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Version control",
+      "Testing",
+      "Accessibility",
+      "UI/UX principles"
+    ]
+  },
+  {
+    "id": "cert-056",
+    "provider": "IBM",
+    "level": "Beginner",
+    "category": "Data Science",
+    "duration": "5 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Comprehensive data science program covering Python, SQL, data visualization, machine learning, and a capstone project using real-world data. Includes hands-on labs with IBM tools.",
+    "prerequisites": [
+      "Basic math",
+      "No prior coding experience required"
+    ],
+    "learning_outcomes": [
+      "Develop Python programs for data science",
+      "Analyze data using Pandas and NumPy",
+      "Build machine learning models with scikit-learn",
+      "Create data visualizations with Matplotlib and Folium",
+      "Complete an end-to-end data science project"
+    ],
+    "official_badge": "IBM Data Science Professional Certificate",
+    "recommended_courses": [
+      "course-009",
+      "course-005"
+    ],
+    "career_roles": [
+      "Data Scientist",
+      "Data Analyst",
+      "Machine Learning Engineer",
+      "AI Developer"
+    ],
+    "name": "IBM Data Science Professional Certificate (Updated)",
+    "exam_link": "https://www.coursera.org/professional-certificates/ibm-data-science",
+    "skills_covered": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Machine learning",
+      "Jupyter notebooks",
+      "IBM Watson",
+      "Data visualization"
+    ]
+  },
+  {
+    "id": "cert-057",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Data Analytics",
+    "duration": "6 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Learn the tools and techniques used by entry-level data analysts. Covers spreadsheets, SQL, R programming, Tableau, and data-driven decision making with real-world case studies.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "learning_outcomes": [
+      "Ask data-driven questions and define problems",
+      "Prepare and clean data for analysis",
+      "Analyze data using SQL and R programming",
+      "Visualize insights with Tableau",
+      "Communicate data findings through presentations"
+    ],
+    "official_badge": "Google Data Analytics Certificate",
+    "recommended_courses": [
+      "course-004",
+      "course-009"
+    ],
+    "career_roles": [
+      "Data Analyst",
+      "Junior Data Analyst",
+      "Business Analyst",
+      "Operations Analyst"
+    ],
+    "name": "Google Data Analytics Professional Certificate (Updated)",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "skills_covered": [
+      "SQL",
+      "R programming",
+      "Tableau",
+      "Spreadsheets",
+      "Data visualization",
+      "Data cleaning",
+      "Data-driven decisions"
+    ]
+  },
+  {
+    "id": "cert-058",
+    "provider": "Google",
+    "level": "Beginner",
+    "category": "Cybersecurity",
+    "duration": "6 months (10 hours/week)",
+    "exam_fee": "Free (Coursera subscription ~$49/month)",
+    "validity": "No expiration",
+    "description": "Develop job-ready skills for an entry-level cybersecurity role. Learn to identify cyber threats, protect organizations, and respond to security incidents using industry-standard tools and methodologies.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "learning_outcomes": [
+      "Identify and classify common cybersecurity threats",
+      "Configure and monitor security tools including SIEM",
+      "Manage identities and access controls",
+      "Automate security tasks using Python",
+      "Detect and respond to security incidents"
+    ],
+    "official_badge": "Google Cybersecurity Certificate",
+    "recommended_courses": [
+      "course-018"
+    ],
+    "career_roles": [
+      "Security Analyst",
+      "SOC Analyst",
+      "Cybersecurity Analyst",
+      "Information Security Analyst"
+    ],
+    "name": "Google Cybersecurity Professional Certificate (Updated)",
+    "exam_link": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    "skills_covered": [
+      "Security operations",
+      "Network security",
+      "Linux",
+      "SQL",
+      "Python",
+      "SIEM tools",
+      "Incident detection",
+      "Threat analysis"
+    ]
+  },
+  {
+    "id": "cert-059",
+    "provider": "Google",
+    "level": "Advanced",
+    "category": "Cloud Computing",
+    "duration": "Self-paced (80-120 hours recommended)",
+    "exam_fee": "$200 USD",
+    "validity": "2 years",
+    "description": "Validate ability to design and manage robust, secure, scalable, and dynamic solutions on Google Cloud. Covers compute, networking, storage, and security best practices for enterprise architectures.",
+    "prerequisites": [
+      "3+ years of cloud industry experience",
+      "1+ years of GCP experience",
+      "Solution architecture experience"
+    ],
+    "learning_outcomes": [
+      "Design GCP solutions that meet business requirements",
+      "Plan and build production-ready cloud architectures",
+      "Optimize GCP solutions for cost and performance",
+      "Implement security and compliance controls",
+      "Manage cloud migrations and hybrid architectures"
+    ],
+    "official_badge": "Google Cloud Professional Cloud Architect",
+    "recommended_courses": [
+      "course-010",
+      "course-014"
+    ],
+    "career_roles": [
+      "Cloud Architect",
+      "Solutions Architect",
+      "Cloud Consultant",
+      "Enterprise Architect"
+    ],
+    "name": "Google Cloud Professional Cloud Architect",
+    "exam_link": "https://cloud.google.com/learn/certification",
+    "skills_covered": [
+      "GCP architecture",
+      "Compute Engine",
+      "GKE",
+      "Cloud Storage",
+      "Networking",
+      "Security",
+      "Cost optimization",
+      "Migration"
+    ]
   }
 ]

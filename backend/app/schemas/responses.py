@@ -23,6 +23,15 @@ class StudentProfileResponse(BaseModel):
     completed_topics: List[str] = Field(default_factory=list)
     progress_percentage: float = 0.0
     learning_style: Optional[str] = None
+    hours_per_week: Optional[float] = None
+    email: Optional[str] = None
+    preferred_study_time: Optional[str] = None
+    preferred_job_role: Optional[str] = None
+    dream_company: Optional[str] = None
+    current_goals: List[str] = Field(default_factory=list)
+    experience_level: Optional[str] = None
+    github_url: Optional[str] = None
+    linkedin_url: Optional[str] = None
 
 
 class RoadmapResponse(BaseModel):

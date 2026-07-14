@@ -5,6 +5,8 @@ from .requests import (
     ProgressUpdateRequest,
     ChatRequest,
     SearchRequest,
+    TopicCompleteRequest,
+    ProgressUpdateBody,
 )
 from .responses import (
     StudentProfileResponse,

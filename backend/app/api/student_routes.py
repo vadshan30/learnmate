@@ -27,6 +27,15 @@ def _to_response(student_id: str, profile: Dict[str, Any]) -> StudentProfileResp
         completed_topics=profile.get("completed_topics", []),
         progress_percentage=profile.get("progress_percentage", 0.0),
         learning_style=profile.get("learning_style"),
+        hours_per_week=profile.get("hours_per_week"),
+        email=profile.get("email"),
+        preferred_study_time=profile.get("preferred_study_time"),
+        preferred_job_role=profile.get("preferred_job_role"),
+        dream_company=profile.get("dream_company"),
+        current_goals=profile.get("current_goals", []),
+        experience_level=profile.get("experience_level"),
+        github_url=profile.get("github_url"),
+        linkedin_url=profile.get("linkedin_url"),
     )
 
 
@@ -53,6 +62,15 @@ async def create_student(body: StudentCreateRequest, store: Store = Depends(get_
         "completed_topics": body.completed_topics,
         "progress_percentage": 0.0,
         "learning_style": body.learning_style,
+        "hours_per_week": body.hours_per_week,
+        "email": body.email,
+        "preferred_study_time": body.preferred_study_time,
+        "preferred_job_role": body.preferred_job_role,
+        "dream_company": body.dream_company,
+        "current_goals": body.current_goals,
+        "experience_level": body.experience_level,
+        "github_url": body.github_url,
+        "linkedin_url": body.linkedin_url,
     }
     store.student_profiles[student_id] = profile
     return SuccessResponse(message="Profile created", data=_to_response(student_id, profile).model_dump())

@@ -5,14 +5,56 @@
     "description": "Design and build a responsive personal portfolio website showcasing your projects, skills, and resume. Deploy it using a static hosting service.",
     "difficulty": "Beginner",
     "estimated_time": "2 weeks",
-    "skills_required": ["HTML5", "CSS3", "JavaScript", "Responsive design"],
-    "technologies": ["HTML", "CSS", "JavaScript", "Git", "GitHub Pages"],
+    "domain": "Web Development",
+    "skills_required": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "Git"
+    ],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages",
+      "Netlify"
+    ],
     "learning_outcomes": [
-      "Build semantic HTML structures",
-      "Apply responsive CSS layouts with Flexbox and Grid",
-      "Implement interactive features with vanilla JavaScript",
-      "Deploy a static site to a hosting platform"
-    ]
+      "Create responsive web layouts with Flexbox and Grid",
+      "Implement CSS animations and transitions",
+      "Deploy to static hosting services",
+      "Use Git for version control",
+      "Optimize for performance and SEO"
+    ],
+    "prerequisites": [
+      "Basic computer literacy"
+    ],
+    "project_type": "portfolio",
+    "roadmap_level": "beginner",
+    "career_tags": [
+      "Frontend Developer",
+      "Web Designer",
+      "UI Developer"
+    ],
+    "resume_value": "Built a responsive personal portfolio website using HTML5, CSS3, and JavaScript, deployed on GitHub Pages with optimized performance and SEO.",
+    "portfolio_value": "Demonstrates responsive web design, CSS animations, version control with Git, and static site deployment.",
+    "industry_use_case": "Personal branding and job applications in web development roles.",
+    "deliverables": [
+      "Source Code",
+      "Deployed Website",
+      "README",
+      "Responsive Design",
+      "Cross-browser Testing"
+    ],
+    "bonus_features": [
+      "Dark Mode Toggle",
+      "Contact Form",
+      "Blog Section",
+      "PWA Support",
+      "Analytics Integration"
+    ],
+    "status": "available"
   },
   {
     "id": "project-002",
@@ -20,14 +62,59 @@
     "description": "Create a RESTful API for a task management application with CRUD operations, user authentication, and input validation using FastAPI.",
     "difficulty": "Intermediate",
     "estimated_time": "3 weeks",
-    "skills_required": ["Python", "FastAPI", "Pydantic", "SQL", "REST API design"],
-    "technologies": ["FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Pydantic"],
+    "domain": "Backend Development",
+    "skills_required": [
+      "Python",
+      "FastAPI",
+      "Pydantic",
+      "SQL",
+      "REST API Design",
+      "Authentication"
+    ],
+    "technologies": [
+      "FastAPI",
+      "Python",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pydantic",
+      "JWT"
+    ],
     "learning_outcomes": [
-      "Design RESTful API endpoints",
-      "Implement data validation with Pydantic",
-      "Connect to a relational database",
-      "Write API documentation with OpenAPI"
-    ]
+      "Design RESTful API endpoints following best practices",
+      "Implement data validation with Pydantic models",
+      "Connect to a relational database with SQLAlchemy ORM",
+      "Write API documentation with OpenAPI/Swagger",
+      "Implement JWT-based user authentication"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "HTTP fundamentals"
+    ],
+    "project_type": "api",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Backend Developer",
+      "API Developer",
+      "Python Developer"
+    ],
+    "resume_value": "Developed a production-grade RESTful API with FastAPI featuring JWT authentication, Pydantic validation, and PostgreSQL database integration.",
+    "portfolio_value": "Demonstrates API design, database modeling, authentication, input validation, and API documentation.",
+    "industry_use_case": "Building backend services for task management and productivity applications.",
+    "deliverables": [
+      "Source Code",
+      "API Documentation",
+      "Database Schema",
+      "Unit Tests",
+      "README"
+    ],
+    "bonus_features": [
+      "Role-Based Access",
+      "Rate Limiting",
+      "Pagination",
+      "Webhooks",
+      "Docker Support"
+    ],
+    "status": "available"
   },
   {
     "id": "project-003",
@@ -35,14 +122,59 @@
     "description": "Decompose a monolithic application into microservices, containerize each with Docker, and orchestrate them using Docker Compose with shared networking.",
     "difficulty": "Intermediate",
     "estimated_time": "3 weeks",
-    "skills_required": ["Docker", "Docker Compose", "REST APIs", "Networking", "Linux"],
-    "technologies": ["Docker", "Docker Compose", "Python", "FastAPI", "Nginx"],
+    "domain": "DevOps",
+    "skills_required": [
+      "Docker",
+      "Docker Compose",
+      "REST APIs",
+      "Microservices",
+      "Linux"
+    ],
+    "technologies": [
+      "Docker",
+      "Docker Compose",
+      "Python",
+      "Flask",
+      "Nginx",
+      "Redis"
+    ],
     "learning_outcomes": [
-      "Write Dockerfiles for multiple services",
-      "Configure inter-service networking",
-      "Manage multi-container deployments",
-      "Implement reverse proxy with Nginx"
-    ]
+      "Design microservice architecture from a monolith",
+      "Write optimized Dockerfiles for multiple services",
+      "Configure inter-service networking with Docker Compose",
+      "Implement reverse proxy with Nginx",
+      "Set up service discovery and load balancing"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "HTTP fundamentals",
+      "Command line basics"
+    ],
+    "project_type": "architecture",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "DevOps Engineer",
+      "Backend Developer",
+      "Cloud Engineer"
+    ],
+    "resume_value": "Architected a microservices application with Docker Compose, implementing service discovery, reverse proxying with Nginx, and inter-container networking.",
+    "portfolio_value": "Demonstrates containerization, microservice decomposition, orchestration, and network configuration.",
+    "industry_use_case": "Modernizing legacy monolithic applications into scalable microservice architectures.",
+    "deliverables": [
+      "Source Code",
+      "Docker Compose File",
+      "Dockerfiles",
+      "Architecture Diagram",
+      "README"
+    ],
+    "bonus_features": [
+      "Health Checks",
+      "Log Aggregation",
+      "CI/CD Integration",
+      "Monitoring Stack",
+      "Service Mesh"
+    ],
+    "status": "available"
   },
   {
     "id": "project-004",
@@ -50,14 +182,57 @@
     "description": "Perform end-to-end EDA on a real-world dataset and build an interactive dashboard to visualize trends, distributions, and correlations.",
     "difficulty": "Beginner",
     "estimated_time": "2 weeks",
-    "skills_required": ["Python", "Pandas", "Matplotlib", "Data cleaning", "Visualization"],
-    "technologies": ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    "domain": "Data Science",
+    "skills_required": [
+      "Python",
+      "Pandas",
+      "Matplotlib",
+      "Data Cleaning",
+      "Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "Pandas",
+      "Plotly Dash",
+      "Matplotlib",
+      "Seaborn",
+      "Jupyter Notebook"
+    ],
     "learning_outcomes": [
-      "Clean and preprocess messy datasets",
+      "Clean and preprocess messy real-world datasets",
       "Create meaningful statistical visualizations",
-      "Communicate insights through dashboards",
-      "Apply exploratory data analysis techniques"
-    ]
+      "Build interactive dashboards with Plotly Dash",
+      "Communicate data insights effectively",
+      "Handle missing data and outliers"
+    ],
+    "prerequisites": [
+      "Python basics"
+    ],
+    "project_type": "dashboard",
+    "roadmap_level": "beginner",
+    "career_tags": [
+      "Data Analyst",
+      "Business Intelligence Analyst",
+      "Data Scientist"
+    ],
+    "resume_value": "Built an interactive EDA dashboard using Pandas, Plotly Dash, and Seaborn to visualize trends, distributions, and correlations in real-world datasets.",
+    "portfolio_value": "Demonstrates data cleaning, statistical analysis, interactive visualization, and dashboard development.",
+    "industry_use_case": "Business intelligence reporting and data-driven decision making.",
+    "deliverables": [
+      "Source Code",
+      "Dashboard App",
+      "Jupyter Notebook",
+      "Cleaned Dataset",
+      "README"
+    ],
+    "bonus_features": [
+      "Export Reports",
+      "Filter Controls",
+      "Dark Mode",
+      "Real-time Data",
+      "PDF Export"
+    ],
+    "status": "available"
   },
   {
     "id": "project-005",
@@ -65,14 +240,58 @@
     "description": "Build a machine learning model to predict stock price movements using historical data. Compare multiple algorithms and evaluate performance metrics.",
     "difficulty": "Intermediate",
     "estimated_time": "4 weeks",
-    "skills_required": ["Python", "Scikit-learn", "Pandas", "Time series basics", "Data visualization"],
-    "technologies": ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+    "domain": "Machine Learning",
+    "skills_required": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Time Series Analysis",
+      "Data Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Scikit-learn",
+      "Pandas",
+      "Matplotlib",
+      "Jupyter Notebook"
+    ],
     "learning_outcomes": [
-      "Fetch and process financial time series data",
+      "Preprocess financial time series data",
       "Engineer features for prediction models",
       "Train and compare multiple ML algorithms",
-      "Evaluate models using RMSE, MAE, and R-squared"
-    ]
+      "Evaluate models using RMSE, MAE, and R-squared",
+      "Understand stock market indicators"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic statistics"
+    ],
+    "project_type": "machine-learning",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Scientist",
+      "Quantitative Analyst",
+      "ML Engineer"
+    ],
+    "resume_value": "Developed stock price prediction models using Scikit-learn and TensorFlow, comparing multiple algorithms and evaluating with RMSE, MAE, and R-squared metrics.",
+    "portfolio_value": "Demonstrates time series analysis, feature engineering, model comparison, and financial data processing.",
+    "industry_use_case": "Algorithmic trading and financial market analysis.",
+    "deliverables": [
+      "Source Code",
+      "Jupyter Notebook",
+      "Model Comparison Report",
+      "README",
+      "Dataset"
+    ],
+    "bonus_features": [
+      "LSTM Model",
+      "Technical Indicators",
+      "Backtesting Engine",
+      "Live Predictions",
+      "Portfolio Simulation"
+    ],
+    "status": "available"
   },
   {
     "id": "project-006",
@@ -80,14 +299,58 @@
     "description": "Develop an NLP pipeline that classifies product reviews as positive, negative, or neutral using pre-trained transformer models and custom training.",
     "difficulty": "Advanced",
     "estimated_time": "4 weeks",
-    "skills_required": ["Python", "NLP basics", "Transformers", "Text preprocessing", "Machine learning"],
-    "technologies": ["Python", "Hugging Face Transformers", "NLTK", "Pandas", "FastAPI"],
+    "domain": "NLP",
+    "skills_required": [
+      "Python",
+      "Hugging Face Transformers",
+      "NLTK",
+      "PyTorch",
+      "NLP"
+    ],
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "Transformers",
+      "NLTK",
+      "Scikit-learn",
+      "Gradio"
+    ],
     "learning_outcomes": [
-      "Preprocess and tokenize text data",
-      "Fine-tune pre-trained language models",
+      "Implement NLP preprocessing and tokenization",
+      "Fine-tune pre-trained transformer models",
       "Build an end-to-end NLP classification pipeline",
-      "Deploy a model as a REST API"
-    ]
+      "Create an interactive demo with Gradio",
+      "Evaluate model performance with precision, recall, and F1"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Machine learning fundamentals"
+    ],
+    "project_type": "nlp",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "NLP Engineer",
+      "ML Engineer",
+      "Data Scientist"
+    ],
+    "resume_value": "Built an NLP sentiment analysis pipeline using Hugging Face Transformers, fine-tuning pre-trained models and creating an interactive Gradio demo.",
+    "portfolio_value": "Demonstrates NLP preprocessing, transformer fine-tuning, model evaluation, and interactive demo deployment.",
+    "industry_use_case": "Customer feedback analysis and brand reputation monitoring.",
+    "deliverables": [
+      "Source Code",
+      "Trained Model",
+      "Gradio Demo",
+      "Evaluation Report",
+      "README"
+    ],
+    "bonus_features": [
+      "Multi-language Support",
+      "Real-time Analysis",
+      "Batch Processing",
+      "API Endpoint",
+      "Confusion Matrix Visualization"
+    ],
+    "status": "available"
   },
   {
     "id": "project-007",
@@ -95,14 +358,56 @@
     "description": "Train a convolutional neural network to classify images across multiple categories. Implement data augmentation, transfer learning, and model evaluation.",
     "difficulty": "Advanced",
     "estimated_time": "5 weeks",
-    "skills_required": ["Python", "TensorFlow", "Deep learning", "Computer vision basics"],
-    "technologies": ["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"],
+    "domain": "Computer Vision",
+    "skills_required": [
+      "Python",
+      "TensorFlow",
+      "Deep Learning",
+      "Computer Vision",
+      "Image Processing"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "NumPy",
+      "Matplotlib"
+    ],
     "learning_outcomes": [
       "Build and train CNN architectures from scratch",
       "Apply data augmentation techniques",
       "Implement transfer learning with pre-trained models",
       "Analyze model performance with confusion matrices"
-    ]
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Deep learning fundamentals"
+    ],
+    "project_type": "computer-vision",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Computer Vision Engineer",
+      "ML Engineer",
+      "Deep Learning Engineer"
+    ],
+    "resume_value": "Trained CNN models for image classification using TensorFlow/Keras with data augmentation and transfer learning, achieving high accuracy on multi-class datasets.",
+    "portfolio_value": "Demonstrates deep learning, computer vision, model training, and evaluation techniques.",
+    "industry_use_case": "Image recognition in healthcare, manufacturing, and autonomous systems.",
+    "deliverables": [
+      "Source Code",
+      "Trained Model",
+      "Jupyter Notebook",
+      "Evaluation Report",
+      "README"
+    ],
+    "bonus_features": [
+      "Transfer Learning",
+      "Model Export",
+      "Prediction API",
+      "Data Augmentation Pipeline",
+      "Performance Dashboard"
+    ],
+    "status": "available"
   },
   {
     "id": "project-008",
@@ -110,14 +415,57 @@
     "description": "Build a retrieval-augmented generation chatbot that answers study questions by retrieving relevant content from a vector database of course materials.",
     "difficulty": "Advanced",
     "estimated_time": "5 weeks",
-    "skills_required": ["Python", "LangChain or LlamaIndex", "Vector databases", "Embeddings", "LLM APIs"],
-    "technologies": ["Python", "ChromaDB", "Sentence Transformers", "FastAPI", "React"],
+    "domain": "RAG",
+    "skills_required": [
+      "Python",
+      "LangChain",
+      "Vector Databases",
+      "Embeddings",
+      "LLM APIs"
+    ],
+    "technologies": [
+      "Python",
+      "ChromaDB",
+      "Sentence Transformers",
+      "FastAPI",
+      "React"
+    ],
     "learning_outcomes": [
       "Chunk and embed document collections",
       "Build a semantic search retrieval pipeline",
       "Integrate LLMs with retrieved context",
       "Deploy a full-stack AI application"
-    ]
+    ],
+    "prerequisites": [
+      "Python basics",
+      "LLM concepts",
+      "Web development basics"
+    ],
+    "project_type": "rag",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "LLM Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a RAG-powered study assistant using LangChain, ChromaDB, and Sentence Transformers with a FastAPI backend and React frontend.",
+    "portfolio_value": "Demonstrates RAG architecture, vector databases, document processing, and full-stack AI application development.",
+    "industry_use_case": "Educational platforms and knowledge management systems.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "ChromaDB Setup",
+      "README"
+    ],
+    "bonus_features": [
+      "Document Upload",
+      "Source Citations",
+      "Conversation History",
+      "Multi-format Support",
+      "Admin Dashboard"
+    ],
+    "status": "available"
   },
   {
     "id": "project-009",
@@ -125,14 +473,58 @@
     "description": "Deploy a serverless URL shortener on AWS Lambda with API Gateway, DynamoDB for storage, and CloudFront for caching and global delivery.",
     "difficulty": "Intermediate",
     "estimated_time": "3 weeks",
-    "skills_required": ["AWS Lambda", "API Gateway", "DynamoDB", "Python", "Serverless concepts"],
-    "technologies": ["AWS Lambda", "DynamoDB", "API Gateway", "Python", "Terraform"],
+    "domain": "Cloud Computing",
+    "skills_required": [
+      "AWS Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "Python",
+      "Serverless Concepts"
+    ],
+    "technologies": [
+      "AWS Lambda",
+      "DynamoDB",
+      "API Gateway",
+      "Python",
+      "Terraform",
+      "CloudFront"
+    ],
     "learning_outcomes": [
-      "Design serverless architectures",
+      "Design serverless architectures on AWS",
       "Implement Lambda functions with Python",
-      "Configure API Gateway routing",
-      "Manage infrastructure with Terraform"
-    ]
+      "Configure API Gateway routing and stages",
+      "Manage infrastructure with Terraform",
+      "Implement caching strategies with CloudFront"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "AWS account"
+    ],
+    "project_type": "serverless",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Cloud Engineer",
+      "Serverless Developer",
+      "Backend Developer"
+    ],
+    "resume_value": "Deployed a serverless URL shortener on AWS Lambda with API Gateway, DynamoDB, and CloudFront, managed via Terraform IaC.",
+    "portfolio_value": "Demonstrates serverless architecture, infrastructure as code, API design, and cloud-native development.",
+    "industry_use_case": "Building scalable URL shortening services and link management platforms.",
+    "deliverables": [
+      "Source Code",
+      "Terraform Config",
+      "Architecture Diagram",
+      "API Documentation",
+      "README"
+    ],
+    "bonus_features": [
+      "Custom Aliases",
+      "Analytics Dashboard",
+      "QR Code Generation",
+      "Rate Limiting",
+      "Expiration Links"
+    ],
+    "status": "available"
   },
   {
     "id": "project-010",
@@ -140,14 +532,57 @@
     "description": "Set up a complete CI/CD pipeline that builds, tests, and deploys a containerized application to a Kubernetes cluster with automated rollbacks.",
     "difficulty": "Intermediate",
     "estimated_time": "3 weeks",
-    "skills_required": ["Docker", "Kubernetes", "CI/CD", "Linux", "Git"],
-    "technologies": ["Docker", "Kubernetes", "GitHub Actions", "Helm", "Nginx"],
+    "domain": "DevOps",
+    "skills_required": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Linux",
+      "Git"
+    ],
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Helm",
+      "Nginx"
+    ],
     "learning_outcomes": [
       "Create CI/CD pipeline configurations",
       "Deploy applications to Kubernetes clusters",
       "Implement Helm charts for templated deployments",
       "Configure automated health checks and rollbacks"
-    ]
+    ],
+    "prerequisites": [
+      "Docker basics",
+      "Linux command line",
+      "Git basics"
+    ],
+    "project_type": "devops",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "DevOps Engineer",
+      "Platform Engineer",
+      "SRE"
+    ],
+    "resume_value": "Set up a complete CI/CD pipeline with GitHub Actions, Docker, Kubernetes, and Helm for automated build, test, and deployment with rollback capabilities.",
+    "portfolio_value": "Demonstrates CI/CD design, container orchestration, infrastructure automation, and deployment strategies.",
+    "industry_use_case": "Automating software delivery pipelines for containerized applications.",
+    "deliverables": [
+      "Source Code",
+      "GitHub Actions Workflow",
+      "Dockerfiles",
+      "Helm Charts",
+      "README"
+    ],
+    "bonus_features": [
+      "Blue-Green Deployment",
+      "Canary Releases",
+      "Secret Management",
+      "Monitoring Integration",
+      "Slack Notifications"
+    ],
+    "status": "available"
   },
   {
     "id": "project-011",
@@ -155,14 +590,55 @@
     "description": "Build a tool that captures and analyzes network traffic packets, detects anomalies, and generates security reports for potential threats.",
     "difficulty": "Intermediate",
     "estimated_time": "3 weeks",
-    "skills_required": ["Python", "Networking basics", "Packet analysis", "Data visualization"],
-    "technologies": ["Python", "Scapy", "Wireshark", "Pandas", "Matplotlib"],
+    "domain": "Cybersecurity",
+    "skills_required": [
+      "Python",
+      "Networking Basics",
+      "Packet Analysis",
+      "Data Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "Scapy",
+      "Wireshark",
+      "Pandas",
+      "Matplotlib"
+    ],
     "learning_outcomes": [
       "Capture and parse network packets",
       "Identify common network attack patterns",
       "Visualize network traffic patterns",
       "Generate automated security reports"
-    ]
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Networking fundamentals"
+    ],
+    "project_type": "security-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Network Security Analyst",
+      "Cybersecurity Engineer",
+      "SOC Analyst"
+    ],
+    "resume_value": "Built a network traffic analyzer using Python and Scapy that captures packets, detects anomalies, and generates security reports with visualizations.",
+    "portfolio_value": "Demonstrates network analysis, security monitoring, packet inspection, and threat detection.",
+    "industry_use_case": "Network security monitoring and incident response.",
+    "deliverables": [
+      "Source Code",
+      "Analysis Scripts",
+      "Report Templates",
+      "Visualization Dashboard",
+      "README"
+    ],
+    "bonus_features": [
+      "Real-time Monitoring",
+      "Alert System",
+      "PCAP Export",
+      "Protocol Filtering",
+      "Geolocation Mapping"
+    ],
+    "status": "available"
   },
   {
     "id": "project-012",
@@ -170,13 +646,3144 @@
     "description": "Develop a web-based dashboard that aggregates vulnerability scan results, prioritizes risks, and tracks remediation progress across infrastructure.",
     "difficulty": "Advanced",
     "estimated_time": "4 weeks",
-    "skills_required": ["Python", "Web development", "Security scanning tools", "SQL", "Data visualization"],
-    "technologies": ["FastAPI", "React", "PostgreSQL", "Nmap", "Chart.js"],
+    "domain": "Cybersecurity",
+    "skills_required": [
+      "Python",
+      "Web Development",
+      "Security Scanning",
+      "SQL",
+      "Data Visualization"
+    ],
+    "technologies": [
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "Nmap",
+      "Chart.js"
+    ],
     "learning_outcomes": [
       "Integrate security scanning tools into a web app",
       "Prioritize vulnerabilities by severity",
       "Build real-time security dashboards",
       "Track and manage remediation workflows"
-    ]
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Web development basics",
+      "Security concepts"
+    ],
+    "project_type": "security-tool",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Security Engineer",
+      "Application Security Analyst",
+      "DevSecOps Engineer"
+    ],
+    "resume_value": "Developed a vulnerability scanner dashboard with FastAPI and React that aggregates scan results, prioritizes risks, and tracks remediation progress.",
+    "portfolio_value": "Demonstrates security scanning integration, vulnerability management, dashboard design, and workflow tracking.",
+    "industry_use_case": "IT security operations and vulnerability management programs.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Dashboard",
+      "Database Schema",
+      "README"
+    ],
+    "bonus_features": [
+      "Auto-scheduling Scans",
+      "PDF Reports",
+      "Team Collaboration",
+      "SLA Tracking",
+      "API Integration"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-013",
+    "title": "Real-time Chat Application",
+    "description": "Build a real-time chat application with WebSockets, user authentication, and message persistence using React and Node.js.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Full Stack Development",
+    "skills_required": [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "WebSockets"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "Express",
+      "JWT"
+    ],
+    "learning_outcomes": [
+      "Implement WebSocket communication for real-time features",
+      "Build React frontend components with hooks",
+      "Create RESTful API endpoints with Express",
+      "Store and retrieve messages in MongoDB",
+      "Implement JWT-based user authentication"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "React fundamentals",
+      "Node.js basics"
+    ],
+    "project_type": "fullstack",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "resume_value": "Built a real-time chat application using React, Node.js, and Socket.io with WebSocket communication, MongoDB persistence, and JWT authentication.",
+    "portfolio_value": "Demonstrates real-time communication, full-stack development, database design, and user authentication.",
+    "industry_use_case": "Building real-time messaging platforms and customer support systems.",
+    "deliverables": [
+      "Source Code",
+      "README",
+      "Architecture Diagram",
+      "API Documentation",
+      "Deployment Guide"
+    ],
+    "bonus_features": [
+      "File Sharing",
+      "Typing Indicators",
+      "Read Receipts",
+      "Group Chat",
+      "Message Search"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-014",
+    "title": "Cloud Cost Optimization Tool",
+    "description": "Build a tool that analyzes AWS/cloud usage and provides recommendations for cost optimization with automated reporting.",
+    "difficulty": "Advanced",
+    "estimated_time": "3 weeks",
+    "domain": "Cloud Computing",
+    "skills_required": [
+      "AWS",
+      "Python",
+      "Boto3",
+      "Terraform",
+      "Cloud Cost Analysis"
+    ],
+    "technologies": [
+      "AWS SDK (Boto3)",
+      "Python",
+      "Terraform",
+      "AWS Cost Explorer",
+      "AWS Budgets"
+    ],
+    "learning_outcomes": [
+      "Analyze AWS cloud cost data using Cost Explorer API",
+      "Identify optimization opportunities (unused resources, right-sizing)",
+      "Create automated cost reports with Boto3",
+      "Implement budget alerts with AWS Budgets",
+      "Use Terraform for infrastructure cost modeling"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "AWS account basics"
+    ],
+    "project_type": "cloud-tool",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Cloud Engineer",
+      "FinOps Engineer",
+      "DevOps Engineer"
+    ],
+    "resume_value": "Developed a cloud cost optimization tool using Python and Boto3 that analyzes AWS usage, identifies savings opportunities, and generates automated reports.",
+    "portfolio_value": "Demonstrates cloud cost analysis, automation, infrastructure as code, and financial operations (FinOps) skills.",
+    "industry_use_case": "Enterprise cloud cost management and optimization.",
+    "deliverables": [
+      "Source Code",
+      "Terraform Config",
+      "Cost Report Templates",
+      "README",
+      "Architecture Diagram"
+    ],
+    "bonus_features": [
+      "Multi-account Support",
+      "Cost Forecasting",
+      "Slack Alerts",
+      "Historical Trends",
+      "Recommendation Engine"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-015",
+    "title": "E-commerce Recommendation Engine",
+    "description": "Build a recommendation engine for e-commerce using collaborative filtering, content-based filtering, and hybrid approaches.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Machine Learning",
+    "skills_required": [
+      "Python",
+      "Machine Learning",
+      "Collaborative Filtering",
+      "Data Processing",
+      "Recommendation Systems"
+    ],
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "Surprise",
+      "Pandas",
+      "FastAPI",
+      "Redis"
+    ],
+    "learning_outcomes": [
+      "Implement collaborative filtering with matrix factorization",
+      "Build content-based recommendations using item features",
+      "Create a hybrid recommendation system",
+      "Deploy recommendations as a REST API",
+      "Evaluate recommendation quality with precision, recall, and NDCG"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Machine learning fundamentals",
+      "Linear algebra basics"
+    ],
+    "project_type": "machine-learning",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "ML Engineer",
+      "Data Scientist",
+      "Backend Developer"
+    ],
+    "resume_value": "Built an e-commerce recommendation engine using collaborative filtering, content-based filtering, and hybrid approaches deployed via FastAPI.",
+    "portfolio_value": "Demonstrates recommendation algorithms, matrix factorization, API deployment, and ML evaluation metrics.",
+    "industry_use_case": "Product recommendation for e-commerce platforms and streaming services.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "Evaluation Report",
+      "README",
+      "Dataset"
+    ],
+    "bonus_features": [
+      "Real-time Updates",
+      "A/B Testing Framework",
+      "Cold Start Handling",
+      "Batch Recommendations",
+      "Redis Caching"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-016",
+    "title": "Blockchain-based Voting System",
+    "description": "Create a secure voting system using blockchain technology with smart contracts for transparency and immutability.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "Blockchain",
+    "skills_required": [
+      "Solidity",
+      "Blockchain",
+      "Smart Contracts",
+      "Web3",
+      "Ethereum"
+    ],
+    "technologies": [
+      "Solidity",
+      "Ethereum",
+      "Web3.js",
+      "Truffle",
+      "Ganache",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Write and deploy Solidity smart contracts",
+      "Deploy to Ethereum test network with Truffle",
+      "Build a Web3 frontend with React",
+      "Implement secure voting logic on-chain",
+      "Ensure transparency and immutability of votes"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "Basic cryptography concepts"
+    ],
+    "project_type": "blockchain",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Blockchain Developer",
+      "Web3 Developer",
+      "Smart Contract Developer"
+    ],
+    "resume_value": "Developed a blockchain-based voting system using Solidity smart contracts, Web3.js, and Truffle, ensuring transparent and immutable vote recording.",
+    "portfolio_value": "Demonstrates smart contract development, blockchain integration, Web3 frontend, and decentralized application design.",
+    "industry_use_case": "Secure electronic voting systems and governance platforms.",
+    "deliverables": [
+      "Source Code",
+      "Smart Contracts",
+      "React Frontend",
+      "Truffle Config",
+      "README"
+    ],
+    "bonus_features": [
+      "Voter Authentication",
+      "Vote Tallying Dashboard",
+      "Audit Trail",
+      "Multi-election Support",
+      "Token-based Voting"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-017",
+    "title": "AI-Powered Code Review Assistant",
+    "description": "Build an AI assistant that analyzes code reviews and provides improvement suggestions using LLMs and code analysis tools.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "AI",
+    "skills_required": [
+      "Python",
+      "LLMs",
+      "Code Analysis",
+      "Natural Language Processing",
+      "FastAPI"
+    ],
+    "technologies": [
+      "Python",
+      "IBM Granite LLM",
+      "FastAPI",
+      "Git",
+      "CodeQL",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Integrate LLMs for automated code analysis",
+      "Build a code review pipeline with static analysis",
+      "Create a real-time feedback system",
+      "Implement security scanning with CodeQL",
+      "Develop an interactive review dashboard"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Git basics",
+      "Familiarity with code quality concepts"
+    ],
+    "project_type": "ai-tool",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "DevOps Engineer",
+      "Software Engineer"
+    ],
+    "resume_value": "Built an AI-powered code review assistant using IBM Granite LLM, CodeQL for security scanning, and FastAPI for real-time feedback delivery.",
+    "portfolio_value": "Demonstrates LLM integration, code analysis, security scanning, and full-stack AI application development.",
+    "industry_use_case": "Automated code quality assurance and developer productivity tools.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Dashboard",
+      "Security Reports",
+      "README"
+    ],
+    "bonus_features": [
+      "GitHub Integration",
+      "PR Comments",
+      "Code Metrics",
+      "Severity Levels",
+      "Team Analytics"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-018",
+    "title": "IoT Smart Home Dashboard",
+    "description": "Build a smart home IoT dashboard that connects to MQTT devices, monitors sensors, and controls appliances with real-time updates.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "IoT",
+    "skills_required": [
+      "MQTT",
+      "Python",
+      "React",
+      "IoT Protocols",
+      "Data Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "MQTT",
+      "React",
+      "Node.js",
+      "Grafana",
+      "Arduino"
+    ],
+    "learning_outcomes": [
+      "Connect IoT devices via MQTT protocol",
+      "Implement real-time sensor data monitoring",
+      "Build an interactive React dashboard",
+      "Control devices remotely through the dashboard",
+      "Visualize sensor data with Grafana"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "JavaScript basics",
+      "Basic electronics knowledge"
+    ],
+    "project_type": "iot",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "IoT Developer",
+      "Embedded Systems Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built an IoT smart home dashboard using MQTT, React, and Grafana for real-time sensor monitoring and remote device control.",
+    "portfolio_value": "Demonstrates IoT protocols, real-time data processing, dashboard development, and hardware integration.",
+    "industry_use_case": "Smart home automation and IoT device management platforms.",
+    "deliverables": [
+      "Source Code",
+      "React Dashboard",
+      "MQTT Configuration",
+      "Arduino Sketches",
+      "README"
+    ],
+    "bonus_features": [
+      "Voice Control",
+      "Automation Rules",
+      "Energy Monitoring",
+      "Mobile App",
+      "Alert Notifications"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-019",
+    "title": "Automated Resume Parser",
+    "description": "Develop an automated resume parser that extracts information from PDFs and categorizes skills, experience, and education.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "NLP",
+    "skills_required": [
+      "Python",
+      "NLP",
+      "PDF Parsing",
+      "Regex",
+      "Data Extraction"
+    ],
+    "technologies": [
+      "Python",
+      "PyPDF2",
+      "NLTK",
+      "Spacy",
+      "FastAPI",
+      "PostgreSQL"
+    ],
+    "learning_outcomes": [
+      "Extract text from PDF documents",
+      "Implement NLP techniques for information extraction",
+      "Categorize extracted data into structured formats",
+      "Build a REST API for resume processing",
+      "Store parsed results in a relational database"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic NLP concepts"
+    ],
+    "project_type": "nlp",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "NLP Engineer",
+      "Backend Developer",
+      "Data Engineer"
+    ],
+    "resume_value": "Developed an automated resume parser using Python, PyPDF2, and Spacy that extracts skills, experience, and education from PDF resumes via a FastAPI endpoint.",
+    "portfolio_value": "Demonstrates PDF text extraction, NLP information extraction, API development, and database integration.",
+    "industry_use_case": "HR technology platforms and applicant tracking systems.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "Parser Models",
+      "Database Schema",
+      "README"
+    ],
+    "bonus_features": [
+      "Batch Processing",
+      "Skills Matching",
+      "Export to JSON",
+      "Multi-format Support",
+      "ATS Integration"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-020",
+    "title": "Containerized CI/CD Pipeline",
+    "description": "Build a complete CI/CD pipeline with Jenkins, Docker, and Kubernetes for automated build, test, and deployment.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "DevOps",
+    "skills_required": [
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Git"
+    ],
+    "technologies": [
+      "Jenkins",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "Terraform",
+      "Helm"
+    ],
+    "learning_outcomes": [
+      "Set up Jenkins pipelines for automated builds",
+      "Containerize applications with Docker",
+      "Deploy to Kubernetes clusters with Helm charts",
+      "Implement automated testing in CI/CD",
+      "Monitor deployments with Prometheus and Grafana"
+    ],
+    "prerequisites": [
+      "Linux basics",
+      "Git basics",
+      "Docker fundamentals"
+    ],
+    "project_type": "devops",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "DevOps Engineer",
+      "Platform Engineer",
+      "SRE"
+    ],
+    "resume_value": "Built a containerized CI/CD pipeline using Jenkins, Docker, Kubernetes, and Helm for automated build, test, and deployment workflows.",
+    "portfolio_value": "Demonstrates CI/CD pipeline design, containerization, orchestration, and infrastructure automation.",
+    "industry_use_case": "Enterprise software delivery and deployment automation.",
+    "deliverables": [
+      "Source Code",
+      "Jenkinsfile",
+      "Dockerfiles",
+      "Helm Charts",
+      "Terraform Config",
+      "README"
+    ],
+    "bonus_features": [
+      "Blue-Green Deployment",
+      "Canary Releases",
+      "Rollback Automation",
+      "Secret Management",
+      "Notification Integrations"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-021",
+    "title": "Real-time Sports Analytics Dashboard",
+    "description": "Build a dashboard that displays real-time sports analytics from streaming data APIs with interactive visualizations.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Data Science",
+    "skills_required": [
+      "Python",
+      "Stream Processing",
+      "Data Visualization",
+      "APIs",
+      "Real-time Analytics"
+    ],
+    "technologies": [
+      "Python",
+      "Apache Kafka",
+      "Plotly Dash",
+      "Pandas",
+      "Redis"
+    ],
+    "learning_outcomes": [
+      "Process streaming sports data in real-time",
+      "Build interactive dashboards with Plotly Dash",
+      "Implement data pipelines with Apache Kafka",
+      "Visualize complex sports statistics",
+      "Handle real-time data updates efficiently"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic statistics"
+    ],
+    "project_type": "dashboard",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Engineer",
+      "Data Analyst",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a real-time sports analytics dashboard using Apache Kafka, Plotly Dash, and Redis for streaming data processing and interactive visualization.",
+    "portfolio_value": "Demonstrates stream processing, real-time analytics, interactive dashboards, and data pipeline design.",
+    "industry_use_case": "Live sports analytics and real-time performance monitoring.",
+    "deliverables": [
+      "Source Code",
+      "Dashboard App",
+      "Kafka Config",
+      "Data Pipeline",
+      "README"
+    ],
+    "bonus_features": [
+      "Live Score Updates",
+      "Player Statistics",
+      "Predictive Analytics",
+      "Multi-sport Support",
+      "Mobile Responsive"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-022",
+    "title": "Content Management System (CMS)",
+    "description": "Build a scalable CMS with role-based permissions, content versioning, and media management.",
+    "difficulty": "Intermediate",
+    "estimated_time": "5 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "Django",
+      "PostgreSQL",
+      "REST APIs",
+      "Authentication",
+      "File Management"
+    ],
+    "technologies": [
+      "Django",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Design a scalable database schema for content management",
+      "Implement role-based access control (RBAC)",
+      "Manage file uploads and media storage",
+      "Build RESTful APIs with Django REST Framework",
+      "Implement caching with Redis for performance"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "SQL fundamentals",
+      "Django basics"
+    ],
+    "project_type": "backend",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Backend Developer",
+      "Full Stack Developer",
+      "Python Developer"
+    ],
+    "resume_value": "Built a scalable content management system with Django featuring role-based permissions, content versioning, Redis caching, and Docker deployment.",
+    "portfolio_value": "Demonstrates database design, RBAC implementation, file management, API development, and caching strategies.",
+    "industry_use_case": "Digital content publishing and enterprise content management.",
+    "deliverables": [
+      "Source Code",
+      "Django Project",
+      "Docker Config",
+      "API Documentation",
+      "README"
+    ],
+    "bonus_features": [
+      "WYSIWYG Editor",
+      "Content Scheduling",
+      "SEO Tools",
+      "Multi-language Support",
+      "Workflow Approvals"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-023",
+    "title": "Cryptocurrency Trading Bot",
+    "description": "Build an algorithmic trading bot for cryptocurrencies with technical indicators and backtesting capabilities.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Algorithmic Trading",
+    "skills_required": [
+      "Python",
+      "Algorithmic Trading",
+      "APIs",
+      "Quantitative Analysis",
+      "Risk Management"
+    ],
+    "technologies": [
+      "Python",
+      "CCXT",
+      "Pandas",
+      "NumPy",
+      "TA-Lib",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Implement trading strategies with technical indicators",
+      "Backtest strategies with historical market data",
+      "Connect to cryptocurrency exchange APIs via CCXT",
+      "Manage portfolio risk with position sizing",
+      "Monitor and log trading performance"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic financial markets knowledge"
+    ],
+    "project_type": "fintech",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Quantitative Developer",
+      "Algorithmic Trader",
+      "FinTech Engineer"
+    ],
+    "resume_value": "Developed a cryptocurrency trading bot using Python, CCXT, and TA-Lib with backtesting capabilities and risk management.",
+    "portfolio_value": "Demonstrates algorithmic trading, technical analysis, API integration, and quantitative finance.",
+    "industry_use_case": "Automated cryptocurrency trading and portfolio management.",
+    "deliverables": [
+      "Source Code",
+      "Backtesting Engine",
+      "Trading Strategies",
+      "Docker Config",
+      "README"
+    ],
+    "bonus_features": [
+      "Paper Trading Mode",
+      "Performance Dashboard",
+      "Multi-exchange Support",
+      "Alert System",
+      "Portfolio Tracker"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-024",
+    "title": "Healthcare Telemedicine Platform",
+    "description": "Develop a secure telemedicine platform with video consultations, appointment scheduling, and patient record management.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "Full Stack Development",
+    "skills_required": [
+      "Video Streaming",
+      "WebRTC",
+      "Node.js",
+      "HIPAA Compliance",
+      "Database Design"
+    ],
+    "technologies": [
+      "Node.js",
+      "WebRTC",
+      "React",
+      "MongoDB",
+      "JWT",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Implement real-time video calling with WebRTC",
+      "Build an appointment scheduling system",
+      "Manage patient records securely",
+      "Ensure HIPAA compliance for healthcare data",
+      "Create an admin dashboard for clinic management"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "React fundamentals",
+      "Node.js basics"
+    ],
+    "project_type": "fullstack",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Full Stack Developer",
+      "Healthcare Developer",
+      "WebRTC Engineer"
+    ],
+    "resume_value": "Built a HIPAA-compliant telemedicine platform with WebRTC video consultations, appointment scheduling, and secure patient record management.",
+    "portfolio_value": "Demonstrates video streaming, healthcare compliance, real-time communication, and secure data management.",
+    "industry_use_case": "Telehealth services and virtual healthcare consultations.",
+    "deliverables": [
+      "Source Code",
+      "React Frontend",
+      "Node.js Backend",
+      "Docker Config",
+      "HIPAA Checklist",
+      "README"
+    ],
+    "bonus_features": [
+      "EHR Integration",
+      "Prescription Management",
+      "Insurance Verification",
+      "Waiting Room",
+      "Screen Sharing"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-025",
+    "title": "GraphQL API Gateway",
+    "description": "Build a GraphQL API gateway that aggregates data from multiple microservices with Apollo Server.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "GraphQL",
+      "Apollo Server",
+      "Microservices",
+      "API Gateway",
+      "Authentication"
+    ],
+    "technologies": [
+      "Apollo Server",
+      "Node.js",
+      "GraphQL",
+      "PostgreSQL",
+      "Redis",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Design a GraphQL schema for multi-service aggregation",
+      "Implement resolvers for data fetching from multiple sources",
+      "Aggregate data from multiple microservices",
+      "Optimize queries with DataLoader and caching",
+      "Implement authentication and authorization in GraphQL"
+    ],
+    "prerequisites": [
+      "REST API basics",
+      "Node.js basics",
+      "Database fundamentals"
+    ],
+    "project_type": "api",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Backend Developer",
+      "API Architect",
+      "GraphQL Developer"
+    ],
+    "resume_value": "Built a GraphQL API gateway using Apollo Server that aggregates data from multiple microservices with Redis caching and authentication.",
+    "portfolio_value": "Demonstrates GraphQL schema design, resolver implementation, microservice aggregation, and query optimization.",
+    "industry_use_case": "Unified API layer for microservice architectures.",
+    "deliverables": [
+      "Source Code",
+      "GraphQL Schema",
+      "Apollo Server Config",
+      "Docker Config",
+      "README"
+    ],
+    "bonus_features": [
+      "Subscriptions",
+      "File Uploads",
+      "Query Complexity Analysis",
+      "Persisted Queries",
+      "Schema Stitching"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-026",
+    "title": "Movie Recommendation System",
+    "description": "Build a collaborative filtering recommendation system for movies using the MovieLens dataset.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Machine Learning",
+    "skills_required": [
+      "Python",
+      "Collaborative Filtering",
+      "Matrix Factorization",
+      "Data Processing",
+      "Scikit-learn"
+    ],
+    "technologies": [
+      "Python",
+      "Surprise",
+      "Pandas",
+      "NumPy",
+      "Flask",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Implement user-based and item-based collaborative filtering",
+      "Apply matrix factorization techniques (SVD, ALS)",
+      "Build a recommendation API with Flask",
+      "Create a React web interface for recommendations",
+      "Evaluate recommendations with RMSE and precision@k"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic linear algebra"
+    ],
+    "project_type": "machine-learning",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Scientist",
+      "ML Engineer",
+      "Backend Developer"
+    ],
+    "resume_value": "Built a movie recommendation system using collaborative filtering and matrix factorization with the Surprise library, deployed via Flask API.",
+    "portfolio_value": "Demonstrates recommendation algorithms, matrix factorization, API development, and ML evaluation.",
+    "industry_use_case": "Content recommendation for streaming platforms and media services.",
+    "deliverables": [
+      "Source Code",
+      "Flask API",
+      "React Frontend",
+      "Evaluation Report",
+      "README"
+    ],
+    "bonus_features": [
+      "Hybrid Recommendations",
+      "Cold Start Handling",
+      "Real-time Updates",
+      "Movie Search",
+      "Rating History"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-027",
+    "title": "Serverless Image Processing Pipeline",
+    "description": "Create a serverless pipeline that automatically processes uploaded images using AWS Lambda and S3.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Cloud Computing",
+    "skills_required": [
+      "AWS S3",
+      "AWS Lambda",
+      "Python",
+      "Image Processing",
+      "Serverless"
+    ],
+    "technologies": [
+      "AWS S3",
+      "AWS Lambda",
+      "Python",
+      "Pillow",
+      "CloudFront",
+      "SQS"
+    ],
+    "learning_outcomes": [
+      "Process images at scale with serverless functions",
+      "Implement AWS Lambda functions for image transformations",
+      "Trigger workflows with S3 event notifications",
+      "Manage S3 bucket policies and permissions",
+      "Optimize image delivery with CloudFront CDN"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "AWS account basics"
+    ],
+    "project_type": "serverless",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Cloud Engineer",
+      "Serverless Developer",
+      "Backend Developer"
+    ],
+    "resume_value": "Created a serverless image processing pipeline using AWS Lambda, S3, and CloudFront for automatic image transformation and optimized delivery.",
+    "portfolio_value": "Demonstrates serverless architecture, event-driven processing, image manipulation, and CDN optimization.",
+    "industry_use_case": "Image processing for e-commerce, social media, and content management.",
+    "deliverables": [
+      "Source Code",
+      "Lambda Functions",
+      "S3 Configuration",
+      "CloudFront Setup",
+      "README"
+    ],
+    "bonus_features": [
+      "Thumbnail Generation",
+      "Watermarking",
+      "Format Conversion",
+      "EXIF Metadata",
+      "Batch Processing"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-028",
+    "title": "Social Media Sentiment Analysis",
+    "description": "Analyze sentiment of social media posts using NLP and create interactive visualizations of results.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "NLP",
+    "skills_required": [
+      "Python",
+      "NLP",
+      "Twitter API",
+      "Data Visualization",
+      "Text Analysis"
+    ],
+    "technologies": [
+      "Python",
+      "Tweepy",
+      "NLTK",
+      "TextBlob",
+      "Plotly",
+      "Pandas"
+    ],
+    "learning_outcomes": [
+      "Collect social media data via APIs",
+      "Implement sentiment analysis with NLP techniques",
+      "Process and clean social media text data",
+      "Create interactive visualizations of sentiment trends",
+      "Analyze temporal patterns in social media sentiment"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic NLP concepts"
+    ],
+    "project_type": "nlp",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Scientist",
+      "NLP Engineer",
+      "Social Media Analyst"
+    ],
+    "resume_value": "Built a social media sentiment analysis system using Python, Tweepy, and TextBlob with interactive Plotly visualizations of sentiment trends.",
+    "portfolio_value": "Demonstrates API data collection, NLP text analysis, sentiment classification, and interactive visualization.",
+    "industry_use_case": "Brand monitoring and social media reputation management.",
+    "deliverables": [
+      "Source Code",
+      "Jupyter Notebook",
+      "Interactive Dashboard",
+      "Sentiment Reports",
+      "README"
+    ],
+    "bonus_features": [
+      "Real-time Monitoring",
+      "Multi-platform Support",
+      "Topic Modeling",
+      "Influencer Analysis",
+      "Export Reports"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-029",
+    "title": "Kubernetes Cluster Setup",
+    "description": "Deploy a production-ready Kubernetes cluster with monitoring, logging, and auto-scaling capabilities.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "DevOps",
+    "skills_required": [
+      "Kubernetes",
+      "Docker",
+      "Helm",
+      "Terraform",
+      "Monitoring"
+    ],
+    "technologies": [
+      "Kubernetes",
+      "Prometheus",
+      "Grafana",
+      "Helm",
+      "Terraform",
+      "Istio"
+    ],
+    "learning_outcomes": [
+      "Set up a production-ready Kubernetes cluster",
+      "Deploy applications with Helm charts",
+      "Implement monitoring with Prometheus and Grafana",
+      "Configure auto-scaling (HPA and VPA)",
+      "Manage ingress and service mesh with Istio"
+    ],
+    "prerequisites": [
+      "Linux basics",
+      "Docker fundamentals",
+      "Networking basics"
+    ],
+    "project_type": "devops",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Kubernetes Administrator",
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "resume_value": "Deployed a production-ready Kubernetes cluster with Prometheus monitoring, Grafana dashboards, Helm charts, and auto-scaling policies.",
+    "portfolio_value": "Demonstrates container orchestration, monitoring, infrastructure as code, and production operations.",
+    "industry_use_case": "Enterprise Kubernetes deployments and cloud-native infrastructure.",
+    "deliverables": [
+      "Source Code",
+      "Helm Charts",
+      "Terraform Config",
+      "Monitoring Dashboards",
+      "README"
+    ],
+    "bonus_features": [
+      "Service Mesh",
+      "Secret Management",
+      "Log Aggregation",
+      "Cost Monitoring",
+      "Disaster Recovery"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-030",
+    "title": "Serverless E-commerce Backend",
+    "description": "Build a serverless e-commerce backend with authentication, product catalog, and payment processing.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Cloud Computing",
+    "skills_required": [
+      "AWS Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "Stripe API",
+      "Authentication"
+    ],
+    "technologies": [
+      "AWS Lambda",
+      "DynamoDB",
+      "API Gateway",
+      "Stripe",
+      "AWS Cognito"
+    ],
+    "learning_outcomes": [
+      "Design a serverless backend architecture",
+      "Process payments securely with Stripe API",
+      "Handle user authentication with AWS Cognito",
+      "Manage a product catalog in DynamoDB",
+      "Implement shopping cart operations serverlessly"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "AWS account basics",
+      "REST API concepts"
+    ],
+    "project_type": "serverless",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Cloud Engineer",
+      "Backend Developer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a serverless e-commerce backend using AWS Lambda, DynamoDB, Cognito, and Stripe for authentication, product catalog, and payment processing.",
+    "portfolio_value": "Demonstrates serverless architecture, payment integration, authentication, and NoSQL database design.",
+    "industry_use_case": "Scalable e-commerce platforms and online marketplace backends.",
+    "deliverables": [
+      "Source Code",
+      "Lambda Functions",
+      "API Gateway Config",
+      "DynamoDB Schema",
+      "README"
+    ],
+    "bonus_features": [
+      "Order History",
+      "Inventory Management",
+      "Discount Codes",
+      "Email Notifications",
+      "Admin Dashboard"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-031",
+    "title": "Neural Style Transfer App",
+    "description": "Build an application that applies artistic styles to images using neural style transfer with pre-trained models.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Computer Vision",
+    "skills_required": [
+      "Python",
+      "TensorFlow",
+      "Computer Vision",
+      "Neural Networks",
+      "Image Processing"
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "Flask",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Implement neural style transfer using pre-trained models",
+      "Use TensorFlow for image processing tasks",
+      "Process and transform images with OpenCV",
+      "Build a web interface for style transfer",
+      "Optimize model performance for real-time inference"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic deep learning concepts"
+    ],
+    "project_type": "computer-vision",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Computer Vision Engineer",
+      "ML Engineer",
+      "AI Developer"
+    ],
+    "resume_value": "Built a neural style transfer application using TensorFlow and OpenCV with a Flask backend and React frontend for real-time artistic style application.",
+    "portfolio_value": "Demonstrates computer vision, deep learning, image processing, and full-stack AI application development.",
+    "industry_use_case": "Creative AI tools and digital art generation platforms.",
+    "deliverables": [
+      "Source Code",
+      "Flask Backend",
+      "React Frontend",
+      "Pre-trained Models",
+      "README"
+    ],
+    "bonus_features": [
+      "Multiple Style Presets",
+      "Video Style Transfer",
+      "Custom Style Upload",
+      "Resolution Options",
+      "Gallery View"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-032",
+    "title": "Log Analysis & Anomaly Detection",
+    "description": "Build a log analysis system that uses ML to detect anomalies and patterns in application logs.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Data Science",
+    "skills_required": [
+      "Python",
+      "Machine Learning",
+      "Log Analysis",
+      "Data Processing",
+      "Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Elasticsearch",
+      "Kibana",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Parse and structure unstructured log data",
+      "Apply ML for anomaly detection in logs",
+      "Build log visualization dashboards",
+      "Create automated alerting for anomalies",
+      "Analyze log patterns and trends"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Basic ML concepts"
+    ],
+    "project_type": "data-science",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Engineer",
+      "DevOps Engineer",
+      "SRE"
+    ],
+    "resume_value": "Built a log analysis and anomaly detection system using Python, Scikit-learn, and Elasticsearch for automated pattern recognition and alerting.",
+    "portfolio_value": "Demonstrates log processing, anomaly detection, data visualization, and operational analytics.",
+    "industry_use_case": "Application monitoring and incident detection.",
+    "deliverables": [
+      "Source Code",
+      "ML Models",
+      "Elasticsearch Config",
+      "Kibana Dashboards",
+      "README"
+    ],
+    "bonus_features": [
+      "Real-time Processing",
+      "Custom Parsers",
+      "Alert Rules",
+      "Log Retention",
+      "Multi-source Ingestion"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-033",
+    "title": "Ansible Automation Playbooks",
+    "description": "Create Ansible playbooks for automated server configuration, application deployment, and infrastructure management.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "DevOps",
+    "skills_required": [
+      "Ansible",
+      "YAML",
+      "Linux Admin",
+      "SSH",
+      "Automation"
+    ],
+    "technologies": [
+      "Ansible",
+      "YAML",
+      "AWX",
+      "Git",
+      "Linux"
+    ],
+    "learning_outcomes": [
+      "Write Ansible playbooks for server configuration",
+      "Manage infrastructure as code with Ansible",
+      "Automate application deployments",
+      "Configure servers consistently across environments",
+      "Use roles and modules for reusable automation"
+    ],
+    "prerequisites": [
+      "Linux command line basics",
+      "SSH fundamentals"
+    ],
+    "project_type": "automation",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "DevOps Engineer",
+      "System Administrator",
+      "Cloud Engineer"
+    ],
+    "resume_value": "Created Ansible playbooks for automated server configuration, application deployment, and infrastructure management across multiple environments.",
+    "portfolio_value": "Demonstrates infrastructure automation, configuration management, and DevOps practices.",
+    "industry_use_case": "Server provisioning and application deployment automation.",
+    "deliverables": [
+      "Source Code",
+      "Ansible Playbooks",
+      "Roles",
+      "Inventory Files",
+      "README"
+    ],
+    "bonus_features": [
+      "AWX Integration",
+      "Vault for Secrets",
+      "Multi-environment Support",
+      "Idempotent Design",
+      "Rollback Playbooks"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-034",
+    "title": "Healthcare Data Analytics Pipeline",
+    "description": "Build a data analytics pipeline for healthcare data with ETL, compliance, and interactive dashboards.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "Data Engineering",
+    "skills_required": [
+      "Data Engineering",
+      "Python",
+      "SQL",
+      "ETL",
+      "Healthcare Regulations"
+    ],
+    "technologies": [
+      "Python",
+      "Apache Airflow",
+      "PostgreSQL",
+      "Tableau",
+      "dbt",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Build ETL pipelines with Apache Airflow",
+      "Handle healthcare data with compliance requirements",
+      "Ensure HIPAA compliance for data processing",
+      "Create interactive dashboards with Tableau",
+      "Manage data quality and validation"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "SQL fundamentals",
+      "Basic data engineering concepts"
+    ],
+    "project_type": "data-engineering",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Data Engineer",
+      "Healthcare Data Analyst",
+      "ETL Developer"
+    ],
+    "resume_value": "Built a HIPAA-compliant healthcare data analytics pipeline using Apache Airflow, PostgreSQL, dbt, and Tableau for ETL and interactive dashboards.",
+    "portfolio_value": "Demonstrates data pipeline design, healthcare compliance, ETL orchestration, and dashboard development.",
+    "industry_use_case": "Healthcare data warehousing and clinical analytics.",
+    "deliverables": [
+      "Source Code",
+      "Airflow DAGs",
+      "dbt Models",
+      "Tableau Dashboard",
+      "Compliance Docs",
+      "README"
+    ],
+    "bonus_features": [
+      "Data Lineage",
+      "Quality Checks",
+      "Automated Reporting",
+      "Audit Logging",
+      "FHIR Integration"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-035",
+    "title": "Cross-platform Mobile App (Flutter)",
+    "description": "Build a cross-platform mobile application using Flutter with state management and backend integration.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Mobile Development",
+    "skills_required": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Mobile UI",
+      "REST APIs"
+    ],
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Firebase",
+      "Provider",
+      "REST API"
+    ],
+    "learning_outcomes": [
+      "Build cross-platform mobile apps with Flutter",
+      "Implement state management with Provider",
+      "Connect to Firebase backend services",
+      "Consume and display REST API data",
+      "Create responsive and adaptive mobile UI"
+    ],
+    "prerequisites": [
+      "Programming basics",
+      "Object-oriented programming concepts"
+    ],
+    "project_type": "mobile",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Mobile Developer",
+      "Flutter Developer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a cross-platform mobile application using Flutter and Dart with Provider state management, Firebase integration, and REST API consumption.",
+    "portfolio_value": "Demonstrates cross-platform mobile development, state management, backend integration, and responsive UI design.",
+    "industry_use_case": "Cross-platform mobile applications for iOS and Android.",
+    "deliverables": [
+      "Source Code",
+      "Flutter App",
+      "Firebase Config",
+      "Screenshots",
+      "README"
+    ],
+    "bonus_features": [
+      "Push Notifications",
+      "Offline Support",
+      "Dark Mode",
+      "In-app Purchases",
+      "Localization"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-036",
+    "title": "Elasticsearch Search Engine",
+    "description": "Build a search engine using Elasticsearch for full-text search, autocomplete, and faceted filtering.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "Elasticsearch",
+      "Java",
+      "REST APIs",
+      "Search Optimization",
+      "Kibana"
+    ],
+    "technologies": [
+      "Elasticsearch",
+      "Kibana",
+      "Java",
+      "Spring Boot",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Index data in Elasticsearch efficiently",
+      "Implement full-text search with relevance scoring",
+      "Build autocomplete functionality",
+      "Create faceted filtering and search refinement",
+      "Monitor search analytics with Kibana"
+    ],
+    "prerequisites": [
+      "REST API basics",
+      "Database fundamentals",
+      "Java or Python basics"
+    ],
+    "project_type": "search",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Search Engineer",
+      "Backend Developer",
+      "Java Developer"
+    ],
+    "resume_value": "Built a search engine using Elasticsearch with full-text search, autocomplete, faceted filtering, and Kibana analytics dashboards.",
+    "portfolio_value": "Demonstrates search engine design, relevance tuning, indexing strategies, and search analytics.",
+    "industry_use_case": "Enterprise search platforms and e-commerce product search.",
+    "deliverables": [
+      "Source Code",
+      "Elasticsearch Config",
+      "React Frontend",
+      "Kibana Dashboard",
+      "README"
+    ],
+    "bonus_features": [
+      "Fuzzy Matching",
+      "Synonym Support",
+      "Search Suggestions",
+      "Multi-language",
+      "Query Analytics"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-037",
+    "title": "Terraform Infrastructure Automation",
+    "description": "Use Terraform to automate infrastructure provisioning across multiple cloud providers.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "DevOps",
+    "skills_required": [
+      "Terraform",
+      "HCL",
+      "AWS",
+      "Azure",
+      "Infrastructure as Code"
+    ],
+    "technologies": [
+      "Terraform",
+      "AWS",
+      "Azure",
+      "GitHub Actions",
+      "Terragrunt"
+    ],
+    "learning_outcomes": [
+      "Write Terraform configurations in HCL",
+      "Manage Terraform state effectively",
+      "Provision multi-cloud resources with Terraform",
+      "Use Terraform modules for reusable infrastructure",
+      "Implement CI/CD for infrastructure changes"
+    ],
+    "prerequisites": [
+      "Cloud provider basics (AWS or Azure)",
+      "Command line basics"
+    ],
+    "project_type": "infrastructure",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "DevOps Engineer",
+      "Cloud Engineer",
+      "Infrastructure Engineer"
+    ],
+    "resume_value": "Automated multi-cloud infrastructure provisioning using Terraform with modules, state management, and GitHub Actions CI/CD integration.",
+    "portfolio_value": "Demonstrates infrastructure as code, multi-cloud management, state management, and CI/CD for infrastructure.",
+    "industry_use_case": "Multi-cloud infrastructure provisioning and management.",
+    "deliverables": [
+      "Source Code",
+      "Terraform Configs",
+      "Module Library",
+      "CI/CD Pipeline",
+      "README"
+    ],
+    "bonus_features": [
+      "Workspace Management",
+      "Cost Estimation",
+      "Policy as Code",
+      "Drift Detection",
+      "Import Existing Resources"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-038",
+    "title": "Digital Media Asset Management",
+    "description": "Build a digital asset management system for media files with search, tagging, and sharing capabilities.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Full Stack Development",
+    "skills_required": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "File Storage",
+      "Search"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "GridFS",
+      "Elasticsearch",
+      "AWS S3"
+    ],
+    "learning_outcomes": [
+      "Manage media file uploads and storage",
+      "Implement tagging and categorization",
+      "Build search functionality for media assets",
+      "Create sharing and permission systems",
+      "Optimize media delivery and streaming"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "React fundamentals",
+      "Node.js basics"
+    ],
+    "project_type": "fullstack",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "Frontend Developer"
+    ],
+    "resume_value": "Built a digital media asset management system with React, Node.js, MongoDB GridFS, and Elasticsearch for search, tagging, and sharing.",
+    "portfolio_value": "Demonstrates file management, search implementation, real-time features, and full-stack development.",
+    "industry_use_case": "Media libraries, brand asset management, and content repositories.",
+    "deliverables": [
+      "Source Code",
+      "React Frontend",
+      "Node.js Backend",
+      "Database Schema",
+      "README"
+    ],
+    "bonus_features": [
+      "Batch Upload",
+      "Version Control",
+      "Watermarking",
+      "CDN Integration",
+      "API Access"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-039",
+    "title": "ML Model Monitoring System",
+    "description": "Build a monitoring system for machine learning models tracking performance, drift, and data quality.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "MLOps",
+    "skills_required": [
+      "Python",
+      "MLflow",
+      "Evidently AI",
+      "Data Monitoring",
+      "MLOps"
+    ],
+    "technologies": [
+      "MLflow",
+      "Evidently AI",
+      "Python",
+      "Prometheus",
+      "Grafana",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Monitor ML model performance in production",
+      "Detect data drift and concept drift",
+      "Track model metrics and experiments with MLflow",
+      "Create monitoring dashboards with Grafana",
+      "Implement alerting for model degradation"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Machine learning fundamentals",
+      "Docker basics"
+    ],
+    "project_type": "mlops",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "MLOps Engineer",
+      "ML Engineer",
+      "Data Engineer"
+    ],
+    "resume_value": "Built an ML model monitoring system using MLflow, Evidently AI, Prometheus, and Grafana for tracking performance, drift, and data quality.",
+    "portfolio_value": "Demonstrates MLOps practices, model monitoring, drift detection, and operational ML.",
+    "industry_use_case": "Production ML model monitoring and maintenance.",
+    "deliverables": [
+      "Source Code",
+      "MLflow Config",
+      "Evidently Reports",
+      "Grafana Dashboards",
+      "README"
+    ],
+    "bonus_features": [
+      "Automated Retraining Triggers",
+      "A/B Testing",
+      "Model Registry",
+      "Feature Store Integration",
+      "SLA Monitoring"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-040",
+    "title": "Dynamic Pricing Engine",
+    "description": "Build a dynamic pricing engine that uses machine learning to optimize prices based on demand and competition.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Machine Learning",
+    "skills_required": [
+      "Python",
+      "Machine Learning",
+      "Optimization",
+      "Time Series",
+      "Economics"
+    ],
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "FastAPI",
+      "PostgreSQL"
+    ],
+    "learning_outcomes": [
+      "Implement pricing algorithms based on demand patterns",
+      "Analyze market and competitor data",
+      "Predict demand using time series models",
+      "Optimize prices with constraint-based algorithms",
+      "Monitor pricing performance and revenue impact"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Machine learning fundamentals",
+      "Basic economics"
+    ],
+    "project_type": "machine-learning",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Data Scientist",
+      "ML Engineer",
+      "Pricing Analyst"
+    ],
+    "resume_value": "Developed a dynamic pricing engine using ML models for demand prediction and price optimization, deployed via FastAPI.",
+    "portfolio_value": "Demonstrates pricing optimization, time series forecasting, ML deployment, and business analytics.",
+    "industry_use_case": "Revenue optimization for e-commerce, travel, and hospitality.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "Pricing Models",
+      "Evaluation Report",
+      "README"
+    ],
+    "bonus_features": [
+      "A/B Testing Framework",
+      "Price Elasticity Analysis",
+      "Competitor Monitoring",
+      "Revenue Dashboard",
+      "Rule Engine"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-041",
+    "title": "Progressive Web App (PWA)",
+    "description": "Transform a web application into a Progressive Web App with offline support, push notifications, and home screen installation.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Web Development",
+    "skills_required": [
+      "Service Workers",
+      "React",
+      "PWA",
+      "Web App Manifest",
+      "Offline Storage"
+    ],
+    "technologies": [
+      "React",
+      "Workbox",
+      "IndexedDB",
+      "Web Push",
+      "Lighthouse"
+    ],
+    "learning_outcomes": [
+      "Implement service workers for offline functionality",
+      "Add offline support with cached resources",
+      "Configure web app manifest for home screen installation",
+      "Enable push notifications",
+      "Optimize PWA performance with Lighthouse"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "React fundamentals",
+      "Web development basics"
+    ],
+    "project_type": "webapp",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Frontend Developer",
+      "Web Developer",
+      "PWA Developer"
+    ],
+    "resume_value": "Transformed a React web app into a PWA with service workers, offline support, push notifications, and Lighthouse-optimized performance.",
+    "portfolio_value": "Demonstrates PWA architecture, service workers, offline-first design, and web performance optimization.",
+    "industry_use_case": "Mobile-first web applications with offline capabilities.",
+    "deliverables": [
+      "Source Code",
+      "Service Worker",
+      "Web Manifest",
+      "Lighthouse Report",
+      "README"
+    ],
+    "bonus_features": [
+      "Background Sync",
+      "Periodic Background Sync",
+      "App Shortcuts",
+      "Share Target",
+      "Offline Analytics"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-042",
+    "title": "Data Lineage & Governance",
+    "description": "Build a data lineage and governance system to track data flow across an organization.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Data Engineering",
+    "skills_required": [
+      "SQL",
+      "Data Governance",
+      "Metadata Management",
+      "ETL",
+      "Python"
+    ],
+    "technologies": [
+      "Python",
+      "Apache Atlas",
+      "SQL",
+      "Airflow",
+      "DataHub",
+      "OpenMetadata"
+    ],
+    "learning_outcomes": [
+      "Implement data lineage tracking across pipelines",
+      "Track metadata for datasets and transformations",
+      "Build a governance system with access policies",
+      "Create a searchable data catalog",
+      "Manage data quality rules and validation"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "SQL fundamentals",
+      "Basic data engineering concepts"
+    ],
+    "project_type": "data-engineering",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Data Engineer",
+      "Data Architect",
+      "Data Governance Analyst"
+    ],
+    "resume_value": "Built a data lineage and governance system using Apache Atlas and OpenMetadata for tracking data flow, metadata management, and data cataloging.",
+    "portfolio_value": "Demonstrates data governance, metadata management, lineage tracking, and data engineering practices.",
+    "industry_use_case": "Enterprise data governance and regulatory compliance.",
+    "deliverables": [
+      "Source Code",
+      "Lineage Graphs",
+      "Data Catalog",
+      "Governance Policies",
+      "README"
+    ],
+    "bonus_features": [
+      "Impact Analysis",
+      "Data Classification",
+      "Access Auditing",
+      "Quality Dashboards",
+      "Automated Compliance"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-043",
+    "title": "Biometric Authentication System",
+    "description": "Build a biometric authentication system using facial recognition for secure access control.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "Computer Vision",
+    "skills_required": [
+      "Python",
+      "Computer Vision",
+      "Face Recognition",
+      "Deep Learning",
+      "Security"
+    ],
+    "technologies": [
+      "Python",
+      "OpenCV",
+      "Dlib",
+      "PyTorch",
+      "Flask",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Implement face detection with OpenCV",
+      "Build a face recognition system for authentication",
+      "Ensure security measures against spoofing",
+      "Handle privacy concerns and data protection",
+      "Optimize recognition accuracy and performance"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Deep learning basics",
+      "Image processing concepts"
+    ],
+    "project_type": "computer-vision",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Computer Vision Engineer",
+      "Security Engineer",
+      "ML Engineer"
+    ],
+    "resume_value": "Built a biometric authentication system using OpenCV, Dlib, and PyTorch for facial recognition-based secure access control.",
+    "portfolio_value": "Demonstrates computer vision, face recognition, security engineering, and privacy-aware design.",
+    "industry_use_case": "Physical access control and identity verification systems.",
+    "deliverables": [
+      "Source Code",
+      "Flask Backend",
+      "React Frontend",
+      "Model Files",
+      "Security Audit",
+      "README"
+    ],
+    "bonus_features": [
+      "Liveness Detection",
+      "Multi-face Recognition",
+      "Access Logs",
+      "Admin Panel",
+      "API Documentation"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-044",
+    "title": "Distributed Task Queue System",
+    "description": "Build a distributed task queue system using Celery with RabbitMQ for background processing.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "Python",
+      "Celery",
+      "RabbitMQ",
+      "Redis",
+      "Distributed Systems"
+    ],
+    "technologies": [
+      "Python",
+      "Celery",
+      "RabbitMQ",
+      "Redis",
+      "Django",
+      "Flower"
+    ],
+    "learning_outcomes": [
+      "Implement distributed task queues with Celery",
+      "Configure message brokers with RabbitMQ",
+      "Distribute workloads across multiple workers",
+      "Handle task retries, failures, and rate limiting",
+      "Monitor and visualize task execution with Flower"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Django basics",
+      "Basic networking concepts"
+    ],
+    "project_type": "backend",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Backend Developer",
+      "Python Developer",
+      "Distributed Systems Engineer"
+    ],
+    "resume_value": "Built a distributed task queue system using Celery and RabbitMQ with Django, implementing task retry, rate limiting, and Flower monitoring.",
+    "portfolio_value": "Demonstrates distributed systems, message queues, background processing, and system monitoring.",
+    "industry_use_case": "Background job processing for web applications and data pipelines.",
+    "deliverables": [
+      "Source Code",
+      "Celery Config",
+      "Django Project",
+      "Flower Dashboard",
+      "README"
+    ],
+    "bonus_features": [
+      "Task Chaining",
+      "Priority Queues",
+      "Scheduled Tasks",
+      "Dead Letter Handling",
+      "Worker Auto-scaling"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-045",
+    "title": "NoSQL Database Migration Tool",
+    "description": "Build a tool for migrating data between different NoSQL databases with schema transformation.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Database",
+    "skills_required": [
+      "Python",
+      "MongoDB",
+      "Cassandra",
+      "Data Migration",
+      "ETL"
+    ],
+    "technologies": [
+      "Python",
+      "MongoDB",
+      "Cassandra",
+      "Redis",
+      "Apache Kafka"
+    ],
+    "learning_outcomes": [
+      "Connect to multiple NoSQL databases programmatically",
+      "Transform data formats between different schemas",
+      "Ensure data consistency during migration",
+      "Handle large volumes of data efficiently",
+      "Validate migrated data for completeness"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "NoSQL database basics",
+      "SQL fundamentals"
+    ],
+    "project_type": "data-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Engineer",
+      "Database Administrator",
+      "Backend Developer"
+    ],
+    "resume_value": "Built a NoSQL database migration tool supporting MongoDB and Cassandra with schema transformation, data validation, and Kafka-based streaming.",
+    "portfolio_value": "Demonstrates database migration, schema design, data transformation, and distributed data handling.",
+    "industry_use_case": "Database migrations and cross-platform data transfers.",
+    "deliverables": [
+      "Source Code",
+      "Migration Scripts",
+      "Schema Transformers",
+      "Validation Reports",
+      "README"
+    ],
+    "bonus_features": [
+      "Incremental Migration",
+      "Rollback Support",
+      "Data Mapping UI",
+      "Performance Benchmarking",
+      "Logging & Audit"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-046",
+    "title": "Web Scraping & Monitoring System",
+    "description": "Build a web scraping system that monitors websites for changes and sends alerts.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "Automation",
+    "skills_required": [
+      "Python",
+      "BeautifulSoup",
+      "Scrapy",
+      "Selenium",
+      "Data Monitoring"
+    ],
+    "technologies": [
+      "Python",
+      "Scrapy",
+      "Selenium",
+      "BeautifulSoup",
+      "PostgreSQL",
+      "FastAPI"
+    ],
+    "learning_outcomes": [
+      "Scrape dynamic websites with Selenium and Scrapy",
+      "Handle login sessions and authentication",
+      "Detect content changes automatically",
+      "Send alerts via email or webhooks",
+      "Store scraped data in a relational database"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "HTML/CSS basics",
+      "HTTP fundamentals"
+    ],
+    "project_type": "automation",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Data Engineer",
+      "Backend Developer",
+      "Automation Engineer"
+    ],
+    "resume_value": "Built a web scraping and monitoring system using Scrapy, Selenium, and BeautifulSoup with change detection, alerting, and PostgreSQL storage.",
+    "portfolio_value": "Demonstrates web scraping, automation, data storage, and monitoring system design.",
+    "industry_use_case": "Price monitoring, competitor tracking, and content change detection.",
+    "deliverables": [
+      "Source Code",
+      "Scrapy Spiders",
+      "FastAPI Backend",
+      "Alert System",
+      "README"
+    ],
+    "bonus_features": [
+      "Proxy Rotation",
+      "CAPTCHA Handling",
+      "Scheduled Scraping",
+      "Data Export",
+      "Dashboard View"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-047",
+    "title": "Micro-frontend Architecture",
+    "description": "Implement micro-frontend architecture with React using Module Federation for large-scale applications.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Frontend Development",
+    "skills_required": [
+      "React",
+      "Micro-frontends",
+      "Webpack",
+      "Module Federation",
+      "State Management"
+    ],
+    "technologies": [
+      "React",
+      "Webpack 5",
+      "Module Federation",
+      "Redux",
+      "TypeScript"
+    ],
+    "learning_outcomes": [
+      "Design micro-frontend architecture for large apps",
+      "Implement Module Federation with Webpack 5",
+      "Manage shared state across micro-frontends",
+      "Handle cross-application navigation",
+      "Deploy micro-frontends independently"
+    ],
+    "prerequisites": [
+      "React fundamentals",
+      "JavaScript advanced concepts",
+      "Build tools basics"
+    ],
+    "project_type": "frontend",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Frontend Architect",
+      "Senior Frontend Developer",
+      "Web Developer"
+    ],
+    "resume_value": "Implemented micro-frontend architecture using React and Webpack 5 Module Federation with shared state management and independent deployment.",
+    "portfolio_value": "Demonstrates advanced frontend architecture, modular design, and scalable application development.",
+    "industry_use_case": "Large-scale enterprise web applications with multiple teams.",
+    "deliverables": [
+      "Source Code",
+      "Micro-frontend Configs",
+      "Shared State Library",
+      "Architecture Diagram",
+      "README"
+    ],
+    "bonus_features": [
+      "TypeScript Support",
+      "Shared Dependencies",
+      "Error Boundaries",
+      "Performance Monitoring",
+      "A/B Testing"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-048",
+    "title": "Log Management System (ELK Stack)",
+    "description": "Build a log management system using ELK Stack (Elasticsearch, Logstash, Kibana) for real-time log analysis.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "DevOps",
+    "skills_required": [
+      "Elasticsearch",
+      "Logstash",
+      "Kibana",
+      "Logging",
+      "Data Analysis"
+    ],
+    "technologies": [
+      "Elasticsearch",
+      "Logstash",
+      "Kibana",
+      "Filebeat",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Centralize logs from multiple sources",
+      "Process and parse logs in real-time with Logstash",
+      "Create Kibana dashboards for log visualization",
+      "Set up alerts for error patterns",
+      "Analyze log patterns and trends"
+    ],
+    "prerequisites": [
+      "Linux basics",
+      "Basic networking",
+      "JSON concepts"
+    ],
+    "project_type": "devops",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "DevOps Engineer",
+      "SRE",
+      "Platform Engineer"
+    ],
+    "resume_value": "Built a centralized log management system using ELK Stack (Elasticsearch, Logstash, Kibana) with Filebeat for real-time log analysis and alerting.",
+    "portfolio_value": "Demonstrates log aggregation, real-time processing, search optimization, and operational monitoring.",
+    "industry_use_case": "Centralized logging and observability for production systems.",
+    "deliverables": [
+      "Source Code",
+      "Docker Compose",
+      "Logstash Pipelines",
+      "Kibana Dashboards",
+      "README"
+    ],
+    "bonus_features": [
+      "Multi-source Ingestion",
+      "Log Retention Policies",
+      "Security Analytics",
+      "Custom Parsers",
+      "Role-based Access"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-049",
+    "title": "AI-powered Resume Builder",
+    "description": "Build a resume builder that uses AI to suggest improvements, skills, and formatting based on job descriptions.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "AI",
+    "skills_required": [
+      "Python",
+      "NLP",
+      "React",
+      "Document Generation",
+      "AI Integration"
+    ],
+    "technologies": [
+      "Python",
+      "IBM Granite",
+      "React",
+      "PDF Generation",
+      "Node.js"
+    ],
+    "learning_outcomes": [
+      "Generate resume content with AI assistance",
+      "Use LLMs for skill and improvement suggestions",
+      "Parse and analyze job descriptions",
+      "Create professional PDF output",
+      "Score resume quality against job requirements"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "React basics",
+      "Basic NLP concepts"
+    ],
+    "project_type": "ai-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "AI Developer",
+      "Full Stack Developer",
+      "NLP Engineer"
+    ],
+    "resume_value": "Built an AI-powered resume builder using IBM Granite LLM for content suggestions, job description parsing, and PDF generation.",
+    "portfolio_value": "Demonstrates AI integration, document generation, NLP processing, and full-stack development.",
+    "industry_use_case": "HR technology and career development platforms.",
+    "deliverables": [
+      "Source Code",
+      "React Frontend",
+      "Python Backend",
+      "PDF Templates",
+      "README"
+    ],
+    "bonus_features": [
+      "ATS Score Checker",
+      "Multiple Templates",
+      "Cover Letter Generation",
+      "Skill Gap Analysis",
+      "Export Options"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-050",
+    "title": "Infrastructure Cost Calculator",
+    "description": "Build a tool that calculates cloud infrastructure costs across different providers and provides cost-optimization recommendations.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Cloud Computing",
+    "skills_required": [
+      "Cloud Computing",
+      "Python",
+      "Cost Optimization",
+      "Provider APIs",
+      "Calculator"
+    ],
+    "technologies": [
+      "Python",
+      "AWS Pricing API",
+      "Azure Pricing API",
+      "FastAPI",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Calculate cloud costs across AWS and Azure",
+      "Compare pricing across different providers",
+      "Optimize resource selection for cost efficiency",
+      "Generate detailed cost reports",
+      "Provide actionable cost-optimization recommendations"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Cloud computing basics"
+    ],
+    "project_type": "cloud-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Cloud Engineer",
+      "FinOps Analyst",
+      "DevOps Engineer"
+    ],
+    "resume_value": "Built a cloud infrastructure cost calculator using Python and provider pricing APIs with FastAPI backend and React frontend for cost comparison and optimization.",
+    "portfolio_value": "Demonstrates cloud cost analysis, multi-provider comparison, API integration, and recommendation generation.",
+    "industry_use_case": "Cloud cost planning and FinOps budget management.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "Pricing Data",
+      "README"
+    ],
+    "bonus_features": [
+      "Cost Forecasting",
+      "Scenario Comparison",
+      "PDF Reports",
+      "Historical Tracking",
+      "Budget Alerts"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-051",
+    "title": "Real-time Collaboration Platform",
+    "description": "Build a real-time collaboration platform with document editing, comments, and version history.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "Full Stack Development",
+    "skills_required": [
+      "WebSockets",
+      "Conflict Resolution",
+      "React",
+      "Node.js",
+      "Document Management"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "Socket.io",
+      "MongoDB",
+      "CRDTs"
+    ],
+    "learning_outcomes": [
+      "Implement real-time document editing with CRDTs",
+      "Handle concurrent collaboration and conflict resolution",
+      "Manage document version history",
+      "Build real-time notification systems",
+      "Implement operational transformation or CRDT algorithms"
+    ],
+    "prerequisites": [
+      "JavaScript advanced concepts",
+      "React fundamentals",
+      "Node.js basics",
+      "WebSocket concepts"
+    ],
+    "project_type": "fullstack",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Full Stack Developer",
+      "Real-time Systems Engineer",
+      "Senior Software Engineer"
+    ],
+    "resume_value": "Built a real-time collaboration platform using React, Node.js, Socket.io, and CRDTs for concurrent document editing with version history.",
+    "portfolio_value": "Demonstrates real-time systems, conflict resolution algorithms, WebSocket communication, and collaborative editing.",
+    "industry_use_case": "Collaborative productivity tools like Google Docs and Figma.",
+    "deliverables": [
+      "Source Code",
+      "React Frontend",
+      "Node.js Backend",
+      "CRDT Implementation",
+      "README"
+    ],
+    "bonus_features": [
+      "Rich Text Editing",
+      "Comments & Annotations",
+      "Presence Indicators",
+      "Export Options",
+      "Offline Support"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-052",
+    "title": "Data Quality Framework",
+    "description": "Build a comprehensive data quality framework with validation rules, monitoring, and reporting.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Data Engineering",
+    "skills_required": [
+      "SQL",
+      "Python",
+      "Data Validation",
+      "Quality Metrics",
+      "Reporting"
+    ],
+    "technologies": [
+      "Python",
+      "Great Expectations",
+      "Pandas",
+      "SQL",
+      "Airflow"
+    ],
+    "learning_outcomes": [
+      "Define data quality rules and expectations",
+      "Validate datasets against quality criteria",
+      "Build quality reports and dashboards",
+      "Automate quality checks in data pipelines",
+      "Monitor quality trends over time"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "SQL fundamentals",
+      "Data engineering concepts"
+    ],
+    "project_type": "data-engineering",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Data Engineer",
+      "Data Analyst",
+      "Analytics Engineer"
+    ],
+    "resume_value": "Built a comprehensive data quality framework using Great Expectations, Pandas, and Airflow for automated validation, monitoring, and reporting.",
+    "portfolio_value": "Demonstrates data quality engineering, validation framework design, and automated data pipeline monitoring.",
+    "industry_use_case": "Enterprise data quality management and compliance.",
+    "deliverables": [
+      "Source Code",
+      "Validation Suites",
+      "Quality Reports",
+      "Airflow DAGs",
+      "README"
+    ],
+    "bonus_features": [
+      "Data Profiling",
+      "Anomaly Detection",
+      "Quality SLAs",
+      "Slack Alerts",
+      "Historical Trends"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-053",
+    "title": "AI Chatbot for Customer Support",
+    "description": "Build an AI-powered customer support chatbot that uses IBM Granite for natural language understanding and response generation.",
+    "difficulty": "Intermediate",
+    "estimated_time": "4 weeks",
+    "domain": "AI",
+    "skills_required": [
+      "Python",
+      "IBM Granite",
+      "NLP",
+      "Dialog Management",
+      "Integration"
+    ],
+    "technologies": [
+      "IBM Granite",
+      "Python",
+      "FastAPI",
+      "React",
+      "WebSockets"
+    ],
+    "learning_outcomes": [
+      "Build conversational AI with IBM Granite LLM",
+      "Manage conversation flow and context",
+      "Create an admin panel for chatbot management",
+      "Analyze conversation logs for improvements",
+      "Integrate chatbot with web applications"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "NLP concepts",
+      "Web development basics"
+    ],
+    "project_type": "ai-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "AI Developer",
+      "Conversational AI Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built an AI customer support chatbot using IBM Granite LLM, FastAPI, and React with conversation management, analytics, and admin panel.",
+    "portfolio_value": "Demonstrates conversational AI, LLM integration, dialog management, and full-stack chatbot development.",
+    "industry_use_case": "Customer service automation and support ticket reduction.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "Admin Panel",
+      "README"
+    ],
+    "bonus_features": [
+      "Multi-language Support",
+      "Sentiment Analysis",
+      "Ticket Escalation",
+      "Knowledge Base",
+      "Analytics Dashboard"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-054",
+    "title": "Custom Chatbot with RAG",
+    "description": "Build a custom chatbot using Retrieval-Augmented Generation (RAG) with IBM Granite for domain-specific responses.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "RAG",
+    "skills_required": [
+      "Python",
+      "RAG",
+      "ChromaDB",
+      "LLMs",
+      "Natural Language"
+    ],
+    "technologies": [
+      "IBM Granite",
+      "ChromaDB",
+      "Python",
+      "FastAPI",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Implement RAG architecture for domain-specific Q&A",
+      "Use IBM Granite LLM for response generation",
+      "Build and query a vector database with ChromaDB",
+      "Create an interactive chat interface",
+      "Optimize retrieval quality and response accuracy"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "LLM concepts",
+      "Basic embedding concepts"
+    ],
+    "project_type": "rag",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "LLM Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a custom RAG chatbot using IBM Granite LLM, ChromaDB vector database, and FastAPI with an interactive React frontend.",
+    "portfolio_value": "Demonstrates RAG architecture, vector databases, LLM integration, and conversational AI.",
+    "industry_use_case": "Domain-specific knowledge assistants and enterprise chatbots.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "ChromaDB Setup",
+      "README"
+    ],
+    "bonus_features": [
+      "Document Upload",
+      "Source Citations",
+      "Conversation History",
+      "Multi-turn Context",
+      "Admin Dashboard"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-055",
+    "title": "Event-Driven Microservices",
+    "description": "Implement event-driven microservices with Kafka, handling eventual consistency and distributed transactions.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Architecture",
+    "skills_required": [
+      "Kafka",
+      "Microservices",
+      "Event Sourcing",
+      "CQRS",
+      "Java/Python"
+    ],
+    "technologies": [
+      "Apache Kafka",
+      "Spring Boot",
+      "Python",
+      "MongoDB",
+      "Docker",
+      "Kubernetes"
+    ],
+    "learning_outcomes": [
+      "Implement event-driven architecture with Kafka",
+      "Use Kafka for reliable message delivery",
+      "Handle distributed transactions with saga pattern",
+      "Apply CQRS pattern for read/write separation",
+      "Build resilient and fault-tolerant services"
+    ],
+    "prerequisites": [
+      "Microservices basics",
+      "REST API concepts",
+      "Docker basics"
+    ],
+    "project_type": "architecture",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Software Architect",
+      "Backend Developer",
+      "Senior Developer"
+    ],
+    "resume_value": "Implemented event-driven microservices using Apache Kafka with saga pattern for distributed transactions and CQRS for read/write separation.",
+    "portfolio_value": "Demonstrates event-driven architecture, message queues, distributed systems patterns, and resilient service design.",
+    "industry_use_case": "Enterprise event-driven architectures and real-time data pipelines.",
+    "deliverables": [
+      "Source Code",
+      "Kafka Configuration",
+      "Microservices",
+      "Architecture Diagram",
+      "README"
+    ],
+    "bonus_features": [
+      "Dead Letter Queues",
+      "Event Replay",
+      "Saga Orchestration",
+      "Schema Registry",
+      "Monitoring Dashboard"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-056",
+    "title": "Real-time Fraud Detection",
+    "description": "Build a real-time fraud detection system using machine learning and streaming analytics.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "AI",
+    "skills_required": [
+      "Python",
+      "Machine Learning",
+      "Stream Processing",
+      "Anomaly Detection",
+      "Data Analysis"
+    ],
+    "technologies": [
+      "Python",
+      "Apache Flink",
+      "Scikit-learn",
+      "XGBoost",
+      "Redis",
+      "Elasticsearch"
+    ],
+    "learning_outcomes": [
+      "Implement real-time fraud detection algorithms",
+      "Process streaming data with Apache Flink",
+      "Build ML models for anomaly detection",
+      "Monitor and flag suspicious activities in real-time",
+      "Create an alert system for fraud incidents"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Machine learning fundamentals",
+      "Stream processing concepts"
+    ],
+    "project_type": "ai-tool",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "ML Engineer",
+      "Data Engineer",
+      "FinTech Engineer"
+    ],
+    "resume_value": "Built a real-time fraud detection system using Apache Flink, XGBoost, and Elasticsearch for streaming analytics and anomaly detection.",
+    "portfolio_value": "Demonstrates real-time ML, stream processing, anomaly detection, and production ML deployment.",
+    "industry_use_case": "Financial fraud detection and transaction monitoring.",
+    "deliverables": [
+      "Source Code",
+      "Flink Jobs",
+      "ML Models",
+      "Elasticsearch Dashboards",
+      "README"
+    ],
+    "bonus_features": [
+      "Rule Engine",
+      "Alert System",
+      "Historical Analysis",
+      "Model Retraining",
+      "Risk Scoring"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-057",
+    "title": "RAG-based Document Q&A System",
+    "description": "Build a document Q&A system using RAG that answers questions based on uploaded documents.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "RAG",
+    "skills_required": [
+      "RAG",
+      "LangChain",
+      "IBM Granite",
+      "ChromaDB",
+      "Python"
+    ],
+    "technologies": [
+      "Python",
+      "LangChain",
+      "IBM Granite",
+      "ChromaDB",
+      "FastAPI",
+      "React"
+    ],
+    "learning_outcomes": [
+      "Implement RAG architecture for document Q&A",
+      "Process various document types (PDF, DOCX, TXT)",
+      "Use LangChain for RAG orchestration",
+      "Build an interactive Q&A interface",
+      "Handle document ingestion and chunking strategies"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "LLM concepts",
+      "Basic embedding concepts"
+    ],
+    "project_type": "rag",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "LLM Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built a RAG-based document Q&A system using LangChain, IBM Granite LLM, and ChromaDB for multi-format document processing and intelligent Q&A.",
+    "portfolio_value": "Demonstrates RAG architecture, document processing, vector search, and LLM application development.",
+    "industry_use_case": "Enterprise document search and knowledge management.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "Document Processor",
+      "README"
+    ],
+    "bonus_features": [
+      "Multi-format Support",
+      "Source Citations",
+      "Document Preview",
+      "Search History",
+      "Batch Processing"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-058",
+    "title": "URL Shortener with Analytics",
+    "description": "Build a URL shortener with click analytics, geographic tracking, and link expiration features.",
+    "difficulty": "Intermediate",
+    "estimated_time": "2 weeks",
+    "domain": "Web Development",
+    "skills_required": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "JavaScript",
+      "Data Visualization"
+    ],
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Redis",
+      "React",
+      "Chart.js",
+      "PostgreSQL"
+    ],
+    "learning_outcomes": [
+      "Build a high-performance URL shortening service",
+      "Implement click tracking and analytics",
+      "Create geographic and device breakdown reports",
+      "Handle link expiration and custom aliases",
+      "Optimize for low-latency redirects"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "REST API concepts"
+    ],
+    "project_type": "webapp",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Backend Developer",
+      "Full Stack Developer",
+      "Python Developer"
+    ],
+    "resume_value": "Built a URL shortener with analytics dashboard using FastAPI, Redis caching, and PostgreSQL for click tracking and geographic insights.",
+    "portfolio_value": "Demonstrates API design, caching, analytics, and data visualization.",
+    "industry_use_case": "Marketing link management and campaign tracking.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Dashboard",
+      "Database Schema",
+      "README"
+    ],
+    "bonus_features": [
+      "QR Code Generation",
+      "Bulk Shortening",
+      "API Rate Limiting",
+      "Campaign Tags",
+      "A/B Testing Links"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-059",
+    "title": "AI Image Generator Studio",
+    "description": "Build an AI image generation studio with prompt engineering, style transfer, and image editing capabilities.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "Generative AI",
+    "skills_required": [
+      "Python",
+      "Stable Diffusion",
+      "React",
+      "Image Processing",
+      "AI Integration"
+    ],
+    "technologies": [
+      "Python",
+      "Stable Diffusion",
+      "React",
+      "FastAPI",
+      "Pillow",
+      "Hugging Face"
+    ],
+    "learning_outcomes": [
+      "Integrate Stable Diffusion for image generation",
+      "Implement prompt engineering techniques",
+      "Build image editing and style transfer features",
+      "Create an interactive generation studio UI",
+      "Optimize generation speed and quality"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Deep learning concepts",
+      "React basics"
+    ],
+    "project_type": "generative-ai",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "Generative AI Developer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built an AI image generation studio using Stable Diffusion, FastAPI, and React with prompt engineering, style transfer, and editing capabilities.",
+    "portfolio_value": "Demonstrates generative AI integration, image processing, prompt engineering, and creative AI application development.",
+    "industry_use_case": "Creative content generation and AI-powered design tools.",
+    "deliverables": [
+      "Source Code",
+      "FastAPI Backend",
+      "React Frontend",
+      "Model Integration",
+      "README"
+    ],
+    "bonus_features": [
+      "Image Gallery",
+      "Prompt Templates",
+      "Batch Generation",
+      "Style Presets",
+      "Export Options"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-060",
+    "title": "Password Manager Application",
+    "description": "Build a secure password manager with encryption, auto-fill, and password generation features.",
+    "difficulty": "Intermediate",
+    "estimated_time": "3 weeks",
+    "domain": "Cybersecurity",
+    "skills_required": [
+      "Python",
+      "Cryptography",
+      "React",
+      "Node.js",
+      "Security"
+    ],
+    "technologies": [
+      "Python",
+      "React",
+      "Node.js",
+      "SQLite",
+      "AES Encryption",
+      "Browser Extension"
+    ],
+    "learning_outcomes": [
+      "Implement AES encryption for password storage",
+      "Build a secure master password authentication system",
+      "Create a browser extension for auto-fill",
+      "Generate strong random passwords",
+      "Implement zero-knowledge architecture"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "Basic cryptography concepts"
+    ],
+    "project_type": "security-tool",
+    "roadmap_level": "intermediate",
+    "career_tags": [
+      "Security Engineer",
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "resume_value": "Built a secure password manager with AES encryption, master password authentication, browser extension auto-fill, and zero-knowledge architecture.",
+    "portfolio_value": "Demonstrates encryption, security engineering, browser extension development, and secure system design.",
+    "industry_use_case": "Personal and enterprise password management.",
+    "deliverables": [
+      "Source Code",
+      "React Frontend",
+      "Node.js Backend",
+      "Browser Extension",
+      "README"
+    ],
+    "bonus_features": [
+      "Password Sharing",
+      "Breach Monitoring",
+      "Secure Notes",
+      "2FA Support",
+      "Import/Export"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-061",
+    "title": "Multi-tenant SaaS Platform",
+    "description": "Build a multi-tenant SaaS platform with tenant isolation, subscription management, and usage tracking.",
+    "difficulty": "Advanced",
+    "estimated_time": "6 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Stripe",
+      "Multi-tenancy"
+    ],
+    "technologies": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Stripe",
+      "Redis",
+      "Docker"
+    ],
+    "learning_outcomes": [
+      "Design multi-tenant database architectures",
+      "Implement tenant isolation and data partitioning",
+      "Build subscription management with Stripe",
+      "Track and limit per-tenant usage",
+      "Handle tenant provisioning and onboarding"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Django basics",
+      "Database design"
+    ],
+    "project_type": "backend",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Backend Developer",
+      "SaaS Architect",
+      "Python Developer"
+    ],
+    "resume_value": "Built a multi-tenant SaaS platform with Django featuring tenant isolation, Stripe subscription management, and usage-based billing.",
+    "portfolio_value": "Demonstrates multi-tenancy patterns, subscription billing, tenant isolation, and scalable SaaS architecture.",
+    "industry_use_case": "Building B2B SaaS products with multi-tenant architecture.",
+    "deliverables": [
+      "Source Code",
+      "Django Project",
+      "Database Migrations",
+      "Stripe Integration",
+      "README"
+    ],
+    "bonus_features": [
+      "Tenant Admin Dashboard",
+      "Usage Analytics",
+      "Plan Upgrades",
+      "API Rate Limiting",
+      "White-label Support"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-062",
+    "title": "Video Streaming Platform",
+    "description": "Build a video streaming platform with upload, transcoding, adaptive streaming, and playback features.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "Full Stack Development",
+    "skills_required": [
+      "Node.js",
+      "FFmpeg",
+      "React",
+      "AWS S3",
+      "Video Processing"
+    ],
+    "technologies": [
+      "Node.js",
+      "React",
+      "FFmpeg",
+      "AWS S3",
+      "CloudFront",
+      "MongoDB"
+    ],
+    "learning_outcomes": [
+      "Implement video upload and chunked transfer",
+      "Transcode videos with FFmpeg for multiple formats",
+      "Build adaptive bitrate streaming (HLS/DASH)",
+      "Create a video player with quality selection",
+      "Manage video metadata and thumbnails"
+    ],
+    "prerequisites": [
+      "JavaScript basics",
+      "React fundamentals",
+      "Node.js basics"
+    ],
+    "project_type": "fullstack",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "Media Engineer"
+    ],
+    "resume_value": "Built a video streaming platform with Node.js and React featuring FFmpeg transcoding, HLS adaptive streaming, and S3 storage with CloudFront CDN.",
+    "portfolio_value": "Demonstrates video processing, adaptive streaming, CDN integration, and media platform development.",
+    "industry_use_case": "Video-on-demand platforms and content streaming services.",
+    "deliverables": [
+      "Source Code",
+      "Node.js Backend",
+      "React Frontend",
+      "FFmpeg Config",
+      "README"
+    ],
+    "bonus_features": [
+      "Video Transcoding Queue",
+      "Thumbnail Generation",
+      "Subtitle Support",
+      "Watch History",
+      "Recommendation Engine"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-063",
+    "title": "Distributed Cache System",
+    "description": "Build a distributed caching system with consistency hashing, replication, and eviction policies.",
+    "difficulty": "Advanced",
+    "estimated_time": "4 weeks",
+    "domain": "Backend Development",
+    "skills_required": [
+      "Python",
+      "Distributed Systems",
+      "Networking",
+      "Data Structures",
+      "Caching"
+    ],
+    "technologies": [
+      "Python",
+      "Redis",
+      "Docker",
+      "gRPC",
+      "Prometheus",
+      "Grafana"
+    ],
+    "learning_outcomes": [
+      "Implement consistent hashing for key distribution",
+      "Build replication and fault tolerance mechanisms",
+      "Apply LRU/LFU eviction policies",
+      "Create a client library for cache access",
+      "Monitor cache hit rates and performance"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "Data structures",
+      "Networking basics"
+    ],
+    "project_type": "backend",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "Systems Engineer",
+      "Backend Developer",
+      "Infrastructure Engineer"
+    ],
+    "resume_value": "Built a distributed cache system implementing consistent hashing, replication, and LRU/LFU eviction with monitoring dashboards.",
+    "portfolio_value": "Demonstrates distributed systems, caching algorithms, system design, and performance optimization.",
+    "industry_use_case": "High-performance caching layers for web applications.",
+    "deliverables": [
+      "Source Code",
+      "Cache Server",
+      "Client Library",
+      "Docker Setup",
+      "README"
+    ],
+    "bonus_features": [
+      "Cache Invalidation",
+      "Pub/Sub Notifications",
+      "Cluster Mode",
+      "Persistence",
+      "Benchmarking Tool"
+    ],
+    "status": "available"
+  },
+  {
+    "id": "project-064",
+    "title": "AI Code Completion IDE Plugin",
+    "description": "Build an AI-powered code completion IDE plugin that suggests code snippets and completions using language models.",
+    "difficulty": "Advanced",
+    "estimated_time": "5 weeks",
+    "domain": "AI",
+    "skills_required": [
+      "Python",
+      "LLMs",
+      "VS Code Extension",
+      "NLP",
+      "Code Intelligence"
+    ],
+    "technologies": [
+      "Python",
+      "IBM Granite",
+      "TypeScript",
+      "VS Code API",
+      "FastAPI"
+    ],
+    "learning_outcomes": [
+      "Build a VS Code extension with TypeScript",
+      "Integrate LLMs for code completion suggestions",
+      "Implement context-aware code analysis",
+      "Create a fast inference pipeline",
+      "Handle multi-language code support"
+    ],
+    "prerequisites": [
+      "Python basics",
+      "TypeScript basics",
+      "VS Code basics"
+    ],
+    "project_type": "ai-tool",
+    "roadmap_level": "advanced",
+    "career_tags": [
+      "AI Engineer",
+      "Developer Tools Engineer",
+      "Full Stack Developer"
+    ],
+    "resume_value": "Built an AI code completion IDE plugin using IBM Granite LLM, TypeScript VS Code API, and FastAPI for context-aware code suggestions.",
+    "portfolio_value": "Demonstrates LLM integration, IDE extension development, code intelligence, and developer tooling.",
+    "industry_use_case": "AI-powered developer productivity tools and code assistants.",
+    "deliverables": [
+      "Source Code",
+      "VS Code Extension",
+      "FastAPI Backend",
+      "Documentation",
+      "README"
+    ],
+    "bonus_features": [
+      "Multi-language Support",
+      "Code Explanation",
+      "Refactoring Suggestions",
+      "Test Generation",
+      "Snippet Library"
+    ],
+    "status": "available"
   }
 ]

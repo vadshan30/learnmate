@@ -91,33 +91,40 @@ async def load_datasets() -> None:
     init_store()
     store = get_store_direct()
 
-    courses_path = DATA_DIR / "courses.json"
-    if courses_path.exists():
-        with open(courses_path, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-            store.loaded_courses = [Course(**item) for item in raw]
-        logger.info("Loaded %d courses", len(store.loaded_courses))
+    # Load datasets using the data_loader utility
+    from app.utils.data_loader import (
+        load_courses,
+        load_certifications,
+        load_projects,
+    )
 
-    certs_path = DATA_DIR / "certifications.json"
-    if certs_path.exists():
-        with open(certs_path, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-            store.loaded_certifications = [Certification(**item) for item in raw]
-        logger.info("Loaded %d certifications", len(store.loaded_certifications))
+    courses = load_courses()
+    store.loaded_courses = [Course(**item) for item in courses]
+    logger.info("Loaded %d courses into Store", len(store.loaded_courses))
 
-    projects_path = DATA_DIR / "projects.json"
-    if projects_path.exists():
-        with open(projects_path, "r", encoding="utf-8") as f:
-            raw = json.load(f)
-            store.loaded_projects = [Project(**item) for item in raw]
-        logger.info("Loaded %d projects", len(store.loaded_projects))
+    certs = load_certifications()
+    store.loaded_certifications = [Certification(**item) for item in certs]
+    logger.info("Loaded %d certifications into Store", len(store.loaded_certifications))
 
+    projects = load_projects()
+    store.loaded_projects = [Project(**item) for item in projects]
+    logger.info("Loaded %d projects into Store", len(store.loaded_projects))
+
+    # Initialize RAG service
     if RAG_AVAILABLE and rag_service is not None:
-        await rag_service.initialise()
-        logger.info("RAG service initialised")
+        try:
+            await rag_service.initialise()
+            stats = await rag_service.get_collection_stats()
+            logger.info(
+                "RAG service initialised – %d documents indexed, status=%s",
+                stats.get("total_documents", 0),
+                stats.get("status", "unknown"),
+            )
+        except Exception as exc:
+            logger.error("[RAG ERROR] Initialization failed: %s", exc)
     else:
         logger.warning(
-            "ChromaDB/sentence-transformers not installed – RAG endpoints return 503"
+            "[RAG] ChromaDB/sentence-transformers not installed – RAG endpoints return 503"
         )
 
     logger.info("LearnMate AI ready (watsonx=%s, rag=%s)", granite_available, RAG_AVAILABLE)

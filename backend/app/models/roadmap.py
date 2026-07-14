@@ -7,7 +7,7 @@ weekly learning plans, and the full personalized roadmap.
 from __future__ import annotations
 
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
@@ -25,6 +25,44 @@ class DifficultyLevel(str, Enum):
     ADVANCED = "Advanced"
 
 
+class TopicCompletion(BaseModel):
+    """Tracks completion state for a single topic within a week.
+
+    Attributes:
+        topic_id: Unique identifier for the topic (e.g. "week-3-topic-0").
+        topic_name: Human-readable topic name.
+        completed: Whether the topic has been completed.
+        completed_at: ISO timestamp when completed, or None.
+        week_number: The week this topic belongs to.
+    """
+
+    topic_id: str = Field(..., description="Unique topic identifier")
+    topic_name: str = Field(..., description="Human-readable topic name")
+    completed: bool = Field(default=False, description="Completion state")
+    completed_at: Optional[str] = Field(default=None, description="ISO timestamp of completion")
+    week_number: int = Field(default=1, ge=1, description="Parent week number")
+
+
+class WeekProgress(BaseModel):
+    """Tracks progress for a single week.
+
+    Attributes:
+        week_number: The week number (1-indexed).
+        completed: Whether all topics in this week are done.
+        total_topics: Total topics in this week.
+        completed_topics_count: How many topics are done.
+        percentage: Completion percentage for this week.
+        status: One of 'pending', 'in_progress', 'completed'.
+    """
+
+    week_number: int = Field(..., ge=1, description="Week number")
+    completed: bool = Field(default=False, description="All topics done")
+    total_topics: int = Field(default=0, ge=0, description="Total topics")
+    completed_topics_count: int = Field(default=0, ge=0, description="Completed topics")
+    percentage: float = Field(default=0.0, ge=0.0, le=100.0, description="Week completion %")
+    status: str = Field(default="pending", description="pending|in_progress|completed")
+
+
 class RoadmapProgress(BaseModel):
     """Tracks the student's progress through a generated roadmap.
 
@@ -33,6 +71,10 @@ class RoadmapProgress(BaseModel):
         total_weeks: Total weeks in the roadmap.
         percentage: Completion percentage (0-100).
         current_week: The week the student is currently on.
+        total_topics: Total topics across all weeks.
+        completed_topics_count: Number of completed topics.
+        week_progress: Per-week progress breakdown.
+        completion_status: Overall status string.
     """
 
     completed_weeks: int = Field(default=0, ge=0, description="Weeks finished")
@@ -41,6 +83,12 @@ class RoadmapProgress(BaseModel):
         default=0.0, ge=0.0, le=100.0, description="Completion percentage"
     )
     current_week: int = Field(default=1, ge=1, description="Current active week")
+    total_topics: int = Field(default=0, ge=0, description="Total topics across all weeks")
+    completed_topics_count: int = Field(default=0, ge=0, description="Completed topics")
+    week_progress: List[WeekProgress] = Field(
+        default_factory=list, description="Per-week progress"
+    )
+    completion_status: str = Field(default="not_started", description="not_started|in_progress|completed")
 
 
 # ---------------------------------------------------------------------------
@@ -71,6 +119,8 @@ class Course(BaseModel):
     level: DifficultyLevel = Field(
         default=DifficultyLevel.BEGINNER, description="Difficulty level"
     )
+    provider: str = Field(default="", description="Course provider or platform")
+    url: str = Field(default="", description="Course URL")
     prerequisites: List[str] = Field(
         default_factory=list, description="Prerequisites (IDs or skill names)"
     )
@@ -80,6 +130,7 @@ class Course(BaseModel):
     tags: List[str] = Field(
         default_factory=list, description="Searchable tags"
     )
+    category: str = Field(default="", description="Course category (alias for domain)")
 
 
 class Project(BaseModel):
@@ -126,10 +177,18 @@ class Certification(BaseModel):
         name: Official certification name.
         provider: Issuing organization.
         level: Difficulty / experience level.
+        category: Certification category (e.g. "Cloud Computing").
         description: Overview of the certification.
+        duration: Estimated study/prep time.
+        exam_fee: Cost of the exam.
+        validity: How long the certification is valid.
         prerequisites: Requirements before attempting.
         exam_link: URL to the official exam page.
         skills_covered: Skills validated by this certification.
+        learning_outcomes: What the learner will gain.
+        official_badge: Badge name or image URL.
+        recommended_courses: Course IDs recommended as preparation.
+        career_roles: Job roles this certification supports.
     """
 
     id: str = Field(default="", description="Unique certification identifier")
@@ -138,13 +197,27 @@ class Certification(BaseModel):
     level: DifficultyLevel = Field(
         default=DifficultyLevel.BEGINNER, description="Certification level"
     )
+    category: str = Field(default="", description="Certification category")
     description: str = Field(default="", description="Description")
+    duration: str = Field(default="", description="Estimated study/prep time")
+    exam_fee: str = Field(default="", description="Exam fee")
+    validity: str = Field(default="", description="Certification validity period")
     prerequisites: List[str] = Field(
         default_factory=list, description="Prerequisites"
     )
     exam_link: str = Field(default="", description="Official exam URL")
     skills_covered: List[str] = Field(
         default_factory=list, description="Skills covered"
+    )
+    learning_outcomes: List[str] = Field(
+        default_factory=list, description="Learning outcomes"
+    )
+    official_badge: str = Field(default="", description="Official badge name")
+    recommended_courses: List[str] = Field(
+        default_factory=list, description="Recommended course IDs"
+    )
+    career_roles: List[str] = Field(
+        default_factory=list, description="Career roles"
     )
 
 
@@ -176,6 +249,11 @@ class LearningWeek(BaseModel):
     )
     estimated_hours: float = Field(
         default=10.0, ge=0.0, description="Estimated study hours"
+    )
+    completion_status: str = Field(default="pending", description="pending|in_progress|completed")
+    completed: bool = Field(default=False, description="Whether this week is fully completed")
+    learning_outcomes: List[str] = Field(
+        default_factory=list, description="Learning outcomes for this week"
     )
 
 
@@ -210,4 +288,7 @@ class LearningRoadmap(BaseModel):
     )
     progress: RoadmapProgress = Field(
         default_factory=RoadmapProgress, description="Progress tracker"
+    )
+    recommendations: List[str] = Field(
+        default_factory=list, description="Learning recommendations"
     )
