@@ -107,7 +107,7 @@ export default function Dashboard() {
         {/* Learning Journey Stats */}
         <motion.div variants={fadeUp} className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
-            { icon: HiOutlineBookOpen, label: 'Courses', value: projectStats?.total_projects ? '21' : '—', sub: 'Available', color: 'text-blue-500' },
+            { icon: HiOutlineBookOpen, label: 'Courses', value: projectStats?.total_courses || '—', sub: 'Available', color: 'text-blue-500' },
             { icon: HiOutlineBriefcase, label: 'Projects Done', value: projectStats?.completed_count ?? '—', sub: `of ${projectStats?.total_projects || 12}`, color: 'text-purple-500' },
             { icon: HiOutlineCheckCircle, label: 'Completed', value: completedTopics, sub: `of ${totalTopics} topics`, color: 'text-green-500' },
             { icon: HiOutlineAcademicCap, label: 'Certs', value: certs.length, sub: 'Recommended', color: 'text-emerald-500' },

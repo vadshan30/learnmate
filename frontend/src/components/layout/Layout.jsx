@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   HiOutlineHome, HiOutlineUser, HiOutlineMap, HiOutlineChatBubbleLeftEllipsis,
   HiOutlineBookOpen, HiOutlineChartBar, HiOutlineCog6Tooth, HiOutlineBars3,
-  HiOutlineXMark, HiOutlineSun, HiOutlineMoon, HiOutlineArrowLeftOnRectangle,
+  HiOutlineXMark, HiOutlineSun, HiOutlineMoon, HiOutlineChevronDoubleLeft,
 } from 'react-icons/hi2'
 import { useTheme } from '../../context/ThemeContext'
 import { useApp } from '../../context/AppContext'
@@ -70,7 +70,7 @@ function Sidebar({ collapsed, onToggle }) {
           onClick={onToggle}
           className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
         >
-          <HiOutlineArrowLeftOnRectangle className={`w-5 h-5 transition-transform duration-300 ${collapsed ? 'rotate-180' : ''}`} />
+          <HiOutlineChevronDoubleLeft className={`w-5 h-5 transition-transform duration-300 ${collapsed ? 'rotate-180' : ''}`} />
           {!collapsed && <span>Collapse</span>}
         </button>
       </div>

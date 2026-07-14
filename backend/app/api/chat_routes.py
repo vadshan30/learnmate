@@ -11,11 +11,25 @@ from app.services.granite_service import mentor_chat
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
+@router.get(
+    "/{student_id}",
+    response_model=SuccessResponse,
+    summary="Get chat history",
+    description="Returns the chat history for a student.",
+    responses={
+        200: {"description": "Chat history returned"},
+    },
+)
+async def get_chat_history(student_id: str, store: Store = Depends(get_store)) -> SuccessResponse:
+    history = store.chat_histories.get(student_id, [])
+    return SuccessResponse(message="Chat history retrieved", data={"messages": history})
+
+
 @router.post(
     "",
     response_model=ChatResponse,
     summary="Chat with AI mentor",
-    description="Sends a message to the AI learning mentor and returns a personalized response.",
+    description="Sends a message to the AI learning mentor and returns a personalised multi-turn response.",
     responses={
         200: {"description": "Mentor response"},
         404: {"model": ErrorResponse, "description": "Student not found"},
@@ -44,9 +58,11 @@ async def chat(body: ChatRequest, store: Store = Depends(get_store)) -> ChatResp
     else:
         resources_text = "No specific resources found."
 
-    reply = await mentor_chat(body.message, student_context, resources_text)
+    # Retrieve existing conversation history for multi-turn context
+    existing_history = store.chat_histories.get(body.student_id, [])
 
-    history = body.history or store.chat_histories.get(body.student_id, [])
+    reply = await mentor_chat(body.message, student_context, resources_text, existing_history)
+
     new_turns = [{"role": "user", "content": body.message}, {"role": "assistant", "content": reply}]
     if body.student_id not in store.chat_histories:
         store.chat_histories[body.student_id] = []

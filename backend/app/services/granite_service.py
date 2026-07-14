@@ -210,21 +210,43 @@ async def mentor_chat(
     user_message: str,
     student_context: str,
     retrieved_resources: str,
+    conversation_history: Optional[List[Dict[str, str]]] = None,
 ) -> str:
-    """Answer a student's learning question using RAG context + Granite."""
+    """Answer a student's learning question using RAG context + Granite.
+
+    Supports multi-turn conversation by including prior chat turns in the prompt.
+    """
     system_instruction = (
         "You are LearnMate AI, a supportive and knowledgeable learning mentor. "
         "Answer the student's question using the provided context about their "
         "profile and relevant learning resources. Be encouraging, specific, "
-        "and actionable. If you lack enough information, say so honestly."
+        "and actionable. If you lack enough information, say so honestly. "
+        "Remember previous messages in this conversation to provide contextual, "
+        "continuous guidance. Reference prior advice when appropriate."
     )
 
-    prompt = (
-        f"### Student Profile\n{student_context}\n\n"
-        f"### Relevant Learning Resources\n{retrieved_resources}\n\n"
-        f"### Student Question\n{user_message}\n\n"
-        "Provide a helpful, personalised answer:"
-    )
+    # Build conversation history block for multi-turn context
+    history_block = ""
+    if conversation_history:
+        recent = conversation_history[-10:]  # last 10 turns for context window
+        turns = []
+        for turn in recent:
+            role = "Student" if turn.get("role") == "user" else "Mentor"
+            turns.append(f"{role}: {turn.get('content', '')}")
+        history_block = "\n".join(turns)
+
+    prompt_parts = [
+        f"### Student Profile\n{student_context}\n",
+        f"### Relevant Learning Resources\n{retrieved_resources}\n",
+    ]
+
+    if history_block:
+        prompt_parts.append(f"### Conversation History\n{history_block}\n")
+
+    prompt_parts.append(f"### Student Question\n{user_message}\n")
+    prompt_parts.append("Provide a helpful, personalised answer:")
+
+    prompt = "\n".join(prompt_parts)
 
     response = await generate_response(
         f"{system_instruction}\n\n{prompt}",

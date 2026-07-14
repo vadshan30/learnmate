@@ -223,6 +223,7 @@ const ProjectDetailsModal = memo(function ProjectDetailsModal({ project, isOpen,
   const modalContentRef = useRef(null)
 
   const projectId = project?.id
+  const projectData = details || project
 
   useEffect(() => {
     if (!isOpen || !projectId) return
@@ -313,25 +314,30 @@ const ProjectDetailsModal = memo(function ProjectDetailsModal({ project, isOpen,
     }
   }, [projectId, student, isCompleted])
 
-  const handleAddToRoadmap = useCallback(() => {
-    setAddedToRoadmap(true)
-    toast.success(`${data?.title || 'Project'} added to roadmap!`)
-  }, [])
+  const handleAddToRoadmap = useCallback(async () => {
+    if (!student?.student_id) { toast.error('Create a profile first'); return }
+    if (addedToRoadmap) return
+    try {
+      await saveProject(projectId, student.student_id)
+      setAddedToRoadmap(true)
+      toast.success(`${projectData?.title || 'Project'} saved to your roadmap!`)
+    } catch {
+      toast.error('Failed to save project')
+    }
+  }, [student, projectId, projectData, addedToRoadmap])
 
   const handleBackdropClick = useCallback((e) => {
     if (e.target === e.currentTarget) onClose()
   }, [onClose])
 
-  const data = details || project
+  if (!projectData) return null
 
-  if (!data) return null
-
-  const skills = data?.skills_required || []
-  const techs = data?.technologies || []
-  const outcomes = data?.learning_outcomes || []
-  const recommended = recommendedCourses.length > 0 ? recommendedCourses : (data?.recommended_courses || [])
-  const prerequisites = data?.prerequisites || []
-  const domain = data?.domain || data?.category || ''
+  const skills = projectData?.skills_required || []
+  const techs = projectData?.technologies || []
+  const outcomes = projectData?.learning_outcomes || []
+  const recommended = recommendedCourses.length > 0 ? recommendedCourses : (projectData?.recommended_courses || [])
+  const prerequisites = projectData?.prerequisites || []
+  const domain = projectData?.domain || projectData?.category || ''
 
   const docLinks = resources?.documentation || []
   const datasets = resources?.datasets || []
@@ -379,18 +385,18 @@ const ProjectDetailsModal = memo(function ProjectDetailsModal({ project, isOpen,
                       <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Project</span>
                     </div>
                     <h2 className="text-xl font-bold text-white leading-tight">
-                      {data?.title || 'Untitled Project'}
+                      {projectData?.title || 'Untitled Project'}
                     </h2>
                     <div className="flex flex-wrap items-center gap-2.5 mt-2.5">
-                      {data?.difficulty && (
-                        <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${getDifficultyBadgeClasses(data.difficulty)}`}>
-                          {data.difficulty}
+                      {projectData?.difficulty && (
+                        <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${getDifficultyBadgeClasses(projectData.difficulty)}`}>
+                          {projectData.difficulty}
                         </span>
                       )}
-                      {data?.estimated_time && (
+                      {projectData?.estimated_time && (
                         <span className="flex items-center gap-1 text-sm text-white/80">
                           <HiOutlineClock className="w-3.5 h-3.5" />
-                          {data.estimated_time}
+                          {projectData.estimated_time}
                         </span>
                       )}
                       {domain && (
@@ -412,16 +418,16 @@ const ProjectDetailsModal = memo(function ProjectDetailsModal({ project, isOpen,
               </div>
 
               <div className="px-6 py-6 max-h-[65vh] overflow-y-auto overscroll-contain">
-                {!data?.title && !data?.description && !skills.length && !techs.length && (
+                {!projectData?.title && !projectData?.description && !skills.length && !techs.length && (
                   <div className="text-center py-8">
                     <HiOutlineExclamationTriangle className="w-10 h-10 text-gray-300 dark:text-gray-600 mx-auto mb-3" />
                     <p className="text-gray-500 dark:text-gray-400 text-sm">No project details available.</p>
                   </div>
                 )}
 
-                {data?.description && (
+                {projectData?.description && (
                   <div className="mb-6">
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">{data.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-[15px]">{projectData.description}</p>
                   </div>
                 )}
 

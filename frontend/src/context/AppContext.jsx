@@ -32,6 +32,8 @@ export function AppProvider({ children }) {
       })
     }
     api.getHealth().then((r) => setHealth(r.data)).catch(() => {})
+    // Load catalog data on mount so Dashboard/Progress have data
+    fetchCatalog()
   }, [wrap])
 
   const saveStudent = useCallback(async (data) => {
@@ -54,7 +56,6 @@ export function AppProvider({ children }) {
     setProgress(null)
     setChatMessages([])
     localStorage.removeItem('learnmate_student_id')
-    toast.success('Profile deleted')
   }, [student, wrap])
 
   const fetchRoadmap = useCallback(async () => {
@@ -84,13 +85,13 @@ export function AppProvider({ children }) {
     )
     setRoadmap(r.data?.roadmap || r.data)
     toast.success('Roadmap generated!')
-    // Refresh progress after generating
     setTimeout(() => fetchProgress(), 500)
     return r.data
   }, [student, wrap, fetchProgress])
 
   const completeTopic = useCallback(async (topicName, completed = true) => {
     if (!student?.student_id) { toast.error('Create a profile first'); return }
+    setLoading((p) => ({ ...p, topic: true }))
     try {
       const r = await api.completeTopic({
         student_id: student.student_id,
@@ -98,13 +99,14 @@ export function AppProvider({ children }) {
         completed,
       })
       setProgress(r.data?.data || null)
-      // Also refresh the roadmap to get updated week statuses
       await fetchRoadmap()
       return r.data
     } catch (e) {
       const msg = e?.response?.data?.message || e?.message || 'Failed to update topic'
       toast.error(msg)
       throw e
+    } finally {
+      setLoading((p) => ({ ...p, topic: false }))
     }
   }, [student, fetchRoadmap])
 
@@ -131,6 +133,17 @@ export function AppProvider({ children }) {
     if (student?.student_id) api.clearChat(student.student_id).catch(() => {})
   }, [student])
 
+  const fetchChatHistory = useCallback(async () => {
+    if (!student?.student_id) return
+    try {
+      const r = await api.getChatHistory(student.student_id)
+      const messages = r.data?.data?.messages || []
+      setChatMessages(messages.map((m, i) => ({ ...m, ts: Date.now() + i })))
+    } catch {
+      // History may not exist yet — that's fine
+    }
+  }, [student])
+
   const fetchCatalog = useCallback(async () => {
     const [c, p, cert] = await Promise.allSettled([api.getCourses(), api.getProjects(), api.getCertifications()])
     if (c.status === 'fulfilled') setCourses(c.value.data)
@@ -142,7 +155,7 @@ export function AppProvider({ children }) {
     student, setStudent, saveStudent, removeStudent,
     roadmap, setRoadmap, fetchRoadmap, buildRoadmap,
     progress, fetchProgress, completeTopic,
-    chatMessages, setChatMessages, sendMessage, clearMessages,
+    chatMessages, setChatMessages, sendMessage, clearMessages, fetchChatHistory,
     courses, projects, certifications, fetchCatalog,
     health, loading,
   }

@@ -63,6 +63,7 @@ export const getSkillProgress = (studentId) => api.get(`/api/roadmap/progress/${
 /* ── Chat ────────────────────────────────────────────────── */
 export const sendChat = (data) => api.post('/api/chat', data)
 export const clearChat = (id) => api.delete(`/api/chat/${id}`)
+export const getChatHistory = (id) => api.get(`/api/chat/${id}`)
 
 /* ── Catalog ─────────────────────────────────────────────── */
 export const getCourses = () => api.get('/api/courses')

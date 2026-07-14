@@ -98,21 +98,18 @@ def search_resources(
     results: List[Dict[str, Any]] = []
     query_lower = query.lower().strip()
 
-    # Load all resources
+    # Load all resources (copy to avoid mutating source data)
     if resource_type is None or resource_type == "course":
         for item in get_all_courses():
-            item["_type"] = "course"
-            results.append(item)
+            results.append({**item, "_type": "course"})
 
     if resource_type is None or resource_type == "project":
         for item in get_projects():
-            item["_type"] = "project"
-            results.append(item)
+            results.append({**item, "_type": "project"})
 
     if resource_type is None or resource_type == "certification":
         for item in get_certifications():
-            item["_type"] = "certification"
-            results.append(item)
+            results.append({**item, "_type": "certification"})
 
     # Score each result
     scored: List[Dict[str, Any]] = []

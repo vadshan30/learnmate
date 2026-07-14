@@ -276,6 +276,7 @@ async def get_project_stats(
 
     all_projects = resource_service.get_projects()
     total = len(all_projects)
+    all_courses = resource_service.get_all_courses()
 
     # Find next recommended project (first not completed)
     next_project = None
@@ -288,6 +289,7 @@ async def get_project_stats(
         message="Project stats retrieved",
         data={
             "total_projects": total,
+            "total_courses": len(all_courses),
             "completed_count": len(completed_projects),
             "saved_count": len(saved_projects),
             "completed_projects": completed_projects,

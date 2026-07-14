@@ -16,7 +16,6 @@ export default function Settings() {
   const handleDelete = async () => {
     try {
       await removeStudent()
-      toast.success('Profile deleted')
     } catch (e) {
       toast.error(e?.message || 'Failed to delete profile')
     }

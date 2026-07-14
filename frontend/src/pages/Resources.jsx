@@ -180,18 +180,14 @@ export default function Resources() {
       ])
 
       if (cRes.status === 'fulfilled') setCourses(cRes.value.data?.data || [])
-      else console.error('Failed to fetch courses:', cRes.reason)
 
       if (pRes.status === 'fulfilled') setProjects(pRes.value.data?.data || [])
-      else console.error('Failed to fetch projects:', pRes.reason)
 
       if (certRes.status === 'fulfilled') setCertifications(certRes.value.data?.data || [])
-      else console.error('Failed to fetch certifications:', certRes.reason)
 
       const allFailed = [cRes, pRes, certRes].every((r) => r.status === 'rejected')
       if (allFailed) throw new Error('Failed to load resources from the server')
     } catch (e) {
-      console.error('Resource fetch error:', e)
       setError(e.message || 'An unexpected error occurred')
     } finally {
       setLoading(false)
@@ -214,8 +210,7 @@ export default function Resources() {
       setSearchResults(
         results.map((item) => ({ ...item, _type: getItemType(item) }))
       )
-    } catch (e) {
-      console.error('Search error:', e)
+    } catch {
       setSearchResults([])
     } finally {
       setSearching(false)

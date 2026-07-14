@@ -220,7 +220,12 @@ class RoadmapGenerator:
         """
         completed_topics = set(roadmap.get("completed_topics", []))
         weeks = roadmap.get("weeks", [])
+
+        # Count total topics from weeks if not explicitly set
         total_topics = roadmap.get("total_topics", 0)
+        if total_topics == 0:
+            total_topics = sum(len(w.get("topics", [])) for w in weeks)
+
         total_weeks = max(len(weeks), 1)
 
         completed_weeks = 0

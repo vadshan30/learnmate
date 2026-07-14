@@ -83,7 +83,7 @@ function DifficultyBadge({ level }) {
   return null
 }
 
-function WeekTimelineCard({ week, index, isExpanded, onToggle, onToggleTopic, completedTopics, allDone }) {
+function WeekTimelineCard({ week, index, isExpanded, onToggle, onToggleTopic, completedTopics, isLast }) {
   const isCompleted = week.completed || week.completion_status === 'completed'
   const isInProgress = week.completion_status === 'in_progress'
   const hours = week.estimated_hours || 0
@@ -115,7 +115,7 @@ function WeekTimelineCard({ week, index, isExpanded, onToggle, onToggleTopic, co
             <span className="text-sm font-bold">{week.week_number || index + 1}</span>
           )}
         </motion.button>
-        {index < 999 && (
+        {!isLast && (
           <div className={`w-0.5 flex-1 min-h-[20px] ${isCompleted ? 'bg-green-300 dark:bg-green-700' : 'bg-gray-200 dark:bg-gray-700'}`} />
         )}
       </div>
@@ -429,7 +429,26 @@ export default function Roadmap() {
   const handleExportPDF = () => { window.print() }
 
   const currentWeek = weeks.find((w) => !w.completed && w.completion_status !== 'completed')
-  const weakestSkill = student?.current_skills?.[0] || 'Programming'
+  const weakestSkill = (() => {
+    const skills = student?.current_skills || []
+    if (skills.length === 0) return 'Programming'
+    const completedLower = new Set(
+      (roadmap?.completed_topics || []).map((t) => t.toLowerCase())
+    )
+    // Find the skill that appears least in completed topics
+    let weakest = skills[0]
+    let minMentions = Infinity
+    for (const skill of skills) {
+      const mentions = [...completedLower].filter((t) =>
+        t.includes(skill.toLowerCase())
+      ).length
+      if (mentions < minMentions) {
+        minMentions = mentions
+        weakest = skill
+      }
+    }
+    return weakest
+  })()
 
   // Milestones
   const milestones = [
@@ -587,6 +606,7 @@ export default function Roadmap() {
                         onToggle={() => toggleWeek(realIndex)}
                         onToggleTopic={handleToggleTopic}
                         completedTopics={completedTopicsSet}
+                        isLast={realIndex === filteredWeeks.length - 1}
                       />
                     )
                   })

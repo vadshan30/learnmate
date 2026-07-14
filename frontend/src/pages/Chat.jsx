@@ -6,7 +6,6 @@ import {
   HiOutlinePaperAirplane, HiOutlineTrash, HiOutlineChatBubbleLeftEllipsis,
 } from 'react-icons/hi2'
 import { useApp } from '../context/AppContext'
-import EmptyState from '../components/common/EmptyState'
 
 const SUGGESTED_PROMPTS = [
   'What skills do I need to become an ML Engineer?',
@@ -61,10 +60,16 @@ function ChatBubble({ msg }) {
 }
 
 export default function Chat() {
-  const { chatMessages, sendMessage, clearMessages, loading, student } = useApp()
+  const { chatMessages, sendMessage, clearMessages, fetchChatHistory, loading, student } = useApp()
   const [input, setInput] = useState('')
   const messagesEnd = useRef(null)
   const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (student?.student_id && chatMessages.length === 0) {
+      fetchChatHistory()
+    }
+  }, [student, fetchChatHistory])
 
   useEffect(() => {
     messagesEnd.current?.scrollIntoView({ behavior: 'smooth' })

@@ -34,7 +34,7 @@ function StatCard({ icon: Icon, label, value, color }) {
 }
 
 export default function Progress() {
-  const { student, roadmap, progress, fetchProgress, courses, projects, certifications } = useApp()
+  const { student, roadmap, progress, fetchProgress } = useApp()
 
   useEffect(() => {
     if (student?.student_id) fetchProgress()
@@ -50,7 +50,7 @@ export default function Progress() {
   const completedTopics = progress?.completed_topics ?? roadmap?.completed_topics?.length ?? 0
   const totalHours = weeks.reduce((sum, w) => sum + (w.estimated_hours || 0), 0)
   const remainingHours = progress?.remaining_hours ?? totalHours
-  const certCount = roadmap?.certifications?.length ?? certifications.length
+  const certCount = roadmap?.certifications?.length ?? 0
 
   const weeklyData = useMemo(() => {
     // Use backend week_progress if available

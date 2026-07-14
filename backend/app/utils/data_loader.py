@@ -18,12 +18,18 @@ logger = logging.getLogger("learnmate.data_loader")
 _BACKEND_ROOT: Path = Path(__file__).resolve().parent.parent.parent.parent
 DATA_DIR: Path = _BACKEND_ROOT / "data"
 
+# In-memory cache to avoid re-reading JSON files from disk on every call
+_cache: Dict[str, List[Dict[str, Any]]] = {}
+
 
 def _load_json_file(filename: str) -> List[Dict[str, Any]]:
-    """Load a JSON file from the data directory.
+    """Load a JSON file from the data directory (cached after first read).
 
     Returns an empty list if the file is missing or contains invalid JSON.
     """
+    if filename in _cache:
+        return _cache[filename]
+
     path = DATA_DIR / filename
     if not path.exists():
         logger.error("[DATA] File not found: %s", path)
@@ -42,7 +48,13 @@ def _load_json_file(filename: str) -> List[Dict[str, Any]]:
         logger.error("[DATA] Expected a JSON array in %s, got %s", path, type(data).__name__)
         return []
 
+    _cache[filename] = data
     return data
+
+
+def invalidate_cache() -> None:
+    """Clear the data cache so files are re-read on next access."""
+    _cache.clear()
 
 
 def validate_course(item: Dict[str, Any]) -> bool:
