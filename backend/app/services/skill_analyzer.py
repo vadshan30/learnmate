@@ -29,88 +29,206 @@ _BACKEND_ROOT: Path = Path(__file__).resolve().parent.parent.parent.parent
 _DATA_DIR: Path = _BACKEND_ROOT / "data"
 
 
+def _load_skills_database() -> Dict[str, List[str]]:
+    """Load the comprehensive skills database from JSON."""
+    path = _DATA_DIR / "skills_database.json"
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+        return {cat["name"]: cat["skills"] for cat in data.get("categories", [])}
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
 # ---------------------------------------------------------------------------
 # Skill domain categorisation mapping
 # ---------------------------------------------------------------------------
 
 SKILL_DOMAIN_MAP: Dict[str, List[str]] = {
     "Programming": [
-        "Python", "Java", "JavaScript", "C++", "C#", "Go", "Rust", "Ruby",
-        "PHP", "Swift", "Kotlin", "TypeScript", "R programming",
+        "Python", "Java", "C", "C++", "C#", "Go", "Rust", "Kotlin", "Swift", "Ruby",
+        "PHP", "Scala", "Perl", "Dart", "MATLAB", "R", "Lua", "Julia", "Assembly",
+        "Shell Scripting", "TypeScript", "JavaScript", "Haskell", "Elixir", "Clojure",
+        "Groovy", "Objective-C", "Fortran", "COBOL", "SASS/SCSS",
         "Python syntax", "Scripting",
     ],
-    "Web Development": [
-        "HTML5", "CSS3", "JavaScript", "React", "Vue.js", "Angular",
-        "Responsive design", "DOM manipulation", "JSX", "React Router",
-        "REST APIs", "REST API design", "HTTP basics",
-    ],
     "Frontend Development": [
-        "HTML5", "CSS3", "React", "Vue.js", "Angular",
+        "HTML", "HTML5", "CSS", "CSS3", "React", "Angular", "Vue", "Vue.js",
+        "Next.js", "Nuxt.js", "Svelte", "Tailwind CSS", "Bootstrap", "Material UI",
+        "Redux", "Webpack", "Vite", "jQuery", "AJAX", "Web Components", "Lit",
+        "Astro", "Remix", "Styled Components", "Ant Design", "Chakra UI", "GSAP",
+        "Framer Motion", "Three.js", "D3.js", "WebGL", "PWA", "WebAssembly",
         "Responsive design", "DOM manipulation", "JSX", "Hooks",
-        "State management", "React Router", "Figma", "Wireframing",
-        "Prototyping", "User research", "Accessibility",
+        "State management", "React Router", "Accessibility",
     ],
     "Backend Development": [
-        "Node.js", "FastAPI", "Pydantic", "Django", "Flask",
-        "REST APIs", "REST API design", "Async programming",
-        "Python syntax", "OpenAPI",
+        "Node.js", "Express", "FastAPI", "Spring Boot", "Django", "Flask", "Laravel",
+        "ASP.NET", "NestJS", "Ruby on Rails", "Gin", "Fiber", "Actix Web",
+        "Phoenix", "Ktor", "Hono", "Fastify", "Koa", "Meteor", "Strapi",
+        "REST API", "REST APIs", "REST API design", "gRPC", "WebSocket", "Socket.io",
+        "GraphQL", "Pydantic", "Async programming", "OpenAPI",
+    ],
+    "Mobile Development": [
+        "React Native", "Flutter", "Swift UI", "Jetpack Compose", "Kotlin Multiplatform",
+        "Xamarin", "Ionic", "Cordova", "Expo", "Capacitor",
+        "Android SDK", "iOS SDK", "UIKit", "SwiftUI",
+    ],
+    "AI / Machine Learning": [
+        "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "TensorFlow",
+        "PyTorch", "Scikit-learn", "Keras", "OpenCV", "LangChain", "LlamaIndex",
+        "HuggingFace", "Prompt Engineering", "Generative AI", "LLMs", "RAG",
+        "MCP", "AI Agents", "GANs", "Reinforcement Learning", "Transformers",
+        "BERT", "GPT", "Stable Diffusion", "Midjourney", "AutoML",
+        "ONNX", "MLflow", "Weights & Biases", "JAX",
+        "Deep learning", "CNN", "RNN", "Transfer learning",
+        "Text classification", "Tokenization", "Neural networks",
+        "Computer vision basics", "Classification", "Clustering",
+        "Model evaluation", "Model serving", "MLOps", "Model monitoring",
+        "Time series basics",
     ],
     "Data Science": [
-        "Pandas", "NumPy", "Matplotlib", "Data cleaning", "EDA",
-        "Statistics", "Data visualization", "Data preprocessing",
-        "Probability", "Hypothesis testing", "Regression",
-        "Statistical inference", "Jupyter notebooks", "Seaborn",
-        "Data visualization",
-    ],
-    "Machine Learning": [
-        "Scikit-learn", "Machine learning", "Classification",
-        "Clustering", "Model evaluation", "MLflow", "Model serving",
-        "MLOps", "Model monitoring", "Time series basics",
-    ],
-    "Artificial Intelligence": [
-        "Deep learning", "TensorFlow", "Keras", "PyTorch", "NLP",
-        "Transformers", "CNN", "RNN", "Transfer learning", "BERT",
-        "Text classification", "Tokenization", "Neural networks",
-        "Computer vision basics",
-    ],
-    "Cloud Computing": [
-        "AWS", "Azure", "GCP", "AWS core services", "Cloud architecture",
-        "IAM", "S3", "EC2", "Azure services", "Cloud concepts",
-        "Serverless concepts", "AWS Lambda", "API Gateway", "DynamoDB",
-    ],
-    "Cybersecurity": [
-        "Security tools", "Penetration testing", "SIEM", "Cryptography",
-        "Incident response", "Compliance", "Nmap", "Wireshark",
-        "Vulnerability assessment", "OWASP", "Threat detection",
-        "Risk management", "Identity management",
+        "Data Analysis", "Data Visualization", "Statistics", "Pandas", "NumPy",
+        "Matplotlib", "Seaborn", "Plotly", "SciPy", "EDA",
+        "Feature Engineering", "A/B Testing", "Time Series Analysis", "Regression",
+        "Jupyter Notebooks", "Jupyter notebooks", "R Programming", "SPSS", "SAS",
+        "Tableau", "Power BI", "Apache Spark", "Hadoop", "Databricks", "dbt",
+        "Data cleaning", "Data preprocessing", "Probability",
+        "Hypothesis testing", "Statistical inference", "Data visualization",
     ],
     "Databases": [
-        "SQL", "PostgreSQL", "MySQL", "MongoDB", "Redis",
-        "Database design", "Normalization", "Joins", "NoSQL",
+        "MySQL", "PostgreSQL", "SQLite", "MongoDB", "Redis", "Oracle", "MariaDB",
+        "Firebase", "Supabase", "DynamoDB", "Cassandra", "Neo4j", "Elasticsearch",
+        "InfluxDB", "CouchDB", "RavenDB", "ClickHouse", "PlanetScale", "CockroachDB",
+        "Prisma", "Sequelize", "TypeORM", "Knex.js",
+        "SQL", "Database design", "Normalization", "Joins", "NoSQL",
         "Document databases", "Caching", "Aggregation pipeline",
     ],
+    "Cloud Computing": [
+        "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
+        "Ansible", "OpenShift", "Cloudflare", "DigitalOcean", "Vercel", "Netlify",
+        "Heroku", "Fly.io", "Render", "Linode", "Hetzner",
+        "Cloud Architecture", "Cloud architecture", "Serverless", "AWS Lambda",
+        "Azure Functions", "Cloud Functions", "S3", "EC2", "RDS", "CloudFront",
+        "IAM", "AWS core services", "Azure services", "Cloud concepts",
+        "Serverless concepts", "API Gateway", "DynamoDB",
+    ],
     "DevOps": [
-        "Docker", "Kubernetes", "CI/CD", "Terraform", "Docker Compose",
-        "Containers", "Helm", "Monitoring", "Shell scripting",
-        "Linux CLI", "File systems", "Process management",
+        "Git", "GitHub", "GitHub Actions", "GitLab CI/CD", "Jenkins", "CircleCI",
+        "Linux", "Bash", "Nginx", "Apache", "Monitoring", "Prometheus", "Grafana",
+        "ArgoCD", "Flux", "Helm", "Pulumi", "Chef", "Puppet",
+        "Sentry", "Datadog", "New Relic", "ELK Stack", "Load Balancing",
+        "CI/CD", "Docker Compose", "Containers",
+        "Shell scripting", "Linux CLI", "File systems", "Process management",
         "Infrastructure as code", "Cloud provisioning", "Modules",
     ],
+    "Cybersecurity": [
+        "Ethical Hacking", "Penetration Testing", "Burp Suite", "Wireshark", "OWASP",
+        "Kali Linux", "Metasploit", "Cryptography", "Network Security",
+        "Vulnerability Assessment", "SIEM", "Incident Response", "Malware Analysis",
+        "Digital Forensics", "Social Engineering", "Zero Trust", "Nmap",
+        "Security Auditing", "Compliance", "Identity Management",
+        "Security tools", "Penetration testing", "Threat detection",
+        "Risk management",
+    ],
+    "UI/UX Design": [
+        "Figma", "Adobe XD", "Photoshop", "Illustrator", "Canva", "Framer",
+        "Sketch", "InVision", "Balsamiq", "Miro", "Principle",
+        "User Research", "Wireframing", "Prototyping", "Usability Testing",
+        "Interaction Design", "Visual Design", "Design Systems", "Accessibility",
+        "Information Architecture", "Motion Design",
+        "Figma", "Wireframing", "Prototyping", "User research",
+    ],
+    "Testing & QA": [
+        "JUnit", "PyTest", "Jest", "Playwright", "Cypress", "Selenium",
+        "Mocha", "Chai", "Vitest", "TestCafe", "Appium", "Postman",
+        "k6", "JMeter", "LoadRunner", "Cucumber", "Robot Framework",
+        "Test-Driven Development", "Behavior-Driven Development", "Code Coverage",
+    ],
+    "Tools": [
+        "VS Code", "IntelliJ IDEA", "Vim/Neovim", "Postman", "Swagger",
+        "Jira", "Confluence", "Notion", "Slack", "Trello",
+        "Linear", "Charles Proxy", "DBeaver", "DataGrip",
+        "Terminal", "tmux", "Homebrew",
+    ],
+    "Version Control": [
+        "Git", "GitHub", "GitLab", "Bitbucket", "SVN", "Mercurial",
+        "GitHub Actions", "GitLab CI/CD", "Branching Strategies", "Code Review",
+        "Pull Requests", "Cherry-picking", "Rebasing", "Version control",
+    ],
     "Operating Systems": [
-        "Linux", "Linux CLI", "Linux basics", "Linux fundamentals",
+        "Linux", "Ubuntu", "CentOS", "Debian", "Fedora", "Arch Linux",
+        "macOS", "Windows Server", "FreeBSD", "Alpine Linux",
+        "Shell Scripting", "Bash", "PowerShell", "Zsh",
+        "Linux CLI", "Linux basics", "Linux fundamentals",
         "Command line", "Networking basics",
     ],
     "Networking": [
+        "TCP/IP", "DNS", "Routing", "Switching", "Cisco", "CCNA",
+        "REST API", "GraphQL", "gRPC", "HTTP/HTTPS", "Load Balancing",
+        "VPN", "Firewall Configuration", "Subnetting", "VLAN",
+        "Network Troubleshooting", "Wireshark", "Packet Analysis",
         "Networking basics", "Network fundamentals", "IP connectivity",
         "IP services", "Networking",
     ],
-    "Soft Skills": [
-        "Communication", "Team collaboration", "Leadership",
-        "Presentation skills", "Time management",
+    "Game Development": [
+        "Unity", "Unreal Engine", "Godot", "GameMaker", "CryEngine",
+        "C#", "C++", "Blueprint", "Shader Programming", "3D Modeling",
+        "Blender", "Maya", "Substance Painter", "Pixel Art",
+        "Physics Simulation", "Animation", "Audio Design",
     ],
-    "Version Control": [
-        "Git", "GitHub", "Version control", "GitLab",
+    "Blockchain": [
+        "Solidity", "Web3.js", "Ethers.js", "Hardhat", "Truffle",
+        "Smart Contracts", "Ethereum", "Polygon", "Solana",
+        "DeFi", "NFT Development", "IPFS", "Rust (Solana)",
+        "Move", "Anchor", "Metamask Integration",
+    ],
+    "IoT": [
+        "Arduino", "ESP32", "Raspberry Pi", "MQTT", "IoT Protocols",
+        "Home Automation", "Zigbee", "Z-Wave", "Bluetooth Low Energy",
+        "LoRaWAN", "ThingSpeak", "AWS IoT", "Azure IoT Hub",
+        "Node-RED", "Edge Computing",
+    ],
+    "Embedded Systems": [
+        "STM32", "FreeRTOS", "Microcontrollers", "Embedded C", "Embedded C++",
+        "Assembly", "RTOS", "Device Drivers", "FPGA", "Verilog",
+        "VHDL", "PCB Design", "KiCad", "Oscilloscope", "Logic Analyzer",
+    ],
+    "AR/VR": [
+        "Unity AR", "Unity VR", "ARCore", "ARKit", "OpenXR",
+        "WebXR", "Vuforia", "3D Interaction", "Spatial Computing",
+        "Meta Quest SDK", "SteamVR", "Mixed Reality",
+    ],
+    "Soft Skills": [
+        "Leadership", "Communication", "Problem Solving", "Teamwork",
+        "Public Speaking", "Time Management", "Project Management",
+        "Business Analysis", "Critical Thinking", "Creativity",
+        "Adaptability", "Emotional Intelligence", "Negotiation",
+        "Conflict Resolution", "Mentoring", "Agile/Scrum",
+        "Communication", "Team collaboration",
+        "Presentation skills",
+    ],
+    "Business": [
+        "Product Management", "Business Strategy", "Marketing",
+        "SEO", "Content Writing", "Copywriting", "Social Media Marketing",
+        "Google Analytics", "Excel", "Financial Modeling",
+        "Fundraising", "Startup Operations", "Sales",
+        "Customer Success", "Vendor Management",
     ],
 }
+
+# Load additional skills from the database JSON and merge
+_loaded_db = _load_skills_database()
+for _cat, _skills in _loaded_db.items():
+    if _cat in SKILL_DOMAIN_MAP:
+        # Merge: add any skills from DB not already in the hardcoded list
+        existing_lower = {s.lower() for s in SKILL_DOMAIN_MAP[_cat]}
+        for s in _skills:
+            if s.lower() not in existing_lower:
+                SKILL_DOMAIN_MAP[_cat].append(s)
+    else:
+        SKILL_DOMAIN_MAP[_cat] = list(_skills)
 
 # Reverse lookup: normalised skill name -> domain (first match wins)
 _SKILL_TO_DOMAIN: Dict[str, str] = {}

@@ -7,7 +7,7 @@ export function ThemeProvider({ children }) {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('learnmate_theme')
       if (stored) return stored === 'dark'
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
+      return false
     }
     return false
   })

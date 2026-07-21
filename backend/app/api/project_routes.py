@@ -6,6 +6,7 @@ smart course recommendations, and project save/complete actions.
 
 from __future__ import annotations
 
+import asyncio
 import json
 import logging
 from pathlib import Path
@@ -217,6 +218,8 @@ async def save_project(
     if project_id not in saved:
         saved.append(project_id)
 
+    await asyncio.to_thread(store.save_progress, student_id)
+
     return SuccessResponse(message=f"Project '{project.get('title', project_id)}' saved", data={"saved_projects": saved})
 
 
@@ -249,6 +252,11 @@ async def complete_project(
     new_skills = set(project.get("skills_required", []))
     if new_skills - current_skills:
         student_profile["current_skills"] = sorted(current_skills | new_skills)
+
+    # Persist changes (non-blocking)
+    await asyncio.to_thread(store.save_progress, student_id)
+    if new_skills - current_skills:
+        await asyncio.to_thread(store.save_student_profile, student_id)
 
     return SuccessResponse(
         message=f"Project '{project.get('title', project_id)}' marked as completed",

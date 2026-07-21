@@ -14,20 +14,23 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from dotenv import load_dotenv
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-
-from app.api import ALL_ROUTERS
-from app.dependencies import get_store_direct, init_store
-from app.exceptions import register_exception_handlers
-from app.models.roadmap import Certification, Course, Project
-from app.services import RAG_AVAILABLE, granite_available, rag_service
 
 # ---------------------------------------------------------------------------
-# Environment & paths
+# Environment – load .env BEFORE any app imports so module-level
+# os.getenv() calls in services pick up the correct values.
 # ---------------------------------------------------------------------------
 
 load_dotenv(Path(__file__).parent / ".env")
+
+from fastapi import FastAPI  # noqa: E402
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
+
+from app.api import ALL_ROUTERS  # noqa: E402
+from app.database import get_db_manager  # noqa: E402
+from app.dependencies import get_store_direct, init_store  # noqa: E402
+from app.exceptions import register_exception_handlers  # noqa: E402
+from app.models.roadmap import Book, Certification, Course, Project  # noqa: E402
+from app.services import RAG_AVAILABLE, gemini_available, rag_service  # noqa: E402
 
 APP_ENV: str = os.getenv("APP_ENV", "development")
 DATA_DIR: Path = Path(__file__).parent.parent / "data"
@@ -57,10 +60,16 @@ async def lifespan(app: FastAPI):
     init_store()
     store = get_store_direct()
 
+    # Initialize SQLite database and load persisted data
+    db = get_db_manager()
+    store.set_db(db)
+    store.load_from_db()
+
     from app.utils.data_loader import (
         load_courses,
         load_certifications,
         load_projects,
+        load_books,
     )
 
     courses = load_courses()
@@ -74,6 +83,10 @@ async def lifespan(app: FastAPI):
     projects = load_projects()
     store.loaded_projects = [Project(**item) for item in projects]
     logger.info("Loaded %d projects into Store", len(store.loaded_projects))
+
+    books = load_books()
+    store.loaded_books = [Book(**item) for item in books]
+    logger.info("Loaded %d books into Store", len(store.loaded_books))
 
     if RAG_AVAILABLE and rag_service is not None:
         try:
@@ -91,7 +104,7 @@ async def lifespan(app: FastAPI):
             "[RAG] ChromaDB/sentence-transformers not installed – RAG endpoints return 503"
         )
 
-    logger.info("LearnMate AI ready (watsonx=%s, rag=%s)", granite_available, RAG_AVAILABLE)
+    logger.info("LearnMate AI ready (gemini=%s, rag=%s)", gemini_available, RAG_AVAILABLE)
 
     yield
 
@@ -104,8 +117,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="LearnMate AI",
-    description="AI-powered personalised learning coach platform",
-    version="1.0.0",
+    description="AI-powered personalised learning coach platform powered by Google Gemini",
+    version="2.0.0",
     docs_url="/docs",
     redoc_url="/redoc",
     lifespan=lifespan,
@@ -143,7 +156,8 @@ store = get_store_direct()
 async def root() -> Dict[str, str]:
     return {
         "app": "LearnMate AI",
-        "version": "1.0.0",
+        "version": "2.0.0",
+        "ai_engine": "Google Gemini",
         "docs": "/docs",
     }
 
@@ -186,4 +200,6 @@ async def get_profile_legacy(name: str) -> Dict[str, Any]:
 async def create_profile_legacy(profile: Dict[str, Any]) -> Dict[str, Any]:
     key = profile.get("name", "").lower().strip()
     store.student_profiles[key] = profile
+    import asyncio
+    await asyncio.to_thread(store.save_student_profile, key)
     return profile

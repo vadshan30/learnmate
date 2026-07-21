@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
-  HiOutlineUser, HiOutlineMap, HiOutlineChatBubbleLeftEllipsis, HiOutlineBookOpen,
+  HiOutlineUser, HiOutlineMap, HiOutlineBookOpen,
   HiOutlineArrowRight, HiOutlineFire, HiOutlineClock,
   HiOutlineAcademicCap, HiOutlineChartBarSquare, HiOutlineBriefcase,
-  HiOutlineCheckCircle,
+  HiOutlineCheckCircle, HiOutlineCalendarDays, HiOutlineSparkles,
+  HiOutlineArrowPath,
 } from 'react-icons/hi2'
 import { useApp } from '../context/AppContext'
-import { getProjectStats } from '../services/api'
+import { useAuth } from '../context/AuthContext'
+import { getProjectStats, getCareerTestHistory } from '../services/api'
 import { SkeletonCard } from '../components/common/SkeletonLoader'
 import EmptyState from '../components/common/EmptyState'
 
@@ -33,18 +35,31 @@ function StatCard({ icon: Icon, label, value, color, to }) {
 }
 
 export default function Dashboard() {
-  const { student, roadmap, progress, loading, fetchRoadmap, fetchProgress } = useApp()
+  const { student, roadmap, progress, loading, fetchRoadmap, fetchProgress, studySessions, studyGoal, fetchAllStudyData } = useApp()
+  const { user } = useAuth()
   const [projectStats, setProjectStats] = useState(null)
+  const [careerResult, setCareerResult] = useState(null)
+
+  const firstName = (user?.full_name || student?.name || 'there').split(' ')[0]
+  const userId = user?.id || localStorage.getItem('learnmate_guest_id') || 'guest'
 
   useEffect(() => {
     if (student?.student_id) {
       fetchRoadmap()
       fetchProgress()
+      fetchAllStudyData()
       getProjectStats(student.student_id)
         .then((r) => setProjectStats(r.data?.data || null))
         .catch(() => {})
     }
-  }, [student, fetchRoadmap, fetchProgress])
+    // Load career test history for dashboard widget
+    getCareerTestHistory(userId)
+      .then((r) => {
+        const history = r.data?.data || []
+        if (history.length > 0) setCareerResult(history[0])
+      })
+      .catch(() => {})
+  }, [student, fetchRoadmap, fetchProgress, fetchAllStudyData, userId])
 
   if (loading.student) {
     return (
@@ -89,7 +104,7 @@ export default function Dashboard() {
         {/* Header */}
         <motion.div variants={fadeUp} className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-display font-bold mb-2">
-            Welcome back, <span className="gradient-text">{student.name}</span>
+            Welcome back, <span className="gradient-text">{firstName}</span>
           </h1>
           <p className="text-gray-500 dark:text-gray-400">
             {student.career_goal || 'Set your career goal to personalise your experience'}
@@ -102,6 +117,137 @@ export default function Dashboard() {
           <StatCard icon={HiOutlineChartBarSquare} label="Overall Progress" value={`${Math.round(overallProgress)}%`} color="bg-purple-100 dark:bg-purple-900/30 text-purple-600" to="/progress" />
           <StatCard icon={HiOutlineClock} label="Study Hours" value={`${totalHours}h`} color="bg-green-100 dark:bg-green-900/30 text-green-600" to="/progress" />
           <StatCard icon={HiOutlineFire} label="Skills" value={`${skills.length} mastered`} color="bg-orange-100 dark:bg-orange-900/30 text-orange-600" to="/profile" />
+        </motion.div>
+
+        {/* Study Planner Section */}
+        <motion.div variants={fadeUp} className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              <HiOutlineCalendarDays className="w-5 h-5 text-primary-500" />
+              Today&apos;s Study Sessions
+            </h2>
+            <Link to="/study-planner" className="text-sm font-medium text-primary-600 hover:text-primary-700 flex items-center gap-1">
+              View Planner <HiOutlineArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Today's Sessions Count */}
+            <div className="glass-card p-4">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Today&apos;s Sessions</p>
+              <p className="text-2xl font-bold">
+                {(studySessions || []).filter((s) => {
+                  const today = new Date().toISOString().split('T')[0]
+                  return s.date === today && s.status !== 'completed'
+                }).length || 0}
+              </p>
+            </div>
+            {/* Weekly Goal Progress */}
+            <div className="glass-card p-4">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Weekly Goal</p>
+              <div className="flex items-center gap-2">
+                <p className="text-2xl font-bold">{studyGoal?.weekly_goal_hours || 10}h</p>
+                <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                  <div
+                    className="h-full gradient-bg rounded-full transition-all duration-500"
+                    style={{
+                      width: `${Math.min(
+                        ((studySessions || []).filter((s) => {
+                          const now = new Date()
+                          const monday = new Date(now)
+                          monday.setDate(now.getDate() - now.getDay() + 1)
+                          const sunday = new Date(monday)
+                          sunday.setDate(monday.getDate() + 6)
+                          return s.date >= monday.toISOString().split('T')[0] &&
+                            s.date <= sunday.toISOString().split('T')[0] &&
+                            s.status === 'completed'
+                        }).reduce((sum, s) => sum + (s.duration || 0), 0) / (studyGoal?.weekly_goal_hours || 10)) * 100, 100)}%`
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+            {/* Next Session Countdown */}
+            <div className="glass-card p-4">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Next Session</p>
+              {(() => {
+                const upcoming = (studySessions || [])
+                  .filter((s) => s.status === 'scheduled' && s.date >= new Date().toISOString().split('T')[0])
+                  .sort((a, b) => `${a.date}T${a.start_time}`.localeCompare(`${b.date}T${b.start_time}`))[0]
+                return upcoming ? (
+                  <div>
+                    <p className="text-sm font-medium truncate">{upcoming.title}</p>
+                    <p className="text-xs text-gray-500">{upcoming.date} · {upcoming.start_time}</p>
+                  </div>
+                ) : (
+                  <p className="text-sm text-gray-400">No upcoming sessions</p>
+                )
+              })()}
+            </div>
+            {/* Quick Start */}
+            <Link to="/study-planner" className="glass-card p-4 flex items-center gap-3 group hover:shadow-md transition-all block">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-primary-100 dark:bg-primary-900/30 text-primary-600">
+                <HiOutlineCalendarDays className="w-5 h-5" />
+              </div>
+              <span className="font-medium flex-1 text-sm">Open Study Planner</span>
+              <HiOutlineArrowRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Career Test Section */}
+        <motion.div variants={fadeUp} className="mb-8">
+          {careerResult ? (
+            <div className="glass-card p-5">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shrink-0">
+                  <HiOutlineAcademicCap className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-semibold">Career Match</h3>
+                    <span className="text-sm font-bold text-primary-600">
+                      {careerResult.top_careers?.[0]?.career_name}
+                    </span>
+                    <span className="text-xs font-bold text-primary-500">
+                      {Math.round(careerResult.top_careers?.[0]?.percentage || 0)}%
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+                    <span>Last test: {careerResult.created_at ? new Date(careerResult.created_at).toLocaleDateString() : 'Unknown'}</span>
+                    {careerResult.top_careers?.length > 1 && (
+                      <span>Also: {careerResult.top_careers.slice(1, 3).map(c => c.career_name).join(', ')}</span>
+                    )}
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <Link to="/career-test" className="btn-secondary text-sm flex items-center gap-1">
+                    <HiOutlineArrowPath className="w-4 h-4" /> Retake
+                  </Link>
+                  <Link to="/career-test" className="btn-primary text-sm flex items-center gap-1">
+                    Details <HiOutlineArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="glass-card p-5 flex flex-col sm:flex-row items-center gap-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shrink-0">
+                <HiOutlineAcademicCap className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="font-semibold">Career Aptitude Test</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Discover your ideal tech career path with AI-powered analysis
+                </p>
+              </div>
+              <Link
+                to="/career-test"
+                className="btn-primary text-sm flex items-center gap-1 shrink-0"
+              >
+                Take Test <HiOutlineArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          )}
         </motion.div>
 
         {/* Learning Journey Stats */}
@@ -146,8 +292,8 @@ export default function Dashboard() {
             <h2 className="text-lg font-semibold">Quick Actions</h2>
             {[
               { to: '/roadmap', icon: HiOutlineMap, label: 'View Roadmap', color: 'bg-primary-50 dark:bg-primary-900/30 text-primary-600' },
-              { to: '/chat', icon: HiOutlineChatBubbleLeftEllipsis, label: 'Chat with AI Mentor', color: 'bg-accent-50 dark:bg-accent-900/30 text-accent-600' },
               { to: '/resources', icon: HiOutlineBookOpen, label: 'Browse Resources', color: 'bg-green-50 dark:bg-green-900/30 text-green-600' },
+              { to: '/career-test', icon: HiOutlineAcademicCap, label: careerResult ? 'Retake Career Test' : 'Take Career Test', color: 'bg-amber-50 dark:bg-amber-900/30 text-amber-600' },
             ].map((a) => (
               <Link key={a.to} to={a.to} className="glass-card p-4 flex items-center gap-3 group hover:shadow-md transition-all block">
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${a.color}`}>

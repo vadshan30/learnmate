@@ -2,20 +2,22 @@ import { useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  HiOutlineHome, HiOutlineUser, HiOutlineMap, HiOutlineChatBubbleLeftEllipsis,
+  HiOutlineHome, HiOutlineUser, HiOutlineMap,
   HiOutlineBookOpen, HiOutlineChartBar, HiOutlineCog6Tooth, HiOutlineBars3,
   HiOutlineXMark, HiOutlineSun, HiOutlineMoon, HiOutlineChevronDoubleLeft,
+  HiOutlineCalendarDays, HiOutlineAcademicCap,
 } from 'react-icons/hi2'
 import { useTheme } from '../../context/ThemeContext'
-import { useApp } from '../../context/AppContext'
+import UserProfileDropdown from './UserProfileDropdown'
 
 const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: HiOutlineHome },
   { to: '/profile', label: 'Profile', icon: HiOutlineUser },
   { to: '/roadmap', label: 'Roadmap', icon: HiOutlineMap },
-  { to: '/chat', label: 'AI Mentor', icon: HiOutlineChatBubbleLeftEllipsis },
   { to: '/resources', label: 'Resources', icon: HiOutlineBookOpen },
   { to: '/progress', label: 'Progress', icon: HiOutlineChartBar },
+  { to: '/study-planner', label: 'Study Planner', icon: HiOutlineCalendarDays },
+  { to: '/career-test', label: 'Career Test', icon: HiOutlineAcademicCap },
   { to: '/settings', label: 'Settings', icon: HiOutlineCog6Tooth },
 ]
 
@@ -80,7 +82,6 @@ function Sidebar({ collapsed, onToggle }) {
 
 function Navbar({ onMenuOpen }) {
   const { dark, toggle } = useTheme()
-  const { student } = useApp()
 
   return (
     <header className="sticky top-0 z-20 h-16 glass border-b border-gray-200 dark:border-gray-800">
@@ -106,14 +107,7 @@ function Navbar({ onMenuOpen }) {
             {dark ? <HiOutlineSun className="w-5 h-5 text-yellow-500" /> : <HiOutlineMoon className="w-5 h-5 text-gray-500" />}
           </button>
 
-          {student && (
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
-                <span className="text-white text-sm font-semibold">{(student.name || 'U')[0].toUpperCase()}</span>
-              </div>
-              <span className="hidden sm:block text-sm font-medium truncate max-w-[120px]">{student.name}</span>
-            </div>
-          )}
+          <UserProfileDropdown />
         </div>
       </div>
     </header>

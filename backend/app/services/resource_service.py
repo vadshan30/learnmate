@@ -15,6 +15,7 @@ from app.utils.data_loader import (
     load_projects,
     load_certifications,
     load_career_pathways,
+    load_books,
 )
 
 logger = logging.getLogger("learnmate.resources")
@@ -72,6 +73,31 @@ def get_career_pathways() -> List[Dict[str, Any]]:
     return load_career_pathways()
 
 
+def get_all_books() -> List[Dict[str, Any]]:
+    """Get all books from the dataset.
+
+    Returns:
+        List of book dicts.
+    """
+    return load_books()
+
+
+def get_book(book_id: str) -> Optional[Dict[str, Any]]:
+    """Get a single book by ID.
+
+    Args:
+        book_id: The book identifier.
+
+    Returns:
+        Book dict if found, None otherwise.
+    """
+    books = load_books()
+    for b in books:
+        if b.get("id") == book_id:
+            return b
+    return None
+
+
 def search_resources(
     query: str,
     top_k: int = 10,
@@ -80,6 +106,7 @@ def search_resources(
     provider: Optional[str] = None,
     skills: Optional[List[str]] = None,
     resource_type: Optional[str] = None,
+    free: Optional[bool] = None,
 ) -> List[Dict[str, Any]]:
     """Search across all resource types.
 
@@ -91,6 +118,7 @@ def search_resources(
         provider: Filter by provider.
         skills: Filter by required skills.
         resource_type: Filter by type (course, project, certification).
+        free: Filter by free status (True = free only, False = paid only, None = all).
 
     Returns:
         List of matching resource dicts with relevance scoring.
@@ -110,6 +138,10 @@ def search_resources(
     if resource_type is None or resource_type == "certification":
         for item in get_certifications():
             results.append({**item, "_type": "certification"})
+
+    if resource_type is None or resource_type == "book":
+        for item in get_all_books():
+            results.append({**item, "_type": "book"})
 
     # Score each result
     scored: List[Dict[str, Any]] = []
@@ -146,6 +178,12 @@ def search_resources(
         scored = [
             item for item in scored
             if _has_matching_skill(item, skills_lower)
+        ]
+
+    if free is not None:
+        scored = [
+            item for item in scored
+            if item.get("free", False) == free
         ]
 
     # Sort by score descending
@@ -194,7 +232,7 @@ def filter_by_domain(domain: str) -> List[Dict[str, Any]]:
         List of matching resources.
     """
     all_resources = (
-        get_all_courses() + get_projects() + get_certifications()
+        get_all_courses() + get_projects() + get_certifications() + get_all_books()
     )
     domain_lower = domain.lower().strip()
     return [
@@ -214,7 +252,7 @@ def filter_by_difficulty(difficulty: str) -> List[Dict[str, Any]]:
         List of matching resources.
     """
     all_resources = (
-        get_all_courses() + get_projects() + get_certifications()
+        get_all_courses() + get_projects() + get_certifications() + get_all_books()
     )
     return [
         r for r in all_resources

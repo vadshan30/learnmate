@@ -16,7 +16,8 @@
       "AWS pricing",
       "Cloud architecture",
       "Support basics"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-002",
@@ -35,7 +36,8 @@
       "CSS3",
       "Version control",
       "Testing"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-003",
@@ -55,7 +57,8 @@
       "Matplotlib",
       "Machine learning",
       "Jupyter notebooks"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-004",
@@ -74,7 +77,8 @@
       "Spreadsheets",
       "Data visualization",
       "Data cleaning"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-005",
@@ -95,7 +99,8 @@
       "RNN",
       "NLP",
       "Time series"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-006",
@@ -113,7 +118,8 @@
       "Azure pricing",
       "Governance",
       "Security"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-007",
@@ -132,7 +138,8 @@
       "Cryptography",
       "Identity management",
       "Incident response"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-008",
@@ -151,7 +158,8 @@
       "Security fundamentals",
       "Automation",
       "Troubleshooting"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-009",
@@ -170,7 +178,8 @@
       "State management",
       "Cloud provisioning",
       "Modules"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-010",
@@ -209,7 +218,8 @@
       "AI ethics",
       "Responsible AI use",
       "AI tools"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-011",
@@ -250,7 +260,8 @@
       "Python",
       "SIEM tools",
       "Incident detection"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-012",
@@ -293,7 +304,8 @@
       "Tableau",
       "Regression",
       "Logistic regression"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-013",
@@ -334,7 +346,8 @@
       "Dashboard creation",
       "Business intelligence",
       "Data-driven decisions"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-014",
@@ -374,7 +387,8 @@
       "Stakeholder management",
       "Budget management",
       "Project planning"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-015",
@@ -417,7 +431,8 @@
       "LLMs",
       "OpenCV",
       "Keras"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-016",
@@ -460,7 +475,8 @@
       "IBM Cognos",
       "Data wrangling",
       "Data visualization"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-017",
@@ -505,7 +521,8 @@
       "Cloud deployment",
       "Agile",
       "TDD"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-018",
@@ -547,7 +564,8 @@
       "Cryptography",
       "Threat intelligence",
       "Vulnerability management"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-019",
@@ -588,7 +606,8 @@
       "Conversational AI",
       "Document intelligence",
       "Responsible AI"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-020",
@@ -629,7 +648,8 @@
       "Non-relational data",
       "Data warehousing",
       "Data lakes"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-021",
@@ -672,7 +692,8 @@
       "Data visualization",
       "Row-level security",
       "Data analysis"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-022",
@@ -712,7 +733,8 @@
       "Azure security",
       "Conditional access",
       "Zero Trust"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-023",
@@ -754,7 +776,8 @@
       "AWS pricing",
       "Cloud architecture",
       "Support basics"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-024",
@@ -797,7 +820,8 @@
       "SageMaker",
       "Generative AI",
       "Responsible AI"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-025",
@@ -841,7 +865,8 @@
       "Cost optimization",
       "Disaster recovery",
       "Well-Architected Framework"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-026",
@@ -886,7 +911,8 @@
       "CI/CD on AWS",
       "Containerization",
       "CloudFormation"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-027",
@@ -930,7 +956,8 @@
       "Unit testing",
       "Docker",
       "GraphQL"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-028",
@@ -972,7 +999,8 @@
       "Room Database",
       "Navigation",
       "MVVM"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-029",
@@ -1014,7 +1042,8 @@
       "REST APIs",
       "ARKit",
       "App Store publishing"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-030",
@@ -1055,7 +1084,8 @@
       "Arrays",
       "Exception handling",
       "File I/O"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-031",
@@ -1098,7 +1128,8 @@
       "JVM internals",
       "Modules",
       "Security"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-032",
@@ -1139,7 +1170,8 @@
       "Data modeling",
       "PL/SQL basics",
       "Query optimization"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-033",
@@ -1180,7 +1212,8 @@
       "Security policies",
       "Incident response",
       "Cryptography"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-034",
@@ -1224,7 +1257,8 @@
       "YAML",
       "Ansible",
       "Cisco platforms"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-035",
@@ -1268,7 +1302,8 @@
       "Fine-tuning",
       "RAG",
       "AI deployment"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-036",
@@ -1313,7 +1348,8 @@
       "Transfer learning",
       "TensorRT",
       "NVIDIA CUDA"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-037",
@@ -1356,7 +1392,8 @@
       "Neural networks",
       "Decision trees",
       "Anomaly detection"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-038",
@@ -1402,7 +1439,8 @@
       "Optimization",
       "Batch normalization",
       "TensorFlow"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-039",
@@ -1443,7 +1481,8 @@
       "AI applications",
       "AI ethics",
       "Business AI strategy"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-040",
@@ -1484,7 +1523,8 @@
       "APIs",
       "Automation",
       "LLM integration"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-041",
@@ -1526,7 +1566,8 @@
       "AI application development",
       "Function calling",
       "Fine-tuning basics"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-042",
@@ -1568,7 +1609,8 @@
       "Constitutional AI",
       "Responsible AI",
       "Building with Claude"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-043",
@@ -1613,7 +1655,8 @@
       "Named entity recognition",
       "Question answering",
       "Fine-tuning"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-044",
@@ -1658,7 +1701,8 @@
       "Multi-agent systems",
       "Code generation",
       "Reasoning"
-    ]
+    ],
+    "free": true
   },
   {
     "id": "cert-045",
@@ -1700,7 +1744,8 @@
       "Microservices",
       "Observability",
       "Service mesh"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-046",
@@ -1746,7 +1791,8 @@
       "Storage",
       "Security",
       "Helm"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-047",
@@ -1791,7 +1837,8 @@
       "Troubleshooting",
       "Etcd",
       "Backup"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-048",
@@ -1834,7 +1881,8 @@
       "Security",
       "Package management",
       "Systemd"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-049",
@@ -1876,7 +1924,8 @@
       "Hardware",
       "Operating systems",
       "DevOps concepts"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-050",
@@ -1919,7 +1968,8 @@
       "PySpark",
       "SQL",
       "Data lakehouse architecture"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-051",
@@ -1963,7 +2013,8 @@
       "AutoML",
       "ML pipelines",
       "Databricks platform"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-052",
@@ -2007,7 +2058,8 @@
       "Semi-structured data",
       "Security",
       "Performance optimization"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-053",
@@ -2052,7 +2104,8 @@
       "Workspaces",
       "Cloud providers",
       "Provisioners"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-054",
@@ -2095,7 +2148,8 @@
       "CRM automation",
       "Data privacy",
       "Ethical AI"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-055",
@@ -2138,7 +2192,8 @@
       "Testing",
       "Accessibility",
       "UI/UX principles"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-056",
@@ -2183,7 +2238,8 @@
       "Jupyter notebooks",
       "IBM Watson",
       "Data visualization"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-057",
@@ -2225,7 +2281,8 @@
       "Data visualization",
       "Data cleaning",
       "Data-driven decisions"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-058",
@@ -2267,7 +2324,8 @@
       "SIEM tools",
       "Incident detection",
       "Threat analysis"
-    ]
+    ],
+    "free": false
   },
   {
     "id": "cert-059",
@@ -2312,6 +2370,714 @@
       "Security",
       "Cost optimization",
       "Migration"
+    ],
+    "free": false
+  },
+  {
+    "id": "cert-060",
+    "name": "Google Digital Marketing",
+    "provider": "Google Digital Garage",
+    "level": "Beginner",
+    "category": "Digital Marketing",
+    "free": true,
+    "description": "Learn the fundamentals of digital marketing including SEO, SEM, social media marketing, and analytics. Gain a globally recognized certificate from Google.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://learndigital.withgoogle.com/digitalgarage",
+    "skills_covered": [
+      "SEO",
+      "SEM",
+      "Marketing",
+      "Analytics"
+    ],
+    "tags": [
+      "google",
+      "digital marketing",
+      "seo",
+      "sem",
+      "free",
+      "marketing"
+    ]
+  },
+  {
+    "id": "cert-061",
+    "name": "Programming & Web Development",
+    "provider": "freeCodeCamp",
+    "level": "Beginner",
+    "category": "Programming",
+    "free": true,
+    "description": "Earn verified certifications in Responsive Web Design, JavaScript Algorithms, Front End Libraries, and more through hands-on coding projects.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.freecodecamp.org",
+    "skills_covered": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Backend"
+    ],
+    "tags": [
+      "freecodecamp",
+      "programming",
+      "web development",
+      "html",
+      "css",
+      "javascript",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-062",
+    "name": "Marketing, Sales & CRM",
+    "provider": "HubSpot Academy",
+    "level": "Beginner",
+    "category": "Marketing",
+    "free": true,
+    "description": "Master inbound marketing, sales enablement, content strategy, and CRM with free certifications from HubSpot Academy.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://academy.hubspot.com",
+    "skills_covered": [
+      "Marketing",
+      "Sales",
+      "CRM"
+    ],
+    "tags": [
+      "hubspot",
+      "marketing",
+      "sales",
+      "crm",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-063",
+    "name": "Networking & Cybersecurity",
+    "provider": "Cisco Skills for All",
+    "level": "Beginner",
+    "category": "Cybersecurity",
+    "free": true,
+    "description": "Build foundational skills in networking, Linux, and cybersecurity through Cisco's free self-paced courses and earn recognized badges.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.netacad.com/skills-for-all",
+    "skills_covered": [
+      "Networking",
+      "Linux",
+      "Cybersecurity"
+    ],
+    "tags": [
+      "cisco",
+      "networking",
+      "cybersecurity",
+      "linux",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-064",
+    "name": "Artificial Intelligence & Data",
+    "provider": "IBM SkillsBuild",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Explore AI, machine learning, and data science through IBM's free learning platform with hands-on labs and earn digital badges.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://skillsbuild.org",
+    "skills_covered": [
+      "AI",
+      "Machine Learning",
+      "Data Science"
+    ],
+    "tags": [
+      "ibm",
+      "ai",
+      "machine learning",
+      "data science",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-065",
+    "name": "Business & Entrepreneurship",
+    "provider": "HP LIFE",
+    "level": "Beginner",
+    "category": "Business",
+    "free": true,
+    "description": "Develop essential business and entrepreneurship skills including finance, marketing, and operations through HP's free global learning program.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://life-global.org",
+    "skills_covered": [
+      "Business",
+      "Entrepreneurship"
+    ],
+    "tags": [
+      "hp",
+      "business",
+      "entrepreneurship",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-066",
+    "name": "Technology & Business",
+    "provider": "Great Learning Academy",
+    "level": "Beginner",
+    "category": "Technology",
+    "free": true,
+    "description": "Access free courses and certificates in programming, cloud computing, AI, and business from Great Learning Academy with industry-relevant curriculum.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.mygreatlearning.com/academy",
+    "skills_covered": [
+      "Programming",
+      "Cloud",
+      "AI",
+      "Business"
+    ],
+    "tags": [
+      "great learning",
+      "programming",
+      "cloud",
+      "ai",
+      "business",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-067",
+    "name": "Professional Development",
+    "provider": "OpenLearn",
+    "level": "Beginner",
+    "category": "Professional Skills",
+    "free": true,
+    "description": "Access hundreds of free courses from The Open University covering career development, professional skills, and personal growth with digital badges.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.open.edu/openlearn",
+    "skills_covered": [
+      "Career",
+      "Professional Development"
+    ],
+    "tags": [
+      "openlearn",
+      "professional development",
+      "career",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-068",
+    "name": "Business, IT & Healthcare",
+    "provider": "Alison",
+    "level": "Beginner",
+    "category": "Professional Learning",
+    "free": true,
+    "description": "Earn free certificates and diplomas across business, IT, healthcare, and more from Alison's extensive course catalog with over 4000 courses.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://alison.com",
+    "skills_covered": [
+      "Business",
+      "IT",
+      "Healthcare"
+    ],
+    "tags": [
+      "alison",
+      "business",
+      "it",
+      "healthcare",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-069",
+    "name": "AWS Educate",
+    "provider": "Amazon Web Services",
+    "level": "Beginner",
+    "category": "Cloud Computing",
+    "free": true,
+    "description": "Get started with cloud computing through AWS Educate's free learning resources, hands-on labs, and AWS fundamentals for students and educators.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://aws.amazon.com/education/awseducate/",
+    "skills_covered": [
+      "AWS",
+      "Cloud"
+    ],
+    "tags": [
+      "aws",
+      "amazon",
+      "cloud",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-070",
+    "name": "Microsoft Learn",
+    "provider": "Microsoft",
+    "level": "Beginner",
+    "category": "Cloud & AI",
+    "free": true,
+    "description": "Learn Azure, Power Platform, AI, and Microsoft 365 through Microsoft Learn's free interactive training path with skill-based badges and certifications.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://learn.microsoft.com/training",
+    "skills_covered": [
+      "Azure",
+      "Power Platform",
+      "AI"
+    ],
+    "tags": [
+      "microsoft",
+      "azure",
+      "power platform",
+      "ai",
+      "cloud",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-071",
+    "name": "UNICEF Agora",
+    "provider": "UNICEF",
+    "level": "Beginner",
+    "category": "Professional Development",
+    "free": true,
+    "description": "Access free learning courses on development, leadership, and humanitarian skills through UNICEF's Agora platform for global learners.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://agora.unicef.org",
+    "skills_covered": [
+      "Development",
+      "Leadership"
+    ],
+    "tags": [
+      "unicef",
+      "development",
+      "leadership",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-072",
+    "name": "Kaggle Learn",
+    "provider": "Kaggle",
+    "level": "Beginner",
+    "category": "Data Science",
+    "free": true,
+    "description": "Master Python, machine learning, and data analysis through Kaggle's free micro-courses with hands-on notebooks and real datasets.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.kaggle.com/learn",
+    "skills_covered": [
+      "Python",
+      "Machine Learning",
+      "Data Analysis"
+    ],
+    "tags": [
+      "kaggle",
+      "python",
+      "machine learning",
+      "data analysis",
+      "data science",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-073",
+    "name": "Simplilearn SkillUp",
+    "provider": "Simplilearn",
+    "level": "Beginner",
+    "category": "Technology",
+    "free": true,
+    "description": "Upskill with free online courses in programming, cloud computing, AI, and data science from Simplilearn's SkillUp program with completion certificates.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://www.simplilearn.com/skillup-free-online-courses",
+    "skills_covered": [
+      "Programming",
+      "Cloud",
+      "AI"
+    ],
+    "tags": [
+      "simplilearn",
+      "programming",
+      "cloud",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-074",
+    "name": "Oracle University Free Learning",
+    "provider": "Oracle",
+    "level": "Beginner",
+    "category": "Database & Cloud",
+    "free": true,
+    "description": "Explore free learning paths in Oracle database, Java, and cloud infrastructure through Oracle University's open access content and earn digital badges.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://education.oracle.com",
+    "skills_covered": [
+      "Oracle",
+      "Java",
+      "Cloud"
+    ],
+    "tags": [
+      "oracle",
+      "database",
+      "java",
+      "cloud",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-075",
+    "name": "Claude 101",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Introduction to Claude, Anthropic's AI assistant. Learn the basics of interacting with Claude, understanding its capabilities, and practical applications.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/claude-101",
+    "skills_covered": [
+      "Claude",
+      "AI Assistants",
+      "Prompting"
+    ],
+    "tags": [
+      "anthropic",
+      "claude",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-076",
+    "name": "AI Fluency: Framework & Foundations",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Build a foundational understanding of AI fluency including core concepts, frameworks for thinking about AI, and essential knowledge for working with AI systems.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+    "skills_covered": [
+      "AI Fluency",
+      "AI Concepts",
+      "AI Frameworks"
+    ],
+    "tags": [
+      "anthropic",
+      "ai fluency",
+      "ai",
+      "foundations",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-077",
+    "name": "Introduction to Agent Skills",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Learn about AI agent capabilities, how agents work, and the skills needed to build and interact with autonomous AI systems.",
+    "prerequisites": [
+      "Basic understanding of AI concepts"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/introduction-to-agent-skills",
+    "skills_covered": [
+      "AI Agents",
+      "Agent Skills",
+      "Autonomous AI"
+    ],
+    "tags": [
+      "anthropic",
+      "agents",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-078",
+    "name": "Building with the Claude API",
+    "provider": "Anthropic",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Hands-on course for developers to build applications using the Claude API. Covers API authentication, message formatting, streaming, and best practices.",
+    "prerequisites": [
+      "Basic programming knowledge",
+      "Familiarity with REST APIs"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/building-with-the-claude-api",
+    "skills_covered": [
+      "Claude API",
+      "REST APIs",
+      "Application Development"
+    ],
+    "tags": [
+      "anthropic",
+      "claude api",
+      "api",
+      "development",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-079",
+    "name": "Claude Code in Action",
+    "provider": "Anthropic",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Master Claude Code, Anthropic's agentic coding tool. Learn to use Claude Code for software development tasks, code review, and programming workflows.",
+    "prerequisites": [
+      "Programming experience",
+      "Command line familiarity"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/claude-code-in-action",
+    "skills_covered": [
+      "Claude Code",
+      "Agentic Coding",
+      "Software Development"
+    ],
+    "tags": [
+      "anthropic",
+      "claude code",
+      "coding",
+      "development",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-080",
+    "name": "Introduction to Model Context Protocol (MCP)",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Learn the fundamentals of MCP, the open protocol that enables AI models to connect to external tools, data sources, and services.",
+    "prerequisites": [
+      "Basic AI knowledge"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/introduction-to-model-context-protocol",
+    "skills_covered": [
+      "MCP",
+      "Model Context Protocol",
+      "AI Integration"
+    ],
+    "tags": [
+      "anthropic",
+      "mcp",
+      "model context protocol",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-081",
+    "name": "MCP: Advanced Topics",
+    "provider": "Anthropic",
+    "level": "Advanced",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Deep dive into advanced MCP concepts including custom tool implementations, security patterns, and building production-grade AI integrations.",
+    "prerequisites": [
+      "Completion of Introduction to MCP",
+      "Programming experience"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/model-context-protocol-advanced-topics",
+    "skills_covered": [
+      "Advanced MCP",
+      "Tool Development",
+      "AI Security"
+    ],
+    "tags": [
+      "anthropic",
+      "mcp",
+      "advanced",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-082",
+    "name": "AI Fluency for Students",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Tailored AI fluency course for students. Learn how to use AI tools responsibly, enhance academic work, and prepare for an AI-driven future.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/ai-fluency-for-students",
+    "skills_covered": [
+      "AI Literacy",
+      "Responsible AI",
+      "Academic AI Use"
+    ],
+    "tags": [
+      "anthropic",
+      "ai fluency",
+      "students",
+      "education",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-083",
+    "name": "AI Fluency for Educators",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Empower educators with AI fluency skills. Learn to integrate AI into teaching, understand AI capabilities in education, and guide students in responsible AI use.",
+    "prerequisites": [
+      "Teaching or education background"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/ai-fluency-for-educators",
+    "skills_covered": [
+      "AI in Education",
+      "Teaching with AI",
+      "AI Policy"
+    ],
+    "tags": [
+      "anthropic",
+      "ai fluency",
+      "educators",
+      "teaching",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-084",
+    "name": "Teaching AI Fluency",
+    "provider": "Anthropic",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Advanced course for educators on how to teach AI fluency effectively. Covers curriculum design, assessment strategies, and pedagogical approaches for AI education.",
+    "prerequisites": [
+      "AI Fluency for Educators completion"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/teaching-ai-fluency",
+    "skills_covered": [
+      "AI Curriculum",
+      "AI Assessment",
+      "Pedagogy"
+    ],
+    "tags": [
+      "anthropic",
+      "teaching",
+      "ai fluency",
+      "education",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-085",
+    "name": "AI Fluency for Small Businesses",
+    "provider": "Anthropic",
+    "level": "Beginner",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Learn how small businesses can leverage AI tools to improve operations, marketing, customer service, and productivity with practical, actionable strategies.",
+    "prerequisites": [
+      "No prior experience required"
+    ],
+    "exam_link": "https://anthropic.skilljar.com/ai-fluency-for-small-businesses",
+    "skills_covered": [
+      "AI for Business",
+      "Business Automation",
+      "Productivity"
+    ],
+    "tags": [
+      "anthropic",
+      "ai fluency",
+      "small business",
+      "business",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-086",
+    "name": "Claude with Amazon Bedrock",
+    "provider": "Anthropic",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Learn to deploy and use Claude models through Amazon Bedrock. Covers Bedrock integration, model selection, and building AI applications on AWS infrastructure.",
+    "prerequisites": [
+      "Basic AWS knowledge",
+      "Familiarity with Claude"
+    ],
+    "exam_link": "https://www.claude.com/resources/courses",
+    "skills_covered": [
+      "Amazon Bedrock",
+      "Claude Deployment",
+      "AWS AI Services"
+    ],
+    "tags": [
+      "anthropic",
+      "claude",
+      "amazon bedrock",
+      "aws",
+      "ai",
+      "free"
+    ]
+  },
+  {
+    "id": "cert-087",
+    "name": "Claude with Google Cloud Vertex AI",
+    "provider": "Anthropic",
+    "level": "Intermediate",
+    "category": "Artificial Intelligence",
+    "free": true,
+    "description": "Master deploying Claude models on Google Cloud's Vertex AI platform. Covers GCP integration, model management, and building scalable AI applications.",
+    "prerequisites": [
+      "Basic Google Cloud knowledge",
+      "Familiarity with Claude"
+    ],
+    "exam_link": "https://www.classcentral.com/course/anthropic-claude-with-google-cloud-vertex-ai",
+    "skills_covered": [
+      "Vertex AI",
+      "Google Cloud AI",
+      "Claude Deployment"
+    ],
+    "tags": [
+      "anthropic",
+      "claude",
+      "vertex ai",
+      "google cloud",
+      "ai",
+      "free"
     ]
   }
 ]

@@ -54,7 +54,8 @@
       "PWA Support",
       "Analytics Integration"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-002",
@@ -114,7 +115,8 @@
       "Webhooks",
       "Docker Support"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-003",
@@ -174,7 +176,8 @@
       "Monitoring Stack",
       "Service Mesh"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-004",
@@ -232,7 +235,8 @@
       "Real-time Data",
       "PDF Export"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-005",
@@ -291,7 +295,8 @@
       "Live Predictions",
       "Portfolio Simulation"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-006",
@@ -350,7 +355,8 @@
       "API Endpoint",
       "Confusion Matrix Visualization"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-007",
@@ -407,7 +413,8 @@
       "Data Augmentation Pipeline",
       "Performance Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-008",
@@ -465,7 +472,8 @@
       "Multi-format Support",
       "Admin Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-009",
@@ -524,7 +532,8 @@
       "Rate Limiting",
       "Expiration Links"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-010",
@@ -582,7 +591,8 @@
       "Monitoring Integration",
       "Slack Notifications"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-011",
@@ -638,7 +648,8 @@
       "Protocol Filtering",
       "Geolocation Mapping"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-012",
@@ -696,7 +707,8 @@
       "SLA Tracking",
       "API Integration"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-013",
@@ -756,7 +768,8 @@
       "Group Chat",
       "Message Search"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-014",
@@ -814,7 +827,8 @@
       "Historical Trends",
       "Recommendation Engine"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-015",
@@ -874,7 +888,8 @@
       "Batch Recommendations",
       "Redis Caching"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-016",
@@ -933,7 +948,8 @@
       "Multi-election Support",
       "Token-based Voting"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-017",
@@ -993,7 +1009,8 @@
       "Severity Levels",
       "Team Analytics"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-018",
@@ -1053,7 +1070,8 @@
       "Mobile App",
       "Alert Notifications"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-019",
@@ -1112,7 +1130,8 @@
       "Multi-format Support",
       "ATS Integration"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-020",
@@ -1173,7 +1192,8 @@
       "Secret Management",
       "Notification Integrations"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-021",
@@ -1231,7 +1251,8 @@
       "Multi-sport Support",
       "Mobile Responsive"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-022",
@@ -1290,7 +1311,8 @@
       "Multi-language Support",
       "Workflow Approvals"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-023",
@@ -1349,7 +1371,8 @@
       "Alert System",
       "Portfolio Tracker"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-024",
@@ -1410,7 +1433,8 @@
       "Waiting Room",
       "Screen Sharing"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-025",
@@ -1470,7 +1494,8 @@
       "Persisted Queries",
       "Schema Stitching"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-026",
@@ -1529,7 +1554,8 @@
       "Movie Search",
       "Rating History"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-027",
@@ -1588,7 +1614,8 @@
       "EXIF Metadata",
       "Batch Processing"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-028",
@@ -1647,7 +1674,8 @@
       "Influencer Analysis",
       "Export Reports"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-029",
@@ -1707,7 +1735,8 @@
       "Cost Monitoring",
       "Disaster Recovery"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-030",
@@ -1766,7 +1795,8 @@
       "Email Notifications",
       "Admin Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-031",
@@ -1824,7 +1854,8 @@
       "Resolution Options",
       "Gallery View"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-032",
@@ -1883,7 +1914,8 @@
       "Log Retention",
       "Multi-source Ingestion"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-033",
@@ -1941,7 +1973,8 @@
       "Idempotent Design",
       "Rollback Playbooks"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-034",
@@ -2002,7 +2035,8 @@
       "Audit Logging",
       "FHIR Integration"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-035",
@@ -2060,7 +2094,8 @@
       "In-app Purchases",
       "Localization"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-036",
@@ -2119,7 +2154,8 @@
       "Multi-language",
       "Query Analytics"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-037",
@@ -2177,7 +2213,8 @@
       "Drift Detection",
       "Import Existing Resources"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-038",
@@ -2237,7 +2274,8 @@
       "CDN Integration",
       "API Access"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-039",
@@ -2297,7 +2335,8 @@
       "Feature Store Integration",
       "SLA Monitoring"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-040",
@@ -2356,7 +2395,8 @@
       "Revenue Dashboard",
       "Rule Engine"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-041",
@@ -2415,7 +2455,8 @@
       "Share Target",
       "Offline Analytics"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-042",
@@ -2475,7 +2516,8 @@
       "Quality Dashboards",
       "Automated Compliance"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-043",
@@ -2536,7 +2578,8 @@
       "Admin Panel",
       "API Documentation"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-044",
@@ -2596,7 +2639,8 @@
       "Dead Letter Handling",
       "Worker Auto-scaling"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-045",
@@ -2655,7 +2699,8 @@
       "Performance Benchmarking",
       "Logging & Audit"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-046",
@@ -2715,7 +2760,8 @@
       "Data Export",
       "Dashboard View"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-047",
@@ -2774,7 +2820,8 @@
       "Performance Monitoring",
       "A/B Testing"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-048",
@@ -2833,7 +2880,8 @@
       "Custom Parsers",
       "Role-based Access"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-049",
@@ -2892,7 +2940,8 @@
       "Skill Gap Analysis",
       "Export Options"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-050",
@@ -2950,7 +2999,8 @@
       "Historical Tracking",
       "Budget Alerts"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-051",
@@ -3010,7 +3060,8 @@
       "Export Options",
       "Offline Support"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-052",
@@ -3069,7 +3120,8 @@
       "Slack Alerts",
       "Historical Trends"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-053",
@@ -3128,7 +3180,8 @@
       "Knowledge Base",
       "Analytics Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-054",
@@ -3187,7 +3240,8 @@
       "Multi-turn Context",
       "Admin Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-055",
@@ -3247,7 +3301,8 @@
       "Schema Registry",
       "Monitoring Dashboard"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-056",
@@ -3307,7 +3362,8 @@
       "Model Retraining",
       "Risk Scoring"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-057",
@@ -3367,7 +3423,8 @@
       "Search History",
       "Batch Processing"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-058",
@@ -3426,7 +3483,8 @@
       "Campaign Tags",
       "A/B Testing Links"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-059",
@@ -3486,7 +3544,8 @@
       "Style Presets",
       "Export Options"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-060",
@@ -3545,7 +3604,8 @@
       "2FA Support",
       "Import/Export"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-061",
@@ -3605,7 +3665,8 @@
       "API Rate Limiting",
       "White-label Support"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-062",
@@ -3665,7 +3726,8 @@
       "Watch History",
       "Recommendation Engine"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-063",
@@ -3725,7 +3787,8 @@
       "Persistence",
       "Benchmarking Tool"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   },
   {
     "id": "project-064",
@@ -3784,6 +3847,7 @@
       "Test Generation",
       "Snippet Library"
     ],
-    "status": "available"
+    "status": "available",
+    "free": true
   }
 ]

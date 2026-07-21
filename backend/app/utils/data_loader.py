@@ -195,15 +195,54 @@ def load_career_pathways() -> List[Dict[str, Any]]:
     return valid
 
 
+def validate_book(item: Dict[str, Any]) -> bool:
+    """Validate that a book dict has all required fields.
+
+    Required: id, title (or name), provider, url.
+    """
+    item_id = item.get("id", "unknown")
+    if not item.get("id"):
+        logger.warning("[DATA] Book missing 'id': %s", item_id)
+        return False
+    if not (item.get("title") or item.get("name")):
+        logger.warning("[DATA] Book '%s' missing 'title'/'name' field — SKIPPED", item_id)
+        return False
+    if not item.get("url"):
+        logger.warning("[DATA] Book '%s' has no URL — button will show as unavailable", item_id)
+    return True
+
+
+def load_books() -> List[Dict[str, Any]]:
+    """Load and validate books from books.json.
+
+    Returns:
+        List of validated book dicts. Invalid entries are
+        logged and skipped instead of crashing the application.
+    """
+    raw = _load_json_file("books.json")
+    valid: List[Dict[str, Any]] = []
+    skipped: List[str] = []
+    for item in raw:
+        if validate_book(item):
+            valid.append(item)
+        else:
+            skipped.append(item.get("id", "unknown"))
+    logger.info("[DATA] Loaded %d/%d books", len(valid), len(raw))
+    if skipped:
+        logger.warning("[DATA] Skipped books: %s", ", ".join(skipped))
+    return valid
+
+
 def load_all_datasets() -> Dict[str, List[Dict[str, Any]]]:
     """Load all datasets and return them as a dictionary.
 
     Returns:
-        Dict with keys: courses, projects, certifications, career_pathways.
+        Dict with keys: courses, projects, certifications, career_pathways, books.
     """
     return {
         "courses": load_courses(),
         "projects": load_projects(),
         "certifications": load_certifications(),
         "career_pathways": load_career_pathways(),
+        "books": load_books(),
     }

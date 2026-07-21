@@ -54,6 +54,15 @@
   .badge-red {
     @apply badge bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300;
   }
+  .badge-orange {
+    @apply badge bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300;
+  }
+  .badge-teal {
+    @apply badge bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300;
+  }
+  .badge-indigo {
+    @apply badge bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300;
+  }
   .page-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
   }
@@ -96,3 +105,24 @@
 }
 .typing-dot:nth-child(2) { animation-delay: 0.2s; }
 .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Code blocks in chat */
+.prose pre {
+  @apply rounded-xl border border-gray-200 dark:border-gray-700;
+}
+.prose code {
+  @apply text-[0.85em];
+}
+.prose :not(pre) > code {
+  @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 font-normal;
+}
+
+/* Smooth scroll for chat */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Textarea auto-height hint */
+textarea {
+  field-sizing: content;
+}

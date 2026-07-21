@@ -1,11 +1,11 @@
 """AI Roadmap Generator for LearnMate AI.
 
-Orchestrates the Skill Gap Analyzer, RAG Service, and Granite Service
+Orchestrates the Skill Gap Analyzer, RAG Service, and Gemini Service
 into a single personalised learning pipeline. Produces structured
 10-week roadmaps with courses, projects, certifications, assessments,
 and weekly learning outcomes.
 
-Falls back to deterministic generation when Granite is unavailable.
+Falls back to deterministic generation when Gemini is unavailable.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from app.services.skill_analyzer import (
     analyze_skill_gap,
 )
 from app.services.rag_service import rag_service, RAG_AVAILABLE
-from app.services import granite_service
+from app.services import gemini_service
 from app.services.prompt_templates import (
     build_roadmap_prompt,
     serialize_courses_for_prompt,
@@ -58,8 +58,8 @@ class RoadmapGenerator:
 
         1. Analyse skill gaps via :class:`SkillGapAnalyzer`.
         2. Retrieve relevant learning resources via RAG.
-        3. Build a Granite prompt from profile + analysis + resources.
-        4. Generate the AI roadmap via Granite (or deterministic fallback).
+        3. Build a Gemini prompt from profile + analysis + resources.
+        4. Generate the AI roadmap via Gemini (or deterministic fallback).
         5. Parse the raw output into a structured roadmap dict.
 
         Args:
@@ -82,7 +82,7 @@ class RoadmapGenerator:
         # Step 2: Retrieve learning resources via RAG
         resources = await self._retrieve_resources(profile, skill_analysis)
 
-        # Step 3 & 4: Generate roadmap via Granite (with fallback)
+        # Step         3 & 4: Generate roadmap via Gemini (with fallback)
         raw_roadmap = await self._generate_with_granite(
             profile, skill_analysis, resources
         )
@@ -504,7 +504,7 @@ class RoadmapGenerator:
         return resources
 
     # ------------------------------------------------------------------
-    # Granite generation with fallback
+    # Gemini generation with fallback
     # ------------------------------------------------------------------
 
     async def _generate_with_granite(
@@ -513,10 +513,10 @@ class RoadmapGenerator:
         skill_analysis: SkillAnalysisResult,
         resources: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """Generate roadmap via Granite, falling back to deterministic.
+        """Generate roadmap via Gemini, falling back to deterministic.
 
         Builds a prompt from the student profile, skill analysis, and
-        retrieved resources, then calls Granite. If the API is
+        retrieved resources, then calls Gemini. If the API is
         unavailable or returns malformed output, falls back to a
         deterministic roadmap generator.
 
@@ -528,7 +528,7 @@ class RoadmapGenerator:
         Returns:
             A dict with a ``"weeks"`` key containing the weekly plan.
         """
-        # Serialise resources for Granite context
+        # Serialise resources for Gemini context
         courses_str = serialize_courses_for_prompt(
             [self._extract_resource_fields(r) for r in resources.get("courses", [])]
         )
@@ -540,7 +540,7 @@ class RoadmapGenerator:
         )
 
         try:
-            raw = await granite_service.generate_roadmap(
+            raw = await gemini_service.generate_roadmap(
                 student_name=profile.name,
                 career_goal=profile.career_goal,
                 current_skills=profile.current_skills,
@@ -552,13 +552,16 @@ class RoadmapGenerator:
             )
 
             if raw and isinstance(raw, dict) and "weeks" in raw:
-                logger.info("Granite roadmap generated successfully")
+                logger.info("Gemini roadmap generated successfully")
                 return raw
 
-            logger.warning("Granite returned invalid roadmap - using fallback")
+            logger.warning("Gemini returned invalid roadmap - using fallback")
 
         except Exception as exc:
-            logger.error("Granite roadmap generation failed: %s", exc)
+            logger.error(
+                "[Gemini roadmap] Generation failed: %s – falling back to deterministic roadmap",
+                exc,
+            )
 
         # Deterministic fallback
         return self._deterministic_roadmap(profile, skill_analysis, resources)
@@ -624,7 +627,7 @@ class RoadmapGenerator:
         skill_analysis: SkillAnalysisResult,
         resources: Dict[str, Any],
     ) -> Dict[str, Any]:
-        """Generate a deterministic fallback roadmap without Granite.
+        """Generate a deterministic fallback roadmap without Gemini.
 
         Distributes missing skills across 10 weeks following the
         curriculum design rules: prerequisites first, beginner before
@@ -855,7 +858,7 @@ class RoadmapGenerator:
     ) -> Dict[str, Any]:
         """Parse raw roadmap data into a structured roadmap dict.
 
-        Normalises the Granite (or fallback) output into a consistent
+        Normalises the Gemini (or fallback) output into a consistent
         structure with all required fields including weeks,
         certifications, final project, progress, and recommendations.
 
@@ -933,7 +936,7 @@ class RoadmapGenerator:
     ) -> List[Dict[str, Any]]:
         """Parse raw week data into normalised week dicts.
 
-        Handles variations in field names from Granite output
+        Handles variations in field names from Gemini output
         (e.g. ``goal`` vs ``title``, ``hours`` vs ``estimated_hours``,
         ``assessment`` as string vs list).
 

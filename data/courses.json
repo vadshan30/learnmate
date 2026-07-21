@@ -9,8 +9,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Python syntax", "Data types", "Control flow", "Functions", "File I/O"],
-    "tags": ["python", "programming", "fundamentals", "backend"]
+    "skills_gained": [
+      "Python syntax",
+      "Data types",
+      "Control flow",
+      "Functions",
+      "File I/O"
+    ],
+    "tags": [
+      "python",
+      "programming",
+      "fundamentals",
+      "backend"
+    ],
+    "free": false
   },
   {
     "id": "course-002",
@@ -22,8 +34,21 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["HTML5", "CSS3", "JavaScript", "Responsive design", "DOM manipulation"],
-    "tags": ["html", "css", "javascript", "frontend", "web"]
+    "skills_gained": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive design",
+      "DOM manipulation"
+    ],
+    "tags": [
+      "html",
+      "css",
+      "javascript",
+      "frontend",
+      "web"
+    ],
+    "free": false
   },
   {
     "id": "course-003",
@@ -34,9 +59,26 @@
     "description": "Build modern single-page applications with React. Covers components, hooks, state management, routing, and API integration.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["HTML5", "CSS3", "JavaScript"],
-    "skills_gained": ["React", "JSX", "Hooks", "State management", "React Router"],
-    "tags": ["react", "frontend", "javascript", "spa", "web"]
+    "prerequisites": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "skills_gained": [
+      "React",
+      "JSX",
+      "Hooks",
+      "State management",
+      "React Router"
+    ],
+    "tags": [
+      "react",
+      "frontend",
+      "javascript",
+      "spa",
+      "web"
+    ],
+    "free": false
   },
   {
     "id": "course-004",
@@ -47,9 +89,24 @@
     "description": "Perform exploratory data analysis, data cleaning, and visualization using Pandas, NumPy, and Matplotlib on real-world datasets.",
     "duration": "6 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python syntax"],
-    "skills_gained": ["Pandas", "NumPy", "Matplotlib", "Data cleaning", "EDA"],
-    "tags": ["data science", "python", "pandas", "visualization", "analysis"]
+    "prerequisites": [
+      "Python syntax"
+    ],
+    "skills_gained": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Data cleaning",
+      "EDA"
+    ],
+    "tags": [
+      "data science",
+      "python",
+      "pandas",
+      "visualization",
+      "analysis"
+    ],
+    "free": false
   },
   {
     "id": "course-005",
@@ -60,9 +117,23 @@
     "description": "Core statistical concepts including probability, distributions, hypothesis testing, and regression analysis for data-driven decision making.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python syntax", "Basic mathematics"],
-    "skills_gained": ["Probability", "Hypothesis testing", "Regression", "Statistical inference"],
-    "tags": ["statistics", "data science", "probability", "math"]
+    "prerequisites": [
+      "Python syntax",
+      "Basic mathematics"
+    ],
+    "skills_gained": [
+      "Probability",
+      "Hypothesis testing",
+      "Regression",
+      "Statistical inference"
+    ],
+    "tags": [
+      "statistics",
+      "data science",
+      "probability",
+      "math"
+    ],
+    "free": false
   },
   {
     "id": "course-006",
@@ -73,9 +144,25 @@
     "description": "Implement supervised and unsupervised ML algorithms including linear regression, decision trees, random forests, and k-means clustering.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python syntax", "Statistics basics", "Pandas"],
-    "skills_gained": ["Scikit-learn", "Classification", "Regression", "Clustering", "Model evaluation"],
-    "tags": ["machine learning", "scikit-learn", "ai", "algorithms"]
+    "prerequisites": [
+      "Python syntax",
+      "Statistics basics",
+      "Pandas"
+    ],
+    "skills_gained": [
+      "Scikit-learn",
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Model evaluation"
+    ],
+    "tags": [
+      "machine learning",
+      "scikit-learn",
+      "ai",
+      "algorithms"
+    ],
+    "free": false
   },
   {
     "id": "course-007",
@@ -86,9 +173,25 @@
     "description": "Build neural networks from scratch and with TensorFlow/Keras. Cover CNNs, RNNs, transfer learning, and model optimization.",
     "duration": "10 weeks",
     "level": "Advanced",
-    "prerequisites": ["Machine learning basics", "Linear algebra", "Python"],
-    "skills_gained": ["TensorFlow", "Keras", "CNN", "RNN", "Transfer learning"],
-    "tags": ["deep learning", "neural networks", "tensorflow", "ai"]
+    "prerequisites": [
+      "Machine learning basics",
+      "Linear algebra",
+      "Python"
+    ],
+    "skills_gained": [
+      "TensorFlow",
+      "Keras",
+      "CNN",
+      "RNN",
+      "Transfer learning"
+    ],
+    "tags": [
+      "deep learning",
+      "neural networks",
+      "tensorflow",
+      "ai"
+    ],
+    "free": false
   },
   {
     "id": "course-008",
@@ -99,9 +202,25 @@
     "description": "Process and analyze text data with NLP techniques including tokenization, sentiment analysis, named entity recognition, and transformer models.",
     "duration": "8 weeks",
     "level": "Advanced",
-    "prerequisites": ["Machine learning basics", "Python"],
-    "skills_gained": ["NLP", "Tokenization", "Transformers", "BERT", "Text classification"],
-    "tags": ["nlp", "ai", "text processing", "transformers", "bert"]
+    "prerequisites": [
+      "Machine learning basics",
+      "Python"
+    ],
+    "skills_gained": [
+      "NLP",
+      "Tokenization",
+      "Transformers",
+      "BERT",
+      "Text classification"
+    ],
+    "tags": [
+      "nlp",
+      "ai",
+      "text processing",
+      "transformers",
+      "bert"
+    ],
+    "free": false
   },
   {
     "id": "course-009",
@@ -113,8 +232,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["AWS core services", "Cloud architecture", "IAM", "S3", "EC2"],
-    "tags": ["aws", "cloud", "certification", "infrastructure"]
+    "skills_gained": [
+      "AWS core services",
+      "Cloud architecture",
+      "IAM",
+      "S3",
+      "EC2"
+    ],
+    "tags": [
+      "aws",
+      "cloud",
+      "certification",
+      "infrastructure"
+    ],
+    "free": false
   },
   {
     "id": "course-010",
@@ -125,9 +256,25 @@
     "description": "Containerize applications with Docker and orchestrate deployments with Kubernetes. Covers images, pods, services, and Helm charts.",
     "duration": "7 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Linux basics", "Command line"],
-    "skills_gained": ["Docker", "Kubernetes", "Containers", "Helm", "CI/CD basics"],
-    "tags": ["docker", "kubernetes", "devops", "containers", "orchestration"]
+    "prerequisites": [
+      "Linux basics",
+      "Command line"
+    ],
+    "skills_gained": [
+      "Docker",
+      "Kubernetes",
+      "Containers",
+      "Helm",
+      "CI/CD basics"
+    ],
+    "tags": [
+      "docker",
+      "kubernetes",
+      "devops",
+      "containers",
+      "orchestration"
+    ],
+    "free": false
   },
   {
     "id": "course-011",
@@ -139,8 +286,21 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Linux CLI", "Shell scripting", "File systems", "Process management", "Networking"],
-    "tags": ["linux", "devops", "system admin", "shell", "bash"]
+    "skills_gained": [
+      "Linux CLI",
+      "Shell scripting",
+      "File systems",
+      "Process management",
+      "Networking"
+    ],
+    "tags": [
+      "linux",
+      "devops",
+      "system admin",
+      "shell",
+      "bash"
+    ],
+    "free": false
   },
   {
     "id": "course-012",
@@ -151,9 +311,24 @@
     "description": "Learn network security principles, vulnerability assessment, penetration testing, and ethical hacking methodologies using industry tools.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Networking basics", "Linux fundamentals"],
-    "skills_gained": ["Penetration testing", "Nmap", "Wireshark", "Vulnerability assessment", "OWASP"],
-    "tags": ["cybersecurity", "ethical hacking", "network security", "penetration testing"]
+    "prerequisites": [
+      "Networking basics",
+      "Linux fundamentals"
+    ],
+    "skills_gained": [
+      "Penetration testing",
+      "Nmap",
+      "Wireshark",
+      "Vulnerability assessment",
+      "OWASP"
+    ],
+    "tags": [
+      "cybersecurity",
+      "ethical hacking",
+      "network security",
+      "penetration testing"
+    ],
+    "free": false
   },
   {
     "id": "course-013",
@@ -165,8 +340,21 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["SQL", "Database design", "PostgreSQL", "Normalization", "Joins"],
-    "tags": ["sql", "database", "postgresql", "mysql", "backend"]
+    "skills_gained": [
+      "SQL",
+      "Database design",
+      "PostgreSQL",
+      "Normalization",
+      "Joins"
+    ],
+    "tags": [
+      "sql",
+      "database",
+      "postgresql",
+      "mysql",
+      "backend"
+    ],
+    "free": false
   },
   {
     "id": "course-014",
@@ -177,9 +365,25 @@
     "description": "Explore document-based and key-value databases. Build applications with MongoDB for flexible schemas and Redis for caching and real-time data.",
     "duration": "4 weeks",
     "level": "Intermediate",
-    "prerequisites": ["SQL basics", "JavaScript basics"],
-    "skills_gained": ["MongoDB", "Redis", "Document databases", "Caching", "Aggregation pipeline"],
-    "tags": ["nosql", "mongodb", "redis", "database", "caching"]
+    "prerequisites": [
+      "SQL basics",
+      "JavaScript basics"
+    ],
+    "skills_gained": [
+      "MongoDB",
+      "Redis",
+      "Document databases",
+      "Caching",
+      "Aggregation pipeline"
+    ],
+    "tags": [
+      "nosql",
+      "mongodb",
+      "redis",
+      "database",
+      "caching"
+    ],
+    "free": false
   },
   {
     "id": "course-015",
@@ -191,8 +395,21 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Figma", "Wireframing", "Prototyping", "User research", "Accessibility"],
-    "tags": ["ui", "ux", "design", "figma", "prototyping"]
+    "skills_gained": [
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "User research",
+      "Accessibility"
+    ],
+    "tags": [
+      "ui",
+      "ux",
+      "design",
+      "figma",
+      "prototyping"
+    ],
+    "free": false
   },
   {
     "id": "course-016",
@@ -203,9 +420,25 @@
     "description": "Build high-performance REST APIs with FastAPI. Covers Pydantic validation, async endpoints, middleware, authentication, and OpenAPI docs.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python syntax", "HTTP basics"],
-    "skills_gained": ["FastAPI", "Pydantic", "REST APIs", "Async programming", "OpenAPI"],
-    "tags": ["fastapi", "python", "backend", "api", "rest"]
+    "prerequisites": [
+      "Python syntax",
+      "HTTP basics"
+    ],
+    "skills_gained": [
+      "FastAPI",
+      "Pydantic",
+      "REST APIs",
+      "Async programming",
+      "OpenAPI"
+    ],
+    "tags": [
+      "fastapi",
+      "python",
+      "backend",
+      "api",
+      "rest"
+    ],
+    "free": false
   },
   {
     "id": "course-017",
@@ -216,9 +449,26 @@
     "description": "Deploy ML models to production with MLOps best practices. Covers model serving, monitoring, CI/CD for ML, and cloud deployment strategies.",
     "duration": "6 weeks",
     "level": "Advanced",
-    "prerequisites": ["Machine learning basics", "Docker", "Python"],
-    "skills_gained": ["MLflow", "Model serving", "MLOps", "Model monitoring", "CI/CD"],
-    "tags": ["mlops", "deployment", "machine learning", "devops", "production"]
+    "prerequisites": [
+      "Machine learning basics",
+      "Docker",
+      "Python"
+    ],
+    "skills_gained": [
+      "MLflow",
+      "Model serving",
+      "MLOps",
+      "Model monitoring",
+      "CI/CD"
+    ],
+    "tags": [
+      "mlops",
+      "deployment",
+      "machine learning",
+      "devops",
+      "production"
+    ],
+    "free": false
   },
   {
     "id": "course-018",
@@ -230,8 +480,21 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Git", "GitHub", "Branching", "Pull requests", "Version control"],
-    "tags": ["git", "github", "version control", "collaboration", "devops"]
+    "skills_gained": [
+      "Git",
+      "GitHub",
+      "Branching",
+      "Pull requests",
+      "Version control"
+    ],
+    "tags": [
+      "git",
+      "github",
+      "version control",
+      "collaboration",
+      "devops"
+    ],
+    "free": false
   },
   {
     "id": "course-019",
@@ -242,9 +505,25 @@
     "description": "Design and build flexible APIs with GraphQL. Covers schema design, resolvers, subscriptions, authentication, and integration with React frontends.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["REST API basics", "JavaScript or Python"],
-    "skills_gained": ["GraphQL", "Schema design", "Resolvers", "Apollo Server", "API design"],
-    "tags": ["graphql", "api", "backend", "javascript", "apollo"]
+    "prerequisites": [
+      "REST API basics",
+      "JavaScript or Python"
+    ],
+    "skills_gained": [
+      "GraphQL",
+      "Schema design",
+      "Resolvers",
+      "Apollo Server",
+      "API design"
+    ],
+    "tags": [
+      "graphql",
+      "api",
+      "backend",
+      "javascript",
+      "apollo"
+    ],
+    "free": false
   },
   {
     "id": "course-020",
@@ -255,9 +534,26 @@
     "description": "Build cross-platform mobile apps for iOS and Android using React Native. Covers navigation, state management, native modules, and app store deployment.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["React basics", "JavaScript", "HTML/CSS"],
-    "skills_gained": ["React Native", "Mobile development", "Navigation", "Expo", "App deployment"],
-    "tags": ["react native", "mobile", "ios", "android", "cross-platform"]
+    "prerequisites": [
+      "React basics",
+      "JavaScript",
+      "HTML/CSS"
+    ],
+    "skills_gained": [
+      "React Native",
+      "Mobile development",
+      "Navigation",
+      "Expo",
+      "App deployment"
+    ],
+    "tags": [
+      "react native",
+      "mobile",
+      "ios",
+      "android",
+      "cross-platform"
+    ],
+    "free": false
   },
   {
     "id": "course-021",
@@ -268,9 +564,25 @@
     "description": "Automate build, test, and deployment workflows using GitHub Actions. Covers workflow syntax, secrets management, matrix builds, and self-hosted runners.",
     "duration": "4 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Git basics", "Command line basics"],
-    "skills_gained": ["GitHub Actions", "CI/CD", "Workflow automation", "Secrets management", "DevOps"],
-    "tags": ["ci/cd", "github actions", "automation", "devops", "deployment"]
+    "prerequisites": [
+      "Git basics",
+      "Command line basics"
+    ],
+    "skills_gained": [
+      "GitHub Actions",
+      "CI/CD",
+      "Workflow automation",
+      "Secrets management",
+      "DevOps"
+    ],
+    "tags": [
+      "ci/cd",
+      "github actions",
+      "automation",
+      "devops",
+      "deployment"
+    ],
+    "free": false
   },
   {
     "id": "course-022",
@@ -282,8 +594,20 @@
     "duration": "8 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Python", "Data structures", "Databases", "Web scraping", "Data visualization"],
-    "tags": ["python", "programming", "fundamentals", "data"]
+    "skills_gained": [
+      "Python",
+      "Data structures",
+      "Databases",
+      "Web scraping",
+      "Data visualization"
+    ],
+    "tags": [
+      "python",
+      "programming",
+      "fundamentals",
+      "data"
+    ],
+    "free": false
   },
   {
     "id": "course-023",
@@ -294,9 +618,23 @@
     "description": "Dive deeper into Python data structures including strings, lists, dictionaries, and tuples. Master data manipulation and processing patterns.",
     "duration": "4 weeks",
     "level": "Beginner",
-    "prerequisites": ["Basic Python syntax"],
-    "skills_gained": ["Strings", "Lists", "Dictionaries", "Tuples", "Data manipulation"],
-    "tags": ["python", "data structures", "programming", "fundamentals"]
+    "prerequisites": [
+      "Basic Python syntax"
+    ],
+    "skills_gained": [
+      "Strings",
+      "Lists",
+      "Dictionaries",
+      "Tuples",
+      "Data manipulation"
+    ],
+    "tags": [
+      "python",
+      "data structures",
+      "programming",
+      "fundamentals"
+    ],
+    "free": false
   },
   {
     "id": "course-024",
@@ -308,8 +646,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Python basics", "Variables", "Expressions", "Conditional code", "Functions"],
-    "tags": ["python", "programming", "beginner", "fundamentals"]
+    "skills_gained": [
+      "Python basics",
+      "Variables",
+      "Expressions",
+      "Conditional code",
+      "Functions"
+    ],
+    "tags": [
+      "python",
+      "programming",
+      "beginner",
+      "fundamentals"
+    ],
+    "free": false
   },
   {
     "id": "course-025",
@@ -321,8 +671,20 @@
     "duration": "10 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Java", "OOP", "Data structures", "GUI development", "File I/O"],
-    "tags": ["java", "programming", "oop", "fundamentals"]
+    "skills_gained": [
+      "Java",
+      "OOP",
+      "Data structures",
+      "GUI development",
+      "File I/O"
+    ],
+    "tags": [
+      "java",
+      "programming",
+      "oop",
+      "fundamentals"
+    ],
+    "free": false
   },
   {
     "id": "course-026",
@@ -333,9 +695,23 @@
     "description": "Master object-oriented programming concepts in Java. Covers classes, inheritance, polymorphism, interfaces, and design patterns.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Java basics"],
-    "skills_gained": ["OOP", "Classes", "Inheritance", "Polymorphism", "Design patterns"],
-    "tags": ["java", "oop", "programming", "design patterns"]
+    "prerequisites": [
+      "Java basics"
+    ],
+    "skills_gained": [
+      "OOP",
+      "Classes",
+      "Inheritance",
+      "Polymorphism",
+      "Design patterns"
+    ],
+    "tags": [
+      "java",
+      "oop",
+      "programming",
+      "design patterns"
+    ],
+    "free": false
   },
   {
     "id": "course-027",
@@ -347,8 +723,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["C language", "Variables", "Control flow", "Functions", "Arrays"],
-    "tags": ["c", "programming", "fundamentals", "systems"]
+    "skills_gained": [
+      "C language",
+      "Variables",
+      "Control flow",
+      "Functions",
+      "Arrays"
+    ],
+    "tags": [
+      "c",
+      "programming",
+      "fundamentals",
+      "systems"
+    ],
+    "free": true
   },
   {
     "id": "course-028",
@@ -360,8 +748,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["C++", "OOP", "STL", "Memory management", "Modern C++"],
-    "tags": ["c++", "programming", "oop", "systems"]
+    "skills_gained": [
+      "C++",
+      "OOP",
+      "STL",
+      "Memory management",
+      "Modern C++"
+    ],
+    "tags": [
+      "c++",
+      "programming",
+      "oop",
+      "systems"
+    ],
+    "free": true
   },
   {
     "id": "course-029",
@@ -372,9 +772,23 @@
     "description": "Master JavaScript fundamentals, ES6 features, regular expressions, debugging, and data structures including arrays, objects, and maps.",
     "duration": "6 weeks",
     "level": "Beginner",
-    "prerequisites": ["Basic HTML/CSS"],
-    "skills_gained": ["JavaScript", "ES6", "Algorithms", "Data structures", "Debugging"],
-    "tags": ["javascript", "algorithms", "data structures", "web"]
+    "prerequisites": [
+      "Basic HTML/CSS"
+    ],
+    "skills_gained": [
+      "JavaScript",
+      "ES6",
+      "Algorithms",
+      "Data structures",
+      "Debugging"
+    ],
+    "tags": [
+      "javascript",
+      "algorithms",
+      "data structures",
+      "web"
+    ],
+    "free": true
   },
   {
     "id": "course-030",
@@ -386,8 +800,21 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["HTML5", "CSS3", "Flexbox", "CSS Grid", "Responsive design"],
-    "tags": ["html", "css", "responsive", "frontend", "web"]
+    "skills_gained": [
+      "HTML5",
+      "CSS3",
+      "Flexbox",
+      "CSS Grid",
+      "Responsive design"
+    ],
+    "tags": [
+      "html",
+      "css",
+      "responsive",
+      "frontend",
+      "web"
+    ],
+    "free": true
   },
   {
     "id": "course-031",
@@ -398,9 +825,26 @@
     "description": "Build dynamic user interfaces with React, Redux, Bootstrap, jQuery, and Sass. Master modern front-end frameworks and libraries.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["HTML", "CSS", "JavaScript basics"],
-    "skills_gained": ["React", "Redux", "Bootstrap", "jQuery", "Sass"],
-    "tags": ["react", "redux", "frontend", "libraries", "web"]
+    "prerequisites": [
+      "HTML",
+      "CSS",
+      "JavaScript basics"
+    ],
+    "skills_gained": [
+      "React",
+      "Redux",
+      "Bootstrap",
+      "jQuery",
+      "Sass"
+    ],
+    "tags": [
+      "react",
+      "redux",
+      "frontend",
+      "libraries",
+      "web"
+    ],
+    "free": true
   },
   {
     "id": "course-032",
@@ -411,9 +855,24 @@
     "description": "Learn back-end development with Node.js, Express, and MongoDB. Build RESTful APIs, handle authentication, and manage databases.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["JavaScript basics"],
-    "skills_gained": ["Node.js", "Express", "MongoDB", "REST APIs", "Authentication"],
-    "tags": ["nodejs", "express", "mongodb", "backend", "api"]
+    "prerequisites": [
+      "JavaScript basics"
+    ],
+    "skills_gained": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+      "Authentication"
+    ],
+    "tags": [
+      "nodejs",
+      "express",
+      "mongodb",
+      "backend",
+      "api"
+    ],
+    "free": true
   },
   {
     "id": "course-033",
@@ -425,8 +884,21 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["PostgreSQL", "SQL", "Bash", "Database design", "Git"],
-    "tags": ["sql", "postgresql", "database", "bash", "backend"]
+    "skills_gained": [
+      "PostgreSQL",
+      "SQL",
+      "Bash",
+      "Database design",
+      "Git"
+    ],
+    "tags": [
+      "sql",
+      "postgresql",
+      "database",
+      "bash",
+      "backend"
+    ],
+    "free": true
   },
   {
     "id": "course-034",
@@ -437,9 +909,26 @@
     "description": "Create visual representations of data using D3.js, SVG, and CSS. Build charts, graphs, maps, and interactive dashboards.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["HTML", "CSS", "JavaScript basics"],
-    "skills_gained": ["D3.js", "SVG", "JSON APIs", "Data visualization", "JavaScript"],
-    "tags": ["d3.js", "visualization", "data", "javascript", "frontend"]
+    "prerequisites": [
+      "HTML",
+      "CSS",
+      "JavaScript basics"
+    ],
+    "skills_gained": [
+      "D3.js",
+      "SVG",
+      "JSON APIs",
+      "Data visualization",
+      "JavaScript"
+    ],
+    "tags": [
+      "d3.js",
+      "visualization",
+      "data",
+      "javascript",
+      "frontend"
+    ],
+    "free": true
   },
   {
     "id": "course-035",
@@ -450,9 +939,23 @@
     "description": "Learn machine learning fundamentals using Python. Build models with TensorFlow, handle data with NumPy, and create visualizations with Matplotlib.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics"],
-    "skills_gained": ["TensorFlow", "NumPy", "Pandas", "Matplotlib", "Machine learning algorithms"],
-    "tags": ["machine learning", "python", "tensorflow", "ai"]
+    "prerequisites": [
+      "Python basics"
+    ],
+    "skills_gained": [
+      "TensorFlow",
+      "NumPy",
+      "Pandas",
+      "Matplotlib",
+      "Machine learning algorithms"
+    ],
+    "tags": [
+      "machine learning",
+      "python",
+      "tensorflow",
+      "ai"
+    ],
+    "free": true
   },
   {
     "id": "course-036",
@@ -463,9 +966,23 @@
     "description": "Analyze real-world datasets using Python. Covers Pandas, NumPy, Matplotlib, and data cleaning, import, and preparation techniques.",
     "duration": "5 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics"],
-    "skills_gained": ["Pandas", "NumPy", "Matplotlib", "Data cleaning", "Statistical analysis"],
-    "tags": ["data analysis", "python", "pandas", "visualization"]
+    "prerequisites": [
+      "Python basics"
+    ],
+    "skills_gained": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Data cleaning",
+      "Statistical analysis"
+    ],
+    "tags": [
+      "data analysis",
+      "python",
+      "pandas",
+      "visualization"
+    ],
+    "free": true
   },
   {
     "id": "course-037",
@@ -476,9 +993,23 @@
     "description": "Learn TensorFlow from scratch. Build and train neural networks, work with tensors, and deploy ML models for various applications.",
     "duration": "4 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics"],
-    "skills_gained": ["TensorFlow", "Neural networks", "Tensors", "Model training", "Deep learning"],
-    "tags": ["tensorflow", "deep learning", "ai", "python"]
+    "prerequisites": [
+      "Python basics"
+    ],
+    "skills_gained": [
+      "TensorFlow",
+      "Neural networks",
+      "Tensors",
+      "Model training",
+      "Deep learning"
+    ],
+    "tags": [
+      "tensorflow",
+      "deep learning",
+      "ai",
+      "python"
+    ],
+    "free": true
   },
   {
     "id": "course-038",
@@ -489,9 +1020,23 @@
     "description": "Master NumPy for numerical computing in Python. Covers arrays, broadcasting, linear algebra, and performance optimization techniques.",
     "duration": "3 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics"],
-    "skills_gained": ["NumPy", "Arrays", "Broadcasting", "Linear algebra", "Performance optimization"],
-    "tags": ["numpy", "python", "data science", "numerical computing"]
+    "prerequisites": [
+      "Python basics"
+    ],
+    "skills_gained": [
+      "NumPy",
+      "Arrays",
+      "Broadcasting",
+      "Linear algebra",
+      "Performance optimization"
+    ],
+    "tags": [
+      "numpy",
+      "python",
+      "data science",
+      "numerical computing"
+    ],
+    "free": true
   },
   {
     "id": "course-039",
@@ -502,9 +1047,24 @@
     "description": "Learn Pandas for data manipulation and analysis in Python. Covers DataFrames, Series, groupby, merging, and time series operations.",
     "duration": "3 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics", "NumPy basics"],
-    "skills_gained": ["Pandas", "DataFrames", "Series", "Data manipulation", "Time series"],
-    "tags": ["pandas", "python", "data science", "analysis"]
+    "prerequisites": [
+      "Python basics",
+      "NumPy basics"
+    ],
+    "skills_gained": [
+      "Pandas",
+      "DataFrames",
+      "Series",
+      "Data manipulation",
+      "Time series"
+    ],
+    "tags": [
+      "pandas",
+      "python",
+      "data science",
+      "analysis"
+    ],
+    "free": true
   },
   {
     "id": "course-040",
@@ -516,8 +1076,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Power BI", "Data modeling", "DAX", "Dashboard design", "Report creation"],
-    "tags": ["power bi", "data visualization", "business intelligence", "reporting"]
+    "skills_gained": [
+      "Power BI",
+      "Data modeling",
+      "DAX",
+      "Dashboard design",
+      "Report creation"
+    ],
+    "tags": [
+      "power bi",
+      "data visualization",
+      "business intelligence",
+      "reporting"
+    ],
+    "free": true
   },
   {
     "id": "course-041",
@@ -529,8 +1101,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["SQL", "Queries", "Joins", "Aggregation", "Data analysis"],
-    "tags": ["sql", "data science", "database", "queries"]
+    "skills_gained": [
+      "SQL",
+      "Queries",
+      "Joins",
+      "Aggregation",
+      "Data analysis"
+    ],
+    "tags": [
+      "sql",
+      "data science",
+      "database",
+      "queries"
+    ],
+    "free": false
   },
   {
     "id": "course-042",
@@ -542,8 +1126,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["MongoDB", "Document databases", "CRUD", "Indexing", "Aggregation"],
-    "tags": ["mongodb", "nosql", "database", "document store"]
+    "skills_gained": [
+      "MongoDB",
+      "Document databases",
+      "CRUD",
+      "Indexing",
+      "Aggregation"
+    ],
+    "tags": [
+      "mongodb",
+      "nosql",
+      "database",
+      "document store"
+    ],
+    "free": true
   },
   {
     "id": "course-043",
@@ -555,8 +1151,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Redis", "Key-value store", "Data structures", "Caching", "Real-time data"],
-    "tags": ["redis", "nosql", "caching", "data structures"]
+    "skills_gained": [
+      "Redis",
+      "Key-value store",
+      "Data structures",
+      "Caching",
+      "Real-time data"
+    ],
+    "tags": [
+      "redis",
+      "nosql",
+      "caching",
+      "data structures"
+    ],
+    "free": true
   },
   {
     "id": "course-044",
@@ -568,8 +1176,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["GitHub", "Repositories", "Branching", "Pull requests", "Collaboration"],
-    "tags": ["github", "version control", "collaboration", "devops"]
+    "skills_gained": [
+      "GitHub",
+      "Repositories",
+      "Branching",
+      "Pull requests",
+      "Collaboration"
+    ],
+    "tags": [
+      "github",
+      "version control",
+      "collaboration",
+      "devops"
+    ],
+    "free": true
   },
   {
     "id": "course-045",
@@ -581,8 +1201,20 @@
     "duration": "2 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Git", "Commits", "Branches", "Merging", "Conflict resolution"],
-    "tags": ["git", "version control", "fundamentals", "devops"]
+    "skills_gained": [
+      "Git",
+      "Commits",
+      "Branches",
+      "Merging",
+      "Conflict resolution"
+    ],
+    "tags": [
+      "git",
+      "version control",
+      "fundamentals",
+      "devops"
+    ],
+    "free": true
   },
   {
     "id": "course-046",
@@ -594,8 +1226,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Azure", "Cloud concepts", "Core services", "Pricing models", "Governance"],
-    "tags": ["azure", "cloud", "microsoft", "certification"]
+    "skills_gained": [
+      "Azure",
+      "Cloud concepts",
+      "Core services",
+      "Pricing models",
+      "Governance"
+    ],
+    "tags": [
+      "azure",
+      "cloud",
+      "microsoft",
+      "certification"
+    ],
+    "free": true
   },
   {
     "id": "course-047",
@@ -607,8 +1251,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Azure AI", "Machine learning", "Computer vision", "NLP", "AI workloads"],
-    "tags": ["azure", "ai", "cloud", "machine learning"]
+    "skills_gained": [
+      "Azure AI",
+      "Machine learning",
+      "Computer vision",
+      "NLP",
+      "AI workloads"
+    ],
+    "tags": [
+      "azure",
+      "ai",
+      "cloud",
+      "machine learning"
+    ],
+    "free": true
   },
   {
     "id": "course-048",
@@ -620,8 +1276,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Azure data", "Relational databases", "Non-relational databases", "Analytics", "Data visualization"],
-    "tags": ["azure", "data", "cloud", "databases"]
+    "skills_gained": [
+      "Azure data",
+      "Relational databases",
+      "Non-relational databases",
+      "Analytics",
+      "Data visualization"
+    ],
+    "tags": [
+      "azure",
+      "data",
+      "cloud",
+      "databases"
+    ],
+    "free": true
   },
   {
     "id": "course-049",
@@ -633,8 +1301,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Docker", "Containers", "Dockerfiles", "Volumes", "Docker Compose"],
-    "tags": ["docker", "containers", "devops", "infrastructure"]
+    "skills_gained": [
+      "Docker",
+      "Containers",
+      "Dockerfiles",
+      "Volumes",
+      "Docker Compose"
+    ],
+    "tags": [
+      "docker",
+      "containers",
+      "devops",
+      "infrastructure"
+    ],
+    "free": false
   },
   {
     "id": "course-050",
@@ -645,9 +1325,23 @@
     "description": "Official Kubernetes interactive tutorials. Learn pods, deployments, services, scaling, and how to deploy containerized applications.",
     "duration": "3 weeks",
     "level": "Beginner",
-    "prerequisites": ["Docker basics"],
-    "skills_gained": ["Kubernetes", "Pods", "Deployments", "Services", "Scaling"],
-    "tags": ["kubernetes", "orchestration", "devops", "cloud native"]
+    "prerequisites": [
+      "Docker basics"
+    ],
+    "skills_gained": [
+      "Kubernetes",
+      "Pods",
+      "Deployments",
+      "Services",
+      "Scaling"
+    ],
+    "tags": [
+      "kubernetes",
+      "orchestration",
+      "devops",
+      "cloud native"
+    ],
+    "free": true
   },
   {
     "id": "course-051",
@@ -659,8 +1353,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Linux", "Command line", "File permissions", "Networking", "Shell scripting"],
-    "tags": ["linux", "command line", "operating system", "fundamentals"]
+    "skills_gained": [
+      "Linux",
+      "Command line",
+      "File permissions",
+      "Networking",
+      "Shell scripting"
+    ],
+    "tags": [
+      "linux",
+      "command line",
+      "operating system",
+      "fundamentals"
+    ],
+    "free": true
   },
   {
     "id": "course-052",
@@ -672,8 +1378,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Linux", "Command line", "File systems", "Process management", "System administration"],
-    "tags": ["linux", "operating system", "fundamentals", "system admin"]
+    "skills_gained": [
+      "Linux",
+      "Command line",
+      "File systems",
+      "Process management",
+      "System administration"
+    ],
+    "tags": [
+      "linux",
+      "operating system",
+      "fundamentals",
+      "system admin"
+    ],
+    "free": true
   },
   {
     "id": "course-053",
@@ -685,8 +1403,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["AI fundamentals", "Prompt engineering", "Responsible AI", "AI tools", "Generative AI"],
-    "tags": ["ai", "google", "fundamentals", "generative ai"]
+    "skills_gained": [
+      "AI fundamentals",
+      "Prompt engineering",
+      "Responsible AI",
+      "AI tools",
+      "Generative AI"
+    ],
+    "tags": [
+      "ai",
+      "google",
+      "fundamentals",
+      "generative ai"
+    ],
+    "free": false
   },
   {
     "id": "course-054",
@@ -698,8 +1428,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Prompt engineering", "LLMs", "ChatGPT", "Chain-of-thought", "AI communication"],
-    "tags": ["prompt engineering", "chatgpt", "ai", "llm"]
+    "skills_gained": [
+      "Prompt engineering",
+      "LLMs",
+      "ChatGPT",
+      "Chain-of-thought",
+      "AI communication"
+    ],
+    "tags": [
+      "prompt engineering",
+      "chatgpt",
+      "ai",
+      "llm"
+    ],
+    "free": false
   },
   {
     "id": "course-055",
@@ -711,8 +1453,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Generative AI", "LLMs", "GANs", "Diffusion models", "AI applications"],
-    "tags": ["generative ai", "ai", "llm", "ibm"]
+    "skills_gained": [
+      "Generative AI",
+      "LLMs",
+      "GANs",
+      "Diffusion models",
+      "AI applications"
+    ],
+    "tags": [
+      "generative ai",
+      "ai",
+      "llm",
+      "ibm"
+    ],
+    "free": true
   },
   {
     "id": "course-056",
@@ -723,9 +1477,24 @@
     "description": "Learn to build and deploy AI-powered applications. Covers AI engineering principles, model integration, APIs, and production-ready AI systems.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "API basics"],
-    "skills_gained": ["AI engineering", "Model deployment", "API integration", "Python", "Production systems"],
-    "tags": ["ai", "engineering", "deployment", "ibm"]
+    "prerequisites": [
+      "Python basics",
+      "API basics"
+    ],
+    "skills_gained": [
+      "AI engineering",
+      "Model deployment",
+      "API integration",
+      "Python",
+      "Production systems"
+    ],
+    "tags": [
+      "ai",
+      "engineering",
+      "deployment",
+      "ibm"
+    ],
+    "free": true
   },
   {
     "id": "course-057",
@@ -737,8 +1506,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Cybersecurity", "Threat analysis", "Network defense", "Vulnerability assessment", "Security operations"],
-    "tags": ["cybersecurity", "network security", "defense", "cisco"]
+    "skills_gained": [
+      "Cybersecurity",
+      "Threat analysis",
+      "Network defense",
+      "Vulnerability assessment",
+      "Security operations"
+    ],
+    "tags": [
+      "cybersecurity",
+      "network security",
+      "defense",
+      "cisco"
+    ],
+    "free": true
   },
   {
     "id": "course-058",
@@ -750,8 +1531,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Networking", "IP addressing", "Protocols", "Network devices", "OSI model"],
-    "tags": ["networking", "cisco", "fundamentals", "infrastructure"]
+    "skills_gained": [
+      "Networking",
+      "IP addressing",
+      "Protocols",
+      "Network devices",
+      "OSI model"
+    ],
+    "tags": [
+      "networking",
+      "cisco",
+      "fundamentals",
+      "infrastructure"
+    ],
+    "free": true
   },
   {
     "id": "course-059",
@@ -762,9 +1555,24 @@
     "description": "Introduction to ethical hacking. Learn penetration testing methodologies, security tools, and how to identify and report vulnerabilities.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Networking basics", "Operating system basics"],
-    "skills_gained": ["Ethical hacking", "Penetration testing", "Security tools", "Vulnerability reporting", "Reconnaissance"],
-    "tags": ["ethical hacking", "cybersecurity", "penetration testing", "cisco"]
+    "prerequisites": [
+      "Networking basics",
+      "Operating system basics"
+    ],
+    "skills_gained": [
+      "Ethical hacking",
+      "Penetration testing",
+      "Security tools",
+      "Vulnerability reporting",
+      "Reconnaissance"
+    ],
+    "tags": [
+      "ethical hacking",
+      "cybersecurity",
+      "penetration testing",
+      "cisco"
+    ],
+    "free": true
   },
   {
     "id": "course-060",
@@ -776,8 +1584,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Packet Tracer", "Network simulation", "Router configuration", "Switch configuration", "Troubleshooting"],
-    "tags": ["packet tracer", "networking", "cisco", "simulation"]
+    "skills_gained": [
+      "Packet Tracer",
+      "Network simulation",
+      "Router configuration",
+      "Switch configuration",
+      "Troubleshooting"
+    ],
+    "tags": [
+      "packet tracer",
+      "networking",
+      "cisco",
+      "simulation"
+    ],
+    "free": true
   },
   {
     "id": "course-061",
@@ -789,8 +1609,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["DevOps", "CI/CD", "Infrastructure as code", "Automation", "Monitoring"],
-    "tags": ["devops", "ci/cd", "automation", "ibm"]
+    "skills_gained": [
+      "DevOps",
+      "CI/CD",
+      "Infrastructure as code",
+      "Automation",
+      "Monitoring"
+    ],
+    "tags": [
+      "devops",
+      "ci/cd",
+      "automation",
+      "ibm"
+    ],
+    "free": true
   },
   {
     "id": "course-062",
@@ -802,8 +1634,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Cloud computing", "IaaS", "PaaS", "SaaS", "Virtualization"],
-    "tags": ["cloud", "fundamentals", "ibm", "infrastructure"]
+    "skills_gained": [
+      "Cloud computing",
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "Virtualization"
+    ],
+    "tags": [
+      "cloud",
+      "fundamentals",
+      "ibm",
+      "infrastructure"
+    ],
+    "free": true
   },
   {
     "id": "course-063",
@@ -815,8 +1659,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Data science", "Data lifecycle", "Statistical analysis", "Data visualization", "Python"],
-    "tags": ["data science", "foundations", "ibm", "python"]
+    "skills_gained": [
+      "Data science",
+      "Data lifecycle",
+      "Statistical analysis",
+      "Data visualization",
+      "Python"
+    ],
+    "tags": [
+      "data science",
+      "foundations",
+      "ibm",
+      "python"
+    ],
+    "free": true
   },
   {
     "id": "course-064",
@@ -827,9 +1683,24 @@
     "description": "Learn NLP with Hugging Face transformers. Fine-tune pre-trained models for text classification, named entity recognition, and question answering.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python", "Deep learning basics"],
-    "skills_gained": ["Transformers", "Hugging Face", "NLP", "Fine-tuning", "Text classification"],
-    "tags": ["nlp", "hugging face", "transformers", "ai"]
+    "prerequisites": [
+      "Python",
+      "Deep learning basics"
+    ],
+    "skills_gained": [
+      "Transformers",
+      "Hugging Face",
+      "NLP",
+      "Fine-tuning",
+      "Text classification"
+    ],
+    "tags": [
+      "nlp",
+      "hugging face",
+      "transformers",
+      "ai"
+    ],
+    "free": true
   },
   {
     "id": "course-065",
@@ -840,9 +1711,25 @@
     "description": "Master large language models. Learn LLM architecture, prompt engineering, fine-tuning, RLHF, quantization, and building LLM-powered applications.",
     "duration": "8 weeks",
     "level": "Advanced",
-    "prerequisites": ["Python", "NLP basics", "Deep learning fundamentals"],
-    "skills_gained": ["LLMs", "Prompt engineering", "RLHF", "Fine-tuning", "Quantization"],
-    "tags": ["llm", "hugging face", "generative ai", "deep learning"]
+    "prerequisites": [
+      "Python",
+      "NLP basics",
+      "Deep learning fundamentals"
+    ],
+    "skills_gained": [
+      "LLMs",
+      "Prompt engineering",
+      "RLHF",
+      "Fine-tuning",
+      "Quantization"
+    ],
+    "tags": [
+      "llm",
+      "hugging face",
+      "generative ai",
+      "deep learning"
+    ],
+    "free": true
   },
   {
     "id": "course-066",
@@ -853,9 +1740,25 @@
     "description": "Learn deep reinforcement learning. Master Q-learning, policy gradients, PPO, and multi-agent RL through hands-on coding assignments.",
     "duration": "10 weeks",
     "level": "Advanced",
-    "prerequisites": ["Python", "Machine learning basics", "Deep learning"],
-    "skills_gained": ["Reinforcement learning", "Q-learning", "PPO", "Policy gradients", "OpenAI Gym"],
-    "tags": ["reinforcement learning", "hugging face", "deep learning", "ai"]
+    "prerequisites": [
+      "Python",
+      "Machine learning basics",
+      "Deep learning"
+    ],
+    "skills_gained": [
+      "Reinforcement learning",
+      "Q-learning",
+      "PPO",
+      "Policy gradients",
+      "OpenAI Gym"
+    ],
+    "tags": [
+      "reinforcement learning",
+      "hugging face",
+      "deep learning",
+      "ai"
+    ],
+    "free": true
   },
   {
     "id": "course-067",
@@ -867,8 +1770,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Google Cloud", "Compute Engine", "Cloud Storage", "Cloud Networking", "Resource management"],
-    "tags": ["google cloud", "cloud", "fundamentals", "gcp"]
+    "skills_gained": [
+      "Google Cloud",
+      "Compute Engine",
+      "Cloud Storage",
+      "Cloud Networking",
+      "Resource management"
+    ],
+    "tags": [
+      "google cloud",
+      "cloud",
+      "fundamentals",
+      "gcp"
+    ],
+    "free": true
   },
   {
     "id": "course-068",
@@ -879,9 +1794,24 @@
     "description": "Learn to build, deploy, and manage ML models on Google Cloud Vertex AI. Covers AutoML, custom training, and model monitoring.",
     "duration": "4 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Basic ML concepts", "Python basics"],
-    "skills_gained": ["Vertex AI", "AutoML", "Model deployment", "Feature engineering", "Model monitoring"],
-    "tags": ["vertex ai", "google cloud", "machine learning", "mlops"]
+    "prerequisites": [
+      "Basic ML concepts",
+      "Python basics"
+    ],
+    "skills_gained": [
+      "Vertex AI",
+      "AutoML",
+      "Model deployment",
+      "Feature engineering",
+      "Model monitoring"
+    ],
+    "tags": [
+      "vertex ai",
+      "google cloud",
+      "machine learning",
+      "mlops"
+    ],
+    "free": true
   },
   {
     "id": "course-069",
@@ -892,9 +1822,24 @@
     "description": "Build data pipelines on Google Cloud. Learn BigQuery, Dataflow, Pub/Sub, and how to design scalable data processing architectures.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["SQL basics", "Python basics"],
-    "skills_gained": ["BigQuery", "Dataflow", "Pub/Sub", "Data pipelines", "Cloud data engineering"],
-    "tags": ["data engineering", "google cloud", "bigquery", "data pipelines"]
+    "prerequisites": [
+      "SQL basics",
+      "Python basics"
+    ],
+    "skills_gained": [
+      "BigQuery",
+      "Dataflow",
+      "Pub/Sub",
+      "Data pipelines",
+      "Cloud data engineering"
+    ],
+    "tags": [
+      "data engineering",
+      "google cloud",
+      "bigquery",
+      "data pipelines"
+    ],
+    "free": true
   },
   {
     "id": "course-070",
@@ -905,9 +1850,24 @@
     "description": "Google's fast-paced introduction to machine learning. Covers linear regression, neural networks, classification, overfitting, and ML best practices.",
     "duration": "4 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics", "High school math"],
-    "skills_gained": ["Machine learning", "Linear regression", "Neural networks", "Classification", "Overfitting"],
-    "tags": ["machine learning", "google", "crash course", "fundamentals"]
+    "prerequisites": [
+      "Python basics",
+      "High school math"
+    ],
+    "skills_gained": [
+      "Machine learning",
+      "Linear regression",
+      "Neural networks",
+      "Classification",
+      "Overfitting"
+    ],
+    "tags": [
+      "machine learning",
+      "google",
+      "crash course",
+      "fundamentals"
+    ],
+    "free": true
   },
   {
     "id": "course-071",
@@ -918,9 +1878,24 @@
     "description": "Learn web accessibility standards and best practices. Understand WCAG guidelines, ARIA roles, semantic HTML, and inclusive design patterns.",
     "duration": "3 weeks",
     "level": "Beginner",
-    "prerequisites": ["HTML basics", "CSS basics"],
-    "skills_gained": ["Accessibility", "WCAG", "ARIA", "Semantic HTML", "Inclusive design"],
-    "tags": ["accessibility", "web", "wcag", "inclusive design"]
+    "prerequisites": [
+      "HTML basics",
+      "CSS basics"
+    ],
+    "skills_gained": [
+      "Accessibility",
+      "WCAG",
+      "ARIA",
+      "Semantic HTML",
+      "Inclusive design"
+    ],
+    "tags": [
+      "accessibility",
+      "web",
+      "wcag",
+      "inclusive design"
+    ],
+    "free": true
   },
   {
     "id": "course-072",
@@ -932,8 +1907,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["AI safety", "Constitutional AI", "AI alignment", "Responsible AI", "Claude"],
-    "tags": ["ai", "anthropic", "safety", "responsible ai"]
+    "skills_gained": [
+      "AI safety",
+      "Constitutional AI",
+      "AI alignment",
+      "Responsible AI",
+      "Claude"
+    ],
+    "tags": [
+      "ai",
+      "anthropic",
+      "safety",
+      "responsible ai"
+    ],
+    "free": true
   },
   {
     "id": "course-073",
@@ -945,8 +1932,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["GPT", "Prompt engineering", "OpenAI API", "LLM applications", "AI development"],
-    "tags": ["openai", "gpt", "api", "prompt engineering"]
+    "skills_gained": [
+      "GPT",
+      "Prompt engineering",
+      "OpenAI API",
+      "LLM applications",
+      "AI development"
+    ],
+    "tags": [
+      "openai",
+      "gpt",
+      "api",
+      "prompt engineering"
+    ],
+    "free": true
   },
   {
     "id": "course-074",
@@ -958,8 +1957,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["AI fundamentals", "TensorFlow", "Machine learning", "Google Cloud AI", "Career development"],
-    "tags": ["google", "ai", "tensorflow", "career"]
+    "skills_gained": [
+      "AI fundamentals",
+      "TensorFlow",
+      "Machine learning",
+      "Google Cloud AI",
+      "Career development"
+    ],
+    "tags": [
+      "google",
+      "ai",
+      "tensorflow",
+      "career"
+    ],
+    "free": true
   },
   {
     "id": "course-075",
@@ -970,9 +1981,24 @@
     "description": "Meta's AI educational resources. Learn about PyTorch, computer vision, NLP, and AI research from Meta's AI team.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "ML fundamentals"],
-    "skills_gained": ["PyTorch", "Computer vision", "NLP", "AI research", "Meta AI"],
-    "tags": ["meta", "ai", "pytorch", "research"]
+    "prerequisites": [
+      "Python basics",
+      "ML fundamentals"
+    ],
+    "skills_gained": [
+      "PyTorch",
+      "Computer vision",
+      "NLP",
+      "AI research",
+      "Meta AI"
+    ],
+    "tags": [
+      "meta",
+      "ai",
+      "pytorch",
+      "research"
+    ],
+    "free": true
   },
   {
     "id": "course-076",
@@ -983,9 +2009,24 @@
     "description": "NVIDIA's developer training programs. Master GPU computing, CUDA, deep learning, and AI acceleration with hands-on labs and certification paths.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "ML fundamentals"],
-    "skills_gained": ["CUDA", "GPU computing", "Deep learning", "AI acceleration", "NVIDIA platforms"],
-    "tags": ["nvidia", "gpu", "cuda", "deep learning"]
+    "prerequisites": [
+      "Python basics",
+      "ML fundamentals"
+    ],
+    "skills_gained": [
+      "CUDA",
+      "GPU computing",
+      "Deep learning",
+      "AI acceleration",
+      "NVIDIA platforms"
+    ],
+    "tags": [
+      "nvidia",
+      "gpu",
+      "cuda",
+      "deep learning"
+    ],
+    "free": true
   },
   {
     "id": "course-077",
@@ -997,8 +2038,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Azure AI", "Copilot", "Responsible AI", "Intelligent apps", "Microsoft platforms"],
-    "tags": ["microsoft", "ai", "azure", "copilot"]
+    "skills_gained": [
+      "Azure AI",
+      "Copilot",
+      "Responsible AI",
+      "Intelligent apps",
+      "Microsoft platforms"
+    ],
+    "tags": [
+      "microsoft",
+      "ai",
+      "azure",
+      "copilot"
+    ],
+    "free": true
   },
   {
     "id": "course-078",
@@ -1010,8 +2063,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Generative AI", "Machine learning", "NLP", "AI ethics", "IBM Watson"],
-    "tags": ["ibm", "ai", "skillsbuild", "watson"]
+    "skills_gained": [
+      "Generative AI",
+      "Machine learning",
+      "NLP",
+      "AI ethics",
+      "IBM Watson"
+    ],
+    "tags": [
+      "ibm",
+      "ai",
+      "skillsbuild",
+      "watson"
+    ],
+    "free": true
   },
   {
     "id": "course-079",
@@ -1022,9 +2087,24 @@
     "description": "AWS's AI learning platform. Master Amazon Bedrock, SageMaker, AI/ML services, and building scalable AI solutions on AWS cloud.",
     "duration": "6 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Cloud basics", "Python basics"],
-    "skills_gained": ["Amazon Bedrock", "SageMaker", "AWS AI services", "MLOps", "Cloud AI"],
-    "tags": ["aws", "ai", "bedrock", "sagemaker"]
+    "prerequisites": [
+      "Cloud basics",
+      "Python basics"
+    ],
+    "skills_gained": [
+      "Amazon Bedrock",
+      "SageMaker",
+      "AWS AI services",
+      "MLOps",
+      "Cloud AI"
+    ],
+    "tags": [
+      "aws",
+      "ai",
+      "bedrock",
+      "sagemaker"
+    ],
+    "free": false
   },
   {
     "id": "course-080",
@@ -1036,8 +2116,20 @@
     "duration": "8 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Deep learning", "Generative AI", "MLOps", "TensorFlow", "AI strategy"],
-    "tags": ["deeplearning.ai", "andrew ng", "deep learning", "ai"]
+    "skills_gained": [
+      "Deep learning",
+      "Generative AI",
+      "MLOps",
+      "TensorFlow",
+      "AI strategy"
+    ],
+    "tags": [
+      "deeplearning.ai",
+      "andrew ng",
+      "deep learning",
+      "ai"
+    ],
+    "free": true
   },
   {
     "id": "course-081",
@@ -1048,9 +2140,24 @@
     "description": "Hugging Face's comprehensive AI courses. Master transformers, NLP, deep reinforcement learning, LLMs, and building AI-powered applications.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "ML fundamentals"],
-    "skills_gained": ["Transformers", "NLP", "Deep RL", "LLMs", "Hugging Face ecosystem"],
-    "tags": ["hugging face", "transformers", "nlp", "llm"]
+    "prerequisites": [
+      "Python basics",
+      "ML fundamentals"
+    ],
+    "skills_gained": [
+      "Transformers",
+      "NLP",
+      "Deep RL",
+      "LLMs",
+      "Hugging Face ecosystem"
+    ],
+    "tags": [
+      "hugging face",
+      "transformers",
+      "nlp",
+      "llm"
+    ],
+    "free": true
   },
   {
     "id": "course-082",
@@ -1062,8 +2169,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Python", "Pandas", "NumPy", "Web scraping", "REST APIs"],
-    "tags": ["python", "data science", "ibm", "programming"]
+    "skills_gained": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Web scraping",
+      "REST APIs"
+    ],
+    "tags": [
+      "python",
+      "data science",
+      "ibm",
+      "programming"
+    ],
+    "free": false
   },
   {
     "id": "course-083",
@@ -1075,8 +2194,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["SQL", "Queries", "Joins", "Window functions", "Database management"],
-    "tags": ["sql", "database", "analytics", "edx"]
+    "skills_gained": [
+      "SQL",
+      "Queries",
+      "Joins",
+      "Window functions",
+      "Database management"
+    ],
+    "tags": [
+      "sql",
+      "database",
+      "analytics",
+      "edx"
+    ],
+    "free": true
   },
   {
     "id": "course-084",
@@ -1088,8 +2219,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Statistics", "R programming", "Probability", "Hypothesis testing", "Confidence intervals"],
-    "tags": ["statistics", "r", "probability", "data science"]
+    "skills_gained": [
+      "Statistics",
+      "R programming",
+      "Probability",
+      "Hypothesis testing",
+      "Confidence intervals"
+    ],
+    "tags": [
+      "statistics",
+      "r",
+      "probability",
+      "data science"
+    ],
+    "free": true
   },
   {
     "id": "course-085",
@@ -1101,8 +2244,20 @@
     "duration": "8 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["R programming", "Data wrangling", "dplyr", "ggplot2", "Data visualization"],
-    "tags": ["r", "harvard", "data science", "visualization"]
+    "skills_gained": [
+      "R programming",
+      "Data wrangling",
+      "dplyr",
+      "ggplot2",
+      "Data visualization"
+    ],
+    "tags": [
+      "r",
+      "harvard",
+      "data science",
+      "visualization"
+    ],
+    "free": true
   },
   {
     "id": "course-086",
@@ -1114,8 +2269,20 @@
     "duration": "5 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Excel", "Power BI", "DAX", "Data modeling", "Dashboard creation"],
-    "tags": ["excel", "power bi", "data analysis", "microsoft"]
+    "skills_gained": [
+      "Excel",
+      "Power BI",
+      "DAX",
+      "Data modeling",
+      "Dashboard creation"
+    ],
+    "tags": [
+      "excel",
+      "power bi",
+      "data analysis",
+      "microsoft"
+    ],
+    "free": true
   },
   {
     "id": "course-087",
@@ -1126,9 +2293,23 @@
     "description": "Harvard's data visualization course. Learn visualization principles, ggplot2, and how to communicate data-driven findings effectively.",
     "duration": "8 weeks",
     "level": "Beginner",
-    "prerequisites": ["R basics"],
-    "skills_gained": ["Data visualization", "ggplot2", "Exploratory analysis", "Data communication", "R"],
-    "tags": ["visualization", "harvard", "ggplot2", "data science"]
+    "prerequisites": [
+      "R basics"
+    ],
+    "skills_gained": [
+      "Data visualization",
+      "ggplot2",
+      "Exploratory analysis",
+      "Data communication",
+      "R"
+    ],
+    "tags": [
+      "visualization",
+      "harvard",
+      "ggplot2",
+      "data science"
+    ],
+    "free": true
   },
   {
     "id": "course-088",
@@ -1139,9 +2320,24 @@
     "description": "Harvard's machine learning course for data science. Build recommendation systems, learn cross-validation, regularization, and popular ML algorithms.",
     "duration": "8 weeks",
     "level": "Intermediate",
-    "prerequisites": ["R basics", "Statistics basics"],
-    "skills_gained": ["Machine learning", "Cross-validation", "Regularization", "Recommendation systems", "R"],
-    "tags": ["machine learning", "harvard", "data science", "algorithms"]
+    "prerequisites": [
+      "R basics",
+      "Statistics basics"
+    ],
+    "skills_gained": [
+      "Machine learning",
+      "Cross-validation",
+      "Regularization",
+      "Recommendation systems",
+      "R"
+    ],
+    "tags": [
+      "machine learning",
+      "harvard",
+      "data science",
+      "algorithms"
+    ],
+    "free": true
   },
   {
     "id": "course-089",
@@ -1153,8 +2349,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["R programming", "Data structures", "Functions", "Debugging", "Code organization"],
-    "tags": ["r", "programming", "data science", "coursera"]
+    "skills_gained": [
+      "R programming",
+      "Data structures",
+      "Functions",
+      "Debugging",
+      "Code organization"
+    ],
+    "tags": [
+      "r",
+      "programming",
+      "data science",
+      "coursera"
+    ],
+    "free": false
   },
   {
     "id": "course-090",
@@ -1166,8 +2374,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Tableau", "Data visualization", "Dashboard creation", "Data preparation", "Business analytics"],
-    "tags": ["tableau", "visualization", "dashboard", "business intelligence"]
+    "skills_gained": [
+      "Tableau",
+      "Data visualization",
+      "Dashboard creation",
+      "Data preparation",
+      "Business analytics"
+    ],
+    "tags": [
+      "tableau",
+      "visualization",
+      "dashboard",
+      "business intelligence"
+    ],
+    "free": false
   },
   {
     "id": "course-091",
@@ -1178,9 +2398,23 @@
     "description": "Master Power BI for data analysis. Learn data modeling, DAX measures, Power Query, report building, and deployment to the Power BI service.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Basic data concepts"],
-    "skills_gained": ["Power BI", "DAX", "Power Query", "Data modeling", "Report building"],
-    "tags": ["power bi", "microsoft", "data analysis", "reporting"]
+    "prerequisites": [
+      "Basic data concepts"
+    ],
+    "skills_gained": [
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Data modeling",
+      "Report building"
+    ],
+    "tags": [
+      "power bi",
+      "microsoft",
+      "data analysis",
+      "reporting"
+    ],
+    "free": false
   },
   {
     "id": "course-092",
@@ -1192,8 +2426,21 @@
     "duration": "8 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Unix/Linux", "Git", "GitHub", "RStudio", "R Markdown"],
-    "tags": ["productivity", "git", "linux", "harvard", "data science"]
+    "skills_gained": [
+      "Unix/Linux",
+      "Git",
+      "GitHub",
+      "RStudio",
+      "R Markdown"
+    ],
+    "tags": [
+      "productivity",
+      "git",
+      "linux",
+      "harvard",
+      "data science"
+    ],
+    "free": true
   },
   {
     "id": "course-093",
@@ -1204,9 +2451,23 @@
     "description": "Harvard's probability course for data science. Learn random variables, Monte Carlo simulations, expected values, and the Central Limit Theorem.",
     "duration": "8 weeks",
     "level": "Beginner",
-    "prerequisites": ["R basics"],
-    "skills_gained": ["Probability", "Monte Carlo simulation", "Expected values", "Central Limit Theorem", "Statistical inference"],
-    "tags": ["probability", "statistics", "harvard", "data science"]
+    "prerequisites": [
+      "R basics"
+    ],
+    "skills_gained": [
+      "Probability",
+      "Monte Carlo simulation",
+      "Expected values",
+      "Central Limit Theorem",
+      "Statistical inference"
+    ],
+    "tags": [
+      "probability",
+      "statistics",
+      "harvard",
+      "data science"
+    ],
+    "free": true
   },
   {
     "id": "course-094",
@@ -1218,8 +2479,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Linear algebra", "Calculus", "Statistics", "MATLAB", "Machine learning math"],
-    "tags": ["mathematics", "matlab", "linear algebra", "data science"]
+    "skills_gained": [
+      "Linear algebra",
+      "Calculus",
+      "Statistics",
+      "MATLAB",
+      "Machine learning math"
+    ],
+    "tags": [
+      "mathematics",
+      "matlab",
+      "linear algebra",
+      "data science"
+    ],
+    "free": true
   },
   {
     "id": "course-095",
@@ -1231,8 +2504,20 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Statistics", "Probability", "Distributions", "Hypothesis testing", "Sampling"],
-    "tags": ["statistics", "probability", "data science", "great learning"]
+    "skills_gained": [
+      "Statistics",
+      "Probability",
+      "Distributions",
+      "Hypothesis testing",
+      "Sampling"
+    ],
+    "tags": [
+      "statistics",
+      "probability",
+      "data science",
+      "great learning"
+    ],
+    "free": true
   },
   {
     "id": "course-096",
@@ -1243,9 +2528,24 @@
     "description": "IBM's data visualization course with Python. Create charts, maps, and interactive dashboards using Matplotlib, Seaborn, Folium, and Plotly.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "Pandas basics"],
-    "skills_gained": ["Matplotlib", "Seaborn", "Folium", "Plotly", "Dashboard creation"],
-    "tags": ["visualization", "python", "matplotlib", "plotly"]
+    "prerequisites": [
+      "Python basics",
+      "Pandas basics"
+    ],
+    "skills_gained": [
+      "Matplotlib",
+      "Seaborn",
+      "Folium",
+      "Plotly",
+      "Dashboard creation"
+    ],
+    "tags": [
+      "visualization",
+      "python",
+      "matplotlib",
+      "plotly"
+    ],
+    "free": false
   },
   {
     "id": "course-097",
@@ -1256,9 +2556,24 @@
     "description": "Andrew Ng's Machine Learning Specialization by Stanford and DeepLearning.AI. Master supervised learning, neural networks, decision trees, and unsupervised learning.",
     "duration": "10 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics", "High school math"],
-    "skills_gained": ["Machine learning", "Supervised learning", "Neural networks", "Decision trees", "TensorFlow"],
-    "tags": ["machine learning", "andrew ng", "stanford", "deep learning"]
+    "prerequisites": [
+      "Python basics",
+      "High school math"
+    ],
+    "skills_gained": [
+      "Machine learning",
+      "Supervised learning",
+      "Neural networks",
+      "Decision trees",
+      "TensorFlow"
+    ],
+    "tags": [
+      "machine learning",
+      "andrew ng",
+      "stanford",
+      "deep learning"
+    ],
+    "free": false
   },
   {
     "id": "course-098",
@@ -1269,9 +2584,25 @@
     "description": "Andrew Ng's Deep Learning Specialization. Master CNNs, RNNs, LSTMs, Transformers, and build deep learning applications with TensorFlow.",
     "duration": "12 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "Basic linear algebra"],
-    "skills_gained": ["Deep learning", "CNN", "RNN", "LSTM", "Transformers", "TensorFlow"],
-    "tags": ["deep learning", "cnn", "rnn", "tensorflow"]
+    "prerequisites": [
+      "Python basics",
+      "Basic linear algebra"
+    ],
+    "skills_gained": [
+      "Deep learning",
+      "CNN",
+      "RNN",
+      "LSTM",
+      "Transformers",
+      "TensorFlow"
+    ],
+    "tags": [
+      "deep learning",
+      "cnn",
+      "rnn",
+      "tensorflow"
+    ],
+    "free": false
   },
   {
     "id": "course-099",
@@ -1282,9 +2613,23 @@
     "description": "Harvard's linear regression course. Learn to implement linear regression in R, handle confounding, and analyze relationships between variables.",
     "duration": "8 weeks",
     "level": "Beginner",
-    "prerequisites": ["R basics"],
-    "skills_gained": ["Linear regression", "R programming", "Confounding", "Statistical modeling", "Data analysis"],
-    "tags": ["linear regression", "harvard", "statistics", "r"]
+    "prerequisites": [
+      "R basics"
+    ],
+    "skills_gained": [
+      "Linear regression",
+      "R programming",
+      "Confounding",
+      "Statistical modeling",
+      "Data analysis"
+    ],
+    "tags": [
+      "linear regression",
+      "harvard",
+      "statistics",
+      "r"
+    ],
+    "free": true
   },
   {
     "id": "course-100",
@@ -1295,9 +2640,23 @@
     "description": "Harvard's data wrangling course. Learn to import, tidy, and process raw data using R. Cover string processing, web scraping, and text mining.",
     "duration": "8 weeks",
     "level": "Beginner",
-    "prerequisites": ["R basics"],
-    "skills_gained": ["Data wrangling", "Data tidying", "String processing", "Web scraping", "Text mining"],
-    "tags": ["wrangling", "data cleaning", "harvard", "r"]
+    "prerequisites": [
+      "R basics"
+    ],
+    "skills_gained": [
+      "Data wrangling",
+      "Data tidying",
+      "String processing",
+      "Web scraping",
+      "Text mining"
+    ],
+    "tags": [
+      "wrangling",
+      "data cleaning",
+      "harvard",
+      "r"
+    ],
+    "free": true
   },
   {
     "id": "course-101",
@@ -1309,8 +2668,20 @@
     "duration": "6 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Linear algebra", "Vectors", "Matrices", "Eigenvalues", "Linear transformations"],
-    "tags": ["linear algebra", "mathematics", "data science", "edx"]
+    "skills_gained": [
+      "Linear algebra",
+      "Vectors",
+      "Matrices",
+      "Eigenvalues",
+      "Linear transformations"
+    ],
+    "tags": [
+      "linear algebra",
+      "mathematics",
+      "data science",
+      "edx"
+    ],
+    "free": true
   },
   {
     "id": "course-102",
@@ -1322,8 +2693,20 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Probability", "Statistics", "Distributions", "Regression", "Statistical inference"],
-    "tags": ["probability", "statistics", "data science", "great learning"]
+    "skills_gained": [
+      "Probability",
+      "Statistics",
+      "Distributions",
+      "Regression",
+      "Statistical inference"
+    ],
+    "tags": [
+      "probability",
+      "statistics",
+      "data science",
+      "great learning"
+    ],
+    "free": true
   },
   {
     "id": "course-103",
@@ -1334,9 +2717,24 @@
     "description": "Harvard's linear models course. Learn to use R for matrix algebra, linear models, and applications in life sciences and data analysis.",
     "duration": "4 weeks",
     "level": "Intermediate",
-    "prerequisites": ["R basics", "Statistics basics"],
-    "skills_gained": ["Linear models", "Matrix algebra", "R programming", "Statistical computing", "Life sciences"],
-    "tags": ["linear models", "matrix algebra", "harvard", "r"]
+    "prerequisites": [
+      "R basics",
+      "Statistics basics"
+    ],
+    "skills_gained": [
+      "Linear models",
+      "Matrix algebra",
+      "R programming",
+      "Statistical computing",
+      "Life sciences"
+    ],
+    "tags": [
+      "linear models",
+      "matrix algebra",
+      "harvard",
+      "r"
+    ],
+    "free": true
   },
   {
     "id": "course-104",
@@ -1347,9 +2745,23 @@
     "description": "Harvard's data science capstone project. Apply all skills from the Professional Certificate program to a real-world data analysis challenge.",
     "duration": "2 weeks",
     "level": "Intermediate",
-    "prerequisites": ["All Harvard Data Science courses"],
-    "skills_gained": ["Data science", "Capstone project", "Real-world analysis", "Portfolio building", "End-to-end analysis"],
-    "tags": ["capstone", "harvard", "data science", "project"]
+    "prerequisites": [
+      "All Harvard Data Science courses"
+    ],
+    "skills_gained": [
+      "Data science",
+      "Capstone project",
+      "Real-world analysis",
+      "Portfolio building",
+      "End-to-end analysis"
+    ],
+    "tags": [
+      "capstone",
+      "harvard",
+      "data science",
+      "project"
+    ],
+    "free": true
   },
   {
     "id": "course-105",
@@ -1360,9 +2772,23 @@
     "description": "IBM's data analysis course with Python. Master data cleaning, EDA, regression models, and data visualization using Pandas, NumPy, and Scikit-learn.",
     "duration": "5 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics"],
-    "skills_gained": ["Data analysis", "Python", "Pandas", "NumPy", "Scikit-learn"],
-    "tags": ["data analysis", "python", "ibm", "pandas"]
+    "prerequisites": [
+      "Python basics"
+    ],
+    "skills_gained": [
+      "Data analysis",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn"
+    ],
+    "tags": [
+      "data analysis",
+      "python",
+      "ibm",
+      "pandas"
+    ],
+    "free": false
   },
   {
     "id": "course-106",
@@ -1374,8 +2800,21 @@
     "duration": "16 weeks",
     "level": "Beginner",
     "prerequisites": [],
-    "skills_gained": ["Python", "SQL", "Data visualization", "Machine learning", "Jupyter notebooks"],
-    "tags": ["ibm", "data science", "certificate", "python", "sql"]
+    "skills_gained": [
+      "Python",
+      "SQL",
+      "Data visualization",
+      "Machine learning",
+      "Jupyter notebooks"
+    ],
+    "tags": [
+      "ibm",
+      "data science",
+      "certificate",
+      "python",
+      "sql"
+    ],
+    "free": false
   },
   {
     "id": "course-107",
@@ -1386,9 +2825,24 @@
     "description": "First course of the Deep Learning Specialization. Learn to build, train, and apply deep neural networks with TensorFlow by Andrew Ng.",
     "duration": "5 weeks",
     "level": "Intermediate",
-    "prerequisites": ["Python basics", "Basic linear algebra"],
-    "skills_gained": ["Neural networks", "Deep learning", "TensorFlow", "Forward propagation", "Backpropagation"],
-    "tags": ["neural networks", "deep learning", "tensorflow", "andrew ng"]
+    "prerequisites": [
+      "Python basics",
+      "Basic linear algebra"
+    ],
+    "skills_gained": [
+      "Neural networks",
+      "Deep learning",
+      "TensorFlow",
+      "Forward propagation",
+      "Backpropagation"
+    ],
+    "tags": [
+      "neural networks",
+      "deep learning",
+      "tensorflow",
+      "andrew ng"
+    ],
+    "free": false
   },
   {
     "id": "course-108",
@@ -1399,8 +2853,23 @@
     "description": "First course of the Machine Learning Specialization. Build ML models with NumPy and scikit-learn. Master linear regression, logistic regression, and regularization.",
     "duration": "3 weeks",
     "level": "Beginner",
-    "prerequisites": ["Python basics", "High school math"],
-    "skills_gained": ["Linear regression", "Logistic regression", "Regularization", "Scikit-learn", "NumPy"],
-    "tags": ["supervised learning", "regression", "classification", "machine learning"]
+    "prerequisites": [
+      "Python basics",
+      "High school math"
+    ],
+    "skills_gained": [
+      "Linear regression",
+      "Logistic regression",
+      "Regularization",
+      "Scikit-learn",
+      "NumPy"
+    ],
+    "tags": [
+      "supervised learning",
+      "regression",
+      "classification",
+      "machine learning"
+    ],
+    "free": false
   }
 ]

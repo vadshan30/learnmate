@@ -9,11 +9,14 @@ import {
   HiOutlineArrowPath,
   HiOutlineExclamationTriangle,
   HiOutlineSquares2X2,
+  HiOutlineBookmark,
+  HiOutlineSparkles,
 } from 'react-icons/hi2'
 import {
   getResourceCourses,
   getResourceProjects,
   getResourceCertifications,
+  getResourceBooks,
   searchAllResources,
 } from '../services/api'
 import { SkeletonCard } from '../components/common/SkeletonLoader'
@@ -67,6 +70,7 @@ const TABS = [
   { key: 'courses', label: 'Courses', icon: HiOutlineBookOpen },
   { key: 'projects', label: 'Projects', icon: HiOutlineBriefcase },
   { key: 'certifications', label: 'Certifications', icon: HiOutlineAcademicCap },
+  { key: 'books', label: 'Books', icon: HiOutlineBookmark },
 ]
 
 const LEVELS = ['All', 'Beginner', 'Intermediate', 'Advanced']
@@ -86,10 +90,12 @@ const DOMAINS = [
   'Computer Vision',
   'Natural Language Processing',
   'Cloud Computing',
+  'Cloud & AI',
   'DevOps',
   'Cybersecurity',
   'Databases',
   'Database',
+  'Database & Cloud',
   'UI/UX',
   'Mobile Development',
   'Blockchain',
@@ -105,6 +111,11 @@ const DOMAINS = [
   'Operating Systems',
   'Java Development',
   'Project Management',
+  'Digital Marketing',
+  'Marketing',
+  'Professional Skills',
+  'Professional Learning',
+  'Business',
 ]
 const PROVIDERS = [
   'All',
@@ -112,15 +123,19 @@ const PROVIDERS = [
   'Coursera',
   'freeCodeCamp',
   'Great Learning',
+  'Great Learning Academy',
   'Microsoft Learn',
+  'Microsoft',
   'IBM SkillsBuild',
+  'IBM',
   'Cisco Skills for All',
   'Hugging Face',
   'Google Cloud Skills Boost',
   'Google Developers',
+  'Google Digital Garage',
+  'Google',
   'Anthropic',
   'OpenAI',
-  'Google',
   'Meta',
   'NVIDIA',
   'Amazon Web Services',
@@ -139,12 +154,19 @@ const PROVIDERS = [
   'Snowflake',
   'HashiCorp',
   'Salesforce',
-  'IBM',
-  'Microsoft',
+  'HubSpot Academy',
+  'HP LIFE',
+  'OpenLearn',
+  'Alison',
+  'Kaggle',
+  'Simplilearn',
+  'UNICEF',
+  'GoalKicker',
 ]
 
 function getItemType(item) {
   if (item._type) return item._type
+  if (item.category === 'Books' || item.language) return 'book'
   if (item.exam_fee || item.validity || item.official_badge || item.career_roles) return 'certification'
   if (item.skills_covered || item.exam_link) return 'certification'
   if (item.estimated_time) return 'project'
@@ -156,6 +178,7 @@ export default function Resources() {
   const [courses, setCourses] = useState([])
   const [projects, setProjects] = useState([])
   const [certifications, setCertifications] = useState([])
+  const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [tab, setTab] = useState('all')
@@ -166,6 +189,7 @@ export default function Resources() {
   const [domainFilter, setDomainFilter] = useState('All')
   const [providerFilter, setProviderFilter] = useState('All')
   const [sortBy, setSortBy] = useState('default')
+  const [showFreeOnly, setShowFreeOnly] = useState(false)
   const [selectedProject, setSelectedProject] = useState(null)
   const debounceRef = useRef(null)
 
@@ -173,10 +197,11 @@ export default function Resources() {
     setLoading(true)
     setError(null)
     try {
-      const [cRes, pRes, certRes] = await Promise.allSettled([
+      const [cRes, pRes, certRes, bRes] = await Promise.allSettled([
         getResourceCourses(),
         getResourceProjects(),
         getResourceCertifications(),
+        getResourceBooks(),
       ])
 
       if (cRes.status === 'fulfilled') setCourses(cRes.value.data?.data || [])
@@ -185,7 +210,9 @@ export default function Resources() {
 
       if (certRes.status === 'fulfilled') setCertifications(certRes.value.data?.data || [])
 
-      const allFailed = [cRes, pRes, certRes].every((r) => r.status === 'rejected')
+      if (bRes.status === 'fulfilled') setBooks(bRes.value.data?.data || [])
+
+      const allFailed = [cRes, pRes, certRes, bRes].every((r) => r.status === 'rejected')
       if (allFailed) throw new Error('Failed to load resources from the server')
     } catch (e) {
       setError(e.message || 'An unexpected error occurred')
@@ -237,6 +264,7 @@ export default function Resources() {
     setDomainFilter('All')
     setProviderFilter('All')
     setSortBy('default')
+    setShowFreeOnly(false)
     setSelectedProject(null)
   }, [])
 
@@ -244,6 +272,7 @@ export default function Resources() {
     setLevelFilter('All')
     setDomainFilter('All')
     setProviderFilter('All')
+    setShowFreeOnly(false)
     setSearch('')
     setSearchResults(null)
   }, [])
@@ -253,8 +282,9 @@ export default function Resources() {
       ...courses.map((c) => ({ ...c, _type: 'course' })),
       ...projects.map((p) => ({ ...p, _type: 'project' })),
       ...certifications.map((c) => ({ ...c, _type: 'certification' })),
+      ...books.map((b) => ({ ...b, _type: 'book' })),
     ],
-    [courses, projects, certifications]
+    [courses, projects, certifications, books]
   )
 
   const tabItems = useMemo(() => {
@@ -266,13 +296,19 @@ export default function Resources() {
         return projects.map((p) => ({ ...p, _type: 'project' }))
       case 'certifications':
         return certifications.map((c) => ({ ...c, _type: 'certification' }))
+      case 'books':
+        return books.map((b) => ({ ...b, _type: 'book' }))
       default:
         return allItems
     }
-  }, [tab, courses, projects, certifications, allItems, searchResults])
+  }, [tab, courses, projects, certifications, books, allItems, searchResults])
 
   const filtered = useMemo(() => {
     let list = tabItems
+
+    if (showFreeOnly) {
+      list = list.filter((item) => item.free === true)
+    }
 
     if (levelFilter !== 'All') {
       list = list.filter((item) => {
@@ -296,10 +332,10 @@ export default function Resources() {
     }
 
     return sortItems(list, sortBy)
-  }, [tabItems, levelFilter, domainFilter, providerFilter, sortBy])
+  }, [tabItems, showFreeOnly, levelFilter, domainFilter, providerFilter, sortBy])
 
   const hasActiveFilters =
-    levelFilter !== 'All' || domainFilter !== 'All' || providerFilter !== 'All'
+    showFreeOnly || levelFilter !== 'All' || domainFilter !== 'All' || providerFilter !== 'All'
 
   const isInitialLoading = loading
   const isSearching = searching
@@ -315,8 +351,8 @@ export default function Resources() {
             Learning <span className="gradient-text">Resources</span>
           </h1>
           <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
-            Discover {courses.length} courses, {projects.length} projects, and{' '}
-            {certifications.length} certifications
+            Discover {courses.length} courses, {projects.length} projects,{' '}
+            {certifications.length} certifications, and {books.length} free books
           </p>
         </motion.div>
 
@@ -328,12 +364,14 @@ export default function Resources() {
           {TABS.map((t) => {
             const count =
               t.key === 'all'
-                ? courses.length + projects.length + certifications.length
+                ? courses.length + projects.length + certifications.length + books.length
                 : t.key === 'courses'
                   ? courses.length
                   : t.key === 'projects'
                     ? projects.length
-                    : certifications.length
+                    : t.key === 'certifications'
+                      ? certifications.length
+                      : books.length
             return (
               <button
                 key={t.key}
@@ -369,7 +407,7 @@ export default function Resources() {
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search courses, projects, or skills..."
+                placeholder="Search courses, projects, books, or skills..."
                 className="input-field !pl-11 !py-3"
               />
               {isSearching && (
@@ -413,6 +451,17 @@ export default function Resources() {
                   </option>
                 ))}
               </select>
+              <button
+                onClick={() => setShowFreeOnly((prev) => !prev)}
+                className={`flex items-center gap-1.5 px-3 py-2.5 rounded-lg text-sm font-medium transition-all border ${
+                  showFreeOnly
+                    ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700 text-green-700 dark:text-green-300'
+                    : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-green-300 dark:hover:border-green-700'
+                }`}
+              >
+                <HiOutlineSparkles className="w-4 h-4" />
+                Free Only
+              </button>
               {hasActiveFilters && (
                 <button
                   onClick={handleClearFilters}
@@ -438,6 +487,11 @@ export default function Resources() {
           {!isInitialLoading && !isEmpty && (
             <p className="text-sm text-gray-400 dark:text-gray-500">
               Showing {filtered.length} of {tabItems.length} resources
+              {showFreeOnly && (
+                <span className="ml-1 text-green-500 dark:text-green-400 font-medium">
+                  (free only)
+                </span>
+              )}
             </p>
           )}
         </motion.div>
@@ -445,7 +499,7 @@ export default function Resources() {
         {/* Content */}
         <motion.div variants={fadeUp}>
           {isInitialLoading ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <SkeletonCard key={i} />
               ))}
@@ -476,7 +530,9 @@ export default function Resources() {
               <p className="text-gray-500 dark:text-gray-400 text-sm max-w-sm mb-6">
                 {search
                   ? `No results for "${search}". Try different keywords or clear your search.`
-                  : 'No resources match your current filters. Try adjusting them.'}
+                  : showFreeOnly
+                    ? 'No free resources match your current filters. Try adjusting the free filter or other filters.'
+                    : 'No resources match your current filters. Try adjusting them.'}
               </p>
               <button onClick={handleClearFilters} className="btn-secondary text-sm">
                 {search ? 'Clear Search' : 'Clear Filters'}
@@ -484,11 +540,11 @@ export default function Resources() {
             </div>
           ) : (
             <motion.div
-              key={`${tab}-${search}-${levelFilter}-${domainFilter}-${providerFilter}`}
+              key={`${tab}-${search}-${showFreeOnly}-${levelFilter}-${domainFilter}-${providerFilter}`}
               variants={stagger}
               initial="hidden"
               animate="visible"
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
             >
               {filtered.map((item, i) => (
                 <ResourceCard

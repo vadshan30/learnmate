@@ -12,11 +12,11 @@ build/
 venv/
 env/
 .venv/
-.env.local
 
 # IDE
 .vscode/
 .idea/
+*.iml
 *.swp
 *.swo
 *~
@@ -27,16 +27,22 @@ Thumbs.db
 
 # Environment files
 .env
-.env.local
-.env.production
+.env.*
+!.env.example
 
 # Docker
 docker-compose.override.yml
 
 # Data / Databases
-data/chroma_db/
-data/faiss_index/
+**/data/chroma_db/
+**/data/faiss_index/
+backend/data/*.db
+backend/data/*.db-shm
+backend/data/*.db-wal
+backend/data/*.sqlite
 *.db
+*.db-shm
+*.db-wal
 *.sqlite3
 
 # Logs
@@ -49,10 +55,11 @@ frontend/dist/
 frontend/build/
 frontend/.next/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Testing
+# Coverage / Testing
+coverage/
 .coverage
 htmlcov/
 .pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/

@@ -10,6 +10,7 @@ import {
   HiOutlineDocumentText,
   HiOutlinePlus,
   HiOutlineCheckCircle,
+  HiOutlineBookmark,
 } from 'react-icons/hi2'
 import toast from 'react-hot-toast'
 
@@ -35,6 +36,12 @@ const typeConfig = {
     icon: HiOutlineAcademicCap,
     label: 'Certification',
     primaryAction: { label: 'View Certification', emoji: '\uD83C\uDFC5' },
+  },
+  book: {
+    gradient: 'from-amber-500 to-orange-600',
+    icon: HiOutlineBookmark,
+    label: 'Book',
+    primaryAction: { label: 'Open Book', emoji: '\uD83D\uDCD8' },
   },
 }
 
@@ -120,6 +127,11 @@ export default function ResourceCard({ item, type = 'course', showType = false, 
           {levelStr && (
             <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${getLevelBadgeClasses(levelStr)}`}>
               {levelStr}
+            </span>
+          )}
+          {item.free && (
+            <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-green-500/90 text-white">
+              FREE
             </span>
           )}
         </div>

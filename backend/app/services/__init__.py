@@ -1,19 +1,18 @@
 """Services package for LearnMate AI.
 
-Exposes the IBM Granite LLM service, the ChromaDB RAG service,
-the Skill Gap Analyzer, and the Roadmap Generator as importable
-singletons for use throughout the application.
+Exposes the Google Gemini AI service, the ChromaDB RAG service,
+the Skill Gap Analyzer, the Roadmap Generator, and the AI Mentor
+Service as importable singletons for use throughout the application.
 
 Optional AI dependencies (chromadb, sentence-transformers,
-ibm-watsonx-ai) are imported lazily.  The application starts
+google-genai) are imported lazily. The application starts
 successfully even when these packages are missing.
 """
 
-from app.services.granite_service import (
+from app.services.gemini_service import (
     generate_response,
     generate_roadmap,
-    granite_available,
-    mentor_chat,
+    gemini_available,
 )
 from app.services.rag_service import rag_service, RAG_AVAILABLE
 from app.services.skill_analyzer import (
@@ -27,18 +26,13 @@ from app.services.roadmap_generator import (
     generate_roadmap as generate_personalised_roadmap,
     update_roadmap,
 )
-from app.services.prompt_templates import (
-    build_roadmap_prompt,
-    build_mentor_prompt,
-    build_skill_analysis_prompt,
-)
+from app.services import mentor_service
 
 __all__ = [
-    # Granite service
+    # Gemini service
     "generate_response",
     "generate_roadmap",
-    "granite_available",
-    "mentor_chat",
+    "gemini_available",
     # RAG service
     "rag_service",
     "RAG_AVAILABLE",
@@ -51,8 +45,6 @@ __all__ = [
     "RoadmapGenerator",
     "generate_personalised_roadmap",
     "update_roadmap",
-    # Prompt templates
-    "build_roadmap_prompt",
-    "build_mentor_prompt",
-    "build_skill_analysis_prompt",
+    # Mentor service
+    "mentor_service",
 ]

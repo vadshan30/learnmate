@@ -6,11 +6,20 @@ from pydantic import BaseModel, Field
 
 
 class HealthResponse(BaseModel):
-    status: str = "ok"
-    version: str = "1.0.0"
-    rag_available: bool = False
-    watsonx_available: bool = False
+    status: str = "healthy"
+    version: str = "2.0.0"
+    backend: str = "online"
+    database: str = "online"
+    gemini: str = "disabled"
+    rag: str = "disabled"
     services: Dict[str, str] = Field(default_factory=dict)
+    environment: str = "development"
+    python_version: Optional[str] = None
+    database_type: Optional[str] = None
+    database_size_kb: Optional[float] = None
+    indexed_documents: Optional[int] = None
+    server_uptime_seconds: Optional[float] = None
+    operating_system: Optional[str] = None
 
 
 class StudentProfileResponse(BaseModel):
@@ -38,20 +47,7 @@ class RoadmapResponse(BaseModel):
     student_id: str
     roadmap: Optional[Dict[str, Any]] = None
     fallback: bool = False
-    source: str = "watsonx"
-
-
-class ChatResponse(BaseModel):
-    student_id: str
-    response: str
-    source: str = "watsonx"
-    mentor_type: str = "general"
-
-
-class ProgressResponse(BaseModel):
-    student_id: str
-    progress: Dict[str, Any] = Field(default_factory=dict)
-    message: str = ""
+    source: str = "gemini"
 
 
 class SuccessResponse(BaseModel):

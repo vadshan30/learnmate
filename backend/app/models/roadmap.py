@@ -169,6 +169,38 @@ class Project(BaseModel):
     )
 
 
+class Book(BaseModel):
+    """Represents a free programming book from GoalKicker.
+
+    Attributes:
+        id: Unique book identifier.
+        title: Book title.
+        category: Always 'Books'.
+        language: Programming language or subject.
+        provider: Book provider or publisher.
+        free: Whether the book is free.
+        description: Book description.
+        url: URL to the book page.
+        domain: Domain category.
+        level: Difficulty level.
+        tags: Searchable tags.
+        skills_covered: Skills covered by the book.
+    """
+
+    id: str = Field(default="", description="Unique book identifier")
+    title: str = Field(..., min_length=1, description="Book title")
+    category: str = Field(default="Books", description="Resource category")
+    language: str = Field(default="", description="Programming language or subject")
+    provider: str = Field(default="", description="Book provider or publisher")
+    free: bool = Field(default=True, description="Whether the book is free")
+    description: str = Field(default="", description="Book description")
+    url: str = Field(default="", description="URL to the book page")
+    domain: str = Field(default="", description="Domain category")
+    level: str = Field(default="All Levels", description="Difficulty level")
+    tags: List[str] = Field(default_factory=list, description="Searchable tags")
+    skills_covered: List[str] = Field(default_factory=list, description="Skills covered")
+
+
 class Certification(BaseModel):
     """Represents an industry certification the student may pursue.
 

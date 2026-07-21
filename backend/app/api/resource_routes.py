@@ -29,6 +29,7 @@ async def list_courses(
     domain: Optional[str] = Query(default=None, description="Filter by domain"),
     difficulty: Optional[str] = Query(default=None, description="Filter by difficulty"),
     provider: Optional[str] = Query(default=None, description="Filter by provider"),
+    free: Optional[bool] = Query(default=None, description="Filter by free status"),
 ) -> SuccessResponse:
     courses = resource_service.get_all_courses()
 
@@ -51,6 +52,9 @@ async def list_courses(
             c for c in courses
             if provider_lower in (c.get("provider", "") or "").lower()
         ]
+
+    if free is not None:
+        courses = [c for c in courses if c.get("free", False) == free]
 
     return SuccessResponse(
         message=f"Found {len(courses)} courses",
@@ -89,6 +93,7 @@ async def get_course(course_id: str) -> SuccessResponse:
 )
 async def list_projects(
     difficulty: Optional[str] = Query(default=None, description="Filter by difficulty"),
+    free: Optional[bool] = Query(default=None, description="Filter by free status"),
 ) -> SuccessResponse:
     projects = resource_service.get_projects()
 
@@ -97,6 +102,9 @@ async def list_projects(
             p for p in projects
             if resource_service._matches_difficulty(p, difficulty)
         ]
+
+    if free is not None:
+        projects = [p for p in projects if p.get("free", False) == free]
 
     return SuccessResponse(
         message=f"Found {len(projects)} projects",
@@ -113,6 +121,7 @@ async def list_projects(
 )
 async def list_certifications(
     provider: Optional[str] = Query(default=None, description="Filter by provider"),
+    free: Optional[bool] = Query(default=None, description="Filter by free status"),
 ) -> SuccessResponse:
     certifications = resource_service.get_certifications()
 
@@ -123,6 +132,9 @@ async def list_certifications(
             if provider_lower in (c.get("provider", "") or "").lower()
         ]
 
+    if free is not None:
+        certifications = [c for c in certifications if c.get("free", False) == free]
+
     return SuccessResponse(
         message=f"Found {len(certifications)} certifications",
         data=certifications,
@@ -130,10 +142,53 @@ async def list_certifications(
 
 
 @router.get(
+    "/books",
+    response_model=SuccessResponse,
+    summary="Get all books",
+    description="Returns all available free programming books.",
+    responses={200: {"description": "Books returned"}},
+)
+async def list_books(
+    free: Optional[bool] = Query(default=None, description="Filter by free status"),
+) -> SuccessResponse:
+    books = resource_service.get_all_books()
+
+    if free is not None:
+        books = [b for b in books if b.get("free", False) == free]
+
+    return SuccessResponse(
+        message=f"Found {len(books)} books",
+        data=books,
+    )
+
+
+@router.get(
+    "/books/{book_id}",
+    response_model=SuccessResponse,
+    summary="Get a book by ID",
+    description="Returns a single book by its ID.",
+    responses={
+        200: {"description": "Book found"},
+        404: {"description": "Book not found"},
+    },
+)
+async def get_book(book_id: str) -> SuccessResponse:
+    book = resource_service.get_book(book_id)
+    if book is None:
+        from app.exceptions import LearnMateError
+        raise LearnMateError(
+            message=f"Book '{book_id}' not found",
+            error_code="BOOK_NOT_FOUND",
+            status_code=404,
+        )
+    return SuccessResponse(message="Book found", data=book)
+
+
+@router.get(
     "/search",
     response_model=SuccessResponse,
     summary="Search resources",
-    description="Search across courses, projects, and certifications.",
+    description="Search across courses, projects, certifications, and books.",
     responses={200: {"description": "Search results"}},
 )
 async def search_resources(
@@ -142,7 +197,8 @@ async def search_resources(
     difficulty: Optional[str] = Query(default=None, description="Filter by difficulty"),
     domain: Optional[str] = Query(default=None, description="Filter by domain"),
     provider: Optional[str] = Query(default=None, description="Filter by provider"),
-    type: Optional[str] = Query(default=None, description="Filter by type: course, project, certification"),
+    type: Optional[str] = Query(default=None, description="Filter by type: course, project, certification, book"),
+    free: Optional[bool] = Query(default=None, description="Filter by free status"),
 ) -> SuccessResponse:
     results = resource_service.search_resources(
         query=q,
@@ -151,6 +207,7 @@ async def search_resources(
         domain=domain,
         provider=provider,
         resource_type=type,
+        free=free,
     )
     return SuccessResponse(
         message=f"Found {len(results)} results",

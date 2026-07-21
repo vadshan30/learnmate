@@ -40,12 +40,39 @@ class RoadmapNotFoundError(LearnMateError):
         )
 
 
+class StudySessionNotFoundError(LearnMateError):
+    def __init__(self, session_id: str):
+        super().__init__(
+            message=f"Study session '{session_id}' not found",
+            error_code="STUDY_SESSION_NOT_FOUND",
+            status_code=404,
+        )
+
+
 class ServiceUnavailableError(LearnMateError):
     def __init__(self, service_name: str):
         super().__init__(
             message=f"Service '{service_name}' is currently unavailable",
             error_code="SERVICE_UNAVAILABLE",
             status_code=503,
+        )
+
+
+class UnauthorizedError(LearnMateError):
+    def __init__(self, message: str = "Not authenticated"):
+        super().__init__(
+            message=message,
+            error_code="UNAUTHORIZED",
+            status_code=401,
+        )
+
+
+class ForbiddenError(LearnMateError):
+    def __init__(self, message: str = "Access denied"):
+        super().__init__(
+            message=message,
+            error_code="FORBIDDEN",
+            status_code=403,
         )
 
 

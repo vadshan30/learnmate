@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import asyncio
 import uuid
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Header, Query
 
 from app.dependencies import Store, get_store, get_student_or_404
 from app.schemas.requests import StudentCreateRequest, StudentUpdateRequest
@@ -39,6 +40,17 @@ def _to_response(student_id: str, profile: Dict[str, Any]) -> StudentProfileResp
     )
 
 
+def _get_user_id_from_header(authorization: Optional[str]) -> Optional[str]:
+    if not authorization or not authorization.startswith("Bearer "):
+        return None
+    token = authorization.split(" ", 1)[1]
+    from app.utils.jwt import decode_token
+    payload = decode_token(token)
+    if payload and payload.get("type") == "access":
+        return payload.get("sub")
+    return None
+
+
 @router.post(
     "",
     response_model=SuccessResponse,
@@ -50,8 +62,18 @@ def _to_response(student_id: str, profile: Dict[str, Any]) -> StudentProfileResp
         422: {"model": ErrorResponse, "description": "Validation error"},
     },
 )
-async def create_student(body: StudentCreateRequest, store: Store = Depends(get_store)) -> SuccessResponse:
-    student_id = _slug(body.name)
+async def create_student(
+    body: StudentCreateRequest,
+    store: Store = Depends(get_store),
+    authorization: Optional[str] = Header(None),
+) -> SuccessResponse:
+    # Use auth user_id as student_id if authenticated
+    user_id = _get_user_id_from_header(authorization)
+    if user_id:
+        student_id = user_id
+    else:
+        student_id = _slug(body.name)
+
     profile = {
         "name": body.name,
         "student_id": student_id,
@@ -73,6 +95,7 @@ async def create_student(body: StudentCreateRequest, store: Store = Depends(get_
         "linkedin_url": body.linkedin_url,
     }
     store.student_profiles[student_id] = profile
+    await asyncio.to_thread(store.save_student_profile, student_id)
     return SuccessResponse(message="Profile created", data=_to_response(student_id, profile).model_dump())
 
 
@@ -96,7 +119,16 @@ async def list_students(store: Store = Depends(get_store)) -> list[StudentProfil
         404: {"model": ErrorResponse, "description": "Student not found"},
     },
 )
-async def get_student(student_id: str, store: Store = Depends(get_store)) -> StudentProfileResponse:
+async def get_student(
+    student_id: str,
+    store: Store = Depends(get_store),
+    authorization: Optional[str] = Header(None),
+) -> StudentProfileResponse:
+    # If authenticated, enforce that users can only access their own profile
+    user_id = _get_user_id_from_header(authorization)
+    if user_id and student_id != user_id:
+        from app.exceptions import UnauthorizedError
+        raise UnauthorizedError("You can only access your own profile")
     profile = get_student_or_404(student_id, store)
     return _to_response(student_id, profile)
 
@@ -115,10 +147,16 @@ async def update_student(
     student_id: str,
     body: StudentUpdateRequest,
     store: Store = Depends(get_store),
+    authorization: Optional[str] = Header(None),
 ) -> SuccessResponse:
+    user_id = _get_user_id_from_header(authorization)
+    if user_id and student_id != user_id:
+        from app.exceptions import UnauthorizedError
+        raise UnauthorizedError("You can only update your own profile")
     profile = get_student_or_404(student_id, store)
     updates = body.model_dump(exclude_unset=True)
     profile.update(updates)
+    await asyncio.to_thread(store.save_student_profile, student_id)
     return SuccessResponse(message="Profile updated", data=_to_response(student_id, profile).model_dump())
 
 
@@ -132,12 +170,21 @@ async def update_student(
         404: {"model": ErrorResponse, "description": "Student not found"},
     },
 )
-async def delete_student(student_id: str, store: Store = Depends(get_store)) -> SuccessResponse:
+async def delete_student(
+    student_id: str,
+    store: Store = Depends(get_store),
+    authorization: Optional[str] = Header(None),
+) -> SuccessResponse:
+    user_id = _get_user_id_from_header(authorization)
+    if user_id and student_id != user_id:
+        from app.exceptions import UnauthorizedError
+        raise UnauthorizedError("You can only delete your own profile")
     get_student_or_404(student_id, store)
     del store.student_profiles[student_id]
     store.roadmaps.pop(student_id, None)
     store.chat_histories.pop(student_id, None)
     store.progress.pop(student_id, None)
+    await asyncio.to_thread(store.delete_student_profile, student_id)
     return SuccessResponse(message="Profile deleted")
 
 
@@ -158,7 +205,12 @@ async def record_progress(
     completed_topics: str = Query(default="", description="Comma-separated topics"),
     hours_studied: float = Query(default=0.0, ge=0.0),
     store: Store = Depends(get_store),
+    authorization: Optional[str] = Header(None),
 ) -> SuccessResponse:
+    user_id = _get_user_id_from_header(authorization)
+    if user_id and student_id != user_id:
+        from app.exceptions import UnauthorizedError
+        raise UnauthorizedError("You can only record progress for your own profile")
     get_student_or_404(student_id, store)
     if student_id not in store.progress:
         store.progress[student_id] = {"weeks": {}, "total_hours": 0.0, "total_topics": 0}
@@ -170,6 +222,7 @@ async def record_progress(
     }
     entry["total_hours"] += hours_studied
     entry["total_topics"] += len(topics)
+    await asyncio.to_thread(store.save_progress, student_id)
     return SuccessResponse(
         message="Progress recorded",
         data={"week": week_number, "topics_added": len(topics), "hours": hours_studied},

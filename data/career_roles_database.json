@@ -1,0 +1,131 @@
+{
+  "categories": [
+    {
+      "name": "Software Engineering",
+      "roles": [
+        "Software Engineer", "Frontend Developer", "Backend Developer",
+        "Full Stack Developer", "Java Developer", "Python Developer",
+        ".NET Developer", "Mobile Developer", "Android Developer", "iOS Developer",
+        "React Developer", "Angular Developer", "Vue Developer",
+        "Ruby Developer", "PHP Developer", "C++ Developer",
+        "Systems Programmer", "API Developer", "Web Developer"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "roles": [
+        "Cloud Engineer", "Cloud Architect", "AWS Engineer", "Azure Engineer",
+        "GCP Engineer", "Cloud Security Engineer", "Cloud Operations Engineer",
+        "Cloud Migration Specialist", "Cloud Consultant"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "roles": [
+        "DevOps Engineer", "Site Reliability Engineer", "Platform Engineer",
+        "CI/CD Engineer", "Infrastructure Engineer", "Release Engineer",
+        "Build Engineer", "Deployment Engineer"
+      ]
+    },
+    {
+      "name": "AI",
+      "roles": [
+        "AI Engineer", "Machine Learning Engineer", "Deep Learning Engineer",
+        "Computer Vision Engineer", "NLP Engineer", "Generative AI Engineer",
+        "Prompt Engineer", "AI Researcher", "LLM Engineer", "MLOps Engineer",
+        "Applied Scientist", "AI Product Manager", "AI Ethics Researcher"
+      ]
+    },
+    {
+      "name": "Data",
+      "roles": [
+        "Data Scientist", "Data Analyst", "Business Analyst", "Data Engineer",
+        "BI Developer", "Database Administrator", "Analytics Engineer",
+        "Quantitative Analyst", "Research Analyst", "Data Architect",
+        "Chief Data Officer"
+      ]
+    },
+    {
+      "name": "Cybersecurity",
+      "roles": [
+        "Cybersecurity Analyst", "SOC Analyst", "Ethical Hacker",
+        "Security Engineer", "Penetration Tester", "Cloud Security Engineer",
+        "Security Architect", "Incident Responder", "Security Consultant",
+        "Threat Intelligence Analyst", "CISO"
+      ]
+    },
+    {
+      "name": "Networking",
+      "roles": [
+        "Network Engineer", "Network Administrator", "System Administrator",
+        "Solutions Architect", "Network Architect", "Telecommunications Engineer",
+        "Wireless Network Engineer"
+      ]
+    },
+    {
+      "name": "Software Testing",
+      "roles": [
+        "QA Engineer", "Automation Tester", "SDET",
+        "Manual Tester", "Performance Tester", "Security Tester",
+        "Test Lead", "Quality Assurance Manager"
+      ]
+    },
+    {
+      "name": "Game Development",
+      "roles": [
+        "Game Developer", "Unity Developer", "Unreal Developer",
+        "Game Designer", "Game Programmer", "Technical Artist",
+        "Game QA Tester", "Level Designer"
+      ]
+    },
+    {
+      "name": "Blockchain",
+      "roles": [
+        "Blockchain Developer", "Smart Contract Engineer", "Web3 Engineer",
+        "DeFi Developer", "NFT Developer", "Blockchain Consultant",
+        "Crypto Research Analyst"
+      ]
+    },
+    {
+      "name": "Embedded",
+      "roles": [
+        "Embedded Engineer", "Firmware Engineer", "Robotics Engineer",
+        "Hardware Engineer", "IoT Engineer", "FPGA Engineer",
+        "VLSI Engineer", "SoC Designer"
+      ]
+    },
+    {
+      "name": "UI/UX",
+      "roles": [
+        "UI Designer", "UX Designer", "Product Designer",
+        "UX Researcher", "Interaction Designer", "Visual Designer",
+        "UX Writer", "Design System Lead"
+      ]
+    },
+    {
+      "name": "Management",
+      "roles": [
+        "Project Manager", "Technical Lead", "Engineering Manager",
+        "Product Manager", "Scrum Master", "Delivery Manager",
+        "Program Manager", "CTO"
+      ]
+    },
+    {
+      "name": "ERP",
+      "roles": [
+        "SAP Consultant", "Oracle Consultant", "Salesforce Developer",
+        "Microsoft Dynamics Consultant", "Workday Consultant",
+        "ERP Analyst", "CRM Developer"
+      ]
+    },
+    {
+      "name": "Academic & Other",
+      "roles": [
+        "Research Scientist", "Professor", "AI Educator",
+        "Open Source Contributor", "Startup Founder", "Entrepreneur",
+        "Freelance Developer", "Technical Writer", "Developer Advocate",
+        "Solutions Consultant", "Pre-Sales Engineer"
+      ]
+    }
+  ]
+}

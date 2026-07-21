@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class StudentCreateRequest(BaseModel):
@@ -23,6 +23,33 @@ class StudentCreateRequest(BaseModel):
     github_url: Optional[str] = Field(default=None, description="GitHub profile URL")
     linkedin_url: Optional[str] = Field(default=None, description="LinkedIn profile URL")
 
+    @field_validator("current_skills", "interests", "current_goals", mode="before")
+    @classmethod
+    def deduplicate_list(cls, v: List[str]) -> List[str]:
+        if not v:
+            return []
+        seen = set()
+        result = []
+        for item in v:
+            key = item.strip().lower()
+            if key not in seen:
+                seen.add(key)
+                result.append(item.strip())
+        return result
+
+    @field_validator("name")
+    @classmethod
+    def name_must_be_non_empty(cls, value: str) -> str:
+        stripped = value.strip()
+        if not stripped:
+            raise ValueError("Name cannot be empty or whitespace only")
+        return stripped
+
+    @field_validator("career_goal")
+    @classmethod
+    def career_goal_must_be_non_empty(cls, value: str) -> str:
+        return value.strip() if value else value
+
 
 class StudentUpdateRequest(BaseModel):
     current_skills: Optional[List[str]] = None
@@ -41,33 +68,35 @@ class StudentUpdateRequest(BaseModel):
     github_url: Optional[str] = None
     linkedin_url: Optional[str] = None
 
+    @field_validator("current_skills", "interests", "current_goals", mode="before")
+    @classmethod
+    def deduplicate_list(cls, v: Optional[List[str]]) -> Optional[List[str]]:
+        if v is None:
+            return v
+        if not v:
+            return []
+        seen = set()
+        result = []
+        for item in v:
+            key = item.strip().lower()
+            if key not in seen:
+                seen.add(key)
+                result.append(item.strip())
+        return result
+
+    @field_validator("career_goal")
+    @classmethod
+    def career_goal_must_be_non_empty(cls, value: Optional[str]) -> Optional[str]:
+        if value is None:
+            return value
+        return value.strip()
+
 
 class RoadmapGenerateRequest(BaseModel):
     student_id: str = Field(..., min_length=1, description="Student identifier (lowercase name)")
     weeks: int = Field(default=12, ge=1, le=52, description="Roadmap duration in weeks")
     hours_per_week: float = Field(default=10.0, ge=1.0, le=60.0)
     focus_area: Optional[str] = Field(default=None, description="Specific area to focus on")
-
-
-class ProgressUpdateRequest(BaseModel):
-    student_id: str = Field(..., min_length=1)
-    week_number: int = Field(..., ge=1, le=52)
-    completed_topics: List[str] = Field(default_factory=list)
-    hours_studied: float = Field(default=0.0, ge=0.0)
-    notes: Optional[str] = None
-    rating: Optional[int] = Field(default=None, ge=1, le=5)
-
-
-class ChatRequest(BaseModel):
-    student_id: str = Field(..., min_length=1)
-    message: str = Field(..., min_length=1, max_length=2000)
-    history: List[Dict[str, str]] = Field(default_factory=list, description="Prior chat turns")
-
-
-class SearchRequest(BaseModel):
-    query: str = Field(..., min_length=1, max_length=500)
-    top_k: int = Field(default=5, ge=1, le=20)
-    skill_filter: Optional[str] = None
 
 
 class TopicCompleteRequest(BaseModel):
@@ -79,3 +108,64 @@ class TopicCompleteRequest(BaseModel):
 class ProgressUpdateBody(BaseModel):
     completed_topics: List[str] = Field(default_factory=list, description="Topics to mark as completed")
     hours_studied: float = Field(default=0.0, ge=0.0)
+
+
+# ---------------------------------------------------------------------------
+# Mentor-specific request schemas
+# ---------------------------------------------------------------------------
+
+
+class MentorQuizRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    topic: str = Field(..., min_length=1, max_length=200, description="Quiz topic")
+    num_questions: int = Field(default=5, ge=1, le=20, description="Number of questions")
+    difficulty: Optional[str] = Field(default=None, pattern="^(beginner|intermediate|advanced)$")
+
+
+class MentorExplainRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    concept: str = Field(..., min_length=1, max_length=200, description="Concept to explain")
+    level: Optional[str] = Field(default=None, pattern="^(beginner|intermediate|advanced)$")
+
+
+class MentorStudyPlanRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    context: str = Field(..., min_length=1, max_length=1000, description="Study plan context/requirements")
+
+
+class MentorRevisionRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    topics: List[str] = Field(..., min_length=1, description="Topics to revise")
+    exam_date: Optional[str] = Field(default=None, description="Target exam date (YYYY-MM-DD)")
+    focus_areas: Optional[List[str]] = Field(default=None, description="Specific focus areas")
+
+
+class MentorCareerRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    question: str = Field(..., min_length=1, max_length=1000, description="Career-related question")
+
+
+class MentorFlashcardRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    topic: str = Field(..., min_length=1, max_length=200, description="Flashcard topic")
+    num_cards: int = Field(default=10, ge=1, le=50, description="Number of flashcards")
+
+
+class MentorCodingChallengeRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    topic: str = Field(..., min_length=1, max_length=200, description="Challenge topic")
+    difficulty: str = Field(default="medium", pattern="^(easy|medium|hard)$")
+    language: str = Field(default="Python", max_length=50)
+
+
+class MentorResumeReviewRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    resume_text: str = Field(..., min_length=10, max_length=10000, description="Resume content")
+    target_role: str = Field(default="", max_length=200)
+
+
+class MentorInterviewPrepRequest(BaseModel):
+    student_id: str = Field(..., min_length=1)
+    role: str = Field(..., min_length=1, max_length=200, description="Target job role")
+    num_questions: int = Field(default=5, ge=1, le=20)
+    focus: str = Field(default="mixed", pattern="^(technical|behavioral|mixed)$")

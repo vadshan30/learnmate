@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   HiOutlineAcademicCap, HiOutlineSparkles, HiOutlineChartBarSquare,
-  HiOutlineChatBubbleLeftRight, HiOutlineRocketLaunch, HiOutlineBolt,
+  HiOutlineRocketLaunch, HiOutlineBolt,
   HiOutlineCheckBadge, HiOutlineUserGroup, HiOutlineClock,
 } from 'react-icons/hi2'
 
@@ -20,8 +20,8 @@ function Navbar() {
           <span className="font-display font-bold text-xl gradient-text">LearnMate AI</span>
         </Link>
         <div className="flex items-center gap-3">
-          <Link to="/dashboard" className="btn-ghost">Sign In</Link>
-          <Link to="/profile" className="btn-primary text-sm !px-5 !py-2.5">Get Started</Link>
+          <Link to="/login" className="btn-ghost">Sign In</Link>
+          <Link to="/register" className="btn-primary text-sm !px-5 !py-2.5">Get Started</Link>
         </div>
       </div>
     </nav>
@@ -49,11 +49,11 @@ function Hero() {
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            LearnMate AI analyses your skills, understands your goals, and generates a customised roadmap powered by IBM Granite AI. Track progress, chat with your mentor, and achieve your career dreams.
+            LearnMate AI analyses your skills, understands your goals, and generates a customised roadmap powered by Google Gemini AI. Track progress and achieve your career dreams.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/profile" className="btn-primary text-base !px-8 !py-4 shadow-xl">
+            <Link to="/register" className="btn-primary text-base !px-8 !py-4 shadow-xl">
               <span className="flex items-center gap-2"><HiOutlineRocketLaunch className="w-5 h-5" /> Start Learning</span>
             </Link>
             <Link to="/dashboard" className="btn-secondary text-base !px-8 !py-4">
@@ -75,7 +75,6 @@ function Hero() {
 const features = [
   { icon: HiOutlineAcademicCap, title: 'Smart Skill Analysis', desc: 'AI analyses your current skills and identifies gaps for your target career.' },
   { icon: HiOutlineChartBarSquare, title: 'Personalised Roadmaps', desc: 'Get a 10-week learning plan tailored to your goals, skills, and schedule.' },
-  { icon: HiOutlineChatBubbleLeftRight, title: 'AI Mentor Chat', desc: 'Ask questions and get contextual guidance powered by IBM Granite.' },
   { icon: HiOutlineBolt, title: 'RAG-Powered Resources', desc: 'Semantic search finds the best courses, projects, and certs for you.' },
   { icon: HiOutlineClock, title: 'Progress Tracking', desc: 'Visualise your learning streak, hours studied, and topic completion.' },
   { icon: HiOutlineUserGroup, title: 'Adaptive Learning', desc: 'Roadmaps adjust based on your progress and changing interests.' },
@@ -109,7 +108,7 @@ const steps = [
   { num: '01', title: 'Create Your Profile', desc: 'Tell us about your skills, interests, and career goals.' },
   { num: '02', title: 'Generate Roadmap', desc: 'Our AI creates a personalised 10-week learning plan.' },
   { num: '03', title: 'Learn & Build', desc: 'Follow weekly objectives, complete projects, and earn certifications.' },
-  { num: '04', title: 'Track Progress', desc: 'Monitor your growth with analytics and chat with your AI mentor.' },
+  { num: '04', title: 'Track Progress', desc: 'Monitor your growth with analytics and achieve your learning goals.' },
 ]
 
 function HowItWorks() {
@@ -151,7 +150,7 @@ function CTA() {
           <div className="relative">
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">Ready to Transform Your Learning?</h2>
             <p className="text-white/80 max-w-xl mx-auto mb-8">Join LearnMate AI and get a personalised roadmap to your dream career.</p>
-            <Link to="/profile" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl">
+            <Link to="/register" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-600 font-bold rounded-xl hover:bg-gray-100 transition-all shadow-xl">
               <HiOutlineRocketLaunch className="w-5 h-5" /> Get Started Free
             </Link>
           </div>

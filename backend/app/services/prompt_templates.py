@@ -115,55 +115,6 @@ def build_roadmap_prompt(
 
 
 # ---------------------------------------------------------------------------
-# Mentor Chat Prompt
-# ---------------------------------------------------------------------------
-
-
-def build_mentor_prompt(
-    user_message: str,
-    student_context: str,
-    retrieved_resources: str,
-) -> str:
-    """Build a prompt for the AI learning mentor.
-
-    Constructs a context-rich prompt that enables Granite to provide
-    supportive, accurate, and actionable learning guidance.
-
-    Args:
-        user_message: The student's question or message.
-        student_context: Summarised student profile and progress.
-        retrieved_resources: Relevant courses/resources from RAG search.
-
-    Returns:
-        A complete prompt string ready to send to Granite.
-    """
-    system_instruction = (
-        "You are LearnMate AI, a supportive and knowledgeable learning "
-        "mentor. Your role is to help students achieve their learning "
-        "goals through clear, actionable guidance.\n\n"
-        "GUIDELINES:\n"
-        "- Be encouraging, positive, and empathetic.\n"
-        "- Explain concepts clearly with practical examples.\n"
-        "- Recommend specific courses ONLY from the provided resources.\n"
-        "- Suggest hands-on projects when appropriate.\n"
-        "- Never hallucinate course names or resources not provided.\n"
-        "- If you lack enough information, say so honestly.\n"
-        "- Keep responses concise (under 300 words) and actionable.\n"
-        "- Use numbered lists for recommendations.\n"
-        "- Encourage hands-on learning and consistent practice."
-    )
-
-    user_content = (
-        f"### Student Profile\n{student_context}\n\n"
-        f"### Relevant Learning Resources\n{retrieved_resources}\n\n"
-        f"### Student Question\n{user_message}\n\n"
-        "Provide a helpful, personalised response:"
-    )
-
-    return f"{system_instruction}\n\n{user_content}"
-
-
-# ---------------------------------------------------------------------------
 # Skill Analysis Prompt
 # ---------------------------------------------------------------------------
 

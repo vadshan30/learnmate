@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import logging
 from typing import Any, Dict, List
 
@@ -14,7 +15,7 @@ from app.schemas.requests import (
     ProgressUpdateBody,
 )
 from app.schemas.responses import ErrorResponse, RoadmapResponse, SuccessResponse
-from app.services import RAG_AVAILABLE, granite_available
+from app.services import RAG_AVAILABLE, gemini_available
 from app.services.roadmap_generator import RoadmapGenerator
 from app.services import progress_service
 
@@ -87,18 +88,22 @@ async def update_progress(
             student_id,
             len(body.completed_topics),
         )
-        generator = RoadmapGenerator()
-        roadmap = generator.update_roadmap(roadmap, body.completed_topics)
-        store.roadmaps[student_id] = roadmap
+    generator = RoadmapGenerator()
+    result = await generator.update_roadmap(roadmap, body.completed_topics)
+    store.roadmaps[student_id] = roadmap
 
-        # Also update student profile's completed_topics
-        existing = set(profile_dict.get("completed_topics", []))
-        existing.update(t.lower().strip() for t in body.completed_topics)
-        profile_dict["completed_topics"] = list(existing)
+    # Also update student profile's completed_topics
+    existing = set(profile_dict.get("completed_topics", []))
+    existing.update(t.lower().strip() for t in body.completed_topics)
+    profile_dict["completed_topics"] = list(existing)
 
-        # Update progress percentage
-        progress = roadmap.get("progress", {})
-        profile_dict["progress_percentage"] = progress.get("percentage", 0.0)
+    # Update progress percentage
+    progress = roadmap.get("progress", {})
+    profile_dict["progress_percentage"] = progress.get("percentage", 0.0)
+
+    # Persist changes (non-blocking)
+    await asyncio.to_thread(store.save_roadmap, student_id)
+    await asyncio.to_thread(store.save_student_profile, student_id)
 
     progress = progress_service.get_progress_summary(
         roadmap, student_skills=profile_dict.get("current_skills", [])
@@ -159,6 +164,10 @@ async def complete_topic(
         existing.discard(topic_lower)
     profile_dict["completed_topics"] = list(existing)
     profile_dict["progress_percentage"] = roadmap.get("progress", {}).get("percentage", 0.0)
+
+    # Persist changes (non-blocking)
+    await asyncio.to_thread(store.save_roadmap, body.student_id)
+    await asyncio.to_thread(store.save_student_profile, body.student_id)
 
     progress = progress_service.get_progress_summary(
         roadmap, student_skills=profile_dict.get("current_skills", [])
@@ -247,11 +256,12 @@ async def generate_roadmap(
     generator = RoadmapGenerator()
     result = await generator.generate_roadmap(profile)
     store.roadmaps[body.student_id] = result
-    source = "watsonx" if granite_available else "fallback"
+    await asyncio.to_thread(store.save_roadmap, body.student_id)
+    source = "gemini" if gemini_available else "fallback"
     return RoadmapResponse(
         student_id=body.student_id,
         roadmap=result,
-        fallback=not granite_available,
+        fallback=not gemini_available,
         source=source,
     )
 
@@ -269,11 +279,11 @@ async def generate_roadmap(
 async def get_roadmap(student_id: str, store: Store = Depends(get_store)) -> RoadmapResponse:
     get_student_or_404(student_id, store)
     roadmap = get_roadmap_or_404(student_id, store)
-    source = "watsonx" if granite_available else "fallback"
+    source = "gemini" if gemini_available else "fallback"
     return RoadmapResponse(
         student_id=student_id,
         roadmap=roadmap,
-        fallback=not granite_available,
+        fallback=not gemini_available,
         source=source,
     )
 
@@ -298,6 +308,7 @@ async def update_roadmap(
     generator = RoadmapGenerator()
     result = await generator.generate_roadmap(profile)
     store.roadmaps[student_id] = result
+    await asyncio.to_thread(store.save_roadmap, student_id)
     return SuccessResponse(message="Roadmap updated", data=result)
 
 
@@ -314,4 +325,5 @@ async def update_roadmap(
 async def delete_roadmap(student_id: str, store: Store = Depends(get_store)) -> SuccessResponse:
     get_student_or_404(student_id, store)
     store.roadmaps.pop(student_id, None)
+    await asyncio.to_thread(store.delete_roadmap, student_id)
     return SuccessResponse(message="Roadmap deleted")

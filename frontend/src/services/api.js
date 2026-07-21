@@ -10,7 +10,13 @@ const api = axios.create({
 })
 
 api.interceptors.request.use(
-  (config) => config,
+  (config) => {
+    const token = localStorage.getItem('learnmate_access_token') || sessionStorage.getItem('learnmate_access_token')
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
+    }
+    return config
+  },
   (error) => Promise.reject(error)
 )
 
@@ -41,14 +47,14 @@ export const getHealth = () => api.get('/health')
 /* ── Students ────────────────────────────────────────────── */
 export const getStudents = () => api.get('/api/student')
 export const getStudent = (id) => api.get(`/api/student/${id}`)
-export const createStudent = (data) => api.post('/api/student', data)
-export const updateStudent = (id, data) => api.put(`/api/student/${id}`, data)
+export const createStudent = (data) => api.post('/api/student', data, { timeout: 10000 })
+export const updateStudent = (id, data) => api.put(`/api/student/${id}`, data, { timeout: 10000 })
 export const deleteStudent = (id) => api.delete(`/api/student/${id}`)
 export const recordProgress = (id, params) =>
   api.post(`/api/student/${id}/progress`, null, { params })
 
 /* ── Roadmap ─────────────────────────────────────────────── */
-export const generateRoadmap = (data) => api.post('/api/roadmap', data)
+export const generateRoadmap = (data) => api.post('/api/roadmap', data, { timeout: 120000 })
 export const getRoadmap = (id) => api.get(`/api/roadmap/${id}`)
 export const updateRoadmap = (id, data) => api.put(`/api/roadmap/${id}`, data)
 export const deleteRoadmap = (id) => api.delete(`/api/roadmap/${id}`)
@@ -60,10 +66,18 @@ export const completeTopic = (data) => api.post('/api/roadmap/topic/complete', d
 export const getWeeklyProgress = (studentId) => api.get(`/api/roadmap/progress/${studentId}/weekly`)
 export const getSkillProgress = (studentId) => api.get(`/api/roadmap/progress/${studentId}/skills`)
 
-/* ── Chat ────────────────────────────────────────────────── */
-export const sendChat = (data) => api.post('/api/chat', data)
-export const clearChat = (id) => api.delete(`/api/chat/${id}`)
-export const getChatHistory = (id) => api.get(`/api/chat/${id}`)
+/* ── Mentor (non-chat features) ──────────────────────────── */
+export const mentorExplain = (data) => api.post('/api/mentor/explain', data)
+export const mentorQuiz = (data) => api.post('/api/mentor/quiz', data)
+export const mentorFlashcards = (data) => api.post('/api/mentor/flashcards', data)
+export const mentorStudyPlan = (data) => api.post('/api/mentor/study-plan', data)
+export const mentorRevise = (data) => api.post('/api/mentor/revise', data)
+export const mentorCareer = (data) => api.post('/api/mentor/career', data)
+export const mentorCodingChallenge = (data) => api.post('/api/mentor/coding-challenge', data)
+export const mentorResumeReview = (data) => api.post('/api/mentor/resume-review', data)
+export const mentorInterviewPrep = (data) => api.post('/api/mentor/interview-prep', data)
+export const mentorLearningTips = (studentId, area = '') =>
+  api.post(`/api/mentor/learning-tips?student_id=${studentId}&specific_area=${encodeURIComponent(area)}`)
 
 /* ── Catalog ─────────────────────────────────────────────── */
 export const getCourses = () => api.get('/api/courses')
@@ -75,6 +89,7 @@ export const getResourceCourses = (params) => api.get('/api/resources/courses', 
 export const getResourceCourse = (id) => api.get(`/api/resources/courses/${id}`)
 export const getResourceProjects = (params) => api.get('/api/resources/projects', { params })
 export const getResourceCertifications = (params) => api.get('/api/resources/certifications', { params })
+export const getResourceBooks = (params) => api.get('/api/resources/books', { params })
 export const searchAllResources = (params) => api.get('/api/resources/search', { params })
 export const syncResources = () => api.post('/api/resources/sync')
 export const getCareerPathways = () => api.get('/api/resources/pathways')
@@ -86,6 +101,19 @@ export const getRecommendedCourses = (id, params) => api.get(`/api/projects/${id
 export const saveProject = (id, studentId) => api.post(`/api/projects/${id}/save`, null, { params: { student_id: studentId } })
 export const completeProject = (id, studentId) => api.post(`/api/projects/${id}/complete`, null, { params: { student_id: studentId } })
 export const getProjectStats = (studentId) => api.get(`/api/projects/stats/${studentId}`)
+
+/* ── Career Test ─────────────────────────────────────────── */
+export const getCareerTestQuestions = () => api.get('/api/career-test/questions')
+export const getCareerCareers = () => api.get('/api/career-test/careers')
+export const submitCareerTest = (userId, answers) =>
+  api.post(`/api/career-test/submit?user_id=${encodeURIComponent(userId)}`, { answers })
+export const getCareerTestResult = (userId, resultId) =>
+  api.get(`/api/career-test/result/${resultId}?user_id=${encodeURIComponent(userId)}`)
+export const getCareerTestHistory = (userId) =>
+  api.get(`/api/career-test/history?user_id=${encodeURIComponent(userId)}`)
+export const retakeCareerTest = () => api.post('/api/career-test/retake')
+export const getCareerRecommendations = (careerId) =>
+  api.get(`/api/career-test/recommendations/${careerId}`)
 
 /* ── Search ──────────────────────────────────────────────── */
 export const searchResources = (params) => api.get('/api/search', { params })
