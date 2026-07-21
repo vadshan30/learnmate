@@ -66,7 +66,6 @@ httplib2==0.31.2
 httptools==0.8.0
 httpx==0.28.1
 huggingface_hub==1.23.0
-google-genai==1.63.0
 idna==3.18
 importlib_resources==7.1.0
 itsdangerous==2.2.0
