@@ -12,24 +12,30 @@ A modern full-stack learning platform that helps students build personalized lea
 ![JWT](https://img.shields.io/badge/Auth-JWT-orange)
 ![License](https://img.shields.io/badge/License-Educational-success)
 
+### 🌐 Live Demo
+
+**https://learnmate-kappa.vercel.app**
+
 </div>
 
 ---
 
 # 📖 Overview
 
-LearnMate is an AI-assisted learning management platform built to help students create structured learning journeys.
+LearnMate is an AI-assisted learning management platform designed to help students build structured and personalized learning journeys.
 
-Instead of randomly searching for courses and certifications, LearnMate enables users to:
+Instead of spending hours searching for courses, certifications, books, and career guidance across multiple websites, LearnMate brings everything together in one place.
 
-- Build their learning profile
-- Generate personalized learning roadmaps
-- Track learning progress
-- Manage study schedules
-- Take career aptitude tests
-- Discover free learning resources
-- Explore certifications, books and projects
-- Save everything securely with authentication
+With LearnMate, users can:
+
+- 👤 Create a personalized learning profile
+- 🎯 Generate AI-powered learning roadmaps
+- 📚 Discover curated free learning resources
+- 📅 Plan weekly study schedules
+- 📈 Track learning progress
+- 💼 Explore career opportunities
+- 🧠 Take career aptitude tests
+- 🔐 Securely manage their learning journey using JWT authentication
 
 ---
 
@@ -52,8 +58,8 @@ Instead of randomly searching for courses and certifications, LearnMate enables 
 - Skill Selection
 - Career Preference Selection
 - Manual Skill Entry
-- Learning Goal Tracking
-- Roadmap Generation
+- Personalized Learning Goals
+- AI Roadmap Generation
 
 ---
 
@@ -112,7 +118,11 @@ Instead of randomly searching for courses and certifications, LearnMate enables 
 
 # 🖥 Screenshots
 
-> Add screenshots after deployment.
+> Visit the live application:
+
+### 🌐 https://learnmate-kappa.vercel.app
+
+*(Add screenshots here after deployment.)*
 
 ```
 Landing Page
@@ -145,7 +155,7 @@ Settings
 | Language | Python |
 | Database | SQLite |
 | Authentication | JWT |
-| State Management | React Context |
+| State Management | React Context API |
 | Charts | Recharts |
 | Calendar | React Big Calendar |
 | Icons | React Icons |
@@ -154,24 +164,34 @@ Settings
 
 # 📂 Project Structure
 
-```
+```text
 learnmate/
 │
 ├── backend/
 │   ├── app/
 │   ├── tests/
 │   ├── data/
+│   ├── requirements.txt
 │   └── main.py
 │
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   └── package.json
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── data/
 │
 └── README.md
 ```
+
+---
+
+# 🚀 Live Website
+
+### Frontend (Vercel)
+
+https://learnmate-kappa.vercel.app
 
 ---
 
@@ -197,7 +217,7 @@ python -m venv venv
 # Windows
 venv\Scripts\activate
 
-# Linux/Mac
+# Linux / macOS
 source venv/bin/activate
 
 pip install -r requirements.txt
@@ -205,7 +225,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-Backend runs on
+Backend runs at:
 
 ```
 http://localhost:8000
@@ -223,7 +243,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs on
+Frontend runs at:
 
 ```
 http://localhost:5173
@@ -233,34 +253,25 @@ http://localhost:5173
 
 # 📌 Core Modules
 
-✅ Authentication
-
-✅ Student Profile
-
-✅ Personalized Roadmap
-
-✅ Study Planner
-
-✅ Career Aptitude Test
-
-✅ Resource Explorer
-
-✅ Free Books Library
-
-✅ Free Certifications
-
-✅ Dashboard
-
-✅ Progress Tracking
+- ✅ Authentication
+- ✅ Student Profile
+- ✅ Personalized Roadmap
+- ✅ Study Planner
+- ✅ Career Aptitude Test
+- ✅ Resource Explorer
+- ✅ Free Books Library
+- ✅ Free Certifications
+- ✅ Dashboard
+- ✅ Progress Tracking
 
 ---
 
 # 📚 Learning Resources Included
 
-- Courses
+- Online Courses
 - Portfolio Projects
 - Industry Certifications
-- 10000+ Pages Programming Books
+- 10,000+ Pages of Programming Books
 - Free Learning Platforms
 - Career Roadmaps
 
@@ -268,29 +279,29 @@ http://localhost:5173
 
 # 🎯 Future Enhancements
 
+- AI Learning Assistant
 - Email Notifications
 - Study Reminders
 - Mobile Application
-- Team Learning
-- Leaderboard
-- Discussion Forums
-- AI Learning Assistant
-- Cloud Deployment
 - PostgreSQL Support
+- Team Learning
+- Leaderboards
+- Discussion Forums
+- Cloud Deployment
 
 ---
 
 # 📄 API Documentation
 
-After running the backend:
+After running the backend locally:
 
-Swagger UI
+### Swagger UI
 
 ```
 http://localhost:8000/docs
 ```
 
-ReDoc
+### ReDoc
 
 ```
 http://localhost:8000/redoc
@@ -300,23 +311,29 @@ http://localhost:8000/redoc
 
 # 🤝 Contributing
 
-Contributions, issues and feature requests are welcome.
+Contributions, issues, and feature requests are welcome.
 
-Feel free to fork the repository and submit a pull request.
+If you'd like to contribute:
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
 
 ---
 
 # 👨‍💻 Developer
 
-**Sri Vadshan**
+## Sri Vadshan
 
-B.Tech Artificial Intelligence & Data Science
+**B.Tech – Artificial Intelligence & Data Science**
 
-GitHub
+### GitHub
 
 https://github.com/vadshan30
 
-LinkedIn
+### LinkedIn
 
 https://linkedin.com/in/sri-vadshan-47a84a327
 
@@ -328,10 +345,10 @@ If you found this project useful,
 
 please consider giving it a ⭐ on GitHub.
 
-It helps others discover the project.
+It helps others discover the project and motivates further development.
 
 ---
 
-## 📜 License
+# 📜 License
 
 This project is developed for educational and portfolio purposes.
